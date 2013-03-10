@@ -17,3 +17,13 @@
 	<header id="header">
 	</header>
 	<div id="main">
+		<?php if (!is_home()): ?>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<?php wp_nav_menu(array(
+				'theme_location' => 'main',
+				'container' => false,
+				'menu_class' => 'nav-menu',
+				'depth' => 2,
+			)); ?>
+		</nav>
+		<?php endif; ?>
