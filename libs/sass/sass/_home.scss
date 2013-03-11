@@ -1,0 +1,44 @@
+body.home {
+	$border-color: #414141;
+
+	@include container;
+
+	#nav-lang {
+		@include stretch($offset-top:false);
+
+		text-align: center;
+	}
+
+	.menu-item {
+		@include inline-block;
+
+		text-transform: uppercase;
+
+		a {
+			$dimension: 115px;
+
+			@include border-radius(100%);
+
+			border: 2px solid $border-color;
+			color: #5c5c5c;
+			display: table;
+			height: $dimension;
+			text-decoration: none;
+			text-align: center;
+			vertical-align: center;
+			width: $dimension;
+		}
+
+		span {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.content {
+		border: 1px solid $border-color;
+		height: 524px;
+		position: relative;
+		width: 480px;
+	}
+}
