@@ -15,10 +15,8 @@
 </head>
 <body <?php body_class(); ?>>
 	<header id="header">
-	</header>
-	<div id="main">
 		<?php if (!is_home()): ?>
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="nav-main">
 			<?php wp_nav_menu(array(
 				'theme_location' => 'main',
 				'container' => false,
@@ -27,3 +25,5 @@
 			)); ?>
 		</nav>
 		<?php endif; ?>
+	</header>
+	<div id="main">

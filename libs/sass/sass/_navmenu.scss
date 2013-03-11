@@ -1,0 +1,49 @@
+#nav-main {
+	$border-color: #1a1a1a;
+	$height: logo-sprite-height(black);
+	$width: logo-sprite-width(black);
+
+	@include stretch-y;
+
+	margin-top: $height;
+	position: relative;
+	width: $width;
+
+	&::before {
+		@include logo-sprite(black);
+		@include stretch-x;
+
+		display: block;
+		content: '';
+		height: $height;
+		position: absolute;
+		top: -$height;
+		z-index: 1000;
+	}
+
+	a {
+		color: #fff;
+		display: block;
+		padding: 1em 0;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	.nav-menu {
+		border-top: 1px solid $border-color;
+	}
+
+	.menu-item {
+		border-bottom: 1px solid $border-color;
+	}
+
+	.sub-menu {
+		display: none;
+	}
+
+	.current-page-ancestor {
+		a {
+			color: #4e4e4e;
+		}
+	}
+}
