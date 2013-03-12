@@ -1,18 +1,18 @@
 #nav-main {
+	$color: #000;
 	$border-color: #1a1a1a;
 	$height: logo-sprite-height(black);
 	$width: logo-sprite-width(black);
 
-	@include stretch-y;
+	@include stretch-y($offset-top:$height, $offset-bottom:0);
 
-	margin-top: $height;
-	position: relative;
 	width: $width;
 
 	&::before {
 		@include logo-sprite(black);
 		@include stretch-x;
 
+		border-top: $height solid $color;
 		display: block;
 		content: '';
 		height: $height;
@@ -24,26 +24,52 @@
 	a {
 		color: #fff;
 		display: block;
+		font-size: 13px;
 		padding: 1em 0;
+		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 	}
 
 	.nav-menu {
-		border-top: 1px solid $border-color;
+		@include stretch($offset-top:$height);
+
+		background-color: $color;
+		padding: 50px 30px 80px 30px;
+
+		&::after {
+			$height: cavalo-sprite-height(menu);
+			$width: cavalo-sprite-width(menu);
+
+			@include cavalo-sprite(menu);
+
+			content: '';
+			position: absolute;
+			bottom: 0;
+			height: $height;
+			width: $width;
+			padding-bottom: 40px;
+		}
 	}
 
 	.menu-item {
 		border-bottom: 1px solid $border-color;
+
+		&:first-child {
+			border-top: 1px solid $border-color;
+		}
 	}
 
 	.sub-menu {
 		display: none;
 	}
 
+	.current-menu-item,
 	.current-page-ancestor {
 		a {
-			color: #4e4e4e;
+			@include opacity(0.2);
+
+			color: #e6e6e6;
 		}
 	}
 }
