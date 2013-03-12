@@ -12,6 +12,9 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/galleria/galleria-1.2.9.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
