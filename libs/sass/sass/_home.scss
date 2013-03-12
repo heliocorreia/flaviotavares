@@ -1,26 +1,76 @@
 body.home {
-	$border-color: #414141;
+	@include stretch;
+	@include background(image-url("bg-home.jpg") no-repeat center center);
 
-	@include container;
+	$border-color: #fff;
+	$cavalo-offset: 72px;
+
+	#main {
+		display: table;
+		height: 100%;
+		text-align: center;
+		width: 100%;
+	}
+
+	.content {
+		display: table-cell;
+		vertical-align: middle;
+	}
 
 	#nav-lang {
-		@include stretch($offset-top:false);
+		background: #000;
+		border: 1px solid $border-color;
+		display: inline-block;
+		height: 524px;
+		margin-top: $cavalo-offset;
+		position: relative;
+		width: 480px;
 
-		text-align: center;
+		&::before {
+			@include cavalo-sprite(home);
+
+			content: '';
+			display: block;
+			height: cavalo-sprite-height(home);
+			width: cavalo-sprite-width(home);
+			margin: -$cavalo-offset auto 0 auto;
+		}
+	}
+
+	.nav-menu {
+		@include stretch($offset-bottom:67px, $offset-top:false);
+
+		&::before {
+			$height: logo-sprite-height(white-big);
+			@include logo-sprite(white-big);
+
+			content: '';
+			display: block;
+			height: $height;
+			width: logo-sprite-width(white-big);
+			margin: 0 auto;
+			position: relative;
+			top: -$height;
+		}
 	}
 
 	.menu-item {
 		@include inline-block;
 
 		text-transform: uppercase;
+		
+		& + .menu-item {
+			margin-left: 25px;
+		}
 
 		a {
 			$dimension: 115px;
 
 			@include border-radius(100%);
+			@include opacity(0.5);
 
 			border: 2px solid $border-color;
-			color: #5c5c5c;
+			color: #e6e6e6;
 			display: table;
 			height: $dimension;
 			text-decoration: none;
@@ -33,12 +83,5 @@ body.home {
 			display: table-cell;
 			vertical-align: middle;
 		}
-	}
-
-	.content {
-		border: 1px solid $border-color;
-		height: 524px;
-		position: relative;
-		width: 480px;
 	}
 }
