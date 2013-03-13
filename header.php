@@ -9,25 +9,38 @@
 	<title><?php wp_title(' | ', true, 'right'); ?><?php bloginfo('name'); ?></title>
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/media/compiled/css/flaviotavares.css" />
 	<meta name="viewport" content="width=device-width">
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<!--
 	<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	-->
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/jquery-1.9.1.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/galleria/galleria-1.2.9.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+	<?php if (!is_home()): ?>
 	<header id="header">
-		<?php if (!is_home()): ?>
-		<nav id="nav-main">
-			<?php wp_nav_menu(array(
-				'theme_location' => 'main',
-				'container' => false,
-				'menu_class' => 'nav-menu',
-				'depth' => 2,
-			)); ?>
-		</nav>
-		<?php endif; ?>
+		<section class="primary">
+			<nav id="nav-main">
+				<?php wp_nav_menu(array(
+					'theme_location' => 'main',
+					'container' => false,
+					'menu_class' => 'nav-menu',
+					'depth' => 2,
+				)); ?>
+			</nav>
+		</section>
+		<section>
+			<nav id="nav-language">
+				<?php wp_nav_menu(array(
+					'theme_location' => 'language',
+					'container' => false,
+					'menu_class' => 'nav-menu',
+					'depth' => 1,
+				)); ?>
+			</nav>
+		</section>
 	</header>
+	<?php endif; ?>
 	<div id="main">

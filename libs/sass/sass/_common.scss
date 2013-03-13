@@ -1,4 +1,5 @@
 // susy
+ 
 $total-columns  : 16;             // a 12-column grid
 $column-width   : 56px;           // each column is 4em wide
 $gutter-width   : 28px;           // 1em gutters between columns
@@ -6,17 +7,22 @@ $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
 @import "susy";
 
+// compass
+ 
 @import "compass/css3";
+@import "compass/css3/transition";
 @import "compass/layout/stretching";
 @import "compass/reset";
+@import "compass/typography/text/replacement";
 
-@include global-reset;
+// sprites
+ 
+$logo-sprite-dimensions: true;
+$seta-sprite-dimensions: true;
+$cavalo-sprite-dimensions: true;
+$language-sprite-dimensions: true;
 
-html,
-body {
-	background: #000;
-}
-
-body {
-	font-family: 'Quattrocento Sans', sans-serif;
-}
+@import "logo/*.png";
+@import "seta/*.png";
+@import "cavalo/*.png";
+@import "language/*.png";

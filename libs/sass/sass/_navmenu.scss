@@ -1,27 +1,114 @@
-#nav-main {
-	$color: #000;
-	$border-color: #1a1a1a;
-	$height: logo-sprite-height(black);
-	$width: logo-sprite-width(black);
+#header .primary {
+	$logo-sprite-height: logo-sprite-height(black);
+	$cavalo-sprite-height: cavalo-sprite-height(menu);
+	$padding-bottom: 30px;
+	$padding-top: 30px;
 
-	@include stretch-y($offset-top:$height, $offset-bottom:0);
-
-	width: $width;
-	margin-left: 100px;
-	z-index: 10000;
+	display: table;
+	height: 100%;
+	margin-left: 50px;
+	padding-bottom: $padding-top + $cavalo-sprite-height;
+	padding-top: $padding-top + $logo-sprite-height;
+	position: absolute;
+	width: logo-sprite-width(black);
+	z-index: 10;
 
 	&::before {
 		@include logo-sprite(black);
 		@include stretch-x;
 
-		border-top: $height solid $color;
-		display: block;
+		border-top: $padding-top solid $color-black;
 		content: '';
-		height: $height;
+		display: block;
+		left: 0;
 		position: absolute;
-		top: -$height;
-		z-index: 1000;
+		top: 0;
 	}
+
+	&::after {
+		$logo-sprite-width: logo-sprite-width(black);
+		$cavalo-sprite-width: cavalo-sprite-width(menu);
+		$padding-left: round(($logo-sprite-width - $cavalo-sprite-width) / 2);
+		$padding-right: $logo-sprite-width - $cavalo-sprite-width - $padding-left;
+
+		@include cavalo-sprite(menu);
+
+		border: solid $color-black;
+		border-width: $padding-bottom $padding-right $padding-bottom $padding-left;
+		content: '';
+		left: 0;
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+#nav-language {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 10;
+
+	.nav-menu:hover {
+		@include clearfix;
+
+		.menu-item {
+			@include inline-block;
+		}
+	}
+
+	.menu-item {
+		display: none;
+		float: left;
+
+		a {
+			@include hide-text;
+			@include inline-block;
+		}
+	}
+
+	.current-menu-item,
+	.current-page-ancestor {
+		@include inline-block;
+
+		float: right;
+	}
+
+	.slug-portugues a {
+		@include language-sprite(br);
+	}
+
+	.slug-english a {
+		@include language-sprite(en);
+	}
+}
+
+#nav-prev-next {
+	text-align: center;
+	margin-bottom: 30px;
+
+	.prev, .next {
+		cursor: pointer;
+		display: inline-block;
+		margin: 0 .25em;
+	}
+
+	.prev {
+		@include seta-sprite(rounded-small-left);
+	}
+
+	.next {
+		@include seta-sprite(rounded-small-right);
+	}
+}
+
+
+#nav-main {
+	$border-color: #1a1a1a;
+
+	background-color: $color-black;
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
 
 	a {
 		color: #fff;
@@ -34,24 +121,7 @@
 	}
 
 	.nav-menu {
-		@include stretch($offset-top:$height);
-
-		background-color: $color;
-		padding: 50px 30px 80px 30px;
-
-		&::after {
-			$height: cavalo-sprite-height(menu);
-			$width: cavalo-sprite-width(menu);
-
-			@include cavalo-sprite(menu);
-
-			content: '';
-			position: absolute;
-			bottom: 0;
-			height: $height;
-			width: $width;
-			padding-bottom: 40px;
-		}
+		padding: 0 30px;
 	}
 
 	.menu-item {

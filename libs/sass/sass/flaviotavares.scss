@@ -1,7 +1,18 @@
 @import "common";
 
-@import "logo/*.png";
-@import "cavalo/*.png";
+$color-black: #000;
+$color-white: #fff;
+
+@include global-reset;
+
+html,
+body {
+	background: $color-white;
+}
+
+body {
+	font-family: 'Quattrocento Sans', sans-serif;
+}
 
 @import "navmenu";
 @import "home";
