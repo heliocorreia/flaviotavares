@@ -437,7 +437,7 @@ html {
 
 /* line 8, ../../../libs/sass/sass/flaviotavares.scss */
 body {
-  background: black;
+  background: black no-repeat top center;
   font-family: 'Quattrocento Sans', sans-serif;
 }
 
@@ -452,6 +452,20 @@ body {
   margin-right: auto;
   overflow: hidden;
   *zoom: 1;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(4.7619%, rgba(100, 100, 225, 0.25)), color-stop(4.7619%, rgba(0, 0, 0, 0)), color-stop(6.34921%, rgba(0, 0, 0, 0)), color-stop(6.34921%, rgba(100, 100, 225, 0.25)), color-stop(11.11111%, rgba(100, 100, 225, 0.25)), color-stop(11.11111%, rgba(0, 0, 0, 0)), color-stop(12.69841%, rgba(0, 0, 0, 0)), color-stop(12.69841%, rgba(100, 100, 225, 0.25)), color-stop(17.46032%, rgba(100, 100, 225, 0.25)), color-stop(17.46032%, rgba(0, 0, 0, 0)), color-stop(19.04762%, rgba(0, 0, 0, 0)), color-stop(19.04762%, rgba(100, 100, 225, 0.25)), color-stop(23.80952%, rgba(100, 100, 225, 0.25)), color-stop(23.80952%, rgba(0, 0, 0, 0)), color-stop(25.39683%, rgba(0, 0, 0, 0)), color-stop(25.39683%, rgba(100, 100, 225, 0.25)), color-stop(30.15873%, rgba(100, 100, 225, 0.25)), color-stop(30.15873%, rgba(0, 0, 0, 0)), color-stop(31.74603%, rgba(0, 0, 0, 0)), color-stop(31.74603%, rgba(100, 100, 225, 0.25)), color-stop(36.50794%, rgba(100, 100, 225, 0.25)), color-stop(36.50794%, rgba(0, 0, 0, 0)), color-stop(38.09524%, rgba(0, 0, 0, 0)), color-stop(38.09524%, rgba(100, 100, 225, 0.25)), color-stop(42.85714%, rgba(100, 100, 225, 0.25)), color-stop(42.85714%, rgba(0, 0, 0, 0)), color-stop(44.44444%, rgba(0, 0, 0, 0)), color-stop(44.44444%, rgba(100, 100, 225, 0.25)), color-stop(49.20635%, rgba(100, 100, 225, 0.25)), color-stop(49.20635%, rgba(0, 0, 0, 0)), color-stop(50.79365%, rgba(0, 0, 0, 0)), color-stop(50.79365%, rgba(100, 100, 225, 0.25)), color-stop(55.55556%, rgba(100, 100, 225, 0.25)), color-stop(55.55556%, rgba(0, 0, 0, 0)), color-stop(57.14286%, rgba(0, 0, 0, 0)), color-stop(57.14286%, rgba(100, 100, 225, 0.25)), color-stop(61.90476%, rgba(100, 100, 225, 0.25)), color-stop(61.90476%, rgba(0, 0, 0, 0)), color-stop(63.49206%, rgba(0, 0, 0, 0)), color-stop(63.49206%, rgba(100, 100, 225, 0.25)), color-stop(68.25397%, rgba(100, 100, 225, 0.25)), color-stop(68.25397%, rgba(0, 0, 0, 0)), color-stop(69.84127%, rgba(0, 0, 0, 0)), color-stop(69.84127%, rgba(100, 100, 225, 0.25)), color-stop(74.60317%, rgba(100, 100, 225, 0.25)), color-stop(74.60317%, rgba(0, 0, 0, 0)), color-stop(76.19048%, rgba(0, 0, 0, 0)), color-stop(76.19048%, rgba(100, 100, 225, 0.25)), color-stop(80.95238%, rgba(100, 100, 225, 0.25)), color-stop(80.95238%, rgba(0, 0, 0, 0)), color-stop(82.53968%, rgba(0, 0, 0, 0)), color-stop(82.53968%, rgba(100, 100, 225, 0.25)), color-stop(87.30159%, rgba(100, 100, 225, 0.25)), color-stop(87.30159%, rgba(0, 0, 0, 0)), color-stop(88.88889%, rgba(0, 0, 0, 0)), color-stop(88.88889%, rgba(100, 100, 225, 0.25)), color-stop(93.65079%, rgba(100, 100, 225, 0.25)), color-stop(93.65079%, rgba(0, 0, 0, 0)), color-stop(95.2381%, rgba(0, 0, 0, 0)), color-stop(95.2381%, rgba(100, 100, 225, 0.25)), color-stop(100.0%, rgba(100, 100, 225, 0.25)), color-stop(100.0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 4.7619%, rgba(0, 0, 0, 0) 4.7619%, rgba(0, 0, 0, 0) 6.34921%, rgba(100, 100, 225, 0.25) 6.34921%, rgba(100, 100, 225, 0.25) 11.11111%, rgba(0, 0, 0, 0) 11.11111%, rgba(0, 0, 0, 0) 12.69841%, rgba(100, 100, 225, 0.25) 12.69841%, rgba(100, 100, 225, 0.25) 17.46032%, rgba(0, 0, 0, 0) 17.46032%, rgba(0, 0, 0, 0) 19.04762%, rgba(100, 100, 225, 0.25) 19.04762%, rgba(100, 100, 225, 0.25) 23.80952%, rgba(0, 0, 0, 0) 23.80952%, rgba(0, 0, 0, 0) 25.39683%, rgba(100, 100, 225, 0.25) 25.39683%, rgba(100, 100, 225, 0.25) 30.15873%, rgba(0, 0, 0, 0) 30.15873%, rgba(0, 0, 0, 0) 31.74603%, rgba(100, 100, 225, 0.25) 31.74603%, rgba(100, 100, 225, 0.25) 36.50794%, rgba(0, 0, 0, 0) 36.50794%, rgba(0, 0, 0, 0) 38.09524%, rgba(100, 100, 225, 0.25) 38.09524%, rgba(100, 100, 225, 0.25) 42.85714%, rgba(0, 0, 0, 0) 42.85714%, rgba(0, 0, 0, 0) 44.44444%, rgba(100, 100, 225, 0.25) 44.44444%, rgba(100, 100, 225, 0.25) 49.20635%, rgba(0, 0, 0, 0) 49.20635%, rgba(0, 0, 0, 0) 50.79365%, rgba(100, 100, 225, 0.25) 50.79365%, rgba(100, 100, 225, 0.25) 55.55556%, rgba(0, 0, 0, 0) 55.55556%, rgba(0, 0, 0, 0) 57.14286%, rgba(100, 100, 225, 0.25) 57.14286%, rgba(100, 100, 225, 0.25) 61.90476%, rgba(0, 0, 0, 0) 61.90476%, rgba(0, 0, 0, 0) 63.49206%, rgba(100, 100, 225, 0.25) 63.49206%, rgba(100, 100, 225, 0.25) 68.25397%, rgba(0, 0, 0, 0) 68.25397%, rgba(0, 0, 0, 0) 69.84127%, rgba(100, 100, 225, 0.25) 69.84127%, rgba(100, 100, 225, 0.25) 74.60317%, rgba(0, 0, 0, 0) 74.60317%, rgba(0, 0, 0, 0) 76.19048%, rgba(100, 100, 225, 0.25) 76.19048%, rgba(100, 100, 225, 0.25) 80.95238%, rgba(0, 0, 0, 0) 80.95238%, rgba(0, 0, 0, 0) 82.53968%, rgba(100, 100, 225, 0.25) 82.53968%, rgba(100, 100, 225, 0.25) 87.30159%, rgba(0, 0, 0, 0) 87.30159%, rgba(0, 0, 0, 0) 88.88889%, rgba(100, 100, 225, 0.25) 88.88889%, rgba(100, 100, 225, 0.25) 93.65079%, rgba(0, 0, 0, 0) 93.65079%, rgba(0, 0, 0, 0) 95.2381%, rgba(100, 100, 225, 0.25) 95.2381%, rgba(100, 100, 225, 0.25) 100.0%, rgba(0, 0, 0, 0) 100.0%, rgba(0, 0, 0, 0) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 4.7619%, rgba(0, 0, 0, 0) 4.7619%, rgba(0, 0, 0, 0) 6.34921%, rgba(100, 100, 225, 0.25) 6.34921%, rgba(100, 100, 225, 0.25) 11.11111%, rgba(0, 0, 0, 0) 11.11111%, rgba(0, 0, 0, 0) 12.69841%, rgba(100, 100, 225, 0.25) 12.69841%, rgba(100, 100, 225, 0.25) 17.46032%, rgba(0, 0, 0, 0) 17.46032%, rgba(0, 0, 0, 0) 19.04762%, rgba(100, 100, 225, 0.25) 19.04762%, rgba(100, 100, 225, 0.25) 23.80952%, rgba(0, 0, 0, 0) 23.80952%, rgba(0, 0, 0, 0) 25.39683%, rgba(100, 100, 225, 0.25) 25.39683%, rgba(100, 100, 225, 0.25) 30.15873%, rgba(0, 0, 0, 0) 30.15873%, rgba(0, 0, 0, 0) 31.74603%, rgba(100, 100, 225, 0.25) 31.74603%, rgba(100, 100, 225, 0.25) 36.50794%, rgba(0, 0, 0, 0) 36.50794%, rgba(0, 0, 0, 0) 38.09524%, rgba(100, 100, 225, 0.25) 38.09524%, rgba(100, 100, 225, 0.25) 42.85714%, rgba(0, 0, 0, 0) 42.85714%, rgba(0, 0, 0, 0) 44.44444%, rgba(100, 100, 225, 0.25) 44.44444%, rgba(100, 100, 225, 0.25) 49.20635%, rgba(0, 0, 0, 0) 49.20635%, rgba(0, 0, 0, 0) 50.79365%, rgba(100, 100, 225, 0.25) 50.79365%, rgba(100, 100, 225, 0.25) 55.55556%, rgba(0, 0, 0, 0) 55.55556%, rgba(0, 0, 0, 0) 57.14286%, rgba(100, 100, 225, 0.25) 57.14286%, rgba(100, 100, 225, 0.25) 61.90476%, rgba(0, 0, 0, 0) 61.90476%, rgba(0, 0, 0, 0) 63.49206%, rgba(100, 100, 225, 0.25) 63.49206%, rgba(100, 100, 225, 0.25) 68.25397%, rgba(0, 0, 0, 0) 68.25397%, rgba(0, 0, 0, 0) 69.84127%, rgba(100, 100, 225, 0.25) 69.84127%, rgba(100, 100, 225, 0.25) 74.60317%, rgba(0, 0, 0, 0) 74.60317%, rgba(0, 0, 0, 0) 76.19048%, rgba(100, 100, 225, 0.25) 76.19048%, rgba(100, 100, 225, 0.25) 80.95238%, rgba(0, 0, 0, 0) 80.95238%, rgba(0, 0, 0, 0) 82.53968%, rgba(100, 100, 225, 0.25) 82.53968%, rgba(100, 100, 225, 0.25) 87.30159%, rgba(0, 0, 0, 0) 87.30159%, rgba(0, 0, 0, 0) 88.88889%, rgba(100, 100, 225, 0.25) 88.88889%, rgba(100, 100, 225, 0.25) 93.65079%, rgba(0, 0, 0, 0) 93.65079%, rgba(0, 0, 0, 0) 95.2381%, rgba(100, 100, 225, 0.25) 95.2381%, rgba(100, 100, 225, 0.25) 100.0%, rgba(0, 0, 0, 0) 100.0%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 4.7619%, rgba(0, 0, 0, 0) 4.7619%, rgba(0, 0, 0, 0) 6.34921%, rgba(100, 100, 225, 0.25) 6.34921%, rgba(100, 100, 225, 0.25) 11.11111%, rgba(0, 0, 0, 0) 11.11111%, rgba(0, 0, 0, 0) 12.69841%, rgba(100, 100, 225, 0.25) 12.69841%, rgba(100, 100, 225, 0.25) 17.46032%, rgba(0, 0, 0, 0) 17.46032%, rgba(0, 0, 0, 0) 19.04762%, rgba(100, 100, 225, 0.25) 19.04762%, rgba(100, 100, 225, 0.25) 23.80952%, rgba(0, 0, 0, 0) 23.80952%, rgba(0, 0, 0, 0) 25.39683%, rgba(100, 100, 225, 0.25) 25.39683%, rgba(100, 100, 225, 0.25) 30.15873%, rgba(0, 0, 0, 0) 30.15873%, rgba(0, 0, 0, 0) 31.74603%, rgba(100, 100, 225, 0.25) 31.74603%, rgba(100, 100, 225, 0.25) 36.50794%, rgba(0, 0, 0, 0) 36.50794%, rgba(0, 0, 0, 0) 38.09524%, rgba(100, 100, 225, 0.25) 38.09524%, rgba(100, 100, 225, 0.25) 42.85714%, rgba(0, 0, 0, 0) 42.85714%, rgba(0, 0, 0, 0) 44.44444%, rgba(100, 100, 225, 0.25) 44.44444%, rgba(100, 100, 225, 0.25) 49.20635%, rgba(0, 0, 0, 0) 49.20635%, rgba(0, 0, 0, 0) 50.79365%, rgba(100, 100, 225, 0.25) 50.79365%, rgba(100, 100, 225, 0.25) 55.55556%, rgba(0, 0, 0, 0) 55.55556%, rgba(0, 0, 0, 0) 57.14286%, rgba(100, 100, 225, 0.25) 57.14286%, rgba(100, 100, 225, 0.25) 61.90476%, rgba(0, 0, 0, 0) 61.90476%, rgba(0, 0, 0, 0) 63.49206%, rgba(100, 100, 225, 0.25) 63.49206%, rgba(100, 100, 225, 0.25) 68.25397%, rgba(0, 0, 0, 0) 68.25397%, rgba(0, 0, 0, 0) 69.84127%, rgba(100, 100, 225, 0.25) 69.84127%, rgba(100, 100, 225, 0.25) 74.60317%, rgba(0, 0, 0, 0) 74.60317%, rgba(0, 0, 0, 0) 76.19048%, rgba(100, 100, 225, 0.25) 76.19048%, rgba(100, 100, 225, 0.25) 80.95238%, rgba(0, 0, 0, 0) 80.95238%, rgba(0, 0, 0, 0) 82.53968%, rgba(100, 100, 225, 0.25) 82.53968%, rgba(100, 100, 225, 0.25) 87.30159%, rgba(0, 0, 0, 0) 87.30159%, rgba(0, 0, 0, 0) 88.88889%, rgba(100, 100, 225, 0.25) 88.88889%, rgba(100, 100, 225, 0.25) 93.65079%, rgba(0, 0, 0, 0) 93.65079%, rgba(0, 0, 0, 0) 95.2381%, rgba(100, 100, 225, 0.25) 95.2381%, rgba(100, 100, 225, 0.25) 100.0%, rgba(0, 0, 0, 0) 100.0%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 4.7619%, rgba(0, 0, 0, 0) 4.7619%, rgba(0, 0, 0, 0) 6.34921%, rgba(100, 100, 225, 0.25) 6.34921%, rgba(100, 100, 225, 0.25) 11.11111%, rgba(0, 0, 0, 0) 11.11111%, rgba(0, 0, 0, 0) 12.69841%, rgba(100, 100, 225, 0.25) 12.69841%, rgba(100, 100, 225, 0.25) 17.46032%, rgba(0, 0, 0, 0) 17.46032%, rgba(0, 0, 0, 0) 19.04762%, rgba(100, 100, 225, 0.25) 19.04762%, rgba(100, 100, 225, 0.25) 23.80952%, rgba(0, 0, 0, 0) 23.80952%, rgba(0, 0, 0, 0) 25.39683%, rgba(100, 100, 225, 0.25) 25.39683%, rgba(100, 100, 225, 0.25) 30.15873%, rgba(0, 0, 0, 0) 30.15873%, rgba(0, 0, 0, 0) 31.74603%, rgba(100, 100, 225, 0.25) 31.74603%, rgba(100, 100, 225, 0.25) 36.50794%, rgba(0, 0, 0, 0) 36.50794%, rgba(0, 0, 0, 0) 38.09524%, rgba(100, 100, 225, 0.25) 38.09524%, rgba(100, 100, 225, 0.25) 42.85714%, rgba(0, 0, 0, 0) 42.85714%, rgba(0, 0, 0, 0) 44.44444%, rgba(100, 100, 225, 0.25) 44.44444%, rgba(100, 100, 225, 0.25) 49.20635%, rgba(0, 0, 0, 0) 49.20635%, rgba(0, 0, 0, 0) 50.79365%, rgba(100, 100, 225, 0.25) 50.79365%, rgba(100, 100, 225, 0.25) 55.55556%, rgba(0, 0, 0, 0) 55.55556%, rgba(0, 0, 0, 0) 57.14286%, rgba(100, 100, 225, 0.25) 57.14286%, rgba(100, 100, 225, 0.25) 61.90476%, rgba(0, 0, 0, 0) 61.90476%, rgba(0, 0, 0, 0) 63.49206%, rgba(100, 100, 225, 0.25) 63.49206%, rgba(100, 100, 225, 0.25) 68.25397%, rgba(0, 0, 0, 0) 68.25397%, rgba(0, 0, 0, 0) 69.84127%, rgba(100, 100, 225, 0.25) 69.84127%, rgba(100, 100, 225, 0.25) 74.60317%, rgba(0, 0, 0, 0) 74.60317%, rgba(0, 0, 0, 0) 76.19048%, rgba(100, 100, 225, 0.25) 76.19048%, rgba(100, 100, 225, 0.25) 80.95238%, rgba(0, 0, 0, 0) 80.95238%, rgba(0, 0, 0, 0) 82.53968%, rgba(100, 100, 225, 0.25) 82.53968%, rgba(100, 100, 225, 0.25) 87.30159%, rgba(0, 0, 0, 0) 87.30159%, rgba(0, 0, 0, 0) 88.88889%, rgba(100, 100, 225, 0.25) 88.88889%, rgba(100, 100, 225, 0.25) 93.65079%, rgba(0, 0, 0, 0) 93.65079%, rgba(0, 0, 0, 0) 95.2381%, rgba(100, 100, 225, 0.25) 95.2381%, rgba(100, 100, 225, 0.25) 100.0%, rgba(0, 0, 0, 0) 100.0%, rgba(0, 0, 0, 0) 100%);
+  background-position: left top;
+  -webkit-background-origin: content;
+  -moz-background-origin: content;
+  -ms-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
+  -webkit-background-clip: content-box;
+  -moz-background-clip: content-box;
+  background-clip: content-box;
   position: relative;
 }
 /* line 38, ../../../../../../../../../.rvm/gems/ruby-2.0.0-p0@flaviotavares/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
@@ -647,10 +661,10 @@ body {
 
 /* line 1, ../../../libs/sass/sass/_home.scss */
 body.home {
-  background: url('../../img/bg-home.jpg?1363051829') no-repeat top center;
   background-color: black;
+  background-image: url('../../img/bg-home.jpg?1363051829');
 }
-/* line 9, ../../../libs/sass/sass/_home.scss */
+/* line 8, ../../../libs/sass/sass/_home.scss */
 body.home #doc {
   position: absolute;
   top: 0;
@@ -658,19 +672,19 @@ body.home #doc {
   left: 0;
   right: 0;
 }
-/* line 13, ../../../libs/sass/sass/_home.scss */
+/* line 12, ../../../libs/sass/sass/_home.scss */
 body.home #page-home {
   display: table;
   height: 100%;
   text-align: center;
   width: 100%;
 }
-/* line 20, ../../../libs/sass/sass/_home.scss */
+/* line 19, ../../../libs/sass/sass/_home.scss */
 body.home .content {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 25, ../../../libs/sass/sass/_home.scss */
+/* line 24, ../../../libs/sass/sass/_home.scss */
 body.home #nav-lang {
   background: #000;
   border: 1px solid white;
@@ -680,7 +694,7 @@ body.home #nav-lang {
   position: relative;
   width: 480px;
 }
-/* line 34, ../../../libs/sass/sass/_home.scss */
+/* line 33, ../../../libs/sass/sass/_home.scss */
 body.home #nav-lang::before {
   background-position: 0 0;
   height: 256px;
@@ -691,14 +705,14 @@ body.home #nav-lang::before {
   width: 402px;
   margin: -72px auto 0 auto;
 }
-/* line 45, ../../../libs/sass/sass/_home.scss */
+/* line 44, ../../../libs/sass/sass/_home.scss */
 body.home .nav-menu {
   position: absolute;
   bottom: 67px;
   left: 0;
   right: 0;
 }
-/* line 48, ../../../libs/sass/sass/_home.scss */
+/* line 47, ../../../libs/sass/sass/_home.scss */
 body.home .nav-menu::before {
   background-position: 0 0;
   height: 53px;
@@ -711,7 +725,7 @@ body.home .nav-menu::before {
   position: relative;
   top: -53px;
 }
-/* line 62, ../../../libs/sass/sass/_home.scss */
+/* line 61, ../../../libs/sass/sass/_home.scss */
 body.home .menu-item {
   display: -moz-inline-stack;
   display: inline-block;
@@ -721,11 +735,11 @@ body.home .menu-item {
   *display: inline;
   text-transform: uppercase;
 }
-/* line 67, ../../../libs/sass/sass/_home.scss */
+/* line 66, ../../../libs/sass/sass/_home.scss */
 body.home .menu-item + .menu-item {
   margin-left: 25px;
 }
-/* line 71, ../../../libs/sass/sass/_home.scss */
+/* line 70, ../../../libs/sass/sass/_home.scss */
 body.home .menu-item a {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -743,7 +757,7 @@ body.home .menu-item a {
   vertical-align: center;
   width: 115px;
 }
-/* line 87, ../../../libs/sass/sass/_home.scss */
+/* line 86, ../../../libs/sass/sass/_home.scss */
 body.home .menu-item span {
   display: table-cell;
   vertical-align: middle;
@@ -760,11 +774,11 @@ body.home .menu-item span {
 
 /* line 1, ../../../libs/sass/sass/templates/_biography.scss */
 body.page-template-t-biography-php {
-  background: url('../../img/bg-biography.jpg?1363318274') no-repeat top center;
+  background-image: url('../../img/bg-biography.jpg?1363318274');
   background-color: white;
 }
 
-/* line 7, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 6, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography {
   width: 80.95238%;
   float: right;
@@ -772,14 +786,14 @@ body.page-template-t-biography-php {
   #margin-left: -20px;
   display: inline;
 }
-/* line 12, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 11, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header {
   overflow: hidden;
   *zoom: 1;
   padding-top: 40.5em;
   position: relative;
 }
-/* line 18, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 17, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .main-title {
   color: white;
   font-size: 165px;
@@ -791,7 +805,7 @@ body.page-template-t-biography-php {
   top: 165px;
   z-index: 100;
 }
-/* line 30, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 29, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-author {
   width: 37.2549%;
   float: left;
@@ -809,25 +823,25 @@ body.page-template-t-biography-php {
   top: 310px;
   z-index: 10;
 }
-/* line 45, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 44, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-author p {
   border: solid #846d46;
   border-width: 1px 1px 0 1px;
   margin: 0;
   padding: 35px 35px 10px 35px;
 }
-/* line 52, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 51, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-author p:last-child {
   border-width: 0 1px 1px 1px;
   padding: 0 35px 35px 35px;
 }
-/* line 57, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 56, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-author strong {
   color: #846d46;
   display: block;
   font-size: 14px;
 }
-/* line 64, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 63, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .slides {
   width: 68.62745%;
   float: right;
@@ -838,7 +852,7 @@ body.page-template-t-biography-php {
   right: 0;
   top: 150px;
 }
-/* line 72, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 71, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others {
   margin-top: 1.5em;
   padding-top: 0em;
@@ -853,7 +867,7 @@ body.page-template-t-biography-php {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 81, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 80, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others p {
   margin-top: 0em;
   padding-top: 0em;
@@ -862,49 +876,49 @@ body.page-template-t-biography-php {
   color: #987e51;
   font-style: italic;
 }
-/* line 87, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 86, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others p span {
   font-size: 2em;
   line-height: 1.5em;
   display: block;
   text-align: center;
 }
-/* line 95, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 94, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others .block-2, #t-biography .content-header .by-others .block-4 {
   color: #4b3a1d;
 }
-/* line 99, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 98, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others .block-1 {
   text-align: right;
 }
-/* line 103, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 102, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others .block-3 {
   text-align: left;
 }
-/* line 107, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 106, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others footer {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
   color: #000;
   text-align: center;
 }
-/* line 113, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 112, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others footer span {
   font-weight: bold;
 }
-/* line 120, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 119, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography article {
   overflow: hidden;
   *zoom: 1;
   position: relative;
   padding-top: 218px;
 }
-/* line 128, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 127, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content > :first-child, #t-biography .sidebar > :first-child {
   margin-top: 0;
   padding-top: 0;
 }
-/* line 134, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 133, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content {
   margin-left: 23.52941%;
   width: 37.2549%;
@@ -913,7 +927,7 @@ body.page-template-t-biography-php {
   display: inline;
   color: #333;
 }
-/* line 140, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 139, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content h1 {
   font-size: 1em;
   line-height: 1.5em;
@@ -925,18 +939,18 @@ body.page-template-t-biography-php {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 149, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 148, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content blockquote, #t-biography .content p {
   margin-top: 1.5em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.5em;
 }
-/* line 153, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 152, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content blockquote {
   color: #987e51;
 }
-/* line 156, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 155, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content blockquote p {
   font-size: 1.25em;
   line-height: 1.2em;
@@ -945,7 +959,7 @@ body.page-template-t-biography-php {
   padding-bottom: 0em;
   margin-bottom: 1.2em;
 }
-/* line 163, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 162, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar {
   margin-left: 7.84314%;
   width: 29.41176%;
@@ -954,21 +968,21 @@ body.page-template-t-biography-php {
   #margin-left: -20px;
   display: inline;
 }
-/* line 169, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 168, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar ol, #t-biography .sidebar li {
   margin-top: 2em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 2em;
 }
-/* line 173, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 172, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar ol {
   font-size: 0.75em;
   line-height: 2em;
   color: #666;
   list-style: decimal outside;
 }
-/* line 179, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 178, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar ol dd {
   margin-top: 0em;
   padding-top: 0em;
@@ -976,18 +990,18 @@ body.page-template-t-biography-php {
   margin-bottom: 0em;
   margin-left: 0;
 }
-/* line 185, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 184, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar ol .title {
   color: #987e51;
   font-weight: bold;
 }
-/* line 191, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 190, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar figure {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 198, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 197, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar figure::after {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1003,15 +1017,75 @@ body.page-template-t-biography-php {
   right: 0;
   margin-bottom: -20px;
 }
-/* line 209, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 208, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar figure.img-2 {
   left: 284px;
 }
-/* line 213, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 212, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar figure.img-3 {
   left: 558px;
 }
-/* line 217, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 216, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar figure.img-4 {
   top: 198px;
+}
+
+/* line 1, ../../../libs/sass/sass/templates/_contact.scss */
+body.page-template-t-contact-php {
+  background-image: url('../../img/bg-contact.jpg?1363463611');
+}
+
+/* line 5, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  left: 38.09524%;
+  width: 42.85714%;
+}
+/* line 13, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact .outter {
+  display: table;
+  height: 100%;
+}
+/* line 18, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact .inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 23, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact address {
+  margin-top: 1.5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em;
+  background: black;
+  font-style: normal;
+}
+/* line 29, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact address, #t-contact address div {
+  padding: 1em;
+}
+/* line 33, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact address div {
+  border: 1px solid #987e51;
+}
+/* line 38, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact h1, #t-contact p {
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+}
+/* line 42, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact h1, #t-contact a {
+  color: #987e51;
+}
+/* line 46, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact h1 {
+  font-size: 1em;
+  line-height: 1.5em;
+  text-transform: uppercase;
 }

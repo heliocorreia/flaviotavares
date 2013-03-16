@@ -1,0 +1,51 @@
+body.page-template-t-contact-php {
+	background-image: image-url("bg-contact.jpg");
+}
+
+#t-contact {
+	@include stretch-y;
+
+	color: $color-white;
+	text-align: center;
+	left: space(6);
+	width: columns(7);
+
+	.outter {
+		display: table;
+		height: 100%;
+	}
+
+	.inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	address {
+		@include rhythm(1, 0, 0, 1);
+
+		background: $color-black;
+		font-style: normal;
+
+		&, div {
+			padding: 1em;
+		}
+
+		div {
+			border: 1px solid #987e51;
+		}
+	}
+
+	h1, p {
+		@include rhythm;
+	}
+
+	h1, a {
+		color: #987e51;
+	}
+
+	h1 {
+		@include adjust-font-size-to(16px);
+
+		text-transform: uppercase;
+	}
+}

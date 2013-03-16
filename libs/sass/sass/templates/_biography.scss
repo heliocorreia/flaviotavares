@@ -1,6 +1,5 @@
 body.page-template-t-biography-php {
-	@include background(image-url("bg-biography.jpg") no-repeat top center);
-
+	background-image: image-url("bg-biography.jpg");
 	background-color: $color-white;
 }
 

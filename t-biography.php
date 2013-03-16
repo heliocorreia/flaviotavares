@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Biography
+Template Name: [en] Biography
 */
 ?>
 <?php get_header(); ?>

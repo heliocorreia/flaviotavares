@@ -6,14 +6,14 @@ $color-white: #fff;
 @include establish-baseline;
 
 body {
-	background: $color-black;
+	background: $color-black no-repeat top center;
 	font-family: 'Quattrocento Sans', sans-serif;
 }
 
 #doc {
 	@include container;
 	@include clearfix;
-//	@include susy-grid-background;
+	@include susy-grid-background;
 
 	position: relative;
 }
@@ -22,3 +22,4 @@ body {
 @import "home";
 @import "galleria";
 @import "templates/biography";
+@import "templates/contact";

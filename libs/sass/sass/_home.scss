@@ -2,9 +2,8 @@ body.home {
 	$border-color: #fff;
 	$cavalo-offset: 72px;
 
-	@include background(image-url("bg-home.jpg") no-repeat top center);
-
 	background-color: $color-black;
+	background-image: image-url("bg-home.jpg");
 
 	#doc {
 		@include stretch;
