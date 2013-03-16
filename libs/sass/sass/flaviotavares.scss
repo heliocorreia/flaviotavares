@@ -6,13 +6,16 @@ $color-white: #fff;
 @include establish-baseline;
 
 body {
-	background: $color-white;
+	background: $color-black;
 	font-family: 'Quattrocento Sans', sans-serif;
 }
 
 #doc {
 	@include container;
 	@include clearfix;
+//	@include susy-grid-background;
+
+	position: relative;
 }
 
 @import "navmenu";

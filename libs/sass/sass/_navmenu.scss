@@ -1,24 +1,23 @@
 #header {
-	@include clearfix;
 	@include span-columns(3);
 
-	min-height: 100px;
+	min-height: 700px;
 }
 
 #nav-main {
 	$logo-sprite-height: logo-sprite-height(black);
+	$logo-sprite-width: logo-sprite-width(black);
 	$cavalo-sprite-height: cavalo-sprite-height(menu);
+	$cavalo-sprite-width: cavalo-sprite-width(menu);
 	$padding-bottom: 30px;
 	$padding-top: 30px;
 
-	@include span-columns(2, 2);
+	@include stretch-y;
+	@include span-columns(3);
 
-	display: block;
-	height: 100%;
 	padding-bottom: $padding-top + $cavalo-sprite-height;
 	padding-top: $padding-top + $logo-sprite-height;
-	position: relative;
-	min-width: logo-sprite-width(black);
+	width: $logo-sprite-width;
 	z-index: 10;
 
 	&::before {
@@ -34,8 +33,6 @@
 	}
 
 	&::after {
-		$logo-sprite-width: logo-sprite-width(black);
-		$cavalo-sprite-width: cavalo-sprite-width(menu);
 		$padding-left: round(($logo-sprite-width - $cavalo-sprite-width) / 2);
 		$padding-right: $logo-sprite-width - $cavalo-sprite-width - $padding-left;
 
@@ -49,13 +46,19 @@
 		bottom: 0;
 	}
 
-	div {
+	.nav-menu {
 		$border-color: #1a1a1a;
+
+		@include box-sizing(border-box);
+		@include stretch;
 
 		background-color: $color-black;
 		display: block;
-		vertical-align: middle;
-		width: 100%;
+		margin: 0;
+		padding: 0 30px;
+		padding-top: 150px;
+		top: $padding-top + $logo-sprite-height;
+		width: $logo-sprite-width;
 
 		a {
 			color: #fff;
@@ -67,15 +70,11 @@
 			text-transform: uppercase;
 		}
 
-		.nav-menu {
-			padding: 0 30px;
-		}
-
 		.menu-item {
-			border-bottom: 1px solid $border-color;
+			border-top: 1px solid $border-color;
 
-			&:first-child {
-				border-top: 1px solid $border-color;
+			&:last-child {
+				border-bottom: 1px solid $border-color;
 			}
 		}
 
@@ -98,7 +97,7 @@
 	position: absolute;
 	right: 20px;
 	top: 20px;
-	z-index: 10;
+	z-index: 1000;
 
 	.nav-menu:hover {
 		@include clearfix;
@@ -136,7 +135,7 @@
 
 #nav-prev-next {
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 1em;
 
 	.prev, .next {
 		cursor: pointer;

@@ -19,7 +19,7 @@ Galleria.run('#galleria');
 var oGallery = Galleria.get(0);
 
 
-$('#nav-main').prepend('<div id="nav-prev-next"><span class="prev"></span><span class="next"></span></div>');
+$('#nav-main .nav-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
 var $nav = $('#nav-prev-next');
 
 $('.prev', $nav).click(function(){

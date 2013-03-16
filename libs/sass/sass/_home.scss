@@ -2,10 +2,13 @@ body.home {
 	$border-color: #fff;
 	$cavalo-offset: 72px;
 
-	@include stretch;
-	@include background(image-url("bg-home.jpg") no-repeat center center);
+	@include background(image-url("bg-home.jpg") no-repeat top center);
 
 	background-color: $color-black;
+
+	#doc {
+		@include stretch;
+	}
 
 	#page-home {
 		display: table;

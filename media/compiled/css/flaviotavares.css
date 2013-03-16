@@ -437,7 +437,7 @@ html {
 
 /* line 8, ../../../libs/sass/sass/flaviotavares.scss */
 body {
-  background: white;
+  background: black;
   font-family: 'Quattrocento Sans', sans-serif;
 }
 
@@ -452,6 +452,7 @@ body {
   margin-right: auto;
   overflow: hidden;
   *zoom: 1;
+  position: relative;
 }
 /* line 38, ../../../../../../../../../.rvm/gems/ruby-2.0.0-p0@flaviotavares/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #doc:after {
@@ -462,30 +463,28 @@ body {
 
 /* line 1, ../../../libs/sass/sass/_navmenu.scss */
 #header {
-  overflow: hidden;
-  *zoom: 1;
   width: 17.46032%;
   float: left;
   margin-right: 1.5873%;
   display: inline;
-  min-height: 100px;
+  min-height: 700px;
 }
 
-/* line 8, ../../../libs/sass/sass/_navmenu.scss */
+/* line 7, ../../../libs/sass/sass/_navmenu.scss */
 #nav-main {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 17.46032%;
   float: left;
-  margin-right: 14.28571%;
+  margin-right: 1.5873%;
   display: inline;
-  display: block;
-  height: 100%;
   padding-bottom: 109px;
   padding-top: 63px;
-  position: relative;
-  min-width: 182px;
+  width: 182px;
   z-index: 10;
 }
-/* line 24, ../../../libs/sass/sass/_navmenu.scss */
+/* line 23, ../../../libs/sass/sass/_navmenu.scss */
 #nav-main::before {
   background-position: 0 -53px;
   height: 33px;
@@ -500,7 +499,7 @@ body {
   position: absolute;
   top: 0;
 }
-/* line 36, ../../../libs/sass/sass/_navmenu.scss */
+/* line 35, ../../../libs/sass/sass/_navmenu.scss */
 #nav-main::after {
   background-position: 0 -256px;
   height: 79px;
@@ -512,15 +511,26 @@ body {
   position: absolute;
   bottom: 0;
 }
-/* line 52, ../../../libs/sass/sass/_navmenu.scss */
-#nav-main div {
+/* line 49, ../../../libs/sass/sass/_navmenu.scss */
+#nav-main .nav-menu {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: black;
   display: block;
-  vertical-align: middle;
-  width: 100%;
+  margin: 0;
+  padding: 0 30px;
+  padding-top: 150px;
+  top: 63px;
+  width: 182px;
 }
-/* line 60, ../../../libs/sass/sass/_navmenu.scss */
-#nav-main div a {
+/* line 63, ../../../libs/sass/sass/_navmenu.scss */
+#nav-main .nav-menu a {
   color: #fff;
   display: block;
   font-size: 13px;
@@ -529,43 +539,39 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 70, ../../../libs/sass/sass/_navmenu.scss */
-#nav-main div .nav-menu {
-  padding: 0 30px;
-}
-/* line 74, ../../../libs/sass/sass/_navmenu.scss */
-#nav-main div .menu-item {
-  border-bottom: 1px solid #1a1a1a;
-}
-/* line 77, ../../../libs/sass/sass/_navmenu.scss */
-#nav-main div .menu-item:first-child {
+/* line 73, ../../../libs/sass/sass/_navmenu.scss */
+#nav-main .nav-menu .menu-item {
   border-top: 1px solid #1a1a1a;
 }
-/* line 82, ../../../libs/sass/sass/_navmenu.scss */
-#nav-main div .sub-menu {
+/* line 76, ../../../libs/sass/sass/_navmenu.scss */
+#nav-main .nav-menu .menu-item:last-child {
+  border-bottom: 1px solid #1a1a1a;
+}
+/* line 81, ../../../libs/sass/sass/_navmenu.scss */
+#nav-main .nav-menu .sub-menu {
   display: none;
 }
-/* line 88, ../../../libs/sass/sass/_navmenu.scss */
-#nav-main div .current-menu-item a,
-#nav-main div .current-page-ancestor a {
+/* line 87, ../../../libs/sass/sass/_navmenu.scss */
+#nav-main .nav-menu .current-menu-item a,
+#nav-main .nav-menu .current-page-ancestor a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
   opacity: 0.2;
   color: #e6e6e6;
 }
 
-/* line 97, ../../../libs/sass/sass/_navmenu.scss */
+/* line 96, ../../../libs/sass/sass/_navmenu.scss */
 #nav-language {
   position: absolute;
   right: 20px;
   top: 20px;
-  z-index: 10;
+  z-index: 1000;
 }
-/* line 103, ../../../libs/sass/sass/_navmenu.scss */
+/* line 102, ../../../libs/sass/sass/_navmenu.scss */
 #nav-language .nav-menu:hover {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 106, ../../../libs/sass/sass/_navmenu.scss */
+/* line 105, ../../../libs/sass/sass/_navmenu.scss */
 #nav-language .nav-menu:hover .menu-item {
   display: -moz-inline-stack;
   display: inline-block;
@@ -574,12 +580,12 @@ body {
   zoom: 1;
   *display: inline;
 }
-/* line 111, ../../../libs/sass/sass/_navmenu.scss */
+/* line 110, ../../../libs/sass/sass/_navmenu.scss */
 #nav-language .menu-item {
   display: none;
   float: left;
 }
-/* line 115, ../../../libs/sass/sass/_navmenu.scss */
+/* line 114, ../../../libs/sass/sass/_navmenu.scss */
 #nav-language .menu-item a {
   text-indent: -119988px;
   overflow: hidden;
@@ -591,7 +597,7 @@ body {
   zoom: 1;
   *display: inline;
 }
-/* line 122, ../../../libs/sass/sass/_navmenu.scss */
+/* line 121, ../../../libs/sass/sass/_navmenu.scss */
 #nav-language .current-menu-item,
 #nav-language .current-page-ancestor {
   display: -moz-inline-stack;
@@ -602,37 +608,37 @@ body {
   *display: inline;
   float: right;
 }
-/* line 128, ../../../libs/sass/sass/_navmenu.scss */
+/* line 127, ../../../libs/sass/sass/_navmenu.scss */
 #nav-language .slug-portugues a {
   background-position: 0 0;
   height: 45px;
   width: 44px;
 }
-/* line 132, ../../../libs/sass/sass/_navmenu.scss */
+/* line 131, ../../../libs/sass/sass/_navmenu.scss */
 #nav-language .slug-english a {
   background-position: 0 -45px;
   height: 45px;
   width: 44px;
 }
 
-/* line 137, ../../../libs/sass/sass/_navmenu.scss */
+/* line 136, ../../../libs/sass/sass/_navmenu.scss */
 #nav-prev-next {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 1em;
 }
-/* line 141, ../../../libs/sass/sass/_navmenu.scss */
+/* line 140, ../../../libs/sass/sass/_navmenu.scss */
 #nav-prev-next .prev, #nav-prev-next .next {
   cursor: pointer;
   display: inline-block;
   margin: 0 .25em;
 }
-/* line 147, ../../../libs/sass/sass/_navmenu.scss */
+/* line 146, ../../../libs/sass/sass/_navmenu.scss */
 #nav-prev-next .prev {
   background-position: 0 0;
   height: 28px;
   width: 28px;
 }
-/* line 151, ../../../libs/sass/sass/_navmenu.scss */
+/* line 150, ../../../libs/sass/sass/_navmenu.scss */
 #nav-prev-next .next {
   background-position: 0 -28px;
   height: 28px;
@@ -641,27 +647,30 @@ body {
 
 /* line 1, ../../../libs/sass/sass/_home.scss */
 body.home {
+  background: url('../../img/bg-home.jpg?1363051829') no-repeat top center;
+  background-color: black;
+}
+/* line 9, ../../../libs/sass/sass/_home.scss */
+body.home #doc {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: url('../../img/bg-home.jpg?1363051829') no-repeat center center;
-  background-color: black;
 }
-/* line 10, ../../../libs/sass/sass/_home.scss */
+/* line 13, ../../../libs/sass/sass/_home.scss */
 body.home #page-home {
   display: table;
   height: 100%;
   text-align: center;
   width: 100%;
 }
-/* line 17, ../../../libs/sass/sass/_home.scss */
+/* line 20, ../../../libs/sass/sass/_home.scss */
 body.home .content {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 22, ../../../libs/sass/sass/_home.scss */
+/* line 25, ../../../libs/sass/sass/_home.scss */
 body.home #nav-lang {
   background: #000;
   border: 1px solid white;
@@ -671,7 +680,7 @@ body.home #nav-lang {
   position: relative;
   width: 480px;
 }
-/* line 31, ../../../libs/sass/sass/_home.scss */
+/* line 34, ../../../libs/sass/sass/_home.scss */
 body.home #nav-lang::before {
   background-position: 0 0;
   height: 256px;
@@ -682,14 +691,14 @@ body.home #nav-lang::before {
   width: 402px;
   margin: -72px auto 0 auto;
 }
-/* line 42, ../../../libs/sass/sass/_home.scss */
+/* line 45, ../../../libs/sass/sass/_home.scss */
 body.home .nav-menu {
   position: absolute;
   bottom: 67px;
   left: 0;
   right: 0;
 }
-/* line 45, ../../../libs/sass/sass/_home.scss */
+/* line 48, ../../../libs/sass/sass/_home.scss */
 body.home .nav-menu::before {
   background-position: 0 0;
   height: 53px;
@@ -702,7 +711,7 @@ body.home .nav-menu::before {
   position: relative;
   top: -53px;
 }
-/* line 59, ../../../libs/sass/sass/_home.scss */
+/* line 62, ../../../libs/sass/sass/_home.scss */
 body.home .menu-item {
   display: -moz-inline-stack;
   display: inline-block;
@@ -712,11 +721,11 @@ body.home .menu-item {
   *display: inline;
   text-transform: uppercase;
 }
-/* line 64, ../../../libs/sass/sass/_home.scss */
+/* line 67, ../../../libs/sass/sass/_home.scss */
 body.home .menu-item + .menu-item {
   margin-left: 25px;
 }
-/* line 68, ../../../libs/sass/sass/_home.scss */
+/* line 71, ../../../libs/sass/sass/_home.scss */
 body.home .menu-item a {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -734,7 +743,7 @@ body.home .menu-item a {
   vertical-align: center;
   width: 115px;
 }
-/* line 84, ../../../libs/sass/sass/_home.scss */
+/* line 87, ../../../libs/sass/sass/_home.scss */
 body.home .menu-item span {
   display: table-cell;
   vertical-align: middle;
@@ -752,9 +761,10 @@ body.home .menu-item span {
 /* line 1, ../../../libs/sass/sass/templates/_biography.scss */
 body.page-template-t-biography-php {
   background: url('../../img/bg-biography.jpg?1363318274') no-repeat top center;
+  background-color: white;
 }
 
-/* line 5, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 7, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography {
   width: 80.95238%;
   float: right;
@@ -762,25 +772,26 @@ body.page-template-t-biography-php {
   #margin-left: -20px;
   display: inline;
 }
-/* line 10, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 12, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header {
   overflow: hidden;
   *zoom: 1;
   padding-top: 40.5em;
   position: relative;
 }
-/* line 16, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 18, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .main-title {
   color: white;
   font-size: 165px;
   font-weight: bold;
+  line-height: 0;
   margin: 0;
   position: absolute;
   text-transform: uppercase;
-  top: 115px;
+  top: 165px;
   z-index: 100;
 }
-/* line 27, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 30, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-author {
   width: 37.2549%;
   float: left;
@@ -798,25 +809,25 @@ body.page-template-t-biography-php {
   top: 310px;
   z-index: 10;
 }
-/* line 42, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 45, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-author p {
   border: solid #846d46;
   border-width: 1px 1px 0 1px;
   margin: 0;
   padding: 35px 35px 10px 35px;
 }
-/* line 49, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 52, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-author p:last-child {
   border-width: 0 1px 1px 1px;
   padding: 0 35px 35px 35px;
 }
-/* line 54, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 57, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-author strong {
   color: #846d46;
   display: block;
   font-size: 14px;
 }
-/* line 61, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 64, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .slides {
   width: 68.62745%;
   float: right;
@@ -827,7 +838,7 @@ body.page-template-t-biography-php {
   right: 0;
   top: 150px;
 }
-/* line 69, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 72, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others {
   margin-top: 1.5em;
   padding-top: 0em;
@@ -842,7 +853,7 @@ body.page-template-t-biography-php {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 78, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 81, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others p {
   margin-top: 0em;
   padding-top: 0em;
@@ -851,49 +862,49 @@ body.page-template-t-biography-php {
   color: #987e51;
   font-style: italic;
 }
-/* line 84, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 87, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others p span {
   font-size: 2em;
   line-height: 1.5em;
   display: block;
   text-align: center;
 }
-/* line 92, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 95, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others .block-2, #t-biography .content-header .by-others .block-4 {
   color: #4b3a1d;
 }
-/* line 96, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 99, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others .block-1 {
   text-align: right;
 }
-/* line 100, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 103, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others .block-3 {
   text-align: left;
 }
-/* line 104, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 107, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others footer {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
   color: #000;
   text-align: center;
 }
-/* line 110, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 113, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content-header .by-others footer span {
   font-weight: bold;
 }
-/* line 117, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 120, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography article {
   overflow: hidden;
   *zoom: 1;
   position: relative;
   padding-top: 218px;
 }
-/* line 125, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 128, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content > :first-child, #t-biography .sidebar > :first-child {
   margin-top: 0;
   padding-top: 0;
 }
-/* line 131, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 134, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content {
   margin-left: 23.52941%;
   width: 37.2549%;
@@ -902,7 +913,7 @@ body.page-template-t-biography-php {
   display: inline;
   color: #333;
 }
-/* line 137, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 140, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content h1 {
   font-size: 1em;
   line-height: 1.5em;
@@ -914,18 +925,18 @@ body.page-template-t-biography-php {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 146, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 149, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content blockquote, #t-biography .content p {
   margin-top: 1.5em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.5em;
 }
-/* line 150, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 153, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content blockquote {
   color: #987e51;
 }
-/* line 153, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 156, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .content blockquote p {
   font-size: 1.25em;
   line-height: 1.2em;
@@ -934,7 +945,7 @@ body.page-template-t-biography-php {
   padding-bottom: 0em;
   margin-bottom: 1.2em;
 }
-/* line 160, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 163, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar {
   margin-left: 7.84314%;
   width: 29.41176%;
@@ -943,21 +954,21 @@ body.page-template-t-biography-php {
   #margin-left: -20px;
   display: inline;
 }
-/* line 166, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 169, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar ol, #t-biography .sidebar li {
   margin-top: 2em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 2em;
 }
-/* line 170, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 173, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar ol {
   font-size: 0.75em;
   line-height: 2em;
   color: #666;
   list-style: decimal outside;
 }
-/* line 176, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 179, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar ol dd {
   margin-top: 0em;
   padding-top: 0em;
@@ -965,18 +976,18 @@ body.page-template-t-biography-php {
   margin-bottom: 0em;
   margin-left: 0;
 }
-/* line 182, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 185, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar ol .title {
   color: #987e51;
   font-weight: bold;
 }
-/* line 188, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 191, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar figure {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 195, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 198, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar figure::after {
   display: -moz-inline-stack;
   display: inline-block;
@@ -992,15 +1003,15 @@ body.page-template-t-biography-php {
   right: 0;
   margin-bottom: -20px;
 }
-/* line 206, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 209, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar figure.img-2 {
   left: 284px;
 }
-/* line 210, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 213, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar figure.img-3 {
   left: 558px;
 }
-/* line 214, ../../../libs/sass/sass/templates/_biography.scss */
+/* line 217, ../../../libs/sass/sass/templates/_biography.scss */
 #t-biography .sidebar figure.img-4 {
   top: 198px;
 }
