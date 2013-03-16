@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<section id="page-home">
 	<section class="content">
 		<nav id="nav-lang">
 			<?php wp_nav_menu(array(
@@ -11,4 +12,5 @@
 			)); ?>
 		</nav>
 	</section>
+</section>
 <?php get_footer(); ?>

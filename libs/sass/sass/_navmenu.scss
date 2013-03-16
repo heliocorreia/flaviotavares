@@ -1,16 +1,24 @@
-#header .primary {
+#header {
+	@include clearfix;
+	@include span-columns(3);
+
+	min-height: 100px;
+}
+
+#nav-main {
 	$logo-sprite-height: logo-sprite-height(black);
 	$cavalo-sprite-height: cavalo-sprite-height(menu);
 	$padding-bottom: 30px;
 	$padding-top: 30px;
 
-	display: table;
+	@include span-columns(2, 2);
+
+	display: block;
 	height: 100%;
-	margin-left: 50px;
 	padding-bottom: $padding-top + $cavalo-sprite-height;
 	padding-top: $padding-top + $logo-sprite-height;
-	position: absolute;
-	width: logo-sprite-width(black);
+	position: relative;
+	min-width: logo-sprite-width(black);
 	z-index: 10;
 
 	&::before {
@@ -39,6 +47,50 @@
 		left: 0;
 		position: absolute;
 		bottom: 0;
+	}
+
+	div {
+		$border-color: #1a1a1a;
+
+		background-color: $color-black;
+		display: block;
+		vertical-align: middle;
+		width: 100%;
+
+		a {
+			color: #fff;
+			display: block;
+			font-size: 13px;
+			padding: 1em 0;
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		.nav-menu {
+			padding: 0 30px;
+		}
+
+		.menu-item {
+			border-bottom: 1px solid $border-color;
+
+			&:first-child {
+				border-top: 1px solid $border-color;
+			}
+		}
+
+		.sub-menu {
+			display: none;
+		}
+
+		.current-menu-item,
+		.current-page-ancestor {
+			a {
+				@include opacity(0.2);
+
+				color: #e6e6e6;
+			}
+		}
 	}
 }
 
@@ -98,49 +150,5 @@
 
 	.next {
 		@include seta-sprite(rounded-small-right);
-	}
-}
-
-#nav-main {
-	$border-color: #1a1a1a;
-
-	background-color: $color-black;
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
-
-	a {
-		color: #fff;
-		display: block;
-		font-size: 13px;
-		padding: 1em 0;
-		text-align: center;
-		text-decoration: none;
-		text-transform: uppercase;
-	}
-
-	.nav-menu {
-		padding: 0 30px;
-	}
-
-	.menu-item {
-		border-bottom: 1px solid $border-color;
-
-		&:first-child {
-			border-top: 1px solid $border-color;
-		}
-	}
-
-	.sub-menu {
-		display: none;
-	}
-
-	.current-menu-item,
-	.current-page-ancestor {
-		a {
-			@include opacity(0.2);
-
-			color: #e6e6e6;
-		}
 	}
 }

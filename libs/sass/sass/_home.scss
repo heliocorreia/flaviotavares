@@ -1,11 +1,13 @@
 body.home {
-	@include stretch;
-	@include background(image-url("bg-home.jpg") no-repeat center center);
-
 	$border-color: #fff;
 	$cavalo-offset: 72px;
 
-	#main {
+	@include stretch;
+	@include background(image-url("bg-home.jpg") no-repeat center center);
+
+	background-color: $color-black;
+
+	#page-home {
 		display: table;
 		height: 100%;
 		text-align: center;

@@ -1,0 +1,219 @@
+body.page-template-t-biography-php {
+	@include background(image-url("bg-biography.jpg") no-repeat top center);
+}
+
+#t-biography {
+	$img-biography-work-margin: 10px;
+
+	@include span-columns(13 omega);
+
+	.content-header {
+		@include clearfix;
+		@include padding-leader(27);
+
+		position: relative;
+
+		.main-title {
+			color: $color-white;
+			font-size: 165px;
+			font-weight: bold;
+			margin: 0;
+			position: absolute;
+			text-transform: uppercase;
+			top: 115px;
+			z-index: 100;
+		}
+
+		.by-author {
+			@include span-columns(5, 13);
+
+			background: $color-black;
+			color: $color-white;
+			font-size: 20px;
+			left: 0;
+			margin: 0;
+			padding: 21px;
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			top: 310px;
+			z-index: 10;
+
+			p {
+				border: solid #846d46;
+				border-width: 1px 1px 0 1px;
+				margin: 0;
+				padding: 35px 35px 10px 35px;
+			}
+
+			p:last-child {
+				border-width: 0 1px 1px 1px;
+				padding: 0 35px 35px 35px;
+			}
+
+			strong {
+				color: #846d46;
+				display: block;
+				font-size: 14px;
+			}
+		}
+
+		.slides {
+			@include span-columns(9 omega, 13);
+
+			position: absolute;
+			right: 0;
+			top: 150px;
+		}
+
+		.by-others {
+			@include rhythm(1, 0, 0, 1);
+			@include span-columns(13, 13);
+			@include margin-trailer(3);
+
+			text-transform: uppercase;
+			margin-left: 0;
+			margin-right: 0;
+
+			p {
+				@include rhythm;
+
+				color: #987e51;
+				font-style: italic;
+
+				span {
+					@include adjust-font-size-to(32px);
+
+					display: block;
+					text-align: center;
+				}
+			}
+
+			.block-2, .block-4 {
+				color: #4b3a1d;
+			}
+
+			.block-1 {
+				text-align: right;
+			}
+
+			.block-3 {
+				text-align: left;
+			}
+
+			footer {
+				@include opacity(0.7);
+
+				color: #000;
+				text-align: center;
+
+				span {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	article {
+		@include clearfix;
+
+		position: relative;
+		padding-top: $img-biography-work-margin * 3 + image-height("img-biography-work-1.jpg");
+	}
+
+	.content, .sidebar {
+		& > :first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+	}
+
+	.content {
+		@include pre(3, 13);
+		@include span-columns(5, 13);
+
+		color: #333;
+
+		h1 {
+			@include adjust-font-size-to(16px);
+			@include rhythm(3, 1, 0, 1);
+
+			color: $color-black;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		blockquote, p {
+			@include rhythm(1, 0, 0, 1);
+		}
+
+		blockquote {
+			color: #987e51;
+
+			p {
+				@include adjust-font-size-to(20px);
+				@include rhythm(1, 0, 0, 1, 20px);
+			}
+		}
+	}
+
+	.sidebar {
+		$font-size: 12px;
+
+		@include pre(1, 13);
+		@include span-columns(4 omega, 13);
+
+		ol, li {
+			@include rhythm(1, 0, 0, 1, $font-size);
+		}
+
+		ol {
+			@include adjust-font-size-to($font-size);
+
+			color: #666;
+			list-style: decimal outside;
+
+			dd {
+				@include rhythm;
+
+				margin-left: 0;
+			}
+
+			.title {
+				color: #987e51;
+				font-weight: bold;
+			}
+		}
+
+		figure {
+			$img-biography-work-margin: 10px;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			&::after {
+				@include inline-block;
+				@include opacity(0.5);
+
+				content: attr(data-index) ".";
+				bottom: 0;
+				position: absolute;
+				right: 0;
+				margin-bottom: -$img-biography-work-margin * 2;
+			}
+
+			&.img-2 {
+				left: $img-biography-work-margin + image-width("img-biography-work-1.jpg");
+			}
+
+			&.img-3 {
+				left: $img-biography-work-margin + image-width("img-biography-work-1.jpg") + $img-biography-work-margin + image-width("img-biography-work-2.jpg");
+			}
+
+			&.img-4 {
+				top: $img-biography-work-margin + image-height("img-biography-work-1.jpg");
+			}
+		}
+	}
+}

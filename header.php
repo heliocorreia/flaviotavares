@@ -19,28 +19,24 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<div id="doc">
 	<?php if (!is_home()): ?>
 	<header id="header">
-		<section class="primary">
-			<nav id="nav-main">
-				<?php wp_nav_menu(array(
-					'theme_location' => 'main',
-					'container' => false,
-					'menu_class' => 'nav-menu',
-					'depth' => 2,
-				)); ?>
-			</nav>
-		</section>
-		<section>
-			<nav id="nav-language">
-				<?php wp_nav_menu(array(
-					'theme_location' => 'language',
-					'container' => false,
-					'menu_class' => 'nav-menu',
-					'depth' => 1,
-				)); ?>
-			</nav>
-		</section>
+		<nav id="nav-main">
+			<?php wp_nav_menu(array(
+				'theme_location' => 'main',
+				'container' => 'div',
+				'menu_class' => 'nav-menu',
+				'depth' => 2,
+			)); ?>
+		</nav>
+		<nav id="nav-language">
+			<?php wp_nav_menu(array(
+				'theme_location' => 'language',
+				'container' => false,
+				'menu_class' => 'nav-menu',
+				'depth' => 1,
+			)); ?>
+		</nav>
 	</header>
 	<?php endif; ?>
-	<div id="main">

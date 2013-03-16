@@ -1,8 +1,8 @@
 // susy
  
 $total-columns  : 16;             // a 12-column grid
-$column-width   : 56px;           // each column is 4em wide
-$gutter-width   : 28px;           // 1em gutters between columns
+$column-width   : 60px;           // each column is 4em wide
+$gutter-width   : 20px;           // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
 @import "susy";
@@ -12,8 +12,11 @@ $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 @import "compass/css3";
 @import "compass/css3/transition";
 @import "compass/layout/stretching";
-@import "compass/reset";
 @import "compass/typography/text/replacement";
+
+// 3rdparty
+
+@import "3rdparty/normalize";
 
 // sprites
  

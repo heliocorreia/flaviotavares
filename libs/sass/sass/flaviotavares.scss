@@ -3,17 +3,19 @@
 $color-black: #000;
 $color-white: #fff;
 
-@include global-reset;
+@include establish-baseline;
 
-html,
 body {
-	background: $color-black;
+	background: $color-white;
+	font-family: 'Quattrocento Sans', sans-serif;
 }
 
-body {
-	font-family: 'Quattrocento Sans', sans-serif;
+#doc {
+	@include container;
+	@include clearfix;
 }
 
 @import "navmenu";
 @import "home";
 @import "galleria";
+@import "templates/biography";
