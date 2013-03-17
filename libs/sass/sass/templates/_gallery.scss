@@ -1,0 +1,19 @@
+body.page-template-t-gallery-php {
+	background-image: image-url("bg-gallery.jpg");
+}
+
+#t-gallery {
+
+	@include span-columns(13 omega);
+
+	position: relative;
+
+	.main-title {
+		@include hide-text;
+		@include txt-sprite(galeria);
+
+		position: absolute;
+		right: 0;
+		top: 343px;
+	}
+}
