@@ -5,16 +5,30 @@ $color-white: #fff;
 
 @include establish-baseline;
 
+html {
+	overflow-y: scroll;
+}
+
 body {
+	@include stretch;
+
 	background: $color-black no-repeat top center;
 	font-family: 'Quattrocento Sans', sans-serif;
 }
 
 #doc {
-	@include container;
 	@include clearfix;
-	@include susy-grid-background;
+	@include container;
 
+	&:before {
+		@include stretch;
+		@include susy-grid-background;
+		content: '';
+		padding: 0 $grid-padding;
+		z-index: 1;
+	}
+
+	min-height: 100%;
 	position: relative;
 }
 
