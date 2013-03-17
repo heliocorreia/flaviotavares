@@ -3,20 +3,32 @@ body.page-template-t-contact-php {
 }
 
 #t-contact {
-	@include stretch-y;
+	@include pre(3);
+	@include span-columns(7);
 
 	color: $color-white;
 	text-align: center;
-	left: space(6);
-	width: columns(7);
 
 	.outter {
-		display: table;
-		height: 100%;
+		font-size: 0;
+
+		&, &:before {
+			min-height: 900px;
+		}
+
+		&:before {
+			@include inline-block;
+
+			content: '';
+			height: 100%;
+			vertical-align: middle;
+		}
 	}
 
 	.inner {
-		display: table-cell;
+		@include inline-block;
+
+		font-size: $base-font-size;
 		vertical-align: middle;
 	}
 

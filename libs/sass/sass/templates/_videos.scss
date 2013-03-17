@@ -1,0 +1,77 @@
+body.page-template-t-videos-php {
+	background-image: image-url("bg-home.jpg");
+}
+
+#t-videos {
+	@include span-columns(13 omega);
+
+	color: $color-white;
+
+	.outter {
+		font-size: 0;
+
+		&, &:before {
+			min-height: 900px;
+		}
+
+		&:before {
+			@include inline-block;
+
+			content: '';
+			height: 100%;
+			vertical-align: middle;
+		}
+	}
+
+	.inner {
+		@include inline-block;
+
+		font-size: $base-font-size;
+		vertical-align: middle;
+	}
+
+	.section {
+		@include span-columns(6, 13);
+		@include rhythm(1, 0, 0, 1);
+
+		color: $color-white;
+		clear: left;
+
+		&:nth-child(2n) {
+			clear: none;
+
+			h2 {
+				color: #ff4529;
+			}
+		}
+
+		h2, p {
+			@include adjust-font-size-to(14px);
+			@include rhythm;
+		}
+
+		h2 {
+			@include rhythm(1, 1, 0, 0);
+
+			border-top: 1px solid $color-white;
+			color: #9cc36b;
+		}
+	}
+
+	.oembed-result {
+		@include padding-leader(12);
+
+		position: relative;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.oembed-result iframe,  
+	.oembed-result object,  
+	.oembed-result embed {
+		@include stretch;
+
+		height: 100%;
+		width: 100%;
+	}
+}

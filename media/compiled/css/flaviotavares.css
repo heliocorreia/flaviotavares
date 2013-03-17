@@ -1037,25 +1037,46 @@ body.page-template-t-contact-php {
 
 /* line 5, ../../../libs/sass/sass/templates/_contact.scss */
 #t-contact {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+  margin-left: 19.04762%;
+  width: 42.85714%;
+  float: left;
+  margin-right: 1.5873%;
+  display: inline;
   color: white;
   text-align: center;
-  left: 38.09524%;
-  width: 42.85714%;
 }
-/* line 13, ../../../libs/sass/sass/templates/_contact.scss */
+/* line 12, ../../../libs/sass/sass/templates/_contact.scss */
 #t-contact .outter {
-  display: table;
-  height: 100%;
+  font-size: 0;
 }
-/* line 18, ../../../libs/sass/sass/templates/_contact.scss */
-#t-contact .inner {
-  display: table-cell;
+/* line 15, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact .outter, #t-contact .outter:before {
+  min-height: 900px;
+}
+/* line 19, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact .outter:before {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  content: '';
+  height: 100%;
   vertical-align: middle;
 }
-/* line 23, ../../../libs/sass/sass/templates/_contact.scss */
+/* line 28, ../../../libs/sass/sass/templates/_contact.scss */
+#t-contact .inner {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  font-size: 16px;
+  vertical-align: middle;
+}
+/* line 35, ../../../libs/sass/sass/templates/_contact.scss */
 #t-contact address {
   margin-top: 1.5em;
   padding-top: 0em;
@@ -1064,28 +1085,132 @@ body.page-template-t-contact-php {
   background: black;
   font-style: normal;
 }
-/* line 29, ../../../libs/sass/sass/templates/_contact.scss */
+/* line 41, ../../../libs/sass/sass/templates/_contact.scss */
 #t-contact address, #t-contact address div {
   padding: 1em;
 }
-/* line 33, ../../../libs/sass/sass/templates/_contact.scss */
+/* line 45, ../../../libs/sass/sass/templates/_contact.scss */
 #t-contact address div {
   border: 1px solid #987e51;
 }
-/* line 38, ../../../libs/sass/sass/templates/_contact.scss */
+/* line 50, ../../../libs/sass/sass/templates/_contact.scss */
 #t-contact h1, #t-contact p {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 0em;
 }
-/* line 42, ../../../libs/sass/sass/templates/_contact.scss */
+/* line 54, ../../../libs/sass/sass/templates/_contact.scss */
 #t-contact h1, #t-contact a {
   color: #987e51;
 }
-/* line 46, ../../../libs/sass/sass/templates/_contact.scss */
+/* line 58, ../../../libs/sass/sass/templates/_contact.scss */
 #t-contact h1 {
   font-size: 1em;
   line-height: 1.5em;
   text-transform: uppercase;
+}
+
+/* line 1, ../../../libs/sass/sass/templates/_videos.scss */
+body.page-template-t-videos-php {
+  background-image: url('../../img/bg-home.jpg?1363051829');
+}
+
+/* line 5, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos {
+  width: 80.95238%;
+  float: right;
+  margin-right: 0;
+  #margin-left: -20px;
+  display: inline;
+  color: white;
+}
+/* line 10, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .outter {
+  font-size: 0;
+}
+/* line 13, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .outter, #t-videos .outter:before {
+  min-height: 900px;
+}
+/* line 17, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .outter:before {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  content: '';
+  height: 100%;
+  vertical-align: middle;
+}
+/* line 26, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .inner {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  font-size: 16px;
+  vertical-align: middle;
+}
+/* line 33, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .section {
+  width: 45.09804%;
+  float: left;
+  margin-right: 1.96078%;
+  display: inline;
+  margin-top: 1.5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em;
+  color: white;
+  clear: left;
+}
+/* line 40, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .section:nth-child(2n) {
+  clear: none;
+}
+/* line 43, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .section:nth-child(2n) h2 {
+  color: #ff4529;
+}
+/* line 48, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .section h2, #t-videos .section p {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+}
+/* line 53, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .section h2 {
+  margin-top: 1.5em;
+  padding-top: 1.5em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+  border-top: 1px solid white;
+  color: #9cc36b;
+}
+/* line 61, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .oembed-result {
+  padding-top: 18em;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+/* line 71, ../../../libs/sass/sass/templates/_videos.scss */
+#t-videos .oembed-result iframe,
+#t-videos .oembed-result object,
+#t-videos .oembed-result embed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
 }
