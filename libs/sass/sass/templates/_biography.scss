@@ -25,6 +25,7 @@ body.page-template-t-biography-php {
 		}
 
 		.by-author {
+			@include box-sizing(border-box);
 			@include span-columns(5, 13);
 
 			background: $color-black;
