@@ -15,14 +15,12 @@ body.page-template-t-biography-php {
 		position: relative;
 
 		.main-title {
-			color: $color-white;
-			font-size: 165px;
-			font-weight: bold;
-			line-height: 0;
+			@include hide-text;
+			@include txt-sprite(biografia);
+
 			margin: 0;
 			position: absolute;
-			text-transform: uppercase;
-			top: 165px;
+			top: 115px;
 			z-index: 100;
 		}
 

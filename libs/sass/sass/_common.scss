@@ -19,13 +19,15 @@ $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 @import "3rdparty/normalize";
 
 // sprites
- 
-$logo-sprite-dimensions: true;
-$seta-sprite-dimensions: true;
+
+$txt-sprite-dimensions: true;
 $cavalo-sprite-dimensions: true;
 $language-sprite-dimensions: true;
+$logo-sprite-dimensions: true;
+$seta-sprite-dimensions: true;
 
-@import "logo/*.png";
-@import "seta/*.png";
+@import "txt/*.png";
 @import "cavalo/*.png";
 @import "language/*.png";
+@import "logo/*.png";
+@import "seta/*.png";
