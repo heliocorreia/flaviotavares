@@ -11,7 +11,7 @@ body.page-template-t-videos-php {
 		font-size: 0;
 
 		&, &:before {
-			min-height: 900px;
+			min-height: image-height("bg-home.jpg");
 		}
 
 		&:before {

@@ -13,7 +13,7 @@ body.page-template-t-contact-php {
 		font-size: 0;
 
 		&, &:before {
-			min-height: 900px;
+			min-height: image-height("bg-contact.jpg");
 		}
 
 		&:before {
