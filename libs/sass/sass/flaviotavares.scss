@@ -20,13 +20,13 @@ body {
 	@include clearfix;
 	@include container;
 
-	&:before {
-		@include stretch;
-		@include susy-grid-background;
-		content: '';
-		padding: 0 $grid-padding;
-		z-index: 1;
-	}
+//	&:before {
+//		@include stretch;
+//		@include susy-grid-background;
+//		content: '';
+//		padding: 0 $grid-padding;
+//		z-index: 1;
+//	}
 
 	min-height: 100%;
 	position: relative;
