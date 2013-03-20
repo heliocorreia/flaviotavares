@@ -1,48 +1,58 @@
 body.page-template-t-biography-php {
-	background-image: image-url("bg-biography.jpg");
+	background-attachment: fixed;
 	background-color: $color-white;
+	background-image: image-url("bg-biography.jpg");
 }
 
 #t-biography {
-	$img-biography-work-margin: 10px;
+	@include margin-leader(27);
 
-	@include span-columns(13 omega);
+	background-color: $color-white;
+	border-bottom: rhythm(1) solid #9c8358;
+
+	.content-header,
+	.content-body {
+		@include span-columns(13 omega);
+	}
 
 	.content-header {
-		@include clearfix;
-		@include padding-leader(27);
-
 		position: relative;
+
+		.main-title,
+		.by-author,
+		.slides {
+			@include adjust-font-size-to(16px);
+
+			top: - rhythm(27);
+		}
 
 		.main-title {
 			@include hide-text;
 			@include txt-sprite(biografia);
 
-			margin: 0;
+			margin: 115px 0 0 0;
 			position: absolute;
-			top: 115px;
 			z-index: 100;
 		}
 
 		.by-author {
 			@include box-sizing(border-box);
-			@include span-columns(5, 13);
+			@include span-columns(6, 13);
 
 			background: $color-black;
 			color: $color-white;
-			font-size: 20px;
 			left: 0;
-			margin: 0;
+			margin: 310px 0 0 0;
 			padding: 21px;
 			position: absolute;
 			text-align: center;
 			text-transform: uppercase;
-			top: 310px;
 			z-index: 10;
 
 			p {
 				border: solid #846d46;
 				border-width: 1px 1px 0 1px;
+				font-size: 20px;
 				margin: 0;
 				padding: 35px 35px 10px 35px;
 			}
@@ -52,7 +62,7 @@ body.page-template-t-biography-php {
 				padding: 0 35px 35px 35px;
 			}
 
-			strong {
+			span {
 				color: #846d46;
 				display: block;
 				font-size: 14px;
@@ -62,29 +72,34 @@ body.page-template-t-biography-php {
 		.slides {
 			@include span-columns(9 omega, 13);
 
+			margin-top: 150px;
 			position: absolute;
 			right: 0;
-			top: 150px;
+
+			figcaption {
+				@include adjust-font-size-to(10px);
+				@include opacity(0.7);
+
+				text-transform: uppercase;
+			}
 		}
 
 		.by-others {
-			@include rhythm(1, 0, 0, 1);
+			@include rhythm(1, 0, 0, 3);
 			@include span-columns(13, 13);
-			@include margin-trailer(3);
 
-			text-transform: uppercase;
 			margin-left: 0;
 			margin-right: 0;
+			text-transform: uppercase;
 
 			p {
+				@include adjust-font-size-to(32px);
 				@include rhythm;
 
 				color: #987e51;
 				font-style: italic;
 
 				span {
-					@include adjust-font-size-to(32px);
-
 					display: block;
 					text-align: center;
 				}
@@ -115,11 +130,12 @@ body.page-template-t-biography-php {
 		}
 	}
 
-	article {
+	.content-body {
 		@include clearfix;
+		@include padding-leader(10);
+		@include padding-trailer(4);
 
 		position: relative;
-		padding-top: $img-biography-work-margin * 3 + image-height("img-biography-work-1.jpg");
 	}
 
 	.content, .sidebar {
@@ -130,7 +146,7 @@ body.page-template-t-biography-php {
 	}
 
 	.content {
-		@include pre(3, 13);
+		@include pre(4, 13);
 		@include span-columns(5, 13);
 
 		color: #333;
@@ -161,7 +177,6 @@ body.page-template-t-biography-php {
 	.sidebar {
 		$font-size: 12px;
 
-		@include pre(1, 13);
 		@include span-columns(4 omega, 13);
 
 		ol, li {
@@ -189,9 +204,9 @@ body.page-template-t-biography-php {
 		figure {
 			$img-biography-work-margin: 10px;
 
+			left: 0;
 			position: absolute;
 			top: 0;
-			left: 0;
 
 			&::after {
 				@include inline-block;
@@ -200,8 +215,8 @@ body.page-template-t-biography-php {
 				content: attr(data-index) ".";
 				bottom: 0;
 				position: absolute;
-				right: 0;
-				margin-bottom: -$img-biography-work-margin * 2;
+				left: 0;
+				margin-bottom: -1.5em;
 			}
 
 			&.img-2 {
@@ -213,7 +228,10 @@ body.page-template-t-biography-php {
 			}
 
 			&.img-4 {
-				top: $img-biography-work-margin + image-height("img-biography-work-1.jpg");
+				top: rhythm(10, $font-size);
+				left: columns(4, 13);
+				margin-left: - image-width("img-biography-work-4.jpg");
+
 			}
 		}
 	}

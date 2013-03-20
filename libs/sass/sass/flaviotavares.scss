@@ -16,20 +16,12 @@ body {
 	font-family: 'Quattrocento Sans', sans-serif;
 }
 
-#doc {
-	@include clearfix;
+.container {
+	@include pie-clearfix;
 	@include container;
-
-	&:before {
-		@include stretch;
-		@include susy-grid-background;
-		content: '';
-		padding: 0 $grid-padding;
-		z-index: 1;
-	}
-
-	min-height: 100%;
-	position: relative;
+	
+//	@include debug-vertical-alignment;
+//	@include susy-grid-background;
 }
 
 @import "navmenu";
