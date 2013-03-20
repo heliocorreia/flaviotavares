@@ -12,8 +12,8 @@ add_action('after_setup_theme', 'flaviotavares_setup');
 
 // filters
 
-remove_filter( 'the_content', 'wpautop' );
-add_filter( 'the_content', 'wpautop' , 12);
+remove_filter('the_content', 'wpautop');
+add_filter('the_content', 'wpautop' , 12);
 
 function my_wp_nav_menu_objects($items) {
 	foreach ($items as $item) {
