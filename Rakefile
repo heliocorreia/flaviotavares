@@ -14,7 +14,7 @@ end
 
 namespace :compass do
   task :compile do
-    system 'compass compile libs/sass/'
+    system 'compass compile -e production --force libs/sass/'
   end
   task :watch do
     system 'compass watch libs/sass/'
