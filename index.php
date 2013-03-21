@@ -11,9 +11,10 @@
 Galleria.loadTheme('<?php echo get_stylesheet_directory_uri(); ?>/media/js/galleria/themes/classic/galleria.classic.js');
 Galleria.configure({
 	carousel: false,
-    thumbnails: false,
+	imageCrop: true,
 	showCounter: false,
 	showImagenav: false,
+    thumbnails: false,
 });
 Galleria.run('#galleria');
 var oGallery = Galleria.get(0);
