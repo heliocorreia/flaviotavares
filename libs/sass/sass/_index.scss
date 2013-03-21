@@ -1,0 +1,9 @@
+body.page-template-default {
+	#doc {
+		position: static;
+	}
+
+	#galleria {
+		@include stretch;
+	}
+}
