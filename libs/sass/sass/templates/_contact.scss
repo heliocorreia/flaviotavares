@@ -3,20 +3,22 @@ body.page-template-t-contact-php {
 }
 
 #t-contact {
-	@include pre(3);
-	@include span-columns(7);
+	$color: #987e51;
 
 	color: $color-white;
 	text-align: center;
 
 	.outter {
+		@include pre(6);
+		@include span-columns(7);
+
 		font-size: 0;
 
-		&, &:before {
+		&, &::before {
 			min-height: image-height("bg-contact.jpg");
 		}
 
-		&:before {
+		&::before {
 			@include inline-block;
 
 			content: '';
@@ -37,22 +39,31 @@ body.page-template-t-contact-php {
 
 		background: $color-black;
 		font-style: normal;
+		padding: rhythm(2);
+		position: relative;
 
-		&, div {
-			padding: 1em;
-		}
+		&::after {
+			$border-width: 1px;
 
-		div {
-			border: 1px solid #987e51;
+			@include stretch;
+
+			border: $border-width solid $color;
+			bottom: 2 * $border-width;
+			content: '';
+			margin: rhythm(1);
+			position: absolute;
 		}
 	}
 
 	h1, p {
 		@include rhythm;
+
+		position: relative;
+		z-index: 1;
 	}
 
 	h1, a {
-		color: #987e51;
+		color: $color;
 	}
 
 	h1 {
