@@ -16,6 +16,7 @@
 	@include span-columns(3);
 	
 	padding-bottom: $cavalo-full-height;
+	z-index: 1000;
 
 	&::before {
 		@include logo-sprite(black);

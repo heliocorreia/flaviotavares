@@ -4,9 +4,12 @@ body.page-template-t-gallery-php {
 
 #t-gallery {
 
-	@include span-columns(13 omega);
+	.content {
+		@include span-columns(13 omega);
 
-	position: relative;
+		min-height: image-height("bg-gallery.jpg");
+		position: relative;
+	}
 
 	.main-title {
 		@include hide-text;
