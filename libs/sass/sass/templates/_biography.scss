@@ -5,7 +5,8 @@ body.page-template-t-biography-php {
 }
 
 #t-biography {
-	@include margin-leader(27);
+	@include margin-leader(21);
+	@include padding-leader(4);
 
 	background-color: $color-white;
 	border-bottom: rhythm(1) solid #9c8358;
@@ -36,6 +37,8 @@ body.page-template-t-biography-php {
 		}
 
 		.by-author {
+			$color: #846d46;
+
 			@include box-sizing(border-box);
 			@include span-columns(6, 13);
 
@@ -43,29 +46,36 @@ body.page-template-t-biography-php {
 			color: $color-white;
 			left: 0;
 			margin: 310px 0 0 0;
-			padding: 21px;
+			padding: rhythm(2);
 			position: absolute;
 			text-align: center;
 			text-transform: uppercase;
 			z-index: 10;
 
-			p {
-				border: solid #846d46;
-				border-width: 1px 1px 0 1px;
-				font-size: 20px;
-				margin: 0;
-				padding: 35px 35px 10px 35px;
+			&:after {
+				$border-width: 1px;
+
+				@include stretch;
+
+				border: $border-width solid $color;
+				bottom: 2 * $border-width;
+				content: '';
+				margin: rhythm(1);
+				position: absolute;
 			}
 
-			p:last-child {
-				border-width: 0 1px 1px 1px;
-				padding: 0 35px 35px 35px;
+			p {
+				@include adjust-font-size-to(20px);
+				@include rhythm;
+
+				position: relative;
+				z-index: 1;
 			}
 
 			span {
-				color: #846d46;
-				display: block;
-				font-size: 14px;
+				@include adjust-font-size-to(14px);
+
+				color: $color;
 			}
 		}
 
