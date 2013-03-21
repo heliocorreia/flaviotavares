@@ -3,11 +3,11 @@ body.page-template-t-videos-php {
 }
 
 #t-videos {
-	@include span-columns(13 omega);
-
 	color: $color-white;
 
 	.outter {
+		@include span-columns(13 omega);
+
 		font-size: 0;
 
 		&, &:before {

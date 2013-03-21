@@ -5,10 +5,12 @@ Template Name: [en] Videos
 ?>
 <?php get_header(); ?>
 <section id="t-videos">
-	<section class="outter">
-		<section class="inner">
-			<?php the_content(); ?>
+	<div class="container">
+		<section class="outter">
+			<section class="inner">
+				<?php the_post(); the_content(); ?>
+			</section>
 		</section>
-	</section>
+	</div>
 </section>
 <?php get_footer(); ?>
