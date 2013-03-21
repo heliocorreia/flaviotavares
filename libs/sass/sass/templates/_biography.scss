@@ -46,7 +46,7 @@ body.page-template-t-biography-php {
 			color: $color-white;
 			left: 0;
 			margin: 310px 0 0 0;
-			padding: rhythm(2);
+			padding: rhythm(2) rhythm(3);
 			position: absolute;
 			text-align: center;
 			text-transform: uppercase;
@@ -70,12 +70,11 @@ body.page-template-t-biography-php {
 
 				position: relative;
 				z-index: 1;
-			}
 
-			span {
-				@include adjust-font-size-to(14px);
-
-				color: $color;
+				&:last-child {
+					@include adjust-font-size-to(14px);
+					color: $color;
+				}
 			}
 		}
 
