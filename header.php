@@ -20,23 +20,25 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="doc">
-	<?php if (is_home()): ?>
+	<?php if (!is_home()): ?>
 	<header id="header">
-		<nav id="nav-language">
-			<?php wp_nav_menu(array(
-				'theme_location' => 'language',
-				'container' => false,
-				'menu_class' => 'nav-menu',
-				'depth' => 1,
-			)); ?>
-		</nav>
-		<nav id="nav-main">
-			<?php wp_nav_menu(array(
-				'theme_location' => 'main',
-				'container' => 'div',
-				'menu_class' => 'nav-menu',
-				'depth' => 2,
-			)); ?>
-		</nav>
+		<div class="container">
+			<nav id="nav-language">
+				<?php wp_nav_menu(array(
+					'theme_location' => 'language',
+					'container' => false,
+					'menu_class' => 'nav-menu',
+					'depth' => 1,
+				)); ?>
+			</nav>
+			<nav id="nav-main">
+				<?php wp_nav_menu(array(
+					'theme_location' => 'main',
+					'container' => 'div',
+					'menu_class' => 'nav-menu',
+					'depth' => 2,
+				)); ?>
+			</nav>
+		</div>
 	</header>
 	<?php endif; ?>
