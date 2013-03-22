@@ -1,9 +1,14 @@
 body.page-template-t-gallery-php {
 	background-image: image-url("bg-gallery.jpg");
+
+	.menu-has-submenu::before,
+	.sub-menu {
+		display: block;
+	}
+
 }
 
 #t-gallery {
-
 	.content {
 		@include span-columns(13 omega);
 

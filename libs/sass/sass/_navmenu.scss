@@ -1,4 +1,13 @@
+.menu-has-submenu::before,
+.sub-menu {
+	display: none;
+}
+
 #nav-main {
+	$border-color: #1a1a1a;
+	$menu-item-lines: 2;
+	$menu-item-border-width: 1px;
+
 	// logo
 	$logo-sprite-height: logo-sprite-height(black);
 	$logo-sprite-width: logo-sprite-width(black);
@@ -46,9 +55,17 @@
 		bottom: $cavalo-border-bottom;
 	}
 
-	.nav-menu {
-		$border-color: #1a1a1a;
+	a {
+		@include adjust-font-size-to(13px, $menu-item-lines);
 
+		color: $color-white;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	.nav-menu {
 		@include box-sizing(border-box);
 		@include stretch;
 
@@ -58,38 +75,55 @@
 		padding: rhythm(7) rhythm(1) 0 rhythm(1);
 		top: $logo-full-height;
 		width: $logo-sprite-width;
+	}
+
+	.menu-item {
+		border: 0 solid $border-color;
+		border-width: $menu-item-border-width 0 0 0;
+		margin-top: -$menu-item-border-width;
+
+		&:last-child {
+			border-bottom-width: $menu-item-border-width;
+		}
+	}
+
+	.current-menu-item,
+	.current-page-ancestor {
+		a {
+			@include opacity(0.2);
+
+			color: #e6e6e6;
+		}
+	}
+
+	.menu-has-submenu::before,
+	.sub-menu {
+		background-color: $color-gray;
+		left: $logo-sprite-width;
+		position: absolute;
+		width: $logo-sprite-width;
+	}
+
+	.menu-has-submenu::before {
+		@include stretch-y;
+
+		content: '';
+		margin-top: -$logo-full-height;
+	}
+
+	.sub-menu {
+		list-style: none;
+		margin: -100% 0 0 0;
+		padding: (($menu-item-lines * $base-line-height) - ($base-font-size/2) - $menu-item-border-width) 0 0 0;
 
 		a {
-			@include adjust-font-size-to(13px, 2);
+			@include opacity(1);
 
-			color: #fff;
-			display: block;
-			text-align: center;
-			text-decoration: none;
-			text-transform: uppercase;
+			color: $color-white;
 		}
 
 		.menu-item {
-			border: 0 solid $border-color;
-			border-width: 1px 0 0 0;
-			margin-top: -1px;
-
-			&:last-child {
-				border-bottom-width: 1px;
-			}
-		}
-
-		.sub-menu {
-			display: none;
-		}
-
-		.current-menu-item,
-		.current-page-ancestor {
-			a {
-				@include opacity(0.2);
-
-				color: #e6e6e6;
-			}
+			border-color: #343434;
 		}
 	}
 }
