@@ -1,0 +1,69 @@
+body.page-template-t-gallery-items-php {
+	background-image: image-url("bg-gallery-items.jpg");
+
+	.menu-has-submenu::before,
+	.sub-menu {
+		display: block;
+	}
+
+}
+
+#t-gallery-items {
+	$gallery-margin: 4px;
+
+	.content {
+		@include span-columns(10 omega);
+
+		min-height: image-height("bg-gallery-items.jpg");
+		overflow: hidden;
+		position: relative;
+	}
+
+	.content-outer {
+		display: table;
+		width: 100%;
+	}
+
+	.content-inner {
+		display: table-cell;
+		height: image-height("bg-gallery-items.jpg");
+		vertical-align: middle;
+	}
+
+	.gallery {
+		@include pie-clearfix;
+
+		font-size: 0;
+		margin: 0 0 $gallery-margin;
+		white-space: nowrap;
+
+		& + .gallery:nth-child(2n) {
+			.gallery-item {
+				vertical-align: top;
+			}
+		}
+
+		a {
+			@include inline-block;
+		}
+
+		img {
+			float: left;
+		}
+	}
+
+	.gallery-item {
+		@include inline-block;
+
+		font-size: $base-font-size;
+		margin: 0 $gallery-margin 0 0;
+		position: relative;
+		vertical-align: bottom;
+	}
+
+	.gallery-icon {}
+
+	.gallery-caption {
+		display: none;
+	}
+}
