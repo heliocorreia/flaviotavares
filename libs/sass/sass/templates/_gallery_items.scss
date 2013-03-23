@@ -13,6 +13,16 @@ body.page-template-t-gallery-items-php {
 		min-height: image-height("bg-gallery-items.jpg");
 		overflow: hidden;
 		position: relative;
+
+		&::before {
+			@include stretch-y;
+
+			background: image-url("gradient-transparent-black.png") top left repeat-y;
+			content: '';
+			width: image-width("gradient-transparent-black.png");
+			right: 0;
+			z-index: 1;
+		}
 	}
 
 	.content-outer {
