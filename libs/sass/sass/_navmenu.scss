@@ -175,10 +175,10 @@
 		}
 	}
 
-	.menu-has-submenu {
-		.sub-menu,
+	.current-menu-parent,
+	.current-menu-item.menu-has-submenu {
 		&::before,
-		&.current-menu-item {
+		.sub-menu {
 			display: block;
 		}
 	}
