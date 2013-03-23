@@ -160,8 +160,7 @@
 		}
 	}
 
-	.current-menu-item,
-	.current-page-ancestor {
+	.current-menu-item {
 		a {
 			@include opacity(0.2);
 
