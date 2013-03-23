@@ -48,13 +48,56 @@ body.page-template-t-gallery-items-php {
 				vertical-align: top;
 			}
 		}
+	}
 
-		a {
-			@include inline-block;
+	img {
+		float: left;
+	}
+
+	a {
+		@include inline-block;
+
+		color: $color-white;
+
+		&:hover {
+			&::before{
+				@include opacity(0.8);
+			}
+			&::after {
+				@include opaque;
+			}
 		}
 
-		img {
-			float: left;
+		&::before,
+		&::after {
+			@include transparent;
+		    @include transition-property(opacity);
+		    @include transition-duration(.25s);
+		    @include transition-timing-function(ease-in);
+		}
+
+		&::before {
+			@include stretch;
+//			@include opacity(0.8);
+
+			background: $color-black;
+			content: '';
+			z-index: 1;
+		}
+
+		&::after {
+			@include stretch-y;
+//			@include opacity(1);
+
+			border: 1px solid $color-white;
+			content: attr(title);
+			left: 10%;
+			margin: 1em;
+			padding: 1em;
+			right: 10%;
+			text-align: center;
+			vertical-align: middle;
+			z-index: 2;
 		}
 	}
 
@@ -67,7 +110,10 @@ body.page-template-t-gallery-items-php {
 		vertical-align: bottom;
 	}
 
-	.gallery-icon {}
+	.gallery-icon,
+	.gallery-caption {
+		@include inline-block;
+	}
 
 	.gallery-caption {
 		display: none;
