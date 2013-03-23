@@ -1,6 +1,79 @@
-.menu-has-submenu::before,
-.sub-menu {
-	display: none;
+%nav-main-with-sub-menu {
+	#nav-main {
+		// logo
+		$logo-sprite-height: logo-sprite-height(ft);
+		$logo-sprite-width: logo-sprite-width(ft);
+		$logo-border-bottom: round((lines-for-font-size($logo-sprite-height) * $base-line-height) - $logo-sprite-height);
+		$logo-border-top: 2 * $base-line-height;
+		$logo-full-height: $logo-border-top + $logo-sprite-height + $logo-border-bottom;
+
+		// cavalo
+		$cavalo-sprite-height: cavalo-sprite-height(woman);
+		$cavalo-sprite-width: cavalo-sprite-width(woman);
+		$cavalo-border-bottom: 3 * $base-line-height;
+		$cavalo-full-height: (lines-for-font-size($cavalo-sprite-height) * $base-line-height) + $cavalo-border-bottom;
+
+		&::before {
+			@include logo-sprite(ft);
+
+			border-bottom-width: $logo-border-bottom;
+			border-top-width: $logo-border-top;
+		}
+
+		&::after {
+			$padding-left: round(($logo-sprite-width - $cavalo-sprite-width) / 2);
+			$padding-right: $logo-sprite-width - $cavalo-sprite-width - $padding-left;
+
+			@include cavalo-sprite(woman);
+
+			border-width: 0 $padding-right 0 $padding-left;
+			bottom: $cavalo-border-bottom;
+		}
+
+		.nav-menu {
+			padding-left: 0;
+			padding-right: 0;
+			top: $logo-full-height;
+			width: $logo-sprite-width;
+
+			.menu-item {
+				display: none;
+			}
+
+			.sub-menu .menu-item {
+				display: block;
+			}
+
+			.sub-menu,
+			.menu-has-submenu::before {
+				left: $logo-sprite-width;
+			}
+
+			.current-page-ancestor.menu-has-submenu {
+				border-bottom-width: 1px;
+				display: block;
+
+				&::before {
+					margin-top: -$logo-full-height;
+				}
+
+				& > a {
+					@include hide-text;
+					@include opacity(1);
+
+					position: relative;
+
+					&::before {
+						@include stretch;
+
+						content: 'Voltar';
+						text-align: center;
+						text-indent: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 #nav-main {
@@ -23,7 +96,7 @@
 
 	@include stretch-y;
 	@include span-columns(3);
-	
+
 	padding-bottom: $cavalo-full-height;
 	z-index: 1000;
 
@@ -96,8 +169,23 @@
 		}
 	}
 
-	.menu-has-submenu::before,
-	.sub-menu {
+	.menu-has-submenu {
+		&::before,
+		.sub-menu {
+			display: none;
+		}
+	}
+
+	.menu-has-submenu {
+		.sub-menu,
+		&::before,
+		&.current-menu-item {
+			display: block;
+		}
+	}
+
+	.sub-menu,
+	.menu-has-submenu::before {
 		background-color: $color-gray;
 		left: $logo-sprite-width;
 		position: absolute;

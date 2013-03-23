@@ -1,11 +1,7 @@
 body.page-template-t-gallery-items-php {
+	@extend %nav-main-with-sub-menu;
+
 	background-image: image-url("bg-gallery-items.jpg");
-
-	.menu-has-submenu::before,
-	.sub-menu {
-		display: block;
-	}
-
 }
 
 #t-gallery-items {
