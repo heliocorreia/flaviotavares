@@ -23,9 +23,14 @@ body {
 
 .container {
 	@include container;
-	
-//	@include debug-vertical-alignment;
-//	@include susy-grid-background;
+
+	.debug-txt & {
+		@include debug-vertical-alignment;
+	}
+
+	.debug-grid & {
+		@include susy-grid-background;
+	}
 }
 
 @import "navmenu";
