@@ -1,5 +1,16 @@
 <?php
 
+// functions
+
+function my_get_top_parent() {
+	global $post;
+	if ($post->post_parent)	{
+		$id = end(get_post_ancestors($post->ID));
+		return get_post($id);
+	}
+	return $post;
+}
+
 // theme setup
 
 function flaviotavares_setup() {

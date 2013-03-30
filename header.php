@@ -33,6 +33,7 @@
 			</nav>
 			<nav id="nav-main">
 				<?php wp_nav_menu(array(
+					'menu' => 'main-' . my_get_top_parent()->post_name,
 					'theme_location' => 'main',
 					'container' => 'div',
 					'menu_class' => 'nav-menu',
