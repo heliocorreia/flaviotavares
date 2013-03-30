@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+$top_page_slug = my_get_top_parent()->post_name;
+
+?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
@@ -18,7 +21,7 @@
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/galleria/galleria-1.2.9.min.js"></script>
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class('top-page-slug-' . $top_page_slug); ?>>
 <div id="doc">
 	<?php if (!is_home()): ?>
 	<header id="header">
@@ -33,7 +36,7 @@
 			</nav>
 			<nav id="nav-main">
 				<?php wp_nav_menu(array(
-					'menu' => 'main-' . my_get_top_parent()->post_name,
+					'menu' => 'main-' . $top_page_slug,
 					'theme_location' => 'main',
 					'container' => 'div',
 					'menu_class' => 'nav-menu',
