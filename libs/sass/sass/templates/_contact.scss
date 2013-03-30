@@ -8,6 +8,28 @@ body.page-template-t-contact-php {
 	color: $color-white;
 	text-align: center;
 
+	.container {
+		position: relative;
+	}
+
+	.main-title {
+		@include hide-text;
+		@include opacity(0.1);
+		@include txt-sprite(contact);
+
+		margin-right: - txt-sprite-width(contact)/2;
+		position: absolute;
+		right: 50%;
+		top: 353px;
+		z-index: 0;
+
+		.top-page-slug-pt_br & {
+			@include txt-sprite(contato);
+
+			margin-right: - txt-sprite-width(contato)/2;
+		}
+	}	
+
 	.outter {
 		@include pre(6);
 		@include span-columns(7);
