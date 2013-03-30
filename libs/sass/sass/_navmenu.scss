@@ -66,9 +66,13 @@
 					&::before {
 						@include stretch;
 
-						content: 'Voltar';
+						content: 'Back';
 						text-align: center;
 						text-indent: 0;
+
+						.top-page-slug-pt_br & {
+							content: 'Voltar';
+						}
 					}
 				}
 			}
