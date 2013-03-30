@@ -12,10 +12,14 @@ body.page-template-t-gallery-php {
 
 	.main-title {
 		@include hide-text;
-		@include txt-sprite(galeria);
+		@include txt-sprite(gallery);
 
 		position: absolute;
 		right: 0;
 		top: 343px;
+
+		.top-page-slug-pt_br & {
+			@include txt-sprite(galeria);
+		}
 	}
 }
