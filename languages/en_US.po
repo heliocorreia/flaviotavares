@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
 "POT-Creation-Date: 2013-04-02 02:04-0300\n"
-"PO-Revision-Date: 2013-04-02 02:05-0300\n"
+"PO-Revision-Date: 2013-04-02 02:07-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -103,7 +103,7 @@ msgstr "Tuesdays, thursdays and saturdays."
 
 #: ../t-contact.php:17
 msgid "Agendar horário para visitação."
-msgstr "Schedule time for visitation"
+msgstr "Schedule time for visitation."
 
 #: ../t-contact.php:18
 msgid "Fone: (83) 3226 7376"
