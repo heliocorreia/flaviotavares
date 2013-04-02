@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Flávio Tavares\n"
+"POT-Creation-Date: 2013-04-02 00:34-0300\n"
+"PO-Revision-Date: 2013-04-02 00:35-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;_e;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../t-biography.php:12
+msgid "Esse mundo da imagem me persegue e eu o persigo."
+msgstr ""
+
+#: ../t-biography.php:13
+msgid "Flávio Tavares"
+msgstr ""
+
+#: ../t-biography.php:19
+msgid "O artista com seu quadro, A Pedra do Reino, 1981."
+msgstr ""
+
+#: ../t-biography.php:23
+msgid "Apesar de sua singular matriz, a busca de Flávio Tavares"
+msgstr ""
+
+#: ../t-biography.php:23
+msgid "é a de um imaginário arquetípico em que o sacro dialoga"
+msgstr ""
+
+#: ../t-biography.php:23
+msgid "com o profano e onde a afirmação da vida sempre"
+msgstr ""
+
+#: ../t-biography.php:23
+msgid "se sobrepõe ao pessimismo e ao culto da morte, tão"
+msgstr ""
+
+#: ../t-biography.php:23
+msgid "presentes na arte conteporânea."
+msgstr ""
+
+#: ../t-biography.php:24
+msgid "Gabriel Bechara"
+msgstr ""
+
+#: ../t-biography.php:24
+msgid ""
+"Professor de Estética e História da Arte da Universidade Federal da Paraíba, "
+"2005"
+msgstr ""
+
+#: ../t-biography.php:39
+msgid "A semente"
+msgstr ""
+
+#: ../t-biography.php:40
+msgid "Acrílico sobre tela 1,60 x 1,40 cm"
+msgstr ""
+
+#: ../t-biography.php:49 ../t-biography.php:59 ../t-biography.php:69
+msgid "Sem título"
+msgstr "Untitled"
+
+#: ../t-biography.php:50 ../t-biography.php:70
+msgid "Pastel 83 x 93 cm"
+msgstr ""
+
+#: ../t-biography.php:60
+msgid "Óleo sobre tela 80 x 70 cm"
+msgstr ""
+
+#: ../t-contact.php:14
+msgid "Ateliê Flávio Tavares"
+msgstr ""
+
+#: ../t-contact.php:16
+msgid "Terças, quintas e sábados."
+msgstr ""
+
+#: ../t-contact.php:17
+msgid "Agendar horário para visitação."
+msgstr ""
+
+#: ../t-contact.php:18
+msgid "Fone: (83) 3226 7376"
+msgstr ""
+
+#: ../t-contact.php:21
+msgid "Na Web"
+msgstr ""

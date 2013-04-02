@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'compass'
-gem 'susy'
+gem 'gettext'
 gem 'rake'
+gem 'susy'

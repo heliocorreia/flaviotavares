@@ -7,6 +7,11 @@ GEM
       fssm (>= 0.2.7)
       sass (~> 3.1)
     fssm (0.2.10)
+    gettext (2.3.7)
+      levenshtein
+      locale
+    levenshtein (0.2.2)
+    locale (2.0.8)
     rake (10.0.3)
     sass (3.2.7)
     susy (1.0.5)
@@ -18,5 +23,6 @@ PLATFORMS
 
 DEPENDENCIES
   compass
+  gettext
   rake
   susy

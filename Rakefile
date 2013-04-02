@@ -21,6 +21,16 @@ namespace :compass do
   end
 end
 
+namespace :locale do
+  task :compile do
+    system 'rmsgfmt languages/pt_BR.po -o languages/pt_BR.mo'
+    system 'rmsgfmt languages/en_US.po -o languages/en_US.mo'
+  end
+end
+
+desc "Compile"
+multitask :compile => ['compass:compile', 'locale:compile']
+
 desc "Start everything."
 multitask :start => ['mysql:start', 'compass:watch']
 
