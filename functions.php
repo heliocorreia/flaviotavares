@@ -37,8 +37,9 @@ remove_filter('the_content', 'wpautop');
 add_filter('the_content', 'wpautop' , 12);
 
 function my_locale($locale) {
-	$lang = explode('/', $_SERVER['REQUEST_URI'], 3);
-	$lang = $lang[1];
+	$len = strlen(site_url('/', 'relative'));
+	$lang = explode('/', substr($_SERVER['REQUEST_URI'], $len), 2);
+	$lang = $lang[0];
 
 	$source = array('en', 'pt_br');
 	$target = array('en_US', 'pt_BR');
