@@ -26,6 +26,8 @@ function flaviotavares_setup() {
 	if (function_exists('add_image_size')) {
 		add_image_size( 'my-gallery-thumb', 263, 263, false);
 	}
+
+	load_theme_textdomain('flaviotavares', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme', 'flaviotavares_setup');
 
@@ -33,6 +35,23 @@ add_action('after_setup_theme', 'flaviotavares_setup');
 
 remove_filter('the_content', 'wpautop');
 add_filter('the_content', 'wpautop' , 12);
+
+function my_locale($locale) {
+	$lang = explode('/', $_SERVER['REQUEST_URI'], 3);
+	$lang = $lang[1];
+
+	$source = array('en', 'pt_br');
+	$target = array('en_US', 'pt_BR');
+
+	$new = str_replace($source, $target, $lang);
+
+	if ($new != $lang) {
+		return $new;
+	}
+
+	return $locale;
+}
+add_filter('locale', 'my_locale', 10);
 
 function my_wp_nav_menu_objects($items) {
 	$parents = array();
