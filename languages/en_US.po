@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
-"POT-Creation-Date: 2013-04-02 00:34-0300\n"
-"PO-Revision-Date: 2013-04-02 00:35-0300\n"
+"POT-Creation-Date: 2013-04-02 02:04-0300\n"
+"PO-Revision-Date: 2013-04-02 02:05-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -79,20 +79,36 @@ msgstr ""
 
 #: ../t-contact.php:14
 msgid "Ateliê Flávio Tavares"
+msgstr "Atelier Flavio Tavares"
+
+#: ../t-contact.php:15
+msgid "Rua Maria José Rique, quadra 177, loteamento Cidade Recreio"
 msgstr ""
+
+#: ../t-contact.php:15
+msgid "Altiplano"
+msgstr ""
+
+#: ../t-contact.php:15
+msgid "João Pessoa"
+msgstr ""
+
+#: ../t-contact.php:15
+msgid "Veja mapa aqui"
+msgstr "See map here"
 
 #: ../t-contact.php:16
 msgid "Terças, quintas e sábados."
-msgstr ""
+msgstr "Tuesdays, thursdays and saturdays."
 
 #: ../t-contact.php:17
 msgid "Agendar horário para visitação."
-msgstr ""
+msgstr "Schedule time for visitation"
 
 #: ../t-contact.php:18
 msgid "Fone: (83) 3226 7376"
-msgstr ""
+msgstr "Phone: (83) 3226 7376"
 
 #: ../t-contact.php:21
 msgid "Na Web"
-msgstr ""
+msgstr "On Web"
