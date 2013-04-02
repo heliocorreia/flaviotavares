@@ -11,6 +11,10 @@ function my_get_top_parent() {
 	return $post;
 }
 
+function my_top_parent_slug() {
+	return my_get_top_parent()->post_name;
+}
+
 // theme setup
 
 function flaviotavares_setup() {
