@@ -136,5 +136,9 @@ body.page-template-t-gallery-items-php {
 		display: table-cell;
 		padding: 0.5em;
 		vertical-align: middle;
+
+		br {
+			display: none;
+		}
 	}
 }
