@@ -12,7 +12,6 @@ body.page-template-t-gallery-items-php {
 
 		min-height: image-height("bg-gallery-items.jpg");
 		overflow: hidden;
-		position: relative;
 
 		&::before {
 			@include stretch-y;
@@ -21,7 +20,7 @@ body.page-template-t-gallery-items-php {
 			content: '';
 			width: image-width("gradient-transparent-black.png");
 			right: 0;
-			z-index: 1;
+			z-index: 100;
 		}
 	}
 
