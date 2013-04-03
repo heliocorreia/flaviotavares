@@ -151,9 +151,9 @@ function my_post_gallery($output, $attr) {
         $output .= "<{$itemtag} class='gallery-item'>";
         $output .= "<{$icontag} class='gallery-icon'>$link</{$icontag}>";
         if ( $captiontag && trim($attachment->post_excerpt) ) {
-            $output .= "<{$captiontag} class='wp-caption-text gallery-caption'>"
+            $output .= "<{$captiontag} class='wp-caption-text gallery-caption'><span class='gallery-caption-outer'><span class='gallery-caption-inner'>"
 					. wptexturize($attachment->post_excerpt)
-					. "</{$captiontag}>";
+					. "</span></{$captiontag}>";
         }
         $output .= "</{$itemtag}>";
     }

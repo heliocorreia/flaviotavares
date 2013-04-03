@@ -59,44 +59,10 @@ body.page-template-t-gallery-items-php {
 		color: $color-white;
 
 		&:hover {
-			&::before{
-				@include opacity(0.8);
-			}
-			&::after {
-				@include opaque;
-			}
-		}
-
-		&::before,
-		&::after {
-			@include transparent;
+			@include opacity(0.2);
 		    @include transition-property(opacity);
 		    @include transition-duration(.25s);
 		    @include transition-timing-function(ease-in);
-		}
-
-		&::before {
-			@include stretch;
-//			@include opacity(0.8);
-
-			background: $color-black;
-			content: '';
-			z-index: 1;
-		}
-
-		&::after {
-			@include stretch-y;
-//			@include opacity(1);
-
-			border: 1px solid $color-white;
-			content: attr(title);
-			left: 10%;
-			margin: 1em;
-			padding: 1em;
-			right: 10%;
-			text-align: center;
-			vertical-align: middle;
-			z-index: 2;
 		}
 	}
 
@@ -114,7 +80,61 @@ body.page-template-t-gallery-items-php {
 		@include inline-block;
 	}
 
+	.gallery-icon {
+		position: relative;
+		z-index: 1;
+	}
+
 	.gallery-caption {
-		display: none;
+		@include stretch;
+
+		background: $color-black;
+		color: $color-white;
+		margin: 0;
+	}
+
+	.gallery-caption-outer {
+		@include box-sizing(border-box);
+
+		display: table;
+		border-bottom: seta-sprite-height(zoom-in) solid $color-black;
+		height: 100%;
+		padding: seta-sprite-height(zoom-in) 10%;
+		text-align: center;
+		width: 100%;
+
+		.top-page-slug-pt_br & {
+			border-bottom: seta-sprite-height(ampliar) solid $color-black;
+			padding: seta-sprite-height(ampliar) 10%;
+		}
+
+		&::after {
+			@include inline-block;
+			@include seta-sprite(zoom-in);
+
+			content: '';
+			bottom: seta-sprite-height(zoom-in) / 2;
+			left: 50%;
+			margin-left: - seta-sprite-width(zoom-in) / 2;
+			position: absolute;
+
+			.top-page-slug-pt_br & {
+				@include seta-sprite(ampliar);
+
+				bottom: seta-sprite-height(ampliar) / 2;
+				margin-left: - seta-sprite-width(ampliar) / 2;
+			}
+		}
+	}
+
+	.gallery-caption-inner {
+		@include box-sizing(border-box);
+		@include force-wrap;
+		@include adjust-font-size-to(12px);
+
+		border: 1px solid $color-white;
+		display: table-cell;
+		padding: 0.5em;
+		vertical-align: middle;
 	}
 }
