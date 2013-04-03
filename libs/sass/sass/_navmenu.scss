@@ -69,12 +69,16 @@
 						content: 'Back';
 						text-align: center;
 						text-indent: 0;
-
-						.top-page-slug-pt_br & {
-							content: 'Voltar';
-						}
 					}
 				}
+			}
+		}
+	}
+
+	&.top-page-slug-pt_br {
+		#nav-main .nav-menu .current-page-ancestor.menu-has-submenu > a {
+			&::before {
+				content: 'Voltar';
 			}
 		}
 	}
