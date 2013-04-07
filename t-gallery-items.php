@@ -16,6 +16,8 @@ Template Name: Galeria (itens)
 	</div>
 </div>
 
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/touchswipe/jquery.touchSwipe.min.js"></script>
+
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/media/js/swipebox/swipebox.css">
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/swipebox/jquery.swipebox.min.js"></script>
 
@@ -34,26 +36,42 @@ $(document).ready(function(){
 
 	var aBxSlider = [];
 	$gallery.each(function(i, el){
-		bxSlider = $(this).bxSlider({
+		bxSlider = $(el).bxSlider({
 			controls: false,
 			infiniteLoop: false,
 			pager: false,
 			slideWidth: 'auto'
 		});
+
 		aBxSlider.push(bxSlider);
 	});
 
-	var $nav = $('#nav-prev-next');
-
-	$('.prev', $nav).click(function(){
+	var btnPrev = function() {
 		aBxSlider.forEach(function(el){
 			el.goToPrevSlide();
 		})
-	});
-	$('.next', $nav).click(function(){
+	}
+
+	var btnNext = function() {
 		aBxSlider.forEach(function(el){
 			el.goToNextSlide();
 		})
+	}
+
+	var $nav = $('#nav-prev-next');
+	$('.prev', $nav).click(btnPrev);
+	$('.next', $nav).click(btnNext);
+
+	// swipe
+	$gallery.swipe({
+		allowPageScroll: 'auto',
+		triggerOnTouchEnd : true,
+		swipeStatus : function swipeStatus(event, phase, direction, distance, fingers) {
+			if (phase=='end' && (direction=='left' || direction=='right') ) {
+				(direction=='left') && btnNext();
+				(direction=='right') && btnPrev();
+			}
+		}
 	});
 });
 </script>
