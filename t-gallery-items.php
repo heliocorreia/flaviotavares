@@ -23,6 +23,7 @@ Template Name: Galeria (itens)
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/bxslider/jquery.bxslider.min.js"></script>
 
 <script>
+$('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
 $(document).ready(function(){
 	$gallery = $('.gallery');
 
@@ -31,10 +32,28 @@ $(document).ready(function(){
 		hideBarsDelay : 0 // 0 to always show caption and action bar
 	});
 
-	$gallery.bxSlider({
-		pager: false,
-		slideWidth: 'auto',
-		infiniteLoop: false
+	var aBxSlider = [];
+	$gallery.each(function(i, el){
+		bxSlider = $(this).bxSlider({
+			controls: false,
+			infiniteLoop: false,
+			pager: false,
+			slideWidth: 'auto'
+		});
+		aBxSlider.push(bxSlider);
+	});
+
+	var $nav = $('#nav-prev-next');
+
+	$('.prev', $nav).click(function(){
+		aBxSlider.forEach(function(el){
+			el.goToPrevSlide();
+		})
+	});
+	$('.next', $nav).click(function(){
+		aBxSlider.forEach(function(el){
+			el.goToNextSlide();
+		})
 	});
 });
 </script>
