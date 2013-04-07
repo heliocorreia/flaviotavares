@@ -1,3 +1,16 @@
+$gallery-grid-coluns: 12;
+$gallery-margin: 4px;
+
+%gallery-even {
+	margin: 0 0 $gallery-margin;
+
+	& + &:nth-child(2n) {
+		.gallery-item {
+			vertical-align: top;
+		}
+	}
+}
+
 body.page-template-t-gallery-items-php {
 	@extend %nav-main-with-sub-menu;
 
@@ -5,23 +18,11 @@ body.page-template-t-gallery-items-php {
 }
 
 #t-gallery-items {
-	$gallery-margin: 4px;
-
 	.content {
-		@include span-columns(10 omega);
+		@include span-columns($gallery-grid-coluns omega);
 
 		min-height: image-height("bg-gallery-items.jpg");
 		overflow: hidden;
-
-		&::before {
-			@include stretch-y;
-
-			background: image-url("gradient-transparent-black.png") top left repeat-y;
-			content: '';
-			width: image-width("gradient-transparent-black.png");
-			right: 0;
-			z-index: 100;
-		}
 	}
 
 	.content-outer {
@@ -36,34 +37,29 @@ body.page-template-t-gallery-items-php {
 	}
 
 	.gallery {
+		@extend %gallery-even;
+
 		@include pie-clearfix;
 
 		font-size: 0;
-		margin: 0 0 $gallery-margin;
 		white-space: nowrap;
 
-		& + .gallery:nth-child(2n) {
-			.gallery-item {
-				vertical-align: top;
+		a {
+			@include inline-block;
+
+			color: $color-white;
+
+			&:hover {
+				@include opacity(0.2);
+			    @include transition-property(opacity);
+			    @include transition-duration(.25s);
+			    @include transition-timing-function(ease-in);
 			}
 		}
 	}
 
 	img {
 		float: left;
-	}
-
-	a {
-		@include inline-block;
-
-		color: $color-white;
-
-		&:hover {
-			@include opacity(0.2);
-		    @include transition-property(opacity);
-		    @include transition-duration(.25s);
-		    @include transition-timing-function(ease-in);
-		}
 	}
 
 	.gallery-item {
@@ -86,6 +82,7 @@ body.page-template-t-gallery-items-php {
 	}
 
 	.gallery-caption {
+
 		@include stretch;
 
 		background: $color-black;
@@ -139,6 +136,17 @@ body.page-template-t-gallery-items-php {
 
 		br {
 			display: none;
+		}
+	}
+
+	// bx-slider hacks
+	.bx-wrapper {
+		@extend %gallery-even;
+
+		width: columns($gallery-grid-coluns) - gutter(); // variable widths
+
+		.gallery-item {
+			float: none !important;
 		}
 	}
 }
