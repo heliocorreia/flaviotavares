@@ -18,7 +18,6 @@ $top_page_slug = my_top_parent_slug();
 	<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
 	-->
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/jquery-1.9.1.min.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/galleria/galleria-1.2.9.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class('top-page-slug-' . $top_page_slug); ?>>

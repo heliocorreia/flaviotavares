@@ -6,6 +6,7 @@
 	<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/img-01c-full.jpg">
 </div>
 
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/galleria/galleria-1.2.9.min.js"></script>
 <script>
 
 Galleria.loadTheme('<?php echo get_stylesheet_directory_uri(); ?>/media/js/galleria/themes/classic/galleria.classic.js');
