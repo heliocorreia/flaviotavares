@@ -6,33 +6,28 @@
 	<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/img-01c-full.jpg">
 </div>
 
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/galleria/galleria-1.2.9.min.js"></script>
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/media/js/bxslider/jquery.bxslider.css">
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/bxslider/jquery.bxslider.min.js"></script>
+
 <script>
+$(document).ready(function(){
+	$bxSlider = $('#galleria').bxSlider({
+		controls: false,
+		pager: false,
+		randomStart: true
+	});
 
-Galleria.loadTheme('<?php echo get_stylesheet_directory_uri(); ?>/media/js/galleria/themes/classic/galleria.classic.js');
-Galleria.configure({
-	carousel: false,
-	imageCrop: true,
-	showCounter: false,
-	showImagenav: false,
-    thumbnails: false,
+	$('#nav-main .nav-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
+	var $nav = $('#nav-prev-next');
+
+	$('.prev', $nav).click(function(){
+		$bxSlider.goToPrevSlide();
+	});
+
+	$('.next', $nav).click(function(){
+		$bxSlider.goToNextSlide();
+	});
 });
-Galleria.run('#galleria');
-var oGallery = Galleria.get(0);
-
-
-$('#nav-main .nav-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
-var $nav = $('#nav-prev-next');
-
-$('.prev', $nav).click(function(){
-	console.log('prev');
-	oGallery.prev();
-});
-$('.next', $nav).click(function(){
-	console.log('next');
-	oGallery.next();
-});
-
 </script>
 
 <?php get_footer(); ?>
