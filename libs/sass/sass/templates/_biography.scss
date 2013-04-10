@@ -249,4 +249,29 @@ body.page-template-t-biography-php {
 			}
 		}
 	}
+
+	.bx-wrapper {
+		.bx-controls {
+			@include inline-block;
+
+			background: $color-white;
+			bottom: 0;
+			position: absolute;
+			right: 0;
+
+			.bx-prev {
+				@include hide-text;
+				@include inline-block;
+				@include seta-sprite(rounded-small-left-2);
+			}
+
+			.bx-next {
+				@include hide-text;
+				@include inline-block;
+				@include seta-sprite(rounded-small-right-2);
+
+				margin-left: 4px;
+			}
+		}
+	}
 }

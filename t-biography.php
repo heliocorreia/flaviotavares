@@ -4,6 +4,20 @@ Template Name: Biografia
 */
 ?>
 <?php get_header(); the_post(); ?>
+
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/media/js/bxslider/jquery.bxslider.css">
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/bxslider/jquery.bxslider.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.slides .slides-inner').bxSlider({
+		controls: true,
+		infiniteLoop: true,
+		randomStart: true,
+		pager: false
+	});
+});
+</script>
+
 <section id="t-biography">
 	<div class="container">
 		<header class="content-header">
@@ -14,10 +28,19 @@ Template Name: Biografia
 			</blockquote>
 			<footer>
 				<section class="slides">
-					<figure>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/img-biography-slides.jpg" height="441" width="735">
-						<figcaption><?php _e('O artista com seu quadro, A Pedra do Reino, 1981.', 'flaviotavares'); ?></figcaption>
-					</figure>
+					<div class="slides-inner">
+					<?php $slides = array(
+						array('img' => '/media/img/img-biography-author-1.jpg', 'caption' => 'O artista com seu quadro, A Pedra do Reino, 1981.'),
+						array('img' => '/media/img/img-biography-author-2.jpg', 'caption' => 'O artista com seu quadro, A Pedra do Reino, 1981.'),
+						array('img' => '/media/img/img-biography-author-3.jpg', 'caption' => 'O artista com seu quadro, A Pedra do Reino, 1981.'),
+					);
+					foreach($slides as $slide): ?>
+						<figure>
+							<img src="<?php echo get_stylesheet_directory_uri() . $slide['img']; ?>" width="735" height="441">
+							<figcaption><?php _e($slide['caption'], 'flaviotavares'); ?></figcaption>
+						</figure>
+					<?php endforeach; ?>
+					</div>
 				</section>
 				<blockquote class="by-others">
 					<p><span class="block-1"><?php _e('Apesar de sua singular matriz, a busca de Flávio Tavares', 'flaviotavares'); ?></span> <span class="block-2"><?php _e('é a de um imaginário arquetípico em que o sacro dialoga', 'flaviotavares'); ?></span> <span class="block-3"><?php _e('com o profano e onde a afirmação da vida sempre', 'flaviotavares'); ?></span> <span class="block-4"><?php _e('se sobrepõe ao pessimismo e ao culto da morte, tão', 'flaviotavares'); ?></span> <span class="block-5"><?php _e('presentes na arte conteporânea.', 'flaviotavares'); ?></span></p>
