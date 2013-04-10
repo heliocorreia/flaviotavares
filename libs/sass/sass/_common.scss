@@ -32,3 +32,13 @@ $seta-sprite-dimensions: true;
 @import "language/*.png";
 @import "logo/*.png";
 @import "seta/*.png";
+
+// extensions
+
+%font-quattrocento-sans {
+	font-family: 'Quattrocento Sans', sans-serif;
+}
+
+%font-ovo {
+	font-family: 'Ovo', serif;
+}

@@ -11,11 +11,11 @@ html {
 }
 
 body {
+	@extend %font-quattrocento-sans;
 	@include stretch;
 
 	background: $color-black no-repeat top center;
 	background-size: 100% auto;
-	font-family: 'Quattrocento Sans', sans-serif;
 }
 
 #doc {

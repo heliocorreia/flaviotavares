@@ -98,6 +98,7 @@ body.page-template-t-biography-php {
 		}
 
 		.by-others {
+			@extend %font-ovo;
 			@include rhythm(1, 0, 0, 3);
 			@include span-columns(13, 13);
 
@@ -106,7 +107,7 @@ body.page-template-t-biography-php {
 			text-transform: uppercase;
 
 			p {
-				@include adjust-font-size-to(32px);
+				@include adjust-font-size-to(28px);
 				@include rhythm;
 
 				color: #987e51;
@@ -114,6 +115,7 @@ body.page-template-t-biography-php {
 
 				span {
 					display: block;
+					letter-spacing: -0.025em;
 					text-align: center;
 				}
 			}
