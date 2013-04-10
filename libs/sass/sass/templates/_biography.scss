@@ -35,6 +35,10 @@ body.page-template-t-biography-php {
 			position: absolute;
 			z-index: 100;
 
+			@include at-breakpoint(0px 1123px) {
+				right: 0;
+			}
+
 			.top-page-slug-pt_br & {
 				@include txt-sprite(biografia);
 			}
