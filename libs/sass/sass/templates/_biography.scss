@@ -277,3 +277,55 @@ body.page-template-t-biography-php {
 		}
 	}
 }
+
+#nav-biography {
+	$border-color: #4b3a1d;
+
+	@include margin-leader(14);
+
+	.nav-biography {
+		$dimension: rhythm(5);
+
+		margin: 0;
+		padding: 0;
+
+		a,
+		&::before {
+			@include border-radius(100%);
+			@include inline-block;
+
+			border: 2px solid $border-color;
+			color: #4b3a1d;
+			width: $dimension;
+		}
+
+		&::before {
+			@include background(image-url("img-biography-menu.jpg") center center);
+			@include inline-block;
+
+			background-size: 100% auto;
+			content: '';
+			height: $dimension;
+		}
+
+		a {
+			line-height: $dimension;
+			text-align: center;
+			text-decoration: none;
+			vertical-align: center;
+
+			&:hover {
+				background-color: $border-color;
+				color: $color-white;
+			}
+		}
+	}
+
+	.menu-item {
+		@include rhythm(1, 0, 0, 1);
+
+		display: block;
+		text-transform: uppercase;
+		font-style: italic;
+	}
+}

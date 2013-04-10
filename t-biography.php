@@ -96,6 +96,15 @@ $(document).ready(function(){
 						</dl>
 					</li>
 				</ol>
+				<nav id="nav-biography">
+					<?php wp_nav_menu(array(
+						'menu' => 'biography-' . my_top_parent_slug(),
+						'theme_location' => 'biography',
+						'container' => 'div',
+						'menu_class' => 'nav-biography',
+						'depth' => 2,
+					)); ?>
+				</nav>
 			</aside>
 		</article>
 	</div>

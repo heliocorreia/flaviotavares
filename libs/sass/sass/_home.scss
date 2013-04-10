@@ -59,6 +59,8 @@ body.home {
 	}
 
 	.menu-item {
+		$color: #e6e6e6;
+
 		@include inline-block;
 
 		text-transform: uppercase;
@@ -75,13 +77,18 @@ body.home {
 			@include opacity(0.5);
 
 			border: 2px solid $border-color;
-			color: #e6e6e6;
+			color: $color;
 			display: table;
 			height: $dimension;
 			text-decoration: none;
 			text-align: center;
 			vertical-align: center;
 			width: $dimension;
+
+			&:hover {
+				background-color: $border-color;
+				color: $color-black;
+			}
 		}
 
 		span {
