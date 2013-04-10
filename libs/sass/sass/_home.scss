@@ -62,6 +62,7 @@ body.home {
 		@include inline-block;
 
 		text-transform: uppercase;
+		font-style: italic;
 		
 		& + .menu-item {
 			margin-left: 25px;

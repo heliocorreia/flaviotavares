@@ -14,9 +14,7 @@ $top_page_slug = my_top_parent_slug();
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<!--
 	<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
-	-->
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/jquery-1.9.1.min.js"></script>
 	<?php wp_head(); ?>
 </head>
