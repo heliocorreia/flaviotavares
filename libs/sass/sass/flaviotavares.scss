@@ -24,10 +24,6 @@ a {
     @include transition-timing-function(ease-in);
 }
 
-#doc {
-	position: relative;
-}
-
 .container {
 	@include container;
 
