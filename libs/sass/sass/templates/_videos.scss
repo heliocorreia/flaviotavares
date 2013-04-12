@@ -56,6 +56,45 @@ body.page-template-t-videos-php {
 			border-top: 1px solid $color-white;
 			color: #9cc36b;
 		}
+
+		a {
+			@include inline-block;
+
+			max-width: 100%;
+			position: relative;
+
+			&::before {
+				@include seta-sprite(play);
+
+				content: '';
+				left: 50%;
+				margin-left: - seta-sprite-width(play)/2;
+				margin-top: - seta-sprite-height(play)/2;
+				position: absolute;
+				top: 50%;
+				z-index: 1;
+			}
+
+			&::after {
+				@include transparent;
+				@include stretch;
+
+				content: '';
+				background: $color-black;
+				z-index: 2;
+			}
+
+			&:hover {
+				&::after {
+					@include opacity(0.7);
+				}
+			}
+		}
+
+		img {
+			height: auto;
+			max-width: 100%;
+		}
 	}
 
 	.oembed-result {
@@ -66,8 +105,8 @@ body.page-template-t-videos-php {
 		overflow: hidden;
 	}
 
-	.oembed-result iframe,  
-	.oembed-result object,  
+	.oembed-result iframe,
+	.oembed-result object,
 	.oembed-result embed {
 		@include stretch;
 
