@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: [en] Gallery
+Template Name: Galeria
 */
 ?>
 <?php get_header(); ?>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: [en] Videos
+Template Name: Vídeo
 */
 ?>
 <?php get_header(); ?>
