@@ -5,7 +5,7 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/touchswipe/jquery.touchSwipe.min.js"></script>
 
 <script>
-(function() {
+(function($) {
 	var $w = $(window),
 		$current = $('<img />'),
 		$new = $(),
@@ -56,30 +56,7 @@
 		$new.css(dimensions);
 		$current.css(dimensions);
 	};
-
-	$current.css({
-		'left': '0px',
-		'position': 'fixed',
-		'top': '0px'
-    })
-	.prependTo('body')
-	.attr('src', backgrounds[step])
-	.bind('load', function(){
-		bgResize();
-	});
-
-	$new = $current.clone();
-	$new.hide().insertAfter($current);
-
-	var preload = function(backgrounds) {
-        var cache = [];
-        for (var i in backgrounds) {
-            var cacheImage = document.createElement('img');
-            cacheImage.src = backgrounds[i];
-            cache.push(cacheImage);
-        }
-    }
-	preload(backgrounds);
+	$w.resize(bgResize);
 
 	var stepIt = function(forward) {
 		var speed = 250,
@@ -140,25 +117,50 @@
 		return (offset < 0) ? Math.abs(offset / 2) : 0;
 	}
 
-	// swipe
-	$current.swipe({
-		allowPageScroll: 'auto',
-		triggerOnTouchEnd : true,
-		swipeStatus : function swipeStatus(event, phase, direction, distance, fingers) {
-			if (phase=='end' && (direction=='left' || direction=='right') ) {
-				(direction=='left') && stepNext();
-				(direction=='right') && stepPrev();
-			}
-		}
+	$current.css({
+		'left': '0px',
+		'position': 'fixed',
+		'top': '0px'
+    })
+	.prependTo('body')
+	.attr('src', backgrounds[step])
+	.bind('load', function(){
+		bgResize();
 	});
 
-	// bgResize();
-	$w.resize(bgResize);
+	$new = $current.clone();
+	$new.hide().insertAfter($current);
 
-	$('#nav-main .nav-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
-	var $nav = $('#nav-prev-next');
-	$('.prev', $nav).click(stepPrev);
-	$('.next', $nav).click(stepNext);
+	var preload = function(backgrounds) {
+        var cache = [];
+        for (var i in backgrounds) {
+            var cacheImage = document.createElement('img');
+            cacheImage.src = backgrounds[i];
+            cache.push(cacheImage);
+        }
+    }
+	preload(backgrounds);
+
+	$(function() {
+		$('#nav-main .nav-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
+		var $nav = $('#nav-prev-next');
+		$('.prev', $nav).click(stepPrev);
+		$('.next', $nav).click(stepNext);
+
+		bgResize();
+
+		// add swipe
+		$current.swipe({
+			allowPageScroll: 'auto',
+			triggerOnTouchEnd : true,
+			swipeStatus : function swipeStatus(event, phase, direction, distance, fingers) {
+				if (phase=='end' && (direction=='left' || direction=='right') ) {
+					(direction=='left') && stepNext();
+					(direction=='right') && stepPrev();
+				}
+			}
+		});
+	});
 })(jQuery);
 </script>
 
