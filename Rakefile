@@ -28,6 +28,12 @@ namespace :locale do
   end
 end
 
+namespace :deploy do
+  task :prod do
+    system 'rsync --recursive --perms --force --delay-updates --compress --exclude-from=".rsync-exclude" --human-readable --progress . #{ENV["USER"]}:flaviotavares.com.br:/home/flaviotava/public_html/wp-content/themes/flaviotavares/'
+  end
+end
+
 desc "Compile"
 multitask :compile => ['compass:compile', 'locale:compile']
 

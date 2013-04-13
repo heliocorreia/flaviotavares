@@ -1,0 +1,6 @@
+*.po
+*.pot
+.*
+Gemfile*
+libs*
+Rakefile
