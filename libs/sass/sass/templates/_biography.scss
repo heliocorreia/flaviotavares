@@ -33,7 +33,7 @@ body.page-template-t-biography-php {
 
 			margin: 115px 0 0 0;
 			position: absolute;
-			z-index: 100;
+			z-index: 20;
 
 			@include at-breakpoint(0px 1123px) {
 				right: 0;

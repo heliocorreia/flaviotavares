@@ -106,7 +106,8 @@
 	@include span-columns(3);
 
 	padding-bottom: $cavalo-full-height;
-	z-index: 1000;
+	position: fixed;
+	z-index: 100;
 
 	&::before {
 		@include logo-sprite(black);
@@ -227,7 +228,7 @@
 	position: absolute;
 	right: rhythm(1);
 	top: rhythm(1);
-	z-index: 1000;
+	z-index: 100;
 
 	.nav-menu:hover {
 		@include clearfix;
