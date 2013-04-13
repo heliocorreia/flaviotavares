@@ -1,9 +1,9 @@
 // susy
  
-$total-columns  : 16;             // a 12-column grid
-$column-width   : 60px;           // each column is 4em wide
-$gutter-width   : 20px;           // 1em gutters between columns
-$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+$total-columns  : 16;
+$column-width   : 60px;
+$gutter-width   : 20px;
+$grid-padding   : $gutter-width;
 
 @import "susy";
 
