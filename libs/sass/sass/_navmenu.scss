@@ -215,7 +215,8 @@
 		background-color: $color-gray;
 		left: $logo-sprite-width;
 		position: absolute;
-		width: $logo-sprite-width;
+//		width: $logo-sprite-width;
+		width: 2 * ($column-width + $gutter-width) - $gutter-width;
 	}
 
 	.menu-has-submenu::before {
@@ -227,8 +228,9 @@
 
 	.sub-menu {
 		list-style: none;
+		margin-top: -50%;
 		padding: 0;
-		top: 25%;
+		top: 50%;
 
 		a {
 			@include opacity(1);
