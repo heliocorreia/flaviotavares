@@ -28,16 +28,14 @@ body.page-template-t-biography-php {
 		}
 
 		.main-title {
+			@extend %scale-at-breakpoints;
 			@include hide-text;
+			@include transform-origin(0);
 			@include txt-sprite(biography);
 
 			margin: 115px 0 0 0;
 			position: absolute;
 			z-index: 20;
-
-			@include at-breakpoint(0px 1123px) {
-				right: 0;
-			}
 
 			.top-page-slug-pt_br & {
 				@include txt-sprite(biografia);

@@ -1,5 +1,22 @@
 body.page-template-t-contact-php {
 	background-image: image-url("bg-contact.jpg");
+
+	&::after {
+		@extend %absolute-center-and-scale;
+		@include opacity(0.1);
+		@include txt-sprite(contact);
+
+		margin-left: - txt-sprite-width(contact) / 2;
+		margin-top: - txt-sprite-height(contact) / 2;
+		z-index: -1;
+
+		.top-page-slug-pt_br & {
+			@include txt-sprite(contact);
+
+			margin-left: - txt-sprite-width(contact) / 2;
+			margin-top: - txt-sprite-height(contact) / 2;
+		}
+	}
 }
 
 #t-contact {
@@ -13,21 +30,7 @@ body.page-template-t-contact-php {
 	}
 
 	.main-title {
-		@include hide-text;
-		@include opacity(0.1);
-		@include txt-sprite(contact);
-
-		margin-right: - txt-sprite-width(contact)/2;
-		position: absolute;
-		right: 50%;
-		top: 353px;
-		z-index: 0;
-
-		.top-page-slug-pt_br & {
-			@include txt-sprite(contato);
-
-			margin-right: - txt-sprite-width(contato)/2;
-		}
+		display: none;
 	}	
 
 	.outter {

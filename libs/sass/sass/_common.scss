@@ -5,6 +5,11 @@ $column-width   : 60px;
 $gutter-width   : 20px;
 $grid-padding   : $gutter-width;
 
+//$media-desktop-600: 37.5em;
+//$media-desktop-860: 53.75em;
+//$media-desktop-940: 58.75em;
+//$media-desktop-1300: 81.25em;
+
 @import "susy";
 
 // compass
@@ -41,4 +46,30 @@ $seta-sprite-dimensions: true;
 
 %font-ovo {
 	font-family: 'Ovo', serif;
+}
+
+%scale-at-breakpoints {
+	@include scale(0.25);
+
+	@include at-breakpoint(6) {
+		@include scale(.5);
+	}
+
+	@include at-breakpoint(12) {
+		@include scale(.75);
+	}
+
+	@include at-breakpoint(16) {
+		@include scale(1);
+	}
+}
+
+%absolute-center-and-scale {
+	@extend %scale-at-breakpoints;
+
+	content: '';
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	z-index: 1;
 }

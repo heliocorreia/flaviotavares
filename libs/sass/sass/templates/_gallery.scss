@@ -1,25 +1,28 @@
 body.page-template-t-gallery-php {
 	background-image: image-url("bg-gallery.jpg");
+
+	&::after {
+		@extend %absolute-center-and-scale;
+		@include txt-sprite(gallery);
+
+		margin-left: - txt-sprite-width(gallery) / 2;
+		margin-top: - txt-sprite-height(gallery) / 2;
+
+		.top-page-slug-pt_br & {
+			@include txt-sprite(galeria);
+
+			margin-left: - txt-sprite-width(galeria) / 2;
+			margin-top: - txt-sprite-height(galeria) / 2;
+		}
+	}
 }
 
 #t-gallery {
 	.content {
 		@include span-columns(13 omega);
-
-		min-height: image-height("bg-gallery.jpg");
-		position: relative;
 	}
 
 	.main-title {
-		@include hide-text;
-		@include txt-sprite(gallery);
-
-		position: absolute;
-		right: 0;
-		top: 343px;
-
-		.top-page-slug-pt_br & {
-			@include txt-sprite(galeria);
-		}
+		display: none;
 	}
 }
