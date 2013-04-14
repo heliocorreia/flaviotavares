@@ -53,7 +53,7 @@ $seta-sprite-dimensions: true;
 
 	@include transform($trans scale(.25));
 
-	@include at-breakpoint(6) {
+	@include at-breakpoint(8) {
 		@include transform($trans scale(.5));
 	}
 

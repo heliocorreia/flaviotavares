@@ -18,7 +18,7 @@ body {
 	background: $color-black no-repeat top center fixed;
 	background-size: auto 100%;
 
-	@include at-breakpoint(6) {
+	@include at-breakpoint(8) {
 		@include adjust-font-size-to(12px);
 	}
 
