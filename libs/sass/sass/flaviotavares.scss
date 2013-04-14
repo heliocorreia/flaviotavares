@@ -12,10 +12,23 @@ html {
 
 body {
 	@extend %font-quattrocento-sans;
+	@include adjust-font-size-to(10px);
 	@include stretch;
 
 	background: $color-black no-repeat top center fixed;
 	background-size: auto 100%;
+
+	@include at-breakpoint(6) {
+		@include adjust-font-size-to(12px);
+	}
+
+	@include at-breakpoint(12) {
+		@include adjust-font-size-to(14px);
+	}
+
+	@include at-breakpoint(16) {
+		@include adjust-font-size-to(16px);
+	}
 }
 
 a {
