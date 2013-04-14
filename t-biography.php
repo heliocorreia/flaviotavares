@@ -13,7 +13,6 @@ $(document).ready(function(){
 	$('.slides .slides-inner').bxSlider({
 		controls: true,
 		infiniteLoop: true,
-		randomStart: true,
 		pager: false
 	});
 });
