@@ -91,6 +91,11 @@ body.page-template-t-biography-php {
 			position: absolute;
 			right: 0;
 
+			img {
+				height: auto;
+				width: 100%;
+			}
+
 			figcaption {
 				@include adjust-font-size-to(10px);
 				@include opacity(0.7);
