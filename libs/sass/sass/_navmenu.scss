@@ -10,8 +10,9 @@
 		// cavalo
 		$cavalo-sprite-height: cavalo-sprite-height(woman);
 		$cavalo-sprite-width: cavalo-sprite-width(woman);
-		$cavalo-border-bottom: 3 * $base-line-height;
-		$cavalo-full-height: (lines-for-font-size($cavalo-sprite-height) * $base-line-height) + $cavalo-border-bottom;
+		$cavalo-border-top: 1 * $base-line-height;
+		$cavalo-border-bottom: round((lines-for-font-size($cavalo-sprite-height) * $base-line-height) - $cavalo-sprite-height);
+		$cavalo-full-height: $cavalo-border-top + $cavalo-sprite-height + $cavalo-border-bottom;
 
 		&::before {
 			@include logo-sprite(ft);
@@ -26,8 +27,14 @@
 
 			@include cavalo-sprite(woman);
 
+			border: 0 solid $color-black;
 			border-width: 0 $padding-right 0 $padding-left;
-			bottom: $cavalo-border-bottom;
+			border-bottom-width: $cavalo-border-bottom;
+			border-top-width: $cavalo-border-top;
+		}
+
+		.menu-main-en-container {
+			width: $logo-sprite-width;
 		}
 
 		.nav-menu {
@@ -99,13 +106,13 @@
 	// cavalo
 	$cavalo-sprite-height: cavalo-sprite-height(menu);
 	$cavalo-sprite-width: cavalo-sprite-width(menu);
-	$cavalo-border-bottom: 3 * $base-line-height;
-	$cavalo-full-height: (lines-for-font-size($cavalo-sprite-height) * $base-line-height) + $cavalo-border-bottom;
+	$cavalo-border-top: 1 * $base-line-height;
+	$cavalo-border-bottom: round((lines-for-font-size($cavalo-sprite-height) * $base-line-height) - $cavalo-sprite-height);
+	$cavalo-full-height: $cavalo-border-top + $cavalo-sprite-height + $cavalo-border-bottom;
 
 	@include stretch-y;
 	@include span-columns(3);
 
-	padding-bottom: $cavalo-full-height;
 	position: fixed;
 	z-index: 100;
 
@@ -131,10 +138,12 @@
 
 		border: 0 solid $color-black;
 		border-width: 0 $padding-right 0 $padding-left;
+		border-bottom-width: $cavalo-border-bottom;
+		border-top-width: $cavalo-border-top;
 		content: '';
 		left: 0;
 		position: absolute;
-		bottom: $cavalo-border-bottom;
+		bottom: 0;
 	}
 
 	a {
@@ -147,16 +156,25 @@
 		text-transform: uppercase;
 	}
 
+	.menu-main-en-container {
+		@include box-sizing(border-box);
+
+		display: table;
+		height: 100%;
+		padding-bottom: $cavalo-full-height;
+		padding-top: $logo-full-height;
+		width: $logo-sprite-width;
+	}
+
 	.nav-menu {
 		@include box-sizing(border-box);
-		@include stretch;
 
 		background-color: $color-black;
-		display: block;
+		display: table-cell;
 		margin: 0;
-		padding: rhythm(2) rhythm(1) 0 rhythm(1);
-		top: $logo-full-height;
-		width: $logo-sprite-width;
+		list-style: none;
+		padding: 0;
+		vertical-align: middle;
 	}
 
 	.menu-item {
@@ -209,8 +227,8 @@
 
 	.sub-menu {
 		list-style: none;
-		margin: -100% 0 0 0;
-		padding: (($menu-item-lines * $base-line-height) - ($base-font-size/2) - $menu-item-border-width) 0 0 0;
+		padding: 0;
+		top: 25%;
 
 		a {
 			@include opacity(1);
