@@ -49,14 +49,16 @@ $seta-sprite-dimensions: true;
 }
 
 %scale-at-breakpoints {
-	@include scale(0.25);
+	$trans: translate3d(0, 0, 0);
+
+	@include transform($trans scale(.25));
 
 	@include at-breakpoint(6) {
-		@include scale(.5);
+		@include transform($trans scale(.5));
 	}
 
 	@include at-breakpoint(12) {
-		@include scale(.75);
+		@include transform($trans scale(.75));
 	}
 
 	@include at-breakpoint(16) {
