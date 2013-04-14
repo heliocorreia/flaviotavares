@@ -51,7 +51,7 @@ body.page-template-t-biography-php {
 			background: $color-black;
 			color: $color-white;
 			left: 0;
-			margin: 310px 0 0 0;
+			margin: rhythm(13) 0 0 0;
 			padding: rhythm(2) rhythm(3);
 			position: absolute;
 			text-align: center;
@@ -71,7 +71,7 @@ body.page-template-t-biography-php {
 			}
 
 			p {
-				@include adjust-font-size-to(20px);
+				@include adjust-font-size-to(18px);
 				@include rhythm;
 
 				position: relative;
