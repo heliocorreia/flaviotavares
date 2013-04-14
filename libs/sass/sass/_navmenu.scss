@@ -33,7 +33,7 @@
 			border-top-width: $cavalo-border-top;
 		}
 
-		.menu-main-en-container {
+		& > div {
 			width: $logo-sprite-width;
 		}
 
@@ -156,7 +156,7 @@
 		text-transform: uppercase;
 	}
 
-	.menu-main-en-container {
+	& > div {
 		@include box-sizing(border-box);
 
 		display: table;
