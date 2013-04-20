@@ -27,6 +27,10 @@ Template Name: Galeria (itens)
 <script>
 $('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
 $(document).ready(function(){
+	// submenu
+	$('.sub-menu').responsiveVerticalCenter('top');
+
+	// gallery
 	$gallery = $('.gallery');
 
 	$gallery.find('a').swipebox({
@@ -34,6 +38,7 @@ $(document).ready(function(){
 		hideBarsDelay : 0 // 0 to always show caption and action bar
 	});
 
+	// slider
 	var aBxSlider = [];
 	$gallery.each(function(i, el){
 		bxSlider = $(el).bxSlider({
