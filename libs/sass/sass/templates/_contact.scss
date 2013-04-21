@@ -29,37 +29,18 @@ body.page-template-t-contact-php {
 		position: relative;
 	}
 
+	.content {
+		@include clearfix;
+	}
+
 	.main-title {
 		display: none;
 	}	
 
-	.outter {
+	address {
 		@include pre(6);
 		@include span-columns(7);
 
-		font-size: 0;
-
-		&, &::before {
-			min-height: image-height("bg-contact.jpg");
-		}
-
-		&::before {
-			@include inline-block;
-
-			content: '';
-			height: 100%;
-			vertical-align: middle;
-		}
-	}
-
-	.inner {
-		@include inline-block;
-
-		font-size: $base-font-size;
-		vertical-align: middle;
-	}
-
-	address {
 		@include rhythm(1, 0, 0, 1);
 
 		background: $color-black;
