@@ -7,11 +7,7 @@ Template Name: Galeria (itens)
 <div id="t-gallery-items">
 	<div class="container">
 		<section class="content">
-			<div class="content-outer">
-				<div class="content-inner">
-					<?php the_post(); the_content(); ?>
-				</div>
-			</div>
+			<?php the_post(); the_content(); ?>
 		</section>
 	</div>
 </div>
@@ -28,7 +24,10 @@ Template Name: Galeria (itens)
 $('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
 $(document).ready(function(){
 	// submenu
-	$('.sub-menu').responsiveVerticalCenter('top');
+	$('.sub-menu').responsiveVerticalCenter();
+
+	// content
+	$('#t-gallery-items .content').responsiveVerticalCenter({ parentSelector:'body' });
 
 	// gallery
 	$gallery = $('.gallery');

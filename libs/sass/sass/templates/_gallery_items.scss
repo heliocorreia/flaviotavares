@@ -21,24 +21,11 @@ body.page-template-t-gallery-items-php {
 	.content {
 		@include span-columns($gallery-grid-coluns omega);
 
-		min-height: image-height("bg-gallery-items.jpg");
 		overflow: hidden;
-	}
-
-	.content-outer {
-		display: table;
-		width: 100%;
-	}
-
-	.content-inner {
-		display: table-cell;
-		height: image-height("bg-gallery-items.jpg");
-		vertical-align: middle;
 	}
 
 	.gallery {
 		@extend %gallery-even;
-
 		@include pie-clearfix;
 
 		font-size: 0;
@@ -82,7 +69,6 @@ body.page-template-t-gallery-items-php {
 	}
 
 	.gallery-caption {
-
 		@include stretch;
 
 		background: $color-black;
@@ -142,8 +128,6 @@ body.page-template-t-gallery-items-php {
 	// bx-slider hacks
 	.bx-wrapper {
 		@extend %gallery-even;
-
-		width: columns($gallery-grid-coluns) - gutter(); // variable widths
 
 		.gallery-item {
 			float: none !important;
