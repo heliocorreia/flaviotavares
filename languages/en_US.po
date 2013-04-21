@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
-"POT-Creation-Date: 2013-04-02 02:04-0300\n"
-"PO-Revision-Date: 2013-04-02 02:07-0300\n"
+"POT-Creation-Date: 2013-04-21 11:06-0300\n"
+"PO-Revision-Date: 2013-04-21 11:09-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -15,65 +15,63 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../t-biography.php:12
+#: ../t-biography.php:26
 msgid "Esse mundo da imagem me persegue e eu o persigo."
-msgstr ""
+msgstr "This world of the image pursues me and I pursue it in return."
 
-#: ../t-biography.php:13
+#: ../t-biography.php:27
 msgid "Flávio Tavares"
 msgstr ""
 
-#: ../t-biography.php:19
-msgid "O artista com seu quadro, A Pedra do Reino, 1981."
-msgstr ""
-
-#: ../t-biography.php:23
+#: ../t-biography.php:46
 msgid "Apesar de sua singular matriz, a busca de Flávio Tavares"
-msgstr ""
+msgstr "Despite his singular matrix, Flávio Tavares searches"
 
-#: ../t-biography.php:23
+#: ../t-biography.php:46
 msgid "é a de um imaginário arquetípico em que o sacro dialoga"
-msgstr ""
+msgstr "for archetypal imagery in which the sacred encounters"
 
-#: ../t-biography.php:23
+#: ../t-biography.php:46
 msgid "com o profano e onde a afirmação da vida sempre"
-msgstr ""
+msgstr "with the profane, and where an affirmation of life always"
 
-#: ../t-biography.php:23
+#: ../t-biography.php:46
 msgid "se sobrepõe ao pessimismo e ao culto da morte, tão"
-msgstr ""
+msgstr "overcomes pessimism and the cult of death, which is so"
 
-#: ../t-biography.php:23
+#: ../t-biography.php:46
 msgid "presentes na arte conteporânea."
-msgstr ""
+msgstr "present in contemporary art."
 
-#: ../t-biography.php:24
+#: ../t-biography.php:47
 msgid "Gabriel Bechara"
 msgstr ""
 
-#: ../t-biography.php:24
+#: ../t-biography.php:47
 msgid ""
 "Professor de Estética e História da Arte da Universidade Federal da Paraíba, "
 "2005"
 msgstr ""
+"Professor of Aesthetics and History of Art at Paraiba Federal University, "
+"2005"
 
-#: ../t-biography.php:39
+#: ../t-biography.php:62
 msgid "A semente"
 msgstr ""
 
-#: ../t-biography.php:40
+#: ../t-biography.php:63
 msgid "Acrílico sobre tela 1,60 x 1,40 cm"
 msgstr ""
 
-#: ../t-biography.php:49 ../t-biography.php:59 ../t-biography.php:69
+#: ../t-biography.php:72 ../t-biography.php:82 ../t-biography.php:92
 msgid "Sem título"
 msgstr "Untitled"
 
-#: ../t-biography.php:50 ../t-biography.php:70
+#: ../t-biography.php:73 ../t-biography.php:93
 msgid "Pastel 83 x 93 cm"
 msgstr ""
 
-#: ../t-biography.php:60
+#: ../t-biography.php:83
 msgid "Óleo sobre tela 80 x 70 cm"
 msgstr ""
 
