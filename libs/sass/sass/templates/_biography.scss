@@ -5,8 +5,8 @@ body.page-template-t-biography-php {
 }
 
 #t-biography {
-	@include margin-leader(21);
-	@include padding-leader(4);
+	@include margin-leader(17);
+	@include padding-leader(8);
 
 	background-color: $color-white;
 	border-bottom: rhythm(1) solid #9c8358;
