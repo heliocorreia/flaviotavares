@@ -1,5 +1,6 @@
 body.page-template-t-contact-php {
 	background-image: image-url("bg-contact.jpg");
+	overflow-x: hidden;
 
 	&::after {
 		@extend %absolute-center-and-scale;
