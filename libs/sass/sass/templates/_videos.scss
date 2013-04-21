@@ -5,29 +5,8 @@ body.page-template-t-videos-php {
 #t-videos {
 	color: $color-white;
 
-	.outter {
+	.content {
 		@include span-columns(13 omega);
-
-		font-size: 0;
-
-		&, &:before {
-			min-height: image-height("bg-home.jpg");
-		}
-
-		&:before {
-			@include inline-block;
-
-			content: '';
-			height: 100%;
-			vertical-align: middle;
-		}
-	}
-
-	.inner {
-		@include inline-block;
-
-		font-size: $base-font-size;
-		vertical-align: middle;
 	}
 
 	.section {
