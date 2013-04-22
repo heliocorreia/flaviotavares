@@ -21,13 +21,15 @@ Template Name: Galeria (itens)
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/bxslider/jquery.bxslider.min.js"></script>
 
 <script>
+// nav-main prev/next buttons
 $('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
+
+// content: align vertical center
+$('#t-gallery-items .content').responsiveVerticalCenter({ parentSelector:'body' });
+
 $(document).ready(function(){
 	// submenu
 	$('.sub-menu').responsiveVerticalCenter();
-
-	// content
-	$('#t-gallery-items .content').responsiveVerticalCenter({ parentSelector:'body' });
 
 	// gallery
 	$gallery = $('.gallery');
