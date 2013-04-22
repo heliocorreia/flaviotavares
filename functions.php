@@ -25,7 +25,7 @@ function flaviotavares_setup() {
 	register_nav_menu('biography', 'Biography');
 
 	if (function_exists('add_image_size')) {
-		add_image_size( 'my-gallery-thumb', 263, 263, false);
+		add_image_size( 'my-gallery-thumb', 410, 195, false);
 	}
 
 	load_theme_textdomain('flaviotavares', get_template_directory() . '/languages');
