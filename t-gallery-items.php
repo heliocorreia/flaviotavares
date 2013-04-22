@@ -35,8 +35,8 @@ $(document).ready(function(){
 	$gallery = $('.gallery');
 
 	$gallery.find('a').swipebox({
-		useCSS : true, // false will force the use of jQuery for animations
-		hideBarsDelay : 0 // 0 to always show caption and action bar
+		useCSS : true,
+		hideBarsDelay : 3000
 	});
 
 	// slider
