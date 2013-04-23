@@ -5,6 +5,8 @@ body.page-template-t-biography-php {
 }
 
 #t-biography {
+	$figcaption-font-size: 10px;
+
 	@include margin-leader(17);
 	@include padding-leader(8);
 
@@ -97,7 +99,7 @@ body.page-template-t-biography-php {
 			}
 
 			figcaption {
-				@include adjust-font-size-to(10px);
+				@include adjust-font-size-to($figcaption-font-size);
 				@include opacity(0.7);
 
 				text-transform: uppercase;
@@ -308,9 +310,10 @@ body.page-template-t-biography-php {
 			@include inline-block;
 
 			background: $color-white;
-			bottom: 0;
+			bottom: - seta-sprite-height(rounded-small-left-2);
 			position: absolute;
 			right: 0;
+			margin-bottom: lines-for-font-size($figcaption-font-size) * 1em;
 
 			.bx-prev {
 				@include hide-text;
