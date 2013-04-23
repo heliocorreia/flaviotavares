@@ -226,7 +226,9 @@
 
 	.menu-has-submenu::before {
 		@include stretch-y;
+		@include photoshop-drop-shadow(180, 1px, 100%, 0, $color-black);
 
+		border-right: 1px solid #242424;
 		content: '';
 		margin-top: -$logo-full-height;
 	}
