@@ -330,8 +330,6 @@ body.page-template-t-biography-php {
 }
 
 #nav-biography {
-	$border-color: #4b3a1d;
-
 	@include margin-leader(14);
 
 	.nav-biography {
@@ -345,7 +343,7 @@ body.page-template-t-biography-php {
 			@include border-radius(100%);
 			@include inline-block;
 
-			border: 2px solid $border-color;
+			border: 2px solid $color-gold;
 			color: #4b3a1d;
 			width: $dimension;
 		}
@@ -366,7 +364,7 @@ body.page-template-t-biography-php {
 			vertical-align: center;
 
 			&:hover {
-				background-color: $border-color;
+				background-color: $color-gold;
 				color: $color-white;
 			}
 		}
