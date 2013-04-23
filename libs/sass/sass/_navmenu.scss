@@ -95,7 +95,6 @@
 
 #nav-main {
 	$border-color: #1a1a1a;
-	$menu-item-lines: 2;
 	$menu-item-border-width: 1px;
 
 	// logo
@@ -149,13 +148,17 @@
 	}
 
 	a {
-		@include adjust-font-size-to(13px, $menu-item-lines);
+		@include adjust-font-size-to(13px, 3);
 
 		color: $color-white;
 		display: block;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
+
+		&:hover {
+			color: $color-gold;
+		}
 	}
 
 	& > div {
@@ -182,6 +185,7 @@
 	.menu-item {
 		border: 0 solid $border-color;
 		border-width: $menu-item-border-width 0 0 0;
+		margin: 0 32px;
 		margin-top: -$menu-item-border-width;
 
 		&:last-child {
