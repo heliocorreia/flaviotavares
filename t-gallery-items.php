@@ -12,6 +12,17 @@ Template Name: Galeria (itens)
 	</div>
 </div>
 
+<script>
+// nav-main prev/next buttons
+$('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
+
+// submenu
+$('.sub-menu').responsiveVerticalCenter({attribute:'top',parentSelector:'body'});
+
+// content: align vertical center
+$('#t-gallery-items .content').responsiveVerticalCenter({ parentSelector:'body' });
+</script>
+
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/touchswipe/jquery.touchSwipe.min.js"></script>
 
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/media/js/swipebox/swipebox.css">
@@ -21,16 +32,7 @@ Template Name: Galeria (itens)
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/bxslider/jquery.bxslider.min.js"></script>
 
 <script>
-// nav-main prev/next buttons
-$('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
-
-// content: align vertical center
-$('#t-gallery-items .content').responsiveVerticalCenter({ parentSelector:'body' });
-
 $(document).ready(function(){
-	// submenu
-	$('.sub-menu').responsiveVerticalCenter({attribute:'top',parentSelector:'body'});
-
 	// gallery
 	$gallery = $('.gallery');
 
