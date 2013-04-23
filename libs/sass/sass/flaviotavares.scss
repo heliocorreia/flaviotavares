@@ -33,7 +33,7 @@ body {
 }
 
 a {
-    @include transition-property(background, color, opacity);
+    @include transition-property(background, border-color, color, opacity);
     @include transition-duration(.25s);
     @include transition-timing-function(ease-in);
 }

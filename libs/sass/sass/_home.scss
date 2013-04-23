@@ -86,8 +86,11 @@ body.home {
 			width: $dimension;
 
 			&:hover {
-				background-color: $border-color;
-				color: $color-black;
+				@include opaque;
+
+				background-color: $color-gold;
+				border-color: $color-gold;
+				color: $color-white;
 			}
 		}
 
