@@ -55,7 +55,7 @@ body.page-template-t-videos-php {
 			}
 
 			&::after {
-				@include transparent;
+				@include opacity(0.7);
 				@include stretch;
 
 				content: '';
@@ -65,7 +65,7 @@ body.page-template-t-videos-php {
 
 			&:hover {
 				&::after {
-					@include opacity(0.7);
+					@include transparent;
 				}
 			}
 		}
