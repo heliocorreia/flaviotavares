@@ -11,4 +11,11 @@ Template Name: Galeria
 		</section>
 	</div>
 </div>
+
+<script>
+$(document).ready(function(){
+	// submenu
+	$('.sub-menu').responsiveVerticalCenter({attribute:'top',parentSelector:'body'});
+});
+</script>
 <?php get_footer(); ?>

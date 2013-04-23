@@ -29,7 +29,7 @@ $('#t-gallery-items .content').responsiveVerticalCenter({ parentSelector:'body' 
 
 $(document).ready(function(){
 	// submenu
-	$('.sub-menu').responsiveVerticalCenter();
+	$('.sub-menu').responsiveVerticalCenter({attribute:'top',parentSelector:'body'});
 
 	// gallery
 	$gallery = $('.gallery');
