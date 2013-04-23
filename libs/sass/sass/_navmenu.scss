@@ -185,7 +185,7 @@
 	.menu-item {
 		border: 0 solid $border-color;
 		border-width: $menu-item-border-width 0 0 0;
-		margin: 0 32px;
+		margin: 0 17%;
 		margin-top: -$menu-item-border-width;
 
 		&:last-child {
@@ -194,7 +194,7 @@
 	}
 
 	.current-menu-item {
-		a {
+		& > a {
 			@include opacity(0.2);
 
 			color: #e6e6e6;
@@ -235,14 +235,10 @@
 		list-style: none;
 		padding: 0;
 
-		a {
-			@include opacity(1);
-
-			color: $color-white;
-		}
-
 		.menu-item {
 			border-color: #343434;
+			margin-left: 5%;
+			margin-right: 10%;
 		}
 	}
 }
