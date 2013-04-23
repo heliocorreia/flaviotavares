@@ -17,7 +17,7 @@ body {
 	@include stretch;
 
 	background: $color-black no-repeat top center fixed;
-	background-size: auto 100%;
+	background-size: cover;
 
 	@include at-breakpoint(8) {
 		@include adjust-font-size-to(12px);
