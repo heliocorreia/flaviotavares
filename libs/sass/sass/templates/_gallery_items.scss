@@ -15,6 +15,21 @@ body.page-template-t-gallery-items-php {
 	@extend %nav-main-with-sub-menu;
 
 	background-image: image-url("bg-gallery-items.jpg");
+
+	&::after {
+		@include stretch-y;
+
+		background: image-url("gradient-transparent-black.png") repeat-y top right;
+		content: '';
+		right: 0;
+		width: image-width("gradient-transparent-black.png");
+		z-index: 99;
+	}
+
+	.container {
+		max-width: none;
+		padding: 0;
+	}
 }
 
 #t-gallery-items {
