@@ -1,4 +1,5 @@
 # Require any additional compass plugins here.
+require "compass-photoshop-drop-shadow"
 require "susy"
 
 # Set this to the root of your project when deployed:
