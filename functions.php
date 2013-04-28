@@ -88,6 +88,16 @@ function my_enqueue_cssjs(){
 		wp_enqueue_style('_swipebox');
 		wp_enqueue_script('_swipebox');
 	}
+
+	if (is_page_template('t-gallery-items.php')) {
+		wp_enqueue_script('_touchswipe');
+
+		wp_enqueue_style('_swipebox');
+		wp_enqueue_script('_swipebox');
+
+		wp_enqueue_style('_bxslider');
+		wp_enqueue_script('_bxslider');
+	}
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_cssjs');
 
