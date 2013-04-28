@@ -257,11 +257,15 @@ function my_post_gallery($output, $attr) {
 		$img_src_desktop = wp_get_attachment_image_src($id, 'desktop', false);
 		$img_src_original = wp_get_attachment_image_src($id, 'original', false);
 
+		$attachment = get_post($id);
+
 		$data_attr = array(
 			'data-smart' => $img_src_smart[0],
 			'data-tablet' => $img_src_tablet[0],
 			'data-desktop' => $img_src_desktop[0],
 			'data-original' => $img_src_original[0],
+			'title' => __($attachment->post_title, 'flaviotavares'),
+			'data-caption' => __($attachment->post_excerpt, 'flaviotavares'),
 		);
 
 		$media = wp_get_attachment_image($id, $size, false, $data_attr);

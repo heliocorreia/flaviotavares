@@ -5,13 +5,36 @@ body.page-template-default {
 
 	.gallery-item {
 		margin: 0;
+		position: relative;
 
 		img {
 			float: left;
+		}
+
+		&:nth-child(2n) {
+			.bx-caption span {
+				color: $color-green;
+			}
 		}
 	}
 
 	.gallery-caption {
 		display: none;
+	}
+
+	.bx-caption {
+		@extend %font-quattrocento-sans;
+
+		background: $color-black;
+		bottom: 40px;
+		color: $color-white;
+		font-size: 14px;
+		padding: .25em .5em;
+		position: absolute;
+		right: 40px;
+
+		span {
+			color: $color-red;
+		}
 	}
 }

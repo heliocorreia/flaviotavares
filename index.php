@@ -22,8 +22,6 @@ head.ready('_jquery', function(){
 			$bxSlider,
 			$gallery = $('.gallery');
 
-		$gallery.find('a').click(function(e){ e.preventDefault(); });
-
 		var windowResize = function(){
 			var w = $w.width(),
 				h = $w.height();
@@ -42,11 +40,19 @@ head.ready('_jquery', function(){
 		};
 
 		$w.resize(windowResize).trigger('resize');
+		$gallery.find('a').click(function(e){ e.preventDefault(); });
 		
 		$bxSlider = $gallery.bxSlider({
 			slideWidth: 'auto',
+			captions: true,
 			controls: false,
 			pager: false
+		});
+
+		$gallery.find('.bx-caption').each(function(i, el){
+			$el = $(el);
+			$el.find('span').append('.');
+			$el.append(' ' + $el.parent().find('img').attr('alt'));
 		});
 		
 		$('#nav-main .nav-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
