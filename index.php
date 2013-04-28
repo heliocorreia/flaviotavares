@@ -53,7 +53,9 @@ head.ready('_jquery', function(){
 
 		$w.resize(windowResize).trigger('resize');
 
-		$gallery.find('a').click(function(e){ e.preventDefault(); });
+		$gallery.find('a')
+			.css('cursor', 'default')
+			.click(function(e){ e.preventDefault(); });
 
 		$gallery.find('.bx-caption').each(function(i, el){
 			$el = $(el);
