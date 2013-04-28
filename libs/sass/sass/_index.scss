@@ -3,7 +3,15 @@ body.page-template-default {
 		position: static;
 	}
 
-	#galleria {
-		@include stretch;
+	.gallery-item {
+		margin: 0;
+
+		img {
+			float: left;
+		}
+	}
+
+	.gallery-caption {
+		display: none;
 	}
 }
