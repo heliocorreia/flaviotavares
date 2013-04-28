@@ -6,6 +6,12 @@ body.page-template-default {
 	.gallery-item {
 		margin: 0;
 
+		&.item-even {
+			span {
+				color: $color-green;
+			}
+		}
+
 		a {
 			@include clearfix;
 
@@ -14,12 +20,6 @@ body.page-template-default {
 
 		img {
 			float: left;
-		}
-
-		&:nth-child(2n) {
-			.bx-caption span {
-				color: $color-green;
-			}
 		}
 	}
 

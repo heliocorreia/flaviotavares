@@ -252,6 +252,8 @@ function my_post_gallery($output, $attr) {
 
     $i = 0;
     foreach ( $attachments as $id => $attachment ) {
+		$class_oddeven = (++$i & 1) ? 'item-odd' : 'item-even';
+
 		$img_src_smart = wp_get_attachment_image_src($id, 'smart', false);
 		$img_src_tablet = wp_get_attachment_image_src($id, 'tablet', false);
 		$img_src_desktop = wp_get_attachment_image_src($id, 'desktop', false);
@@ -276,7 +278,7 @@ function my_post_gallery($output, $attr) {
 
 		$link = "<a href='$href'>$media</a>";
 
-        $output .= "<{$itemtag} class='gallery-item'>";
+        $output .= "<{$itemtag} class='gallery-item $class_oddeven'>";
         $output .= "<{$icontag} class='gallery-icon'>$link</{$icontag}>";
         if ( $captiontag && trim($attachment->post_excerpt) ) {
             $output .= "<{$captiontag} class='wp-caption-text gallery-caption'><span class='gallery-caption-outer'><span class='gallery-caption-inner'>"
