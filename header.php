@@ -19,13 +19,12 @@ $top_page_slug = my_top_parent_slug();
 			selected = breakpoints[0];
 
 		for (i=0; i<length; i++) {
-			if (breakpoints[i] >= win_w) {
-				break;
+			if (breakpoints[i] < win_w) {
+				selected = labels[i];
 			}
-			selected = labels[i];
 		}
 
-		return selected
+		return selected;
 	}
 	</script>
 </head>
