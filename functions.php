@@ -26,9 +26,9 @@ function flaviotavares_setup() {
 
 	if (function_exists('add_image_size')) {
 		add_image_size('my-gallery-thumb', 410, 195, false);
-		add_image_size('smart', 320, 0, false);
-		add_image_size('tablet', 480, 0, false);
-		add_image_size('desktop', 768, 0, false);
+		add_image_size('smart', 480, 0, false); // 480x320
+		add_image_size('tablet', 800, 0, false); // 800x600
+		add_image_size('desktop', 1024, 0, false); // 1024x768
 	}
 
 	load_theme_textdomain('flaviotavares', get_template_directory() . '/languages');

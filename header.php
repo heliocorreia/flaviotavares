@@ -13,13 +13,13 @@ $top_page_slug = my_top_parent_slug();
 	<script>
 	function getBreakpointLabel() {
 		var win_w = $(window).width(),
-			labels = ['smart', 'tablet', 'desktop', 'original'],
-			breakpoints = [320, 480, 768, 1024],
+			labels = ['smart', 'tablet', 'tablet', 'desktop', 'original'],
+			breakpoints = [320, 600, 768, 1024, 1025],
 			length = breakpoints.length,
 			selected = breakpoints[0];
 
 		for (i=0; i<length; i++) {
-			if (breakpoints[i] < win_w) {
+			if (breakpoints[i] <= win_w) {
 				selected = labels[i];
 			}
 		}
