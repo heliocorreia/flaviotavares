@@ -10,6 +10,24 @@ $top_page_slug = my_top_parent_slug();
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/media/compiled/css/flaviotavares.css" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
+	<script>
+	function getBreakpointLabel() {
+		var win_w = $(window).width(),
+			labels = ['smart', 'tablet', 'desktop', 'original'],
+			breakpoints = [320, 480, 768, 1024],
+			length = breakpoints.length,
+			selected = breakpoints[0];
+
+		for (i=0; i<length; i++) {
+			if (breakpoints[i] >= win_w) {
+				break;
+			}
+			selected = labels[i];
+		}
+
+		return selected
+	}
+	</script>
 </head>
 <body <?php body_class('top-page-slug-' . $top_page_slug); ?>>
 <div id="doc">
