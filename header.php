@@ -9,7 +9,6 @@ $top_page_slug = my_top_parent_slug();
 	<title><?php wp_title(' | ', true, 'right'); ?><?php bloginfo('name'); ?></title>
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/media/compiled/css/flaviotavares.css" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 </head>
