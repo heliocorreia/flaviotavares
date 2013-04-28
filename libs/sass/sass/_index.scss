@@ -5,7 +5,12 @@ body.page-template-default {
 
 	.gallery-item {
 		margin: 0;
-		position: relative;
+
+		a {
+			@include clearfix;
+
+			display: block;
+		}
 
 		img {
 			float: left;
@@ -26,12 +31,12 @@ body.page-template-default {
 		@extend %font-quattrocento-sans;
 
 		background: $color-black;
-		bottom: 40px;
+		bottom: 30px;
 		color: $color-white;
 		font-size: 14px;
 		padding: .25em .5em;
 		position: absolute;
-		right: 40px;
+		right: 30px;
 
 		span {
 			color: $color-red;
