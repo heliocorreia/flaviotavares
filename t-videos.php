@@ -4,7 +4,6 @@ Template Name: Vídeo
 */
 ?>
 <?php get_header(); ?>
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/media/js/swipebox/swipebox.css">
 <script>
 head.ready(function(){
 	$('#t-videos .content').responsiveVerticalCenter({ parentSelector:'body' });

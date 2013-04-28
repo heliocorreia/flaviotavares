@@ -38,12 +38,25 @@ function is_my_print_scripts_disabled() {
 
 // actions
 
-function my_enqueue_scripts(){
+function my_enqueue_cssjs(){
 	if (is_my_print_scripts_disabled()) {
 		return;
 	}
 
 	$base = get_stylesheet_directory_uri();
+
+	$styles = array(
+		'_bxslider'       		=> $base . '/media/js/bxslider/jquery.bxslider.css',
+		'_fontOvo' 				=> 'http://fonts.googleapis.com/css?family=Ovo',
+		'_fontQuattrocentoSans' => 'http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,700italic,700,400',
+		'_swipebox'				=> $base . '/media/js/swipebox/swipebox.css',
+
+	);
+
+	foreach($styles as $k => $v) {
+		wp_deregister_style($k);
+		wp_register_style($k, $v);
+	}
 
 	$scripts = array(
 		'_jquery'         => '/media/js/jquery/2.0.0.js',
@@ -66,14 +79,17 @@ function my_enqueue_scripts(){
 	}
 
 	if (is_page_template('t-biography.php')) {
+		wp_enqueue_style('_fontOvo');
+		wp_enqueue_style('_bxslider');
 		wp_enqueue_script('_bxslider');
 	}
 
 	if (is_page_template('t-videos.php')) {
+		wp_enqueue_style('_swipebox');
 		wp_enqueue_script('_swipebox');
 	}
 }
-add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'my_enqueue_cssjs');
 
 function my_print_scripts(){
 	// http://github.com/beezee/wp_headjs
