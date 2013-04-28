@@ -11,6 +11,15 @@ head.ready('_jquery', function(){
 	$('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
 	$gallery = $('.gallery');
 
+	// update gallery items links
+	var selectedBreakpoint = getBreakpointLabel();
+	$gallery.find('a').each(function(i, el){
+		var data = $(el).find('img').data(selectedBreakpoint);
+		if (data && el.href != data) {
+			el.href = data;
+		}
+	});
+
 	head.ready('_verticalcenter', function(){
 		$('.sub-menu').responsiveVerticalCenter({attribute:'top',parentSelector:'body'});
 		$('#t-gallery-items .content').responsiveVerticalCenter({parentSelector:'body'});
