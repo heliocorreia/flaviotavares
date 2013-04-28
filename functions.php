@@ -75,11 +75,16 @@ function my_enqueue_cssjs(){
 	wp_enqueue_script('_verticalcenter');
 
 	if (is_page_template('default')) {
+		wp_dequeue_script('_verticalcenter');
+
 		wp_enqueue_script('_touchswipe');
 	}
 
 	if (is_page_template('t-biography.php')) {
+		wp_dequeue_script('_verticalcenter');
+
 		wp_enqueue_style('_fontOvo');
+
 		wp_enqueue_style('_bxslider');
 		wp_enqueue_script('_bxslider');
 	}

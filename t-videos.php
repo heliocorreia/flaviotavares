@@ -5,17 +5,21 @@ Template Name: Vídeo
 ?>
 <?php get_header(); ?>
 <script>
-head.ready(function(){
-	$('#t-videos .content').responsiveVerticalCenter({ parentSelector:'body' });
+head.ready('_jquery',function(){
+	head.ready('_verticalcenter', function(){
+		$('#t-videos .content').responsiveVerticalCenter({parentSelector:'body'});
+	});
 
-	$('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
-
-	$('#t-videos').find('.section a').swipebox({
-		useCSS : true, // false will force the use of jQuery for animations
-		hideBarsDelay : 0 // 0 to always show caption and action bar
+	head.ready('_swipebox', function(){
+		console.log('_swipebox');
+		$('#t-videos').find('.section a').swipebox({
+			useCSS: true,
+			hideBarsDelay: 0
+		});
 	});
 });
 </script>
+
 <section id="t-videos">
 	<div class="container">
 		<div class="content">
