@@ -5,9 +5,8 @@ Template Name: Vídeo
 ?>
 <?php get_header(); ?>
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/media/js/swipebox/swipebox.css">
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/swipebox/jquery.swipebox.min.js"></script>
 <script>
-$(document).ready(function(){
+head.ready(function(){
 	$('#t-videos .content').responsiveVerticalCenter({ parentSelector:'body' });
 
 	$('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');

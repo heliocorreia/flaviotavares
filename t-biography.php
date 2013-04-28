@@ -7,9 +7,9 @@ Template Name: Biografia
 
 <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/media/js/bxslider/jquery.bxslider.css">
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/bxslider/jquery.bxslider.min.js"></script>
+
 <script>
-$(document).ready(function(){
+head.ready(function(){
 	$('.slides .slides-inner').bxSlider({
 		controls: true,
 		infiniteLoop: true,

@@ -32,6 +32,77 @@ function flaviotavares_setup() {
 }
 add_action('after_setup_theme', 'flaviotavares_setup');
 
+function is_my_print_scripts_disabled() {
+	return (is_admin() or is_feed() or defined('XMLRPC_REQUEST'));
+}
+
+// actions
+
+function my_enqueue_scripts(){
+	if (is_my_print_scripts_disabled()) {
+		return;
+	}
+
+	$base = get_stylesheet_directory_uri();
+
+	$scripts = array(
+		'_jquery'         => '/media/js/jquery/2.0.0.js',
+		'_verticalcenter' => '/media/js/jquery.responsive-vertical-center.js',
+		'_swipebox'       => '/media/js/swipebox/jquery.swipebox.min.js',
+		'_bxslider'       => '/media/js/bxslider/jquery.bxslider.min.js',
+		'_touchswipe'	  => '/media/js/touchswipe/jquery.touchSwipe.min.js',
+	);
+
+	foreach($scripts as $k => $v) {
+		wp_deregister_script($k);
+		wp_register_script($k, $base . $v);
+	}
+
+	wp_enqueue_script('_jquery');
+	wp_enqueue_script('_verticalcenter');
+
+	if (is_page_template('default')) {
+		wp_enqueue_script('_touchswipe');
+	}
+
+	if (is_page_template('t-biography.php')) {
+		wp_enqueue_script('_bxslider');
+	}
+
+	if (is_page_template('t-videos.php')) {
+		wp_enqueue_script('_swipebox');
+	}
+}
+add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
+
+function my_print_scripts(){
+	// http://github.com/beezee/wp_headjs
+	global $wp_scripts;
+
+	if (is_my_print_scripts_disabled() or empty($wp_scripts->queue)) {
+		return;
+	}
+
+	if (!property_exists($wp_scripts, 'my_print_scripts')) {
+		echo '<script src="' . get_stylesheet_directory_uri() . '/media/js/headjs/0.99.js"></script>';
+		$wp_scripts->my_print_scripts = true;
+	}
+
+	$scripts = array();
+	foreach($wp_scripts->queue as $script) {
+		if (is_array($wp_scripts->registered[$script]->extra) and isset($wp_scripts->registered[$script]->extra['data'])) {
+			echo '<script>' . $wp_scripts->registered[$script]->extra['data'] . '</script>';
+		}
+		$src = $wp_scripts->registered[$script]->src;
+		$src = ( (preg_match('/^(http|https)\:\/\//', $src)) ? '' : get_bloginfo('url') ) . $src;
+		$scripts[] = '{"' . $script . '":"' . $src . '"}';
+	}
+
+	echo '<script type="text/javascript">head.js('. implode(',', $scripts) . ');</script>';
+	$wp_scripts->queue = array();
+}
+add_action('wp_print_scripts', 'my_print_scripts');
+
 // filters
 
 remove_filter('the_content', 'wpautop');

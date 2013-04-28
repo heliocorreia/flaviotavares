@@ -2,10 +2,8 @@
 
 <div id="gallery"></div>
 
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/media/js/touchswipe/jquery.touchSwipe.min.js"></script>
-
 <script>
-(function($) {
+head.ready('_jquery', function(){
 	var $w = $(window),
 		$current = $('<img />'),
 		$new = $(),
@@ -141,7 +139,7 @@
     }
 	preload(backgrounds);
 
-	$(function() {
+	head.ready(function(){
 		$('#nav-main .nav-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
 		var $nav = $('#nav-prev-next');
 		$('.prev', $nav).click(stepPrev);
@@ -161,7 +159,7 @@
 			}
 		});
 	});
-})(jQuery);
+});
 </script>
 
 <?php get_footer(); ?>

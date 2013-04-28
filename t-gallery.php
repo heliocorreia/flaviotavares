@@ -4,6 +4,11 @@ Template Name: Galeria
 */
 ?>
 <?php get_header(); ?>
+<script>
+head.ready(function(){
+	$('.sub-menu').responsiveVerticalCenter({attribute:'top',parentSelector:'body'});
+});
+</script>
 <div id="t-gallery">
 	<div class="container">
 		<section class="content">
@@ -11,9 +16,4 @@ Template Name: Galeria
 		</section>
 	</div>
 </div>
-
-<script>
-// submenu
-$('.sub-menu').responsiveVerticalCenter({attribute:'top',parentSelector:'body'});
-</script>
 <?php get_footer(); ?>

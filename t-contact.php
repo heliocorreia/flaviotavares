@@ -5,8 +5,8 @@ Template Name: Contato
 ?>
 <?php get_header(); ?>
 <script>
-$(document).ready(function(){
-	$('#t-contact .content').responsiveVerticalCenter({ parentSelector:'body' });
+head.ready(function(){
+	$('#t-contact .content').responsiveVerticalCenter({parentSelector:'body'});
 });
 </script>
 <section id="t-contact" class="vcard">
