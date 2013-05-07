@@ -23,19 +23,15 @@ head.ready('_jquery', function(){
 	head.ready('_verticalcenter', function(){
 		$('.sub-menu').responsiveVerticalCenter({attribute:'top',parentSelector:'body'});
 		$('#t-gallery-items .content').responsiveVerticalCenter({parentSelector:'body'});
-	});
 
-	head.ready('_tosros', function(){
-		$gallery.find('a').tosrus({
-			// desktop and touch
-			caption: true,
-			anchors: {
-				zoomIcon: false
-			}
-		}, {
-			// desktop only
-		}, {
-			// touch only
+		head.ready('_tosros', function(){
+			$gallery.find('a').tosrus({
+				// desktop and touch
+				caption: true,
+				anchors: {
+					zoomIcon: false
+				}
+			});
 		});
 	});
 
