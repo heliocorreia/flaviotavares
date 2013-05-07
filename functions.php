@@ -49,10 +49,10 @@ function my_enqueue_cssjs(){
 	$base = get_stylesheet_directory_uri();
 
 	$styles = array(
-		'_bxslider'       		=> $base . '/media/js/bxslider/jquery.bxslider.css',
+		'_bxslider'				=> $base . '/media/js/bxslider/jquery.bxslider.css',
 		'_fontOvo' 				=> 'http://fonts.googleapis.com/css?family=Ovo',
 		'_fontQuattrocentoSans' => 'http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,700italic,700,400',
-		'_swipebox'				=> $base . '/media/js/swipebox/swipebox.css',
+		'_tosros'				=> $base . '/media/js/tosros/jquery.tosrus.css',
 
 	);
 
@@ -62,11 +62,11 @@ function my_enqueue_cssjs(){
 	}
 
 	$scripts = array(
-		'_jquery'         => '/media/js/jquery/2.0.0.js',
-		'_verticalcenter' => '/media/js/jquery.responsive-vertical-center.js',
-		'_swipebox'       => '/media/js/swipebox/jquery.swipebox.min.js',
-		'_bxslider'       => '/media/js/bxslider/jquery.bxslider.min.js',
-		'_touchswipe'	  => '/media/js/touchswipe/jquery.touchSwipe.min.js',
+		'_bxslider'			=> '/media/js/bxslider/jquery.bxslider.min.js',
+		'_jquery'			=> '/media/js/jquery/2.0.0.js',
+		'_tosros'			=> '/media/js/tosros/jquery.tosrus-1.3.1-packed.js',
+		'_verticalcenter'	=> '/media/js/jquery.responsive-vertical-center.js',
+
 	);
 
 	foreach($scripts as $k => $v) {
@@ -93,15 +93,13 @@ function my_enqueue_cssjs(){
 	}
 
 	if (is_page_template('t-videos.php')) {
-		wp_enqueue_style('_swipebox');
-		wp_enqueue_script('_swipebox');
+		wp_enqueue_style('_tosros');
+		wp_enqueue_script('_tosros');
 	}
 
 	if (is_page_template('t-gallery-items.php')) {
-		wp_enqueue_script('_touchswipe');
-
-		wp_enqueue_style('_swipebox');
-		wp_enqueue_script('_swipebox');
+		wp_enqueue_style('_tosros');
+		wp_enqueue_script('_tosros');
 
 		wp_enqueue_style('_bxslider');
 		wp_enqueue_script('_bxslider');

@@ -10,11 +10,23 @@ head.ready('_jquery',function(){
 		$('#t-videos .content').responsiveVerticalCenter({parentSelector:'body'});
 	});
 
-	head.ready('_swipebox', function(){
-		console.log('_swipebox');
-		$('#t-videos').find('.section a').swipebox({
-			useCSS: true,
-			hideBarsDelay: 0
+	head.ready('_tosros', function(){
+		$('#t-videos').find('.section a').tosrus({
+			// desktop and touch
+			caption: false,
+			anchors: {
+				zoomIcon: false
+			},
+			video: {
+				ratio: 16/9
+			}
+		}, {
+			// desktop only
+			video: {
+				maxWidth: 600
+			}
+		}, {
+			// touch only
 		});
 	});
 });
