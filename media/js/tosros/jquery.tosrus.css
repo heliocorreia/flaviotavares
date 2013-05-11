@@ -163,7 +163,7 @@
 .tos-play,
 .tos-zoom:after
 {
-	background: center center no-repeat #000;
+	background: center center no-repeat;
 	color: #fff;
 	border: 0;
 	display: block;
