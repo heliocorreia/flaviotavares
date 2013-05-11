@@ -26,6 +26,11 @@ function flaviotavares_setup() {
 
 	if (function_exists('add_image_size')) {
 		add_image_size('my-gallery-thumb', 410, 195, false);
+
+		add_image_size('gallery-thumb-smart', 0, 100, false);
+		add_image_size('gallery-thumb-tablet', 0, 200, false);
+		add_image_size('gallery-thumb-desktop', 0, 300, false);
+
 		add_image_size('smart', 480, 0, false); // 480x320
 		add_image_size('tablet', 800, 0, false); // 800x600
 		add_image_size('desktop', 1024, 0, false); // 1024x768
@@ -201,7 +206,7 @@ function my_post_gallery($output, $attr) {
         'icontag'    => 'dt',
         'captiontag' => 'dd',
         'columns'    => 3,
-        'size'       => 'my-gallery-thumb',
+        'size'       => 'gallery-thumb-smart',
         'include'    => '',
         'exclude'    => ''
     ), $attr));
@@ -252,29 +257,54 @@ function my_post_gallery($output, $attr) {
     foreach ( $attachments as $id => $attachment ) {
 		$class_oddeven = (++$i & 1) ? 'item-odd' : 'item-even';
 
-		$img_src_smart = wp_get_attachment_image_src($id, 'smart', false);
-		$img_src_tablet = wp_get_attachment_image_src($id, 'tablet', false);
-		$img_src_desktop = wp_get_attachment_image_src($id, 'desktop', false);
-		$img_src_original = wp_get_attachment_image_src($id, 'original', false);
+		$link_href_smart = wp_get_attachment_image_src($id, 'smart', false);
+		$link_href_tablet = wp_get_attachment_image_src($id, 'tablet', false);
+		$link_href_desktop = wp_get_attachment_image_src($id, 'desktop', false);
+		$link_href_original = wp_get_attachment_image_src($id, 'original', false);
+
+		$img_src_smart = wp_get_attachment_image_src($id, 'gallery-thumb-smart', false);
+		$img_src_tablet = wp_get_attachment_image_src($id, 'gallery-thumb-tablet', false);
+		$img_src_desktop = wp_get_attachment_image_src($id, 'gallery-thumb-desktop', false);
 
 		$attachment = get_post($id);
 
-		$data_attr = array(
+		$data_img_attr = array(
 			'data-smart' => $img_src_smart[0],
 			'data-tablet' => $img_src_tablet[0],
 			'data-desktop' => $img_src_desktop[0],
-			'data-original' => $img_src_original[0],
+			'data-original' => $img_src_desktop[0],
+			// size: width x height
+			'data-size-smart' => $img_src_smart[1] . 'x' . $img_src_smart[2],
+			'data-size-tablet' => $img_src_tablet[1] . 'x' . $img_src_tablet[2],
+			'data-size-desktop' => $img_src_desktop[1] . 'x' . $img_src_desktop[2],
+			'data-size-original' => $img_src_desktop[1] . 'x' . $img_src_desktop[2],
+			// extra attr
 			'title' => __($attachment->post_title, 'flaviotavares'),
 			'data-caption' => __($attachment->post_excerpt, 'flaviotavares'),
 		);
 
-		$media = wp_get_attachment_image($id, $size, false, $data_attr);
+		$data_link_attr = array(
+			'data-smart' => $link_href_smart[0],
+			'data-tablet' => $link_href_tablet[0],
+			'data-desktop' => $link_href_desktop[0],
+			'data-original' => $link_href_original[0],
+		);
+
+		$media = "<img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" alt=\"{$attachment->post_excerpt}\"";
+		foreach($data_img_attr as $name => $value) {
+			$media .= " $name=" . '"' . $value . '"';
+		}
+		$media .= ' />';
 
 		$href = isset($attr['link']) && 'file' == $attr['link']
 			? get_attachment_link($id)
 			: wp_get_attachment_url($id);
 
-		$link = "<a href='$href'>$media</a>";
+		$link = "<a href=\"$href\"";
+		foreach($data_link_attr as $name => $value) {
+		        $link .= " $name=" . '"' . $value . '"';
+		}
+		$link .= ">$media</a>";
 
         $output .= "<{$itemtag} class='gallery-item $class_oddeven'>";
         $output .= "<{$icontag} class='gallery-icon'>$link</{$icontag}>";

@@ -11,13 +11,24 @@ head.ready('_jquery', function(){
 	$('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
 	$gallery = $('.gallery');
 
-	// update gallery items links
+	// update gallery items links and img src
 	var selectedBreakpoint = getBreakpointLabel();
 	$gallery.find('a').each(function(i, el){
-		var data = $(el).find('img').data(selectedBreakpoint);
-		if (data && el.href != data) {
-			el.href = data;
-		}
+		var $el = $(el),
+			$img = $el.find('img'),
+			data_el = $el.data(selectedBreakpoint),
+			data_img = $img.data(selectedBreakpoint);
+
+		el.href = data_el;
+
+		img_size = $img.data('size-' + selectedBreakpoint);
+		img_size = img_size.split('x');
+
+		$img.css({
+			'width': img_size[0],
+			'height': img_size[1]
+		})
+		.attr('src', data_img);
 	});
 
 	head.ready('_verticalcenter', function(){
@@ -44,18 +55,18 @@ head.ready('_jquery', function(){
 				pager: false,
 				slideWidth: 'auto'
 			});
-	
+
 			aBxSlider.push(bxSlider);
 		});
-	
+
 		btnPrev = function() {
 			aBxSlider.forEach(function(el){ el.goToPrevSlide(); })
 		}
-	
+
 		btnNext = function() {
 			aBxSlider.forEach(function(el){ el.goToNextSlide(); })
 		}
-	
+
 		var $nav = $('#nav-prev-next');
 		$('.prev', $nav).click(btnPrev);
 		$('.next', $nav).click(btnNext);

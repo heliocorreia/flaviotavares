@@ -13,14 +13,18 @@ head.ready('_jquery', function(){
 			var w = $w.width(),
 				h = $w.height();
 
-			$gallery.find('.gallery-item').css('max-width', w);
+			$gallery.find('.gallery-item').css('width', w);
 
 			$gallery.find('img').each(function(i, el){
 				var $el = $(el),
 					el_w = $el.width(),
 					el_h = $el.height();
 
-				dimensions = ((w/h) > (el_w/el_h))
+				img_ratio = (el_w == 1 && el_h == 1)
+					? false
+					: (el_w/el_h);
+
+				dimensions = (img_ratio && (w/h) > img_ratio)
 					? {width: w     , height: 'auto'}
 					: {width: 'auto', height: h};
 
@@ -29,27 +33,23 @@ head.ready('_jquery', function(){
 			});
 		};
 
-		var selectedBreakpoint = getBreakpointLabel();
-		$('img').each(function(i, el){
-			var $el = $(el).hide(),
-				data = $el.data(selectedBreakpoint);
-			if (data && el.src != data) {
-				el.src = data;
-				$el.css({ height: 'auto', width: 'auto' }).show();
-			}
-		});
-
 		var $w = $(window),
 			$bxSlider,
 			$gallery = $('.gallery');
 
+		var selectedBreakpoint = getBreakpointLabel();
+		$gallery.find('a').each(function(i, el){
+			var $el = $(el);
+			$el.find('img').attr('src', $el.data(selectedBreakpoint));
+		});
+
 		$bxSlider = $gallery.bxSlider({
-				captions: true,
-				controls: false,
-				pager: false,
-				preloadImages: 'all',
-				slideWidth: 'auto',
-			});
+			captions: true,
+			controls: false,
+			pager: false,
+			preloadImages: 'all',
+			slideWidth: 'auto',
+		});
 
 		$w.resize(windowResize).trigger('resize');
 
