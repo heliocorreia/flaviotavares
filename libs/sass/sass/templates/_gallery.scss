@@ -7,13 +7,13 @@ body.page-template-t-gallery-php {
 
 		margin-left: - txt-sprite-width(gallery) / 2;
 		margin-top: - txt-sprite-height(gallery) / 2;
+	}
 
-		.top-page-slug-pt_br & {
-			@include txt-sprite(galeria);
+	&.top-page-slug-pt_br::after {
+		@include txt-sprite(galeria);
 
-			margin-left: - txt-sprite-width(galeria) / 2;
-			margin-top: - txt-sprite-height(galeria) / 2;
-		}
+		margin-left: - txt-sprite-width(galeria) / 2;
+		margin-top: - txt-sprite-height(galeria) / 2;
 	}
 }
 
