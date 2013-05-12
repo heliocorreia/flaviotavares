@@ -94,11 +94,12 @@ body.page-template-t-gallery-items-php {
 	.gallery-caption-outer {
 		@include box-sizing(border-box);
 
-		display: table;
 		border-bottom: seta-sprite-height(zoom-in) solid $color-black;
+		display: table;
 		height: 100%;
 		padding: seta-sprite-height(zoom-in) 10%;
 		text-align: center;
+		visibility: hidden;
 		width: 100%;
 
 		.top-page-slug-pt_br & {
@@ -110,8 +111,8 @@ body.page-template-t-gallery-items-php {
 			@include inline-block;
 			@include seta-sprite(zoom-in);
 
-			content: '';
 			bottom: seta-sprite-height(zoom-in) / 2;
+			content: '';
 			left: 50%;
 			margin-left: - seta-sprite-width(zoom-in) / 2;
 			position: absolute;
@@ -146,6 +147,10 @@ body.page-template-t-gallery-items-php {
 
 		.gallery-item {
 			float: none !important;
+		}
+
+		.gallery-caption-outer {
+			visibility: visible;
 		}
 	}
 }
