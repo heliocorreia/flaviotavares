@@ -269,10 +269,10 @@ function my_post_gallery($output, $attr) {
 		$attachment = get_post($id);
 
 		$data_img_attr = array(
-			'data-smart' => $img_src_smart[0],
-			'data-tablet' => $img_src_tablet[0],
-			'data-desktop' => $img_src_desktop[0],
-			'data-original' => $img_src_desktop[0],
+			'data-src-smart' => $img_src_smart[0],
+			'data-src-tablet' => $img_src_tablet[0],
+			'data-src-desktop' => $img_src_desktop[0],
+			'data-src-original' => $img_src_desktop[0],
 			// size: width x height
 			'data-size-smart' => $img_src_smart[1] . 'x' . $img_src_smart[2],
 			'data-size-tablet' => $img_src_tablet[1] . 'x' . $img_src_tablet[2],
@@ -284,10 +284,10 @@ function my_post_gallery($output, $attr) {
 		);
 
 		$data_link_attr = array(
-			'data-smart' => $link_href_smart[0],
-			'data-tablet' => $link_href_tablet[0],
-			'data-desktop' => $link_href_desktop[0],
-			'data-original' => $link_href_original[0],
+			'data-href-smart' => $link_href_smart[0],
+			'data-href-tablet' => $link_href_tablet[0],
+			'data-href-desktop' => $link_href_desktop[0],
+			'data-href-original' => $link_href_original[0],
 		);
 
 		$media = "<img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" alt=\"{$attachment->post_excerpt}\"";

@@ -16,19 +16,18 @@ head.ready('_jquery', function(){
 	$gallery.find('a').each(function(i, el){
 		var $el = $(el),
 			$img = $el.find('img'),
-			data_el = $el.data(selectedBreakpoint),
-			data_img = $img.data(selectedBreakpoint);
+			data_el = $el.data('href-' + selectedBreakpoint),
+			data_img = $img.data('src-' + selectedBreakpoint);
 
 		el.href = data_el;
 
 		img_size = $img.data('size-' + selectedBreakpoint);
 		img_size = img_size.split('x');
 
-		$img.css({
+		$img.attr('src', data_img).css({
 			'width': img_size[0],
 			'height': img_size[1]
-		})
-		.attr('src', data_img);
+		});
 	});
 
 	head.ready('_verticalcenter', function(){

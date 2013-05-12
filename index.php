@@ -40,7 +40,7 @@ head.ready('_jquery', function(){
 		var selectedBreakpoint = getBreakpointLabel();
 		$gallery.find('a').each(function(i, el){
 			var $el = $(el);
-			$el.find('img').attr('src', $el.data(selectedBreakpoint));
+			$el.find('img').attr('src', $el.data('href-' + selectedBreakpoint));
 		});
 
 		$bxSlider = $gallery.bxSlider({
