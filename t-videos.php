@@ -4,6 +4,14 @@ Template Name: Vídeo
 */
 ?>
 <?php get_header(); ?>
+
+<section id="t-videos">
+	<div class="container">
+		<div class="content">
+			<?php the_post(); the_content(); ?>
+		</div>
+	</div>
+</section>
 <script>
 head.ready('_jquery',function(){
 	head.ready('_verticalcenter', function(){
@@ -30,12 +38,4 @@ head.ready('_jquery',function(){
 
 });
 </script>
-
-<section id="t-videos">
-	<div class="container">
-		<div class="content">
-			<?php the_post(); the_content(); ?>
-		</div>
-	</div>
-</section>
 <?php get_footer(); ?>

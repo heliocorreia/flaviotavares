@@ -4,11 +4,6 @@ Template Name: Contato
 */
 ?>
 <?php get_header(); ?>
-<script>
-head.ready(function(){
-	$('#t-contact .content').responsiveVerticalCenter({parentSelector:'body'});
-});
-</script>
 <section id="t-contact" class="vcard">
 	<div class="container">
 		<section class="content">
@@ -29,4 +24,9 @@ head.ready(function(){
 		</section>
 	</div>
 </section>
+<script>
+head.ready(function(){
+	$('#t-contact .content').responsiveVerticalCenter({parentSelector:'body'});
+});
+</script>
 <?php get_footer(); ?>
