@@ -38,6 +38,10 @@ a {
     @include transition-property(background, border-color, color, opacity);
     @include transition-duration(.25s);
     @include transition-timing-function(ease-in);
+
+	&:focus {
+		outline-color: $color-white;
+	}
 }
 
 .container {
