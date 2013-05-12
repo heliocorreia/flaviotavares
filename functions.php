@@ -288,6 +288,9 @@ function my_post_gallery($output, $attr) {
 			'data-href-tablet' => $link_href_tablet[0],
 			'data-href-desktop' => $link_href_desktop[0],
 			'data-href-original' => $link_href_original[0],
+			// extra attr
+			'title' => __($attachment->post_title, 'flaviotavares'),
+			'data-caption' => __($attachment->post_excerpt, 'flaviotavares'),
 		);
 
 		$media = "<img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" alt=\"{$attachment->post_excerpt}\"";

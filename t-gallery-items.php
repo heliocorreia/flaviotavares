@@ -40,9 +40,14 @@ head.ready('_jquery', function(){
 		$('#t-gallery-items .content').responsiveVerticalCenter({parentSelector:'body'});
 
 		head.ready('_tosros', function(){
-			$gallery.find('a').tosrus({
+			$gallery.find('a').each(function(i, el){
+				var $el = $(el),
+					title = $el.attr('title') + '. ' + $el.data('caption');
+				title = title.replace(/<br \/>\n*/g, ' ');
+				$el.attr('title', title);
+			}).tosrus({
 				// desktop and touch
-				caption: true,
+				caption: ['title'],
 				anchors: {
 					zoomIcon: false
 				}
