@@ -4,30 +4,35 @@ Template Name: Galeria (itens)
 */
 ?>
 <?php get_header(); ?>
+<div id="t-gallery-items">
+	<div class="container">
+		<section class="content">
+			<?php the_post(); the_content(); ?>
+		</section>
+	</div>
+</div>
 <script>
+"use strict";
 head.ready('_jquery', function(){
-	var btnPrev = btnNext = function(){}
+	var btnPrev,
+		btnNext,
+		$gallery = $('.gallery'),
+		selectedBreakpoint = getBreakpointLabel();
 
 	$('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
-	$gallery = $('.gallery');
 
 	// update gallery items links and img src
-	var selectedBreakpoint = getBreakpointLabel();
 	$gallery.find('a').each(function(i, el){
 		var $el = $(el),
 			$img = $el.find('img'),
-			data_el = $el.data('href-' + selectedBreakpoint),
-			data_img = $img.data('src-' + selectedBreakpoint);
+			img_size = $img.data('size-' + selectedBreakpoint).split('x');
 
-		el.href = data_el;
-
-		img_size = $img.data('size-' + selectedBreakpoint);
-		img_size = img_size.split('x');
-
-		$img.attr('src', data_img).css({
+		$img.attr('src', $img.data('src-' + selectedBreakpoint)).css({
 			'width': img_size[0],
 			'height': img_size[1]
 		});
+
+		el.href = $el.data('href-' + selectedBreakpoint);
 	});
 
 	head.ready('_verticalcenter', function(){
@@ -48,7 +53,7 @@ head.ready('_jquery', function(){
 	head.ready('_bxslider', function(){
 		var aBxSlider = [];
 		$gallery.each(function(i, el){
-			bxSlider = $(el).bxSlider({
+			var bxSlider = $(el).bxSlider({
 				controls: false,
 				infiniteLoop: false,
 				pager: false,
@@ -72,12 +77,4 @@ head.ready('_jquery', function(){
 	});
 });
 </script>
-
-<div id="t-gallery-items">
-	<div class="container">
-		<section class="content">
-			<?php the_post(); the_content(); ?>
-		</section>
-	</div>
-</div>
 <?php get_footer(); ?>
