@@ -5,10 +5,11 @@ $column-width   : 60px;
 $gutter-width   : 20px;
 $grid-padding   : $gutter-width;
 
-//$media-desktop-600: 37.5em;
-//$media-desktop-860: 53.75em;
-//$media-desktop-940: 58.75em;
-//$media-desktop-1300: 81.25em;
+$media-layout-480: 0 4 30em;
+$media-layout-600: 37.5em 6;
+$media-layout-768: 48em 8;
+$media-layout-992: 62em 12;
+$media-layout-1382: 86.375em 16;
 
 @import "photoshop-drop-shadow";
 @import "susy";
@@ -33,11 +34,23 @@ $language-sprite-dimensions: true;
 $logo-sprite-dimensions: true;
 $seta-sprite-dimensions: true;
 
+$breakpoint-480-sprite-dimensions: true;
+$breakpoint-600-sprite-dimensions: true;
+$breakpoint-768-sprite-dimensions: true;
+$breakpoint-992-sprite-dimensions: true;
+$breakpoint-1382-sprite-dimensions: true;
+
 @import "txt/*.png";
 @import "cavalo/*.png";
 @import "language/*.png";
 @import "logo/*.png";
 @import "seta/*.png";
+
+@import "breakpoint-480/*.png";
+@import "breakpoint-600/*.png";
+@import "breakpoint-768/*.png";
+@import "breakpoint-992/*.png";
+@import "breakpoint-1382/*.png";
 
 // extensions
 
@@ -49,30 +62,43 @@ $seta-sprite-dimensions: true;
 	font-family: 'Ovo', serif;
 }
 
-%scale-at-breakpoints {
-	$trans: translate3d(0, 0, 0);
-
-	@include transform($trans scale(.25));
-
-	@include at-breakpoint(8) {
-		@include transform($trans scale(.5));
-	}
-
-	@include at-breakpoint(12) {
-		@include transform($trans scale(.75));
-	}
-
-	@include at-breakpoint(16) {
-		@include scale(1);
-	}
-}
-
 %absolute-center-and-scale {
-	@extend %scale-at-breakpoints;
-
 	content: '';
 	left: 50%;
 	position: absolute;
 	top: 50%;
 	z-index: 1;
+}
+
+// https://gist.github.com/dfadler/3105369
+// http://compass-style.org/reference/compass/helpers/sprites/
+@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+
+	//http://compass-style.org/reference/compass/helpers/sprites/#sprite-file
+	$sprite-image: sprite-file($map, $sprite);
+
+	// http://compass-style.org/reference/compass/helpers/sprites/#sprite-url
+	$sprite-map: sprite-url($map);
+
+	// http://compass-style.org/reference/compass/helpers/sprites/#sprite-position
+	$sprite-position: sprite-position($map, $sprite);
+
+	// Returns background
+	background: $sprite-map $sprite-position $repeat;
+
+	// http://compass-style.org/reference/compass/helpers/image-dimensions/
+	// Checks to see if the user wants height returned
+	@if $height == true {
+		// Gets the height of the sprite-image
+		$sprite-height: image-height($sprite-image);
+		// Returns the height
+		height: $sprite-height; }
+
+	// http://compass-style.org/reference/compass/helpers/image-dimensions/
+	// Checks to see if the user wants height returned
+	@if $width == true {
+		// Gets the width of the sprite-image
+		$sprite-width: image-width($sprite-image);
+		// Returns the width
+		width: $sprite-width; }
 }

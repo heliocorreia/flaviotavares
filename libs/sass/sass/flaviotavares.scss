@@ -21,16 +21,42 @@ body {
 	background: $color-black no-repeat top center fixed;
 	background-size: cover;
 
-	@include at-breakpoint(8) {
+	@include at-breakpoint($media-layout-600) {
+		@include adjust-font-size-to(11px);
+	}
+	@include at-breakpoint($media-layout-768) {
 		@include adjust-font-size-to(12px);
 	}
+	@include at-breakpoint($media-layout-992) {
+		@include adjust-font-size-to(13px);
+	}
+	@include at-breakpoint($media-layout-1382) {
+		@include adjust-font-size-to(16px);
+	}
+}
 
-	@include at-breakpoint(12) {
-		@include adjust-font-size-to(14px);
+.container {
+	@include container;
+
+	@include at-breakpoint($media-layout-600) {
+		@include container;
+	}
+	@include at-breakpoint($media-layout-768) {
+		@include container;
+	}
+	@include at-breakpoint($media-layout-992) {
+		@include container;
+	}
+	@include at-breakpoint($media-layout-1382) {
+		@include container;
 	}
 
-	@include at-breakpoint(16) {
-		@include adjust-font-size-to(16px);
+	.debug-txt & {
+		@include debug-vertical-alignment;
+	}
+
+	.debug-grid & {
+		@include susy-grid-background;
 	}
 }
 
@@ -41,18 +67,6 @@ a {
 
 	&:focus {
 		outline-color: $color-white;
-	}
-}
-
-.container {
-	@include container;
-
-	.debug-txt & {
-		@include debug-vertical-alignment;
-	}
-
-	.debug-grid & {
-		@include susy-grid-background;
 	}
 }
 
