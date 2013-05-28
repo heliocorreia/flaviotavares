@@ -3,19 +3,74 @@ body.page-template-t-contact-php {
 	overflow-x: hidden;
 
 	&::after {
-		@extend %absolute-center-and-scale;
-		@include opacity(0.1);
-		@include txt-sprite(contact);
+		$sprite-image: sprite-file($breakpoint-480-sprites, contact);
 
-		margin-left: - txt-sprite-width(contact) / 2;
-		margin-top: - txt-sprite-height(contact) / 2;
+		@include breakpoint-480-sprite(contact);
+		@include opacity(0.1);
+		@include stretch(50%, auto, auto, 50%);
+
+		content: '';
+		margin-left: - image-width($sprite-image) / 2;
+		margin-top: - image-height($sprite-image) / 2;
 		z-index: -1;
 
-		.top-page-slug-pt_br & {
-			@include txt-sprite(contact);
+		@include at-breakpoint($media-layout-600) {
+			$sprite-image: sprite-file($breakpoint-600-sprites, contact);
+			@include get-sprite($breakpoint-600-sprites, contact);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-768) {
+			$sprite-image: sprite-file($breakpoint-768-sprites, contact);
+			@include get-sprite($breakpoint-768-sprites, contact);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-992) {
+			$sprite-image: sprite-file($breakpoint-992-sprites, contact);
+			@include get-sprite($breakpoint-992-sprites, contact);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-1382) {
+			$sprite-image: sprite-file($breakpoint-1382-sprites, contact);
+			@include get-sprite($breakpoint-1382-sprites, contact);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+	}
 
-			margin-left: - txt-sprite-width(contact) / 2;
-			margin-top: - txt-sprite-height(contact) / 2;
+	&.top-page-slug-pt_br::after {
+		$sprite-image: sprite-file($breakpoint-480-sprites, contato);
+
+		@include breakpoint-480-sprite(contato);
+
+		margin-left: - image-width($sprite-image) / 2;
+		margin-top: - image-height($sprite-image) / 2;
+
+		@include at-breakpoint($media-layout-600) {
+			$sprite-image: sprite-file($breakpoint-600-sprites, contato);
+			@include get-sprite($breakpoint-600-sprites, contato);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-768) {
+			$sprite-image: sprite-file($breakpoint-768-sprites, contato);
+			@include get-sprite($breakpoint-768-sprites, contato);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-992) {
+			$sprite-image: sprite-file($breakpoint-992-sprites, contato);
+			@include get-sprite($breakpoint-992-sprites, contato);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-1382) {
+			$sprite-image: sprite-file($breakpoint-1382-sprites, contato);
+			@include get-sprite($breakpoint-1382-sprites, contato);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
 		}
 	}
 }
