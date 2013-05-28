@@ -2,18 +2,73 @@ body.page-template-t-gallery-php {
 	background-image: image-url("bg-gallery.jpg");
 
 	&::after {
-		@extend %absolute-center-and-scale;
-		@include txt-sprite(gallery);
+		$sprite-image: sprite-file($breakpoint-480-sprites, gallery);
 
-		margin-left: - txt-sprite-width(gallery) / 2;
-		margin-top: - txt-sprite-height(gallery) / 2;
+		@include breakpoint-480-sprite(gallery);
+		@include stretch(50%, auto, auto, 50%);
+
+		content: '';
+		margin-left: - image-width($sprite-image) / 2;
+		margin-top: - image-height($sprite-image) / 2;
+
+		@include at-breakpoint($media-layout-600) {
+			$sprite-image: sprite-file($breakpoint-600-sprites, gallery);
+			@include get-sprite($breakpoint-600-sprites, gallery);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-768) {
+			$sprite-image: sprite-file($breakpoint-768-sprites, gallery);
+			@include get-sprite($breakpoint-768-sprites, gallery);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-992) {
+			$sprite-image: sprite-file($breakpoint-992-sprites, gallery);
+			@include get-sprite($breakpoint-992-sprites, gallery);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-1382) {
+			$sprite-image: sprite-file($breakpoint-1382-sprites, gallery);
+			@include get-sprite($breakpoint-1382-sprites, gallery);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
 	}
 
 	&.top-page-slug-pt_br::after {
-		@include txt-sprite(galeria);
+		$sprite-image: sprite-file($breakpoint-480-sprites, galeria);
 
-		margin-left: - txt-sprite-width(galeria) / 2;
-		margin-top: - txt-sprite-height(galeria) / 2;
+		@include breakpoint-480-sprite(galeria);
+
+		margin-left: - image-width($sprite-image) / 2;
+		margin-top: - image-height($sprite-image) / 2;
+
+		@include at-breakpoint($media-layout-600) {
+			$sprite-image: sprite-file($breakpoint-600-sprites, galeria);
+			@include get-sprite($breakpoint-600-sprites, galeria);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-768) {
+			$sprite-image: sprite-file($breakpoint-768-sprites, galeria);
+			@include get-sprite($breakpoint-768-sprites, galeria);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-992) {
+			$sprite-image: sprite-file($breakpoint-992-sprites, galeria);
+			@include get-sprite($breakpoint-992-sprites, galeria);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
+		@include at-breakpoint($media-layout-1382) {
+			$sprite-image: sprite-file($breakpoint-1382-sprites, galeria);
+			@include get-sprite($breakpoint-1382-sprites, galeria);
+			margin-left: - image-width($sprite-image) / 2;
+			margin-top: - image-height($sprite-image) / 2;
+		}
 	}
 }
 
