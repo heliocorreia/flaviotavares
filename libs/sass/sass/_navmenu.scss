@@ -1,101 +1,52 @@
 %nav-main-with-sub-menu {
-//	#nav-main {
-//		// logo
-//		$logo-sprite-height: logo-sprite-height(ft);
-//		$logo-sprite-width: logo-sprite-width(ft);
-//		$logo-border-bottom: round((lines-for-font-size($logo-sprite-height) * $base-line-height) - $logo-sprite-height);
-//		$logo-border-top: 2 * $base-line-height;
-//		$logo-full-height: $logo-border-top + $logo-sprite-height + $logo-border-bottom;
-//
-//		// cavalo
-//		$cavalo-sprite-height: cavalo-sprite-height(woman);
-//		$cavalo-sprite-width: cavalo-sprite-width(woman);
-//		$cavalo-border-top: 1 * $base-line-height;
-//		$cavalo-border-bottom: round((lines-for-font-size($cavalo-sprite-height) * $base-line-height) - $cavalo-sprite-height);
-//		$cavalo-full-height: $cavalo-border-top + $cavalo-sprite-height + $cavalo-border-bottom;
-//
-//		left: 0;
-//
-//		&::before {
-//			@include logo-sprite(ft);
-//
-//			border-bottom-width: $logo-border-bottom;
-//			border-top-width: $logo-border-top;
-//		}
-//
-//		&::after {
-//			$padding-left: round(($logo-sprite-width - $cavalo-sprite-width) / 2);
-//			$padding-right: $logo-sprite-width - $cavalo-sprite-width - $padding-left;
-//
-//			@include cavalo-sprite(woman);
-//
-//			border: 0 solid $color-black;
-//			border-width: 0 $padding-right 0 $padding-left;
-//			border-bottom-width: $cavalo-border-bottom;
-//			border-top-width: $cavalo-border-top;
-//		}
-//
-//		& > div {
-//			width: $logo-sprite-width;
-//		}
-//
-//		.nav-menu {
-//			padding-left: 0;
-//			padding-right: 0;
-//			top: $logo-full-height;
-//			width: $logo-sprite-width;
-//
-//			.menu-item {
-//				display: none;
-//			}
-//
-//			.sub-menu .menu-item {
-//				display: block;
-//			}
-//
-//			.sub-menu,
-//			.menu-has-submenu::before {
-//				left: $logo-sprite-width;
-//			}
-//
-//			.current-page-ancestor.menu-has-submenu {
-//				border-bottom-width: 1px;
-//				display: block;
-//
-//				&::before {
-//					margin-top: -$logo-full-height;
-//				}
-//
-//				& > a {
-//					@include hide-text;
-//					@include opacity(1);
-//
-//					position: relative;
-//
-//					&::before {
-//						@include stretch;
-//
-//						content: '‹ Back';
-//						text-align: center;
-//						text-indent: 0;
-//					}
-//				}
-//			}
-//		}
-//	}
+	#nav-main {
+		.nav-menu {
+			.menu-item {
+				display: none;
+			}
+
+			.sub-menu .menu-item {
+				display: block;
+			}
+
+			.current-page-ancestor.menu-has-submenu {
+				border-bottom-width: 1px;
+				display: block;
+
+				& > a {
+					@include hide-text;
+					@include opacity(1);
+
+					position: relative;
+
+					&::before {
+						@include stretch;
+
+						content: '‹ Back';
+						text-align: center;
+						text-indent: 0;
+					}
+				}
+			}
+		}
+	}
 
 	&.top-page-slug-pt_br {
-		#nav-main .nav-menu .current-page-ancestor.menu-has-submenu > a {
-			&::before {
-				content: '‹ Voltar';
+		#nav-main {
+			.nav-menu {
+				.current-page-ancestor.menu-has-submenu {
+					& > a {
+						&::before {
+							content: '‹ Voltar';
+						}
+					}
+				}
 			}
 		}
 	}
 }
 
 #nav-main {
-	$menu-item-border-width: 1px;
-
 	@include stretch-y;
 	@include span-columns(3);
 
@@ -154,13 +105,15 @@
 	}
 
 	.menu-item {
+		$border-width: 1px;
+
 		border: 0 solid #1a1a1a;
-		border-width: $menu-item-border-width 0 0 0;
+		border-width: $border-width 0 0 0;
 		margin: 0 17%;
-		margin-top: - $menu-item-border-width;
+		margin-top: - $border-width;
 
 		&:last-child {
-			border-bottom-width: $menu-item-border-width;
+			border-bottom-width: $border-width;
 		}
 	}
 
@@ -215,9 +168,9 @@
 }
 
 #nav-main {
-	$layouts: $media-layout-768 $media-layout-992 $media-layout-1382;
-	$sprites: $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
-	$widths: 100px 130px 182px;
+	$layouts: $media-layout-600 $media-layout-768 $media-layout-992 $media-layout-1382;
+	$sprites: $breakpoint-600-sprites $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
+	$widths: 80px 100px 130px 182px;
 
 	@for $i from 1 through length($layouts) {
 		@include at-breakpoint(nth($layouts, $i)) {
@@ -269,6 +222,12 @@
 			.menu-has-submenu::before {
 				margin-top: - $logo-outer-height;
 			}
+
+//			.current-page-ancestor.menu-has-submenu {
+//				&::before {
+//					margin-top: - $logo-outer-height;
+//				}
+//			}
 		}
 	}
 }
