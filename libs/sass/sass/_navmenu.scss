@@ -1,88 +1,88 @@
 %nav-main-with-sub-menu {
-	#nav-main {
-		// logo
-		$logo-sprite-height: logo-sprite-height(ft);
-		$logo-sprite-width: logo-sprite-width(ft);
-		$logo-border-bottom: round((lines-for-font-size($logo-sprite-height) * $base-line-height) - $logo-sprite-height);
-		$logo-border-top: 2 * $base-line-height;
-		$logo-full-height: $logo-border-top + $logo-sprite-height + $logo-border-bottom;
-
-		// cavalo
-		$cavalo-sprite-height: cavalo-sprite-height(woman);
-		$cavalo-sprite-width: cavalo-sprite-width(woman);
-		$cavalo-border-top: 1 * $base-line-height;
-		$cavalo-border-bottom: round((lines-for-font-size($cavalo-sprite-height) * $base-line-height) - $cavalo-sprite-height);
-		$cavalo-full-height: $cavalo-border-top + $cavalo-sprite-height + $cavalo-border-bottom;
-
-		left: 0;
-
-		&::before {
-			@include logo-sprite(ft);
-
-			border-bottom-width: $logo-border-bottom;
-			border-top-width: $logo-border-top;
-		}
-
-		&::after {
-			$padding-left: round(($logo-sprite-width - $cavalo-sprite-width) / 2);
-			$padding-right: $logo-sprite-width - $cavalo-sprite-width - $padding-left;
-
-			@include cavalo-sprite(woman);
-
-			border: 0 solid $color-black;
-			border-width: 0 $padding-right 0 $padding-left;
-			border-bottom-width: $cavalo-border-bottom;
-			border-top-width: $cavalo-border-top;
-		}
-
-		& > div {
-			width: $logo-sprite-width;
-		}
-
-		.nav-menu {
-			padding-left: 0;
-			padding-right: 0;
-			top: $logo-full-height;
-			width: $logo-sprite-width;
-
-			.menu-item {
-				display: none;
-			}
-
-			.sub-menu .menu-item {
-				display: block;
-			}
-
-			.sub-menu,
-			.menu-has-submenu::before {
-				left: $logo-sprite-width;
-			}
-
-			.current-page-ancestor.menu-has-submenu {
-				border-bottom-width: 1px;
-				display: block;
-
-				&::before {
-					margin-top: -$logo-full-height;
-				}
-
-				& > a {
-					@include hide-text;
-					@include opacity(1);
-
-					position: relative;
-
-					&::before {
-						@include stretch;
-
-						content: '‹ Back';
-						text-align: center;
-						text-indent: 0;
-					}
-				}
-			}
-		}
-	}
+//	#nav-main {
+//		// logo
+//		$logo-sprite-height: logo-sprite-height(ft);
+//		$logo-sprite-width: logo-sprite-width(ft);
+//		$logo-border-bottom: round((lines-for-font-size($logo-sprite-height) * $base-line-height) - $logo-sprite-height);
+//		$logo-border-top: 2 * $base-line-height;
+//		$logo-full-height: $logo-border-top + $logo-sprite-height + $logo-border-bottom;
+//
+//		// cavalo
+//		$cavalo-sprite-height: cavalo-sprite-height(woman);
+//		$cavalo-sprite-width: cavalo-sprite-width(woman);
+//		$cavalo-border-top: 1 * $base-line-height;
+//		$cavalo-border-bottom: round((lines-for-font-size($cavalo-sprite-height) * $base-line-height) - $cavalo-sprite-height);
+//		$cavalo-full-height: $cavalo-border-top + $cavalo-sprite-height + $cavalo-border-bottom;
+//
+//		left: 0;
+//
+//		&::before {
+//			@include logo-sprite(ft);
+//
+//			border-bottom-width: $logo-border-bottom;
+//			border-top-width: $logo-border-top;
+//		}
+//
+//		&::after {
+//			$padding-left: round(($logo-sprite-width - $cavalo-sprite-width) / 2);
+//			$padding-right: $logo-sprite-width - $cavalo-sprite-width - $padding-left;
+//
+//			@include cavalo-sprite(woman);
+//
+//			border: 0 solid $color-black;
+//			border-width: 0 $padding-right 0 $padding-left;
+//			border-bottom-width: $cavalo-border-bottom;
+//			border-top-width: $cavalo-border-top;
+//		}
+//
+//		& > div {
+//			width: $logo-sprite-width;
+//		}
+//
+//		.nav-menu {
+//			padding-left: 0;
+//			padding-right: 0;
+//			top: $logo-full-height;
+//			width: $logo-sprite-width;
+//
+//			.menu-item {
+//				display: none;
+//			}
+//
+//			.sub-menu .menu-item {
+//				display: block;
+//			}
+//
+//			.sub-menu,
+//			.menu-has-submenu::before {
+//				left: $logo-sprite-width;
+//			}
+//
+//			.current-page-ancestor.menu-has-submenu {
+//				border-bottom-width: 1px;
+//				display: block;
+//
+//				&::before {
+//					margin-top: -$logo-full-height;
+//				}
+//
+//				& > a {
+//					@include hide-text;
+//					@include opacity(1);
+//
+//					position: relative;
+//
+//					&::before {
+//						@include stretch;
+//
+//						content: '‹ Back';
+//						text-align: center;
+//						text-indent: 0;
+//					}
+//				}
+//			}
+//		}
+//	}
 
 	&.top-page-slug-pt_br {
 		#nav-main .nav-menu .current-page-ancestor.menu-has-submenu > a {
@@ -94,22 +94,7 @@
 }
 
 #nav-main {
-	$border-color: #1a1a1a;
 	$menu-item-border-width: 1px;
-
-	// logo
-	$logo-sprite-height: logo-sprite-height(black);
-	$logo-sprite-width: logo-sprite-width(black);
-	$logo-border-bottom: round((lines-for-font-size($logo-sprite-height) * $base-line-height) - $logo-sprite-height);
-	$logo-border-top: 2 * $base-line-height;
-	$logo-full-height: $logo-border-top + $logo-sprite-height + $logo-border-bottom;
-
-	// cavalo
-	$cavalo-sprite-height: cavalo-sprite-height(menu);
-	$cavalo-sprite-width: cavalo-sprite-width(menu);
-	$cavalo-border-top: 1 * $base-line-height;
-	$cavalo-border-bottom: round((lines-for-font-size($cavalo-sprite-height) * $base-line-height) - $cavalo-sprite-height);
-	$cavalo-full-height: $cavalo-border-top + $cavalo-sprite-height + $cavalo-border-bottom;
 
 	@include stretch-y;
 	@include span-columns(3);
@@ -118,12 +103,9 @@
 	z-index: 100;
 
 	&::before {
-		@include logo-sprite(black);
-		@include stretch-x;
+		@include stretch;
 
 		border: 0 solid $color-black;
-		border-bottom-width: $logo-border-bottom;
-		border-top-width: $logo-border-top;
 		content: '';
 		display: block;
 		left: 0;
@@ -132,15 +114,7 @@
 	}
 
 	&::after {
-		$padding-left: round(($logo-sprite-width - $cavalo-sprite-width) / 2);
-		$padding-right: $logo-sprite-width - $cavalo-sprite-width - $padding-left;
-
-		@include cavalo-sprite(menu);
-
 		border: 0 solid $color-black;
-		border-width: 0 $padding-right 0 $padding-left;
-		border-bottom-width: $cavalo-border-bottom;
-		border-top-width: $cavalo-border-top;
 		content: '';
 		left: 0;
 		position: absolute;
@@ -166,9 +140,6 @@
 
 		display: table;
 		height: 100%;
-		padding-bottom: $cavalo-full-height;
-		padding-top: $logo-full-height;
-		width: $logo-sprite-width;
 	}
 
 	.nav-menu {
@@ -183,10 +154,10 @@
 	}
 
 	.menu-item {
-		border: 0 solid $border-color;
+		border: 0 solid #1a1a1a;
 		border-width: $menu-item-border-width 0 0 0;
 		margin: 0 17%;
-		margin-top: -$menu-item-border-width;
+		margin-top: - $menu-item-border-width;
 
 		&:last-child {
 			border-bottom-width: $menu-item-border-width;
@@ -219,7 +190,6 @@
 	.sub-menu,
 	.menu-has-submenu::before {
 		background-color: $color-gray;
-		left: $logo-sprite-width;
 		position: absolute;
 		width: 2 * ($column-width + $gutter-width) - $gutter-width;
 	}
@@ -230,7 +200,6 @@
 
 		border-right: 1px solid #242424;
 		content: '';
-		margin-top: -$logo-full-height;
 	}
 
 	.sub-menu {
@@ -241,6 +210,65 @@
 			border-color: #343434;
 			margin-left: 5%;
 			margin-right: 10%;
+		}
+	}
+}
+
+#nav-main {
+	$layouts: $media-layout-768 $media-layout-992 $media-layout-1382;
+	$sprites: $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
+	$widths: 100px 130px 182px;
+
+	@for $i from 1 through length($layouts) {
+		@include at-breakpoint(nth($layouts, $i)) {
+			$menu-width: nth($widths, $i);
+
+			$logo: sprite-file(nth($sprites, $i), logo-menu);
+			$logo-height: image-height($logo);
+			$logo-width: image-width($logo);
+			$rodape: sprite-file(nth($sprites, $i), rodape-menu);
+			$rodape-height: image-height($rodape);
+			$rodape-width: image-width($rodape);
+
+			$logo-border-bottom: round((lines-for-font-size($logo-height) * $base-line-height) - $logo-height);
+			$logo-border-left: round(($menu-width - $logo-width) / 2);
+			$logo-border-right: $menu-width - $logo-width - $logo-border-left;
+			$logo-border-top: 2 * $base-line-height;
+
+			$rodape-border-bottom: round((lines-for-font-size($rodape-height) * $base-line-height) - $rodape-height);
+			$rodape-border-left: round(($menu-width - $rodape-width) / 2);
+			$rodape-border-right: $menu-width - $rodape-width - $rodape-border-left;
+			$rodape-border-top: 1 * $base-line-height;
+
+			$logo-outer-height: $logo-border-top + $logo-height + $logo-border-bottom;
+			$logo-outer-width: $logo-border-left + $logo-width + $logo-border-right;
+			$rodape-outer-height: $rodape-border-top + $rodape-height + $rodape-border-bottom;
+			$rodape-outer-width: $rodape-border-left + $rodape-width + $rodape-border-right;
+
+			&::before {
+				@include get-sprite(nth($sprites, $i), logo-menu);
+				border-width: $logo-border-top $logo-border-right $logo-border-bottom $logo-border-left;
+			}
+
+			&::after {
+				@include get-sprite(nth($sprites, $i), rodape-menu);
+				border-width: $rodape-border-top $rodape-border-right $rodape-border-bottom $rodape-border-left;
+			}
+
+			& > div {
+				padding-bottom: $rodape-outer-height;
+				padding-top: $logo-outer-height;
+				width: $menu-width;
+			}
+
+			.sub-menu,
+			.menu-has-submenu::before {
+				left: $logo-outer-width;
+			}
+
+			.menu-has-submenu::before {
+				margin-top: - $logo-outer-height;
+			}
 		}
 	}
 }
