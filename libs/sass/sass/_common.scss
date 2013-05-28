@@ -62,14 +62,6 @@ $breakpoint-1382-sprite-dimensions: true;
 	font-family: 'Ovo', serif;
 }
 
-%absolute-center-and-scale {
-	content: '';
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	z-index: 1;
-}
-
 // https://gist.github.com/dfadler/3105369
 // http://compass-style.org/reference/compass/helpers/sprites/
 @mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
