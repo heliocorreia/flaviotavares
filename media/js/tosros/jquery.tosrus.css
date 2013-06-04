@@ -238,6 +238,10 @@
 	-moz-transform-origin: left center;
 	transform-origin: left center;
 }
+.tos-prev:hover
+{
+	background-image: url( tos-prev-hover.png );
+}
 .tos-next
 {
 	background-image: url( tos-next.png );
@@ -246,6 +250,9 @@
 	-webkit-transform-origin: right center;
 	-moz-transform-origin: right center;
 	transform-origin: right center;
+}
+.tos-next:hover {
+	background-image: url( tos-next-hover.png );
 }
 .tos-close
 {
