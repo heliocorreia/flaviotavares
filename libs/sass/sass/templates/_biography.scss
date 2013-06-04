@@ -386,6 +386,7 @@ body.page-template-t-biography-php {
 			@include inline-block;
 
 			background-size: 100% auto;
+			border-color: $color-white;
 			content: '';
 			height: $dimension;
 		}
