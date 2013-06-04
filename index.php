@@ -40,6 +40,13 @@ head.ready('_jquery', function(){
 			});
 		});
 
+		$bxSlider = $gallery.bxSlider({
+			captions: true,
+			controls: false,
+			mode: 'fade',
+			pager: false,
+		});
+
 		$w
 		.resize(function(){
 			$gallery.find('img').each(function(){
@@ -47,13 +54,6 @@ head.ready('_jquery', function(){
 			});
 		})
 		.trigger('resize');
-
-		$bxSlider = $gallery.bxSlider({
-			captions: true,
-			controls: false,
-			mode: 'fade',
-			pager: false,
-		});
 
 		$gallery.find('.bx-caption').each(function(i, el){
 			$el = $(el);
