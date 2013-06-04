@@ -1,5 +1,6 @@
 body.page-template-t-gallery-php {
 	background-image: image-url("bg-gallery.jpg");
+	overflow-x: hidden;
 
 	&::after {
 		$sprite-image: sprite-file($breakpoint-480-sprites, gallery);
