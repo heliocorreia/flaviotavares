@@ -45,6 +45,11 @@ head.ready('_jquery', function(){
 			controls: false,
 			mode: 'fade',
 			pager: false,
+			onSlideAfter: function($slideElement, oldIndex, newIndex){
+				$slideElement.find('img').each(function(){
+					resizeImage($(this));
+				});
+			}
 		});
 
 		$w
