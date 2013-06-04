@@ -5,57 +5,55 @@
 <script>
 head.ready('_jquery', function(){
 	head.ready('_bxslider', function(){
-		var calculateOffset = function(outer, inner) {
-			return (inner > outer) ? (outer - inner) / 2 : 0;
+		var resizeImage = function($el){
+			var win_w = $w.width(),
+				win_h = $w.height(),
+				img_w_orig = $el.outerWidth(),
+				img_h_orig = $el.outerHeight(),
+				img_ratio = img_w_orig / img_h_orig,
+				scale_h = win_w / img_w_orig,
+				scale_v = win_h / img_h_orig,
+				scale = scale_h > scale_v ? scale_h : scale_v;
+
+			var dimensions = (img_h_orig * scale > win_h)
+				? {width: win_w, height: 'auto'}
+				: {width: 'auto', height: win_h};
+
+			$el.css(dimensions);
 		}
-
-		var windowResize = function(){
-			var w = $w.width(),
-				h = $w.height();
-
-			$gallery.find('.gallery-item').css('width', w);
-
-			$gallery.find('img').each(function(i, el){
-				var $el = $(el),
-					el_w = $el.width(),
-					el_h = $el.height();
-
-				img_ratio = (el_w == 1 && el_h == 1)
-					? false
-					: (el_w/el_h);
-
-				dimensions = (img_ratio && (w/h) > img_ratio)
-					? {width: w     , height: 'auto'}
-					: {width: 'auto', height: h};
-
-				$el.css(dimensions);
-				// $el.css('margin-left', calculateOffset(w, el_w));
-			});
-		};
 
 		var $w = $(window),
 			$bxSlider,
-			$gallery = $('.gallery');
+			$gallery = $('.gallery')
+			selectedBreakpoint = getBreakpointLabel();
 
-		var selectedBreakpoint = getBreakpointLabel();
 		$gallery.find('a').each(function(i, el){
 			var $el = $(el);
-			$el.find('img').attr('src', $el.data('href-' + selectedBreakpoint));
+
+			$el
+			.css('cursor', 'default')
+			.click(function(e){ e.preventDefault(); })
+			.find('img').each(function(){
+				$(this)
+				.load(function(){ resizeImage($(this)) })
+				.attr('src', $el.data('href-' + selectedBreakpoint));
+			});
 		});
+
+		$w
+		.resize(function(){
+			$gallery.find('img').each(function(){
+				resizeImage($(this));
+			});
+		})
+		.trigger('resize');
 
 		$bxSlider = $gallery.bxSlider({
 			captions: true,
 			controls: false,
+			mode: 'fade',
 			pager: false,
-			preloadImages: 'all',
-			slideWidth: 'auto',
 		});
-
-		$w.resize(windowResize).trigger('resize');
-
-		$gallery.find('a')
-			.css('cursor', 'default')
-			.click(function(e){ e.preventDefault(); });
 
 		$gallery.find('.bx-caption').each(function(i, el){
 			$el = $(el);
