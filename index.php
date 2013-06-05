@@ -44,7 +44,7 @@ head.ready('_jquery', function(){
 			captions: true,
 			controls: false,
 			randomStart: true,
-			mode: 'fade',
+			mode: 'horizontal',
 			pager: false,
 			onSlideAfter: function($slideElement, oldIndex, newIndex){
 				$slideElement.find('img').each(function(){
