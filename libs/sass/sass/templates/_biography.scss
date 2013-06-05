@@ -30,44 +30,7 @@ body.page-template-t-biography-php {
 		}
 
 		.main-title {
-			@include hide-text;
-			@include transform-origin(0);
-
-			margin: 115px 0 0 0;
-			position: absolute;
-			z-index: 20;
-
-			@include breakpoint-480-sprite(biography);
-
-			@include at-breakpoint($media-layout-600) {
-				@include get-sprite($breakpoint-600-sprites, biography);
-			}
-			@include at-breakpoint($media-layout-768) {
-				@include get-sprite($breakpoint-768-sprites, biography);
-			}
-			@include at-breakpoint($media-layout-992) {
-				@include get-sprite($breakpoint-992-sprites, biography);
-			}
-			@include at-breakpoint($media-layout-1382) {
-				@include get-sprite($breakpoint-1382-sprites, biography);
-			}
-
-			.top-page-slug-pt_br & {
-				@include breakpoint-480-sprite(biografia);
-
-				@include at-breakpoint($media-layout-600) {
-					@include get-sprite($breakpoint-600-sprites, biografia);
-				}
-				@include at-breakpoint($media-layout-768) {
-					@include get-sprite($breakpoint-768-sprites, biografia);
-				}
-				@include at-breakpoint($media-layout-992) {
-					@include get-sprite($breakpoint-992-sprites, biografia);
-				}
-				@include at-breakpoint($media-layout-1382) {
-					@include get-sprite($breakpoint-1382-sprites, biografia);
-				}
-			}
+			display: none;
 		}
 
 		.by-author {
