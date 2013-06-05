@@ -1,5 +1,10 @@
 body.page-template-t-videos-php {
 	background-image: image-url("bg-home.jpg");
+
+	.content {
+		max-width: none;
+		padding: 0;
+	}
 }
 
 #t-videos {
@@ -10,15 +15,20 @@ body.page-template-t-videos-php {
 	}
 
 	.section {
-		@include span-columns(6, 13);
-		@include rhythm(1, 0, 0, 1);
-
 		color: $color-white;
-		clear: left;
+		float: left;
+		width: 300px;
+
+		img {
+			height: auto !important;
+			width: 100% !important;
+		}
+
+		& + .section {
+			margin-left: 10px;
+		}
 
 		&:nth-child(2n) {
-			clear: none;
-
 			h2 {
 				color: #ff4529;
 			}

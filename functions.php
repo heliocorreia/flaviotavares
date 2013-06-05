@@ -100,6 +100,9 @@ function my_enqueue_cssjs(){
 	if (is_page_template('t-videos.php')) {
 		wp_enqueue_style('_tosros');
 		wp_enqueue_script('_tosros');
+
+		wp_enqueue_style('_bxslider');
+		wp_enqueue_script('_bxslider');
 	}
 
 	if (is_page_template('t-gallery-items.php')) {
