@@ -43,6 +43,7 @@ head.ready('_jquery', function(){
 		$bxSlider = $gallery.bxSlider({
 			captions: true,
 			controls: false,
+			randomStart: true,
 			mode: 'fade',
 			pager: false,
 			onSlideAfter: function($slideElement, oldIndex, newIndex){
