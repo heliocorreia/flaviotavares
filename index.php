@@ -41,7 +41,7 @@ head.ready('_jquery', function(){
 		});
 
 		$bxSlider = $gallery.bxSlider({
-			captions: true,
+			captions: false,
 			controls: false,
 			randomStart: true,
 			mode: 'horizontal',
@@ -61,14 +61,14 @@ head.ready('_jquery', function(){
 		})
 		.trigger('resize');
 
-		$gallery.find('.bx-caption').each(function(i, el){
-			$el = $(el);
-			if (!$el.data('caption')) {
-				$el.find('span').append('.');
-				$el.append(' ' + $el.parent().find('img').attr('alt'));
-				$el.data('caption', true);
-			}
-		});
+		// $gallery.find('.bx-caption').each(function(i, el){
+		// 	$el = $(el);
+		// 	if (!$el.data('caption')) {
+		// 		$el.find('span').append('.');
+		// 		$el.append(' ' + $el.parent().find('img').attr('alt'));
+		// 		$el.data('caption', true);
+		// 	}
+		// });
 
 		$('#nav-main .nav-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
 		var $nav = $('#nav-prev-next');
