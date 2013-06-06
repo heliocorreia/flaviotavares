@@ -282,7 +282,7 @@ function my_post_gallery($output, $attr) {
 			'data-size-desktop' => $img_src_desktop[1] . 'x' . $img_src_desktop[2],
 			'data-size-original' => $img_src_desktop[1] . 'x' . $img_src_desktop[2],
 			// extra attr
-			'title' => __($attachment->post_title, 'flaviotavares'),
+			'data-title' => __($attachment->post_title, 'flaviotavares'),
 			'data-caption' => __($attachment->post_excerpt, 'flaviotavares'),
 		);
 
@@ -292,7 +292,7 @@ function my_post_gallery($output, $attr) {
 			'data-href-desktop' => $link_href_desktop[0],
 			'data-href-original' => $link_href_original[0],
 			// extra attr
-			'title' => __($attachment->post_title, 'flaviotavares'),
+			'data-title' => __($attachment->post_title, 'flaviotavares'),
 			'data-caption' => __($attachment->post_excerpt, 'flaviotavares'),
 		);
 
@@ -316,6 +316,8 @@ function my_post_gallery($output, $attr) {
         $output .= "<{$icontag} class='gallery-icon'>$link</{$icontag}>";
         if ( $captiontag && trim($attachment->post_excerpt) ) {
             $output .= "<{$captiontag} class='wp-caption-text gallery-caption'><span class='gallery-caption-outer'><span class='gallery-caption-inner'>"
+					. wptexturize($attachment->post_title)
+					. ".<br />\n"
 					. wptexturize($attachment->post_excerpt)
 					. "</span></{$captiontag}>";
         }

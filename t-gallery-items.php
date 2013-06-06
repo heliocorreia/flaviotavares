@@ -42,7 +42,7 @@ head.ready('_jquery', function(){
 		head.ready('_tosros', function(){
 			$gallery.find('a').each(function(i, el){
 				var $el = $(el),
-					title = $el.attr('title') + '. ' + $el.data('caption');
+					title = $el.data('title') + '. ' + $el.data('caption');
 				title = title.replace(/<br \/>\n*/g, ' ');
 				$el.attr('title', title);
 			}).tosrus({
