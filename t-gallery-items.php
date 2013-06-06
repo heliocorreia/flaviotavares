@@ -53,7 +53,10 @@ head.ready('_jquery', function(){
 				}
 			}, {
 				// desktop only
-				keys: true
+				keys: true,
+				close: {
+					key: true
+				}
 			});
 		});
 	});

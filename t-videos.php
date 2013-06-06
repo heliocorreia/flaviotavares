@@ -54,6 +54,9 @@ head.ready('_jquery',function(){
 				}, {
 					// desktop only
 					keys: true,
+					close: {
+						key: true
+					},
 					video: {
 						maxWidth: 600
 					}
