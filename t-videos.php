@@ -53,6 +53,7 @@ head.ready('_jquery',function(){
 					}
 				}, {
 					// desktop only
+					keys: true,
 					video: {
 						maxWidth: 600
 					}

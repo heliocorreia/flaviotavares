@@ -51,6 +51,9 @@ head.ready('_jquery', function(){
 				anchors: {
 					zoomIcon: false
 				}
+			}, {
+				// desktop only
+				keys: true
 			});
 		});
 	});
