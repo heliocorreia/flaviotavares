@@ -26,6 +26,10 @@
 						text-align: center;
 						text-indent: 0;
 					}
+
+					&::after {
+						display: none;
+					}
 				}
 			}
 		}
@@ -105,15 +109,12 @@
 	}
 
 	.menu-item {
-		$border-width: 1px;
-
-		border: 0 solid #1a1a1a;
-		border-width: $border-width 0 0 0;
-		margin: 0 17%;
-		margin-top: - $border-width;
-
-		&:last-child {
-			border-bottom-width: $border-width;
+		& + .menu-item > a::after {
+			border: 0 solid #1a1a1a;
+			border-width: 1px 0 0 0;
+			content: '';
+			display: block;
+			margin: 0 41%;
 		}
 	}
 
@@ -142,7 +143,7 @@
 
 	.sub-menu,
 	.menu-has-submenu::before {
-		background-color: $color-gray;
+		background-color: #50432b;
 		position: absolute;
 		width: 2 * ($column-width + $gutter-width) - $gutter-width;
 	}
@@ -151,7 +152,7 @@
 		@include stretch-y;
 		@include photoshop-drop-shadow(180, 1px, 100%, 0, $color-black);
 
-		border-right: 1px solid #242424;
+		border-right: 1px solid #473b26;
 		content: '';
 	}
 
@@ -159,10 +160,8 @@
 		list-style: none;
 		padding: 0;
 
-		.menu-item {
-			border-color: #343434;
-			margin-left: 5%;
-			margin-right: 10%;
+		.menu-item > a::after {
+			border-color: #625641;
 		}
 	}
 }
@@ -170,7 +169,7 @@
 #nav-main {
 	$layouts: $media-layout-600 $media-layout-768 $media-layout-992 $media-layout-1382;
 	$sprites: $breakpoint-600-sprites $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
-	$widths: 80px 100px 130px 182px;
+	$widths: 80px 100px 134px 134px;
 
 	@for $i from 1 through length($layouts) {
 		@include at-breakpoint(nth($layouts, $i)) {
@@ -186,7 +185,7 @@
 			$logo-border-bottom: round((lines-for-font-size($logo-height) * $base-line-height) - $logo-height);
 			$logo-border-left: round(($menu-width - $logo-width) / 2);
 			$logo-border-right: $menu-width - $logo-width - $logo-border-left;
-			$logo-border-top: 2 * $base-line-height;
+			$logo-border-top: 1 * $base-line-height;
 
 			$rodape-border-bottom: round((lines-for-font-size($rodape-height) * $base-line-height) - $rodape-height);
 			$rodape-border-left: round(($menu-width - $rodape-width) / 2);
