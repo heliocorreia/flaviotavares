@@ -82,6 +82,15 @@ head.ready('_jquery', function(){
 			aBxSlider.forEach(function(el){ el.goToNextSlide(); })
 		}
 
+		$(window).keydown(function(event){
+			var action = function(fn) {
+				event.preventDefault();
+				fn();
+			};
+			if (event.keyCode == 37) { action(btnPrev); }
+			if (event.keyCode == 39) { action(btnNext); }
+		});
+
 		var $nav = $('#nav-prev-next');
 		$('.prev', $nav).click(btnPrev);
 		$('.next', $nav).click(btnNext);

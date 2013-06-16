@@ -70,10 +70,22 @@ head.ready('_jquery', function(){
 		// 	}
 		// });
 
+		var btnPrev = function() { $bxSlider.goToPrevSlide(); }
+			btnNext = function() { $bxSlider.goToNextSlide(); }
+
+		$(window).keydown(function(event){
+			var action = function(fn) {
+				event.preventDefault();
+				fn();
+			};
+			if (event.keyCode == 37) { action(btnPrev); }
+			if (event.keyCode == 39) { action(btnNext); }
+		});
+
 		$('#nav-main .nav-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
 		var $nav = $('#nav-prev-next');
-		$('.prev', $nav).click(function() { $bxSlider.goToPrevSlide(); });
-		$('.next', $nav).click(function() { $bxSlider.goToNextSlide(); });
+		$('.prev', $nav).click(btnPrev);
+		$('.next', $nav).click(btnNext);
 	});
 });
 </script>
