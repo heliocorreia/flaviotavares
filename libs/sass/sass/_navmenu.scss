@@ -271,6 +271,72 @@
 	}
 }
 
+.bx-wrapper {
+	$bx-width: 53px;
+
+	&:hover {
+		.bx-prev,
+		.bx-next {
+			@include opaque;
+		}
+	}
+
+	.bx-prev,
+	.bx-next {
+		@include hide-text;
+		@include reset-focus;
+		@include stretch-y;
+		@include transition-duration(0.25s);
+		@include transition-property(opacity);
+		@include transition-timing-function(ease-in);
+		@include transparent;
+
+		background: rgba(0, 0, 0, .5);
+		left: 0;
+		width: $bx-width;
+
+		&::before {
+			@include inline-block;
+
+			position: absolute;
+			content: '';
+		}
+	}
+
+	.bx-next {
+		left: auto;
+		right: 0;
+	}
+
+	$layouts: $media-layout-600 $media-layout-768 $media-layout-992 $media-layout-1382;
+	$sprites: $breakpoint-600-sprites $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
+
+	@for $i from 1 through length($layouts) {
+		@include at-breakpoint(nth($layouts, $i)) {
+			& .bx-prev::before {
+				$img: sprite-file(nth($sprites, $i), arrow-left);
+
+				@include get-sprite(nth($sprites, $i), arrow-left);
+
+				left: 50%;
+				margin-left: - image-width($img) / 2;
+				margin-top: - image-height($img) / 2;
+				top: 50%;
+			}
+			& .bx-next::before {
+				$img: sprite-file(nth($sprites, $i), arrow-right);
+
+				@include get-sprite(nth($sprites, $i), arrow-right);
+
+				margin-right: - image-width($img) / 2;
+				margin-top: - image-height($img) / 2;
+				right: 50%;
+				top: 50%;
+			}
+		}
+	}
+}
+
 #nav-prev-next {
 	text-align: center;
 	margin-bottom: 1em;

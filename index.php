@@ -41,11 +41,14 @@ head.ready('_jquery', function(){
 		});
 
 		$bxSlider = $gallery.bxSlider({
+			auto: true,
+			autoHover: true,
 			captions: false,
-			controls: false,
-			randomStart: true,
+			controls: true,
 			mode: 'horizontal',
 			pager: false,
+			pause: 5000,
+			randomStart: true,
 			onSlideAfter: function($slideElement, oldIndex, newIndex){
 				$slideElement.find('img').each(function(){
 					resizeImage($(this));
@@ -70,22 +73,16 @@ head.ready('_jquery', function(){
 		// 	}
 		// });
 
-		var btnPrev = function() { $bxSlider.goToPrevSlide(); }
-			btnNext = function() { $bxSlider.goToNextSlide(); }
-
 		$(window).keydown(function(event){
-			var action = function(fn) {
+			var btnPrev = function() { $bxSlider.goToPrevSlide(); },
+				btnNext = function() { $bxSlider.goToNextSlide(); },
+				action = function(fn) {
 				event.preventDefault();
 				fn();
 			};
 			if (event.keyCode == 37) { action(btnPrev); }
 			if (event.keyCode == 39) { action(btnNext); }
 		});
-
-		$('#nav-main .nav-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
-		var $nav = $('#nav-prev-next');
-		$('.prev', $nav).click(btnPrev);
-		$('.next', $nav).click(btnNext);
 	});
 });
 </script>
