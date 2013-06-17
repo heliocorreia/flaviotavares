@@ -1,5 +1,4 @@
 body.home {
-	$border-color: #fff;
 	$cavalo-offset: 72px;
 
 	background-color: $color-black;
@@ -23,9 +22,9 @@ body.home {
 
 	#nav-lang {
 		background: #000;
-		border: 1px solid $border-color;
+		border: 1px solid #2b2b2b;
 		display: inline-block;
-		height: 524px;
+		height: 412px;
 		margin-top: $cavalo-offset;
 		position: relative;
 		width: 480px;
@@ -42,7 +41,7 @@ body.home {
 	}
 
 	.nav-menu {
-		@include stretch($offset-bottom:67px, $offset-top:false);
+		@include stretch($offset-bottom:0, $offset-top:false);
 
 		&::before {
 			$height: logo-sprite-height(white-big);
@@ -59,44 +58,45 @@ body.home {
 	}
 
 	.menu-item {
-		$color: #e6e6e6;
+		@include rhythm(1, 0, 0, 1);
 
-		@include inline-block;
-
+		display: block;
+		text-align: center;
 		text-transform: uppercase;
-		font-style: italic;
-		
+		position: relative;
+
 		& + .menu-item {
-			margin-left: 25px;
+			@include padding-leader(1);
+		}
+
+		& + .menu-item::before {
+			$width: 35px;
+
+			border: 0 solid #fff;
+			border-width: 1px 0 0 0;
+			content: '';
+			display: block;
+			left: 50%;
+			margin-left: - $width/2;
+			position: absolute;
+			top: 0;
+			width: $width;
 		}
 
 		a {
-			$dimension: 115px;
-
-			@include border-radius(100%);
+			@include inline-block;
 			@include opacity(0.5);
 
-			border: 2px solid $border-color;
-			color: $color;
-			display: table;
-			height: $dimension;
+			color: #987e51;
+			font-size: 16px;
 			text-decoration: none;
-			text-align: center;
-			vertical-align: center;
-			width: $dimension;
 
 			&:hover {
 				@include opaque;
 
-				background-color: $color-gold;
 				border-color: $color-gold;
 				color: $color-white;
 			}
-		}
-
-		span {
-			display: table-cell;
-			vertical-align: middle;
 		}
 	}
 }
