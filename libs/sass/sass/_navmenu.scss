@@ -1,3 +1,5 @@
+$menu-widths: 80px 100px 134px 134px;
+
 %nav-main-with-sub-menu {
 	#nav-main {
 		.nav-menu {
@@ -55,6 +57,7 @@
 	@include span-columns(3);
 
 	position: fixed;
+	left: $grid-padding;
 	z-index: 100;
 
 	&::before {
@@ -167,18 +170,14 @@
 }
 
 #nav-main {
-	$layouts: $media-layout-600 $media-layout-768 $media-layout-992 $media-layout-1382;
-	$sprites: $breakpoint-600-sprites $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
-	$widths: 80px 100px 134px 134px;
+	@for $i from 1 through length($media-layout-list) {
+		@include at-breakpoint(nth($media-layout-list, $i)) {
+			$menu-width: nth($menu-widths, $i);
 
-	@for $i from 1 through length($layouts) {
-		@include at-breakpoint(nth($layouts, $i)) {
-			$menu-width: nth($widths, $i);
-
-			$logo: sprite-file(nth($sprites, $i), logo-menu);
+			$logo: sprite-file(nth($breakpoint-sprites, $i), logo-menu);
 			$logo-height: image-height($logo);
 			$logo-width: image-width($logo);
-			$rodape: sprite-file(nth($sprites, $i), rodape-menu);
+			$rodape: sprite-file(nth($breakpoint-sprites, $i), rodape-menu);
 			$rodape-height: image-height($rodape);
 			$rodape-width: image-width($rodape);
 
@@ -198,12 +197,12 @@
 			$rodape-outer-width: $rodape-border-left + $rodape-width + $rodape-border-right;
 
 			&::before {
-				@include get-sprite(nth($sprites, $i), logo-menu);
+				@include get-sprite(nth($breakpoint-sprites, $i), logo-menu);
 				border-width: $logo-border-top $logo-border-right $logo-border-bottom $logo-border-left;
 			}
 
 			&::after {
-				@include get-sprite(nth($sprites, $i), rodape-menu);
+				@include get-sprite(nth($breakpoint-sprites, $i), rodape-menu);
 				border-width: $rodape-border-top $rodape-border-right $rodape-border-bottom $rodape-border-left;
 			}
 
@@ -235,7 +234,7 @@
 	position: absolute;
 	right: rhythm(1);
 	top: rhythm(1);
-	z-index: 100;
+	z-index: 120;
 
 	.nav-menu:hover {
 		@include clearfix;
@@ -281,6 +280,13 @@
 		}
 	}
 
+	.bx-controls {
+		@include stretch;
+
+		margin-left: 134px + $grid-padding;
+		z-index: 110;
+	}
+
 	.bx-prev,
 	.bx-next {
 		@include hide-text;
@@ -308,15 +314,16 @@
 		right: 0;
 	}
 
-	$layouts: $media-layout-600 $media-layout-768 $media-layout-992 $media-layout-1382;
-	$sprites: $breakpoint-600-sprites $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
+	@for $i from 1 through length($media-layout-list) {
+		@include at-breakpoint(nth($media-layout-list, $i)) {
+			.bx-controls {
+				margin-left: nth($menu-widths, $i) + $grid-padding;
+			}
 
-	@for $i from 1 through length($layouts) {
-		@include at-breakpoint(nth($layouts, $i)) {
 			& .bx-prev::before {
-				$img: sprite-file(nth($sprites, $i), arrow-left);
+				$img: sprite-file(nth($breakpoint-sprites, $i), arrow-left);
 
-				@include get-sprite(nth($sprites, $i), arrow-left);
+				@include get-sprite(nth($breakpoint-sprites, $i), arrow-left);
 
 				left: 50%;
 				margin-left: - image-width($img) / 2;
@@ -324,9 +331,9 @@
 				top: 50%;
 			}
 			& .bx-next::before {
-				$img: sprite-file(nth($sprites, $i), arrow-right);
+				$img: sprite-file(nth($breakpoint-sprites, $i), arrow-right);
 
-				@include get-sprite(nth($sprites, $i), arrow-right);
+				@include get-sprite(nth($breakpoint-sprites, $i), arrow-right);
 
 				margin-right: - image-width($img) / 2;
 				margin-top: - image-height($img) / 2;

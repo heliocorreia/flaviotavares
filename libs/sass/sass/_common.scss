@@ -11,6 +11,8 @@ $media-layout-768: 48em 8;
 $media-layout-992: 62em 12;
 $media-layout-1382: 86.375em 16;
 
+$media-layout-list: $media-layout-600 $media-layout-768 $media-layout-992 $media-layout-1382;
+
 @import "photoshop-drop-shadow";
 @import "susy";
 
@@ -52,6 +54,8 @@ $breakpoint-1382-sprite-dimensions: true;
 @import "breakpoint-768/*.png";
 @import "breakpoint-992/*.png";
 @import "breakpoint-1382/*.png";
+
+$breakpoint-sprites: $breakpoint-600-sprites $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
 
 // extensions
 
