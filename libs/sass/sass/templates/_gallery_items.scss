@@ -157,6 +157,10 @@ body.page-template-t-gallery-items-php {
 	.bx-wrapper {
 		@extend %gallery-even;
 
+		.bx-prev {
+			left: $submenu-width;
+		}
+
 		.gallery-item {
 			float: none !important;
 		}

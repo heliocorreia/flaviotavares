@@ -14,12 +14,8 @@ Template Name: Galeria (itens)
 <script>
 "use strict";
 head.ready('_jquery', function(){
-	var btnPrev,
-		btnNext,
-		$gallery = $('.gallery'),
+	var $gallery = $('.gallery'),
 		selectedBreakpoint = getBreakpointLabel();
-
-	$('#nav-main').find('.current-menu-parent .sub-menu').prepend('<li id="nav-prev-next"><span class="prev"></span><span class="next"></span></li>');
 
 	// update gallery items links and img src
 	$gallery.find('a').each(function(i, el){
@@ -62,24 +58,20 @@ head.ready('_jquery', function(){
 	});
 
 	head.ready('_bxslider', function(){
-		var aBxSlider = [];
-		$gallery.each(function(i, el){
-			var bxSlider = $(el).bxSlider({
-				controls: false,
-				infiniteLoop: false,
+		var btnPrev,
+			btnNext,
+			bxSlider = $gallery.first().bxSlider({
+				controls: true,
 				pager: false,
 				slideWidth: 'auto'
 			});
 
-			aBxSlider.push(bxSlider);
-		});
-
 		btnPrev = function() {
-			aBxSlider.forEach(function(el){ el.goToPrevSlide(); })
+			bxSlider.goToPrevSlide();
 		}
 
 		btnNext = function() {
-			aBxSlider.forEach(function(el){ el.goToNextSlide(); })
+			bxSlider.goToNextSlide();
 		}
 
 		$(window).keydown(function(event){
@@ -90,10 +82,6 @@ head.ready('_jquery', function(){
 			if (event.keyCode == 37) { action(btnPrev); }
 			if (event.keyCode == 39) { action(btnNext); }
 		});
-
-		var $nav = $('#nav-prev-next');
-		$('.prev', $nav).click(btnPrev);
-		$('.next', $nav).click(btnNext);
 	});
 });
 </script>

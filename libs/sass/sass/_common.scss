@@ -57,6 +57,10 @@ $breakpoint-1382-sprite-dimensions: true;
 
 $breakpoint-sprites: $breakpoint-600-sprites $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
 
+// menus
+
+$submenu-width: 2 * ($column-width + $gutter-width) - $gutter-width;
+
 // extensions
 
 %font-quattrocento-sans {

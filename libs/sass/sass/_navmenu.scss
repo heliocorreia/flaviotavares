@@ -148,7 +148,7 @@ $menu-widths: 80px 100px 134px 134px;
 	.menu-has-submenu::before {
 		background-color: #50432b;
 		position: absolute;
-		width: 2 * ($column-width + $gutter-width) - $gutter-width;
+		width: $submenu-width;
 	}
 
 	.menu-has-submenu::before {
