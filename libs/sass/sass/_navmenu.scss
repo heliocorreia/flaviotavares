@@ -112,7 +112,7 @@ $menu-widths: 80px 100px 134px 134px;
 	}
 
 	.menu-item {
-		& + .menu-item > a::after {
+		> a::after {
 			border: 0 solid #1a1a1a;
 			border-width: 1px 0 0 0;
 			content: '';
