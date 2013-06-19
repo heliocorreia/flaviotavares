@@ -280,11 +280,14 @@ $menu-widths: 80px 100px 134px 134px;
 		}
 	}
 
+	.bx-viewport {
+		z-index: 1;
+	}
+
 	.bx-controls {
 		@include stretch;
 
 		margin-left: 134px + $grid-padding;
-		z-index: 110;
 	}
 
 	.bx-prev,
@@ -300,6 +303,7 @@ $menu-widths: 80px 100px 134px 134px;
 		background: rgba(0, 0, 0, .5);
 		left: 0;
 		width: $bx-width;
+		z-index: 110;
 
 		&::before {
 			@include inline-block;

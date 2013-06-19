@@ -29,6 +29,10 @@ body.page-template-default {
 		display: none;
 	}
 
+	.bx-viewport {
+		z-index: auto;
+	}
+
 	.bx-caption {
 		@extend %font-quattrocento-sans;
 
