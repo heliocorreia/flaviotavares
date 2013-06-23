@@ -299,29 +299,41 @@ body.page-template-t-biography-php {
 		}
 	}
 
-	.bx-wrapper {
-		.bx-controls {
-			@include inline-block;
+	// BxSlider //////////////////////////////////////////////////////////////////
 
-			background: $color-white;
-			bottom: - seta-sprite-height(rounded-small-left-2);
-			position: absolute;
-			right: 0;
-			margin-bottom: lines-for-font-size($figcaption-font-size) * 1em;
+	.bx-controls {
+		margin: 0;
+	}
 
-			.bx-prev {
-				@include hide-text;
-				@include inline-block;
-				@include seta-sprite(rounded-small-left-2);
-			}
+	.bx-pager {
+		@include stretch-x;
 
-			.bx-next {
-				@include hide-text;
-				@include inline-block;
-				@include seta-sprite(rounded-small-right-2);
+		bottom: 0;
+		margin-bottom: lines-for-font-size($figcaption-font-size) * 3em;
+		text-align: center;
+		z-index: 1;
+	}
 
-				margin-left: 4px;
-			}
+	.bx-pager-item {
+		@include inline-block;
+	}
+
+	.bx-pager-link {
+		$size: 14px;
+
+		@include border-radius(50%);
+		@include hide-text;
+		@include inline-block;
+		@include opacity(.6);
+
+		background: black;
+		height: $size;
+		margin: 0 .25em;
+		outline: none;
+		width: $size;
+
+		&.active {
+			@include opaque;
 		}
 	}
 }

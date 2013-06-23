@@ -8,9 +8,10 @@ Template Name: Biografia
 <script>
 head.ready(function(){
 	$('.slides .slides-inner').bxSlider({
-		controls: true,
+		auto: true,
+		controls: false,
 		infiniteLoop: true,
-		pager: false
+		pager: true
 	});
 });
 </script>
