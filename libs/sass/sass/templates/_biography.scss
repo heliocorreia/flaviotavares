@@ -1,303 +1,426 @@
+%biography-header {
+	@include span-columns(13 omega);
+}
+
+%biography-content-h1 {
+	@include adjust-font-size-to(18px);
+
+	color: $color-black;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+%biography-content-blockquote {
+	@include rhythm(1, 0, 0, 1);
+
+	color: #987e51;
+
+	p {
+		@include rhythm(1, 0, 0, 1, 20px);
+	}
+}
+
 body.page-template-t-biography-php {
-	background-color: $color-white;
-	background-image: image-url("bg-biography.jpg");
-	background-size: 100% auto;
+	background: {
+		color: $color-white;
+		image: image-url("bg-biography.jpg");
+		size: 100% auto;
+	}
 }
 
 #t-biography {
 	$figcaption-font-size: 10px;
 
-	@include margin-leader(17);
-	@include padding-leader(8);
+	@include margin-leader(21);
 
-	background-color: $color-white;
+	background: {
+		attachment: fixed;
+		color: $color-white;
+		image: image-url("bg-biography-2.jpg");
+		position: center center;
+		repeat: no-repeat;
+		size: cover;
+	}
 	border-bottom: rhythm(1) solid #9c8358;
 
-	.content-header,
-	.content-body {
-		@include span-columns(13 omega);
+	.header,
+	.content,
+	.extras {
+		@include pie-clearfix;
+		background-color: $color-white;
 	}
 
-	.content-header {
-		position: relative;
+	// HEADER ////////////////////////////////////////////////////////////////////
 
-		.main-title,
-		.by-author,
-		.slides {
-			@include adjust-font-size-to(16px);
-
-			top: - rhythm(27);
-		}
-
-		.main-title {
-			display: none;
-		}
-
-		.by-author {
-			$color: #846d46;
-
-			@include box-sizing(border-box);
-			@include span-columns(5, 13);
-
-			background: $color-black;
-			color: $color-white;
-			left: 0;
-			margin: rhythm(13) 0 0 0;
-			padding: rhythm(2);
-			position: absolute;
-			text-align: center;
-			text-transform: uppercase;
-			z-index: 10;
-
-			&:after {
-				$border-width: 1px;
-
-				@include stretch;
-
-				border: $border-width solid $color;
-				bottom: 2 * $border-width;
-				content: '';
-				margin: rhythm(1);
-				position: absolute;
-			}
-
-			p {
-				@include adjust-font-size-to(18px);
-				@include rhythm;
-
-				position: relative;
-				z-index: 1;
-
-				&:last-child {
-					@include adjust-font-size-to(14px);
-					color: $color;
-				}
-			}
-		}
-
-		.slides {
-			@include span-columns(9 omega, 13);
-
-			margin-top: 150px;
-			position: absolute;
-			right: 0;
-
-			img {
-				height: auto;
-				width: 100%;
-			}
-
-			figcaption {
-				@include adjust-font-size-to($figcaption-font-size);
-				@include opacity(0.7);
-
-				text-transform: uppercase;
-			}
-		}
-
-		.by-others {
-			@extend %font-ovo;
-			@include rhythm(1, 0, 0, 3);
-			@include span-columns(13, 13);
-
-			margin-left: 0;
-			margin-right: 0;
-			text-transform: uppercase;
-
-			p {
-				@include adjust-font-size-to(28px);
-				@include rhythm;
-
-				color: #987e51;
-				font-style: italic;
-				text-align: center;
-				line-height: 1.5em;
-
-				span {
-					letter-spacing: -0.025em;
-
-					@include at-breakpoint($media-layout-992) {
-						display: block;
-						text-align: center;
-					}
-				}
-			}
-
-			.block-2, .block-4 {
-				color: #4b3a1d;
-			}
-
-			.block-1 {
-				text-align: right;
-			}
-
-			.block-3 {
-				text-align: left;
-			}
-
-			footer {
-				@include adjust-font-size-to(15px);
-				@include opacity(0.7);
-
-				color: #000;
-				text-align: center;
-
-				span {
-					font-weight: bold;
-				}
-			}
-		}
-	}
-
-	.content-body {
-		@include clearfix;
-		@include padding-leader(10);
-		@include padding-trailer(4);
-
+	.header-container {
+		@extend .container;
+		@include padding-leader(7);
 		position: relative;
 	}
 
-	.content, .sidebar {
-		& > :first-child {
-			margin-top: 0;
-			padding-top: 0;
+	.header-content {
+		@extend %biography-header;
+	}
+
+	.header-title {
+		display: none;
+	}
+
+	.quote-by-author {
+		$color: #846d46;
+
+		@include box-sizing(border-box);
+		@include span-columns(5, 16);
+
+		background: $color-black;
+		color: $color-white;
+		left: columns(3);
+		margin: rhythm(13) 0 0 0;
+		padding: rhythm(2);
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		top: - rhythm(22);
+		z-index: 10;
+
+		&:after {
+			$border-width: 1px;
+
+			@include stretch;
+
+			border: $border-width solid $color;
+			bottom: 2 * $border-width;
+			content: '';
+			margin: rhythm(1);
+			position: absolute;
+		}
+
+		p {
+			@include adjust-font-size-to(18px);
+			@include rhythm;
+
+			position: relative;
+			z-index: 1;
+
+			&:last-child {
+				@include adjust-font-size-to(14px);
+				color: $color;
+			}
 		}
 	}
 
-	.content {
-		@include pre(4, 13);
-		@include span-columns(5, 13);
+	.header-slides {
+		@include span-columns(9 omega, 16);
+
+		position: absolute;
+		top: - rhythm(15);
+		right: 0;
+
+		img {
+			height: auto;
+			width: 100%;
+		}
+
+		figcaption {
+			@include adjust-font-size-to($figcaption-font-size);
+			@include opacity(0.7);
+
+			text-transform: uppercase;
+		}
+	}
+
+	.quote-by-others {
+		@extend %biography-header;
+		@extend %font-quattrocento-sans;
+		@include rhythm(1, 0, 0, 3);
+
+		text-align: center;
+
+		p {
+			@include adjust-font-size-to(28px);
+			@include rhythm;
+
+			color: #987e51;
+			line-height: 1.5em;
+			padding-left: columns(1, 13);
+			padding-right: columns(1, 13);
+		}
+
+		.fn {
+			font-weight: bold;
+		}
+	}
+
+	// CONTENT ///////////////////////////////////////////////////////////////////
+
+	.content-container {
+		@extend .container;
+		@include padding-trailer(2);
+	}
+
+	.content-main {
+		@include pre(2);
+		@include pad(4);
+		@include span-columns(8);
 
 		color: #333;
+		position: relative;
 
 		h1 {
-			@include adjust-font-size-to(16px);
-			@include rhythm(3, 1, 0, 1);
-
-			color: $color-black;
-			font-weight: bold;
-			text-transform: uppercase;
-		}
-
-		blockquote, p {
-			@include rhythm(1, 0, 0, 1);
+			@extend %biography-content-h1;
 		}
 
 		blockquote {
-			color: #987e51;
-
+			@extend %biography-content-blockquote;
+			
 			p {
 				@include adjust-font-size-to(20px);
-				@include rhythm(1, 0, 0, 1, 20px);
 			}
 		}
 	}
 
-	.sidebar {
+	.content-main-aside {
 		$font-size: 12px;
 
-		@include span-columns(4 omega, 13);
+		.works {
+			@include span-columns(4 omega, 16);
 
-		ol, li {
+			color: #666;
+			direction: rtl;
+			left: 0;
+			list-style: decimal outside;
+			position: absolute;
+			top: 0;
+		}
+
+		.work-item {
 			@include rhythm(1, 0, 0, 1, $font-size);
 		}
 
-		ol {
-			@include adjust-font-size-to($font-size);
-
-			color: #666;
-			list-style: decimal outside;
-
-			dd {
-				@include rhythm;
-
-				margin-left: 0;
-			}
-
-			.title {
-				color: #987e51;
-				font-weight: bold;
-			}
+		.work-figure {
+			display: none;
 		}
 
-		figure {
-			$ratio: 0.25;
-			$img-biography-work-margin: 10px;
-			$img1-height: image-height("img-biography-work-1.jpg");
-			$img1-width: image-width("img-biography-work-1.jpg");
-			$img2-width: image-width("img-biography-work-2.jpg");
-			$img3-width: image-width("img-biography-work-3.jpg");
-			$img4-width: image-width("img-biography-work-4.jpg");
+		.work-title,
+		.work-specs,
+		.work-year {
+			@include adjust-font-size-to($font-size);
+			@include rhythm;
 
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: $img1-width * $ratio;
+			margin: 0;
+		}
 
-			&::after {
-				@include inline-block;
-				@include opacity(0.5);
-
-				content: attr(data-index) ".";
-				bottom: 0;
-				position: absolute;
-				left: 0;
-				margin-bottom: -2em;
-			}
-
-			img {
-				float: left;
-				height: auto;
-				width: 100%;
-			}
-
-			&.img-2 {
-				left: $img-biography-work-margin + ($img1-width * $ratio);
-				width: $img2-width * $ratio;
-			}
-
-			&.img-3 {
-				left: $img-biography-work-margin + ($img1-width * $ratio) + $img-biography-work-margin + ($img2-width * $ratio);
-				width: $img3-width * $ratio;
-			}
-
-			&.img-4 {
-				left: $img1-width * $ratio;
-				margin-left: - image-width("img-biography-work-4.jpg") * $ratio;
-				top: $img-biography-work-margin + ($img1-height * $ratio);
-				width: $img4-width * $ratio;
-			}
-
-			// breakpoints
-			$ratios: 0.5 0.75 1;
-			$breakpoints: $media-layout-768 $media-layout-992 $media-layout-1382;
-			@for $i from 1 through length($ratios) {
-				$ratio: nth($ratios, $i);
-				$breakpoint: nth($breakpoints, $i);
-
-				@include at-breakpoint($breakpoint) {
-					width: $img1-width * $ratio;
-
-					&.img-2 {
-						left: $img-biography-work-margin + ($img1-width * $ratio);
-						width: $img2-width * $ratio;
-					}
-
-					&.img-3 {
-						left: $img-biography-work-margin + ($img1-width * $ratio) + $img-biography-work-margin + ($img2-width * $ratio);
-						width: $img3-width * $ratio;
-					}
-
-					&.img-4 {
-						left: $img1-width * $ratio;
-						margin-left: - image-width("img-biography-work-4.jpg") * $ratio;
-						top: $img-biography-work-margin + ($img1-height * $ratio);
-						width: $img4-width * $ratio;
-					}
-				}
-			}
+		.work-title {
+			color: #987e51;
+			font-weight: bold;
 		}
 	}
+
+	// EXTRAS ////////////////////////////////////////////////////////////////////
+
+	.extras {
+		@include margin-leader(24);
+		@include padding-leader(3);
+		@include padding-trailer(2);
+	}
+
+	.extra-quotes {
+		@include pre(6);
+		@include span-columns(8);
+
+		footer {
+			color: $color-black;
+		}
+
+		.fn {
+			font-weight: bold;
+		}
+	}
+
+	.extra-quotes-title {
+		@extend %biography-content-h1;
+	}
+
+	.extra-quote {
+		@extend %biography-content-blockquote;
+		@include trailer(2);
+		margin: {
+			left: 0;
+			right: 0;
+		}
+	}
+
+	.extra-quote-content {
+	}
+
+	.reinado-do-sol {
+		@include pre(3);
+		@include span-columns(10);
+	}
+
+
+
+
+
+
+
+
+
+
+
+//	.content-body {
+//		@include clearfix;
+//		@include padding-leader(10);
+//		@include padding-trailer(4);
+//
+//		position: relative;
+//	}
+
+//	.content, .sidebar {
+//		& > :first-child {
+//			margin-top: 0;
+//			padding-top: 0;
+//		}
+//	}
+
+//	.content {
+//		@include pre(4, 13);
+//		@include span-columns(5, 13);
+//
+//		color: #333;
+//
+//		h1 {
+//			@include adjust-font-size-to(16px);
+//			@include rhythm(3, 1, 0, 1);
+//
+//			color: $color-black;
+//			font-weight: bold;
+//			text-transform: uppercase;
+//		}
+//
+//		blockquote, p {
+//			@include rhythm(1, 0, 0, 1);
+//		}
+//
+//		blockquote {
+//			color: #987e51;
+//
+//			p {
+//				@include adjust-font-size-to(20px);
+//				@include rhythm(1, 0, 0, 1, 20px);
+//			}
+//		}
+//	}
+
+//	.content-aside {
+//		//
+//	}
+
+//	.sidebar {
+//		$font-size: 12px;
+//
+//		@include span-columns(4 omega, 13);
+//
+//		ol, li {
+//			@include rhythm(1, 0, 0, 1, $font-size);
+//		}
+//
+//		ol {
+//			@include adjust-font-size-to($font-size);
+//
+//			color: #666;
+//			list-style: decimal outside;
+//
+//			dd {
+//				@include rhythm;
+//
+//				margin-left: 0;
+//			}
+//
+//			.title {
+//				color: #987e51;
+//				font-weight: bold;
+//			}
+//		}
+//
+//		figure {
+//			$ratio: 0.25;
+//			$img-biography-work-margin: 10px;
+//			$img1-height: image-height("img-biography-work-1.jpg");
+//			$img1-width: image-width("img-biography-work-1.jpg");
+//			$img2-width: image-width("img-biography-work-2.jpg");
+//			$img3-width: image-width("img-biography-work-3.jpg");
+//			$img4-width: image-width("img-biography-work-4.jpg");
+//
+//			left: 0;
+//			position: absolute;
+//			top: 0;
+//			width: $img1-width * $ratio;
+//
+//			&::after {
+//				@include inline-block;
+//				@include opacity(0.5);
+//
+//				content: attr(data-index) ".";
+//				bottom: 0;
+//				position: absolute;
+//				left: 0;
+//				margin-bottom: -2em;
+//			}
+//
+//			img {
+//				float: left;
+//				height: auto;
+//				width: 100%;
+//			}
+//
+//			&.img-2 {
+//				left: $img-biography-work-margin + ($img1-width * $ratio);
+//				width: $img2-width * $ratio;
+//			}
+//
+//			&.img-3 {
+//				left: $img-biography-work-margin + ($img1-width * $ratio) + $img-biography-work-margin + ($img2-width * $ratio);
+//				width: $img3-width * $ratio;
+//			}
+//
+//			&.img-4 {
+//				left: $img1-width * $ratio;
+//				margin-left: - image-width("img-biography-work-4.jpg") * $ratio;
+//				top: $img-biography-work-margin + ($img1-height * $ratio);
+//				width: $img4-width * $ratio;
+//			}
+//
+//			// breakpoints
+//			$ratios: 0.5 0.75 1;
+//			$breakpoints: $media-layout-768 $media-layout-992 $media-layout-1382;
+//			@for $i from 1 through length($ratios) {
+//				$ratio: nth($ratios, $i);
+//				$breakpoint: nth($breakpoints, $i);
+//
+//				@include at-breakpoint($breakpoint) {
+//					width: $img1-width * $ratio;
+//
+//					&.img-2 {
+//						left: $img-biography-work-margin + ($img1-width * $ratio);
+//						width: $img2-width * $ratio;
+//					}
+//
+//					&.img-3 {
+//						left: $img-biography-work-margin + ($img1-width * $ratio) + $img-biography-work-margin + ($img2-width * $ratio);
+//						width: $img3-width * $ratio;
+//					}
+//
+//					&.img-4 {
+//						left: $img1-width * $ratio;
+//						margin-left: - image-width("img-biography-work-4.jpg") * $ratio;
+//						top: $img-biography-work-margin + ($img1-height * $ratio);
+//						width: $img4-width * $ratio;
+//					}
+//				}
+//			}
+//		}
+//	}
 
 	// BxSlider //////////////////////////////////////////////////////////////////
 
@@ -338,54 +461,54 @@ body.page-template-t-biography-php {
 	}
 }
 
-#nav-biography {
-	@include margin-leader(14);
-
-	.nav-biography {
-		$dimension: rhythm(5);
-
-		margin: 0;
-		padding: 0;
-
-		a,
-		&::before {
-			@include border-radius(100%);
-			@include inline-block;
-
-			border: 2px solid $color-gold;
-			color: #4b3a1d;
-			width: $dimension;
-		}
-
-		&::before {
-			@include background(image-url("img-biography-menu.jpg") center center);
-			@include inline-block;
-
-			background-size: 100% auto;
-			border-color: $color-white;
-			content: '';
-			height: $dimension;
-		}
-
-		a {
-			color: $color-gold;
-			line-height: $dimension;
-			text-align: center;
-			text-decoration: none;
-			vertical-align: center;
-
-			&:hover {
-				background-color: $color-gold;
-				color: $color-white;
-			}
-		}
-	}
-
-	.menu-item {
-		@include rhythm(1, 0, 0, 1);
-
-		display: block;
-		text-transform: uppercase;
-		font-style: italic;
-	}
-}
+//#nav-biography {
+//	@include margin-leader(14);
+//
+//	.nav-biography {
+//		$dimension: rhythm(5);
+//
+//		margin: 0;
+//		padding: 0;
+//
+//		a,
+//		&::before {
+//			@include border-radius(100%);
+//			@include inline-block;
+//
+//			border: 2px solid $color-gold;
+//			color: #4b3a1d;
+//			width: $dimension;
+//		}
+//
+//		&::before {
+//			@include background(image-url("img-biography-menu.jpg") center center);
+//			@include inline-block;
+//
+//			background-size: 100% auto;
+//			border-color: $color-white;
+//			content: '';
+//			height: $dimension;
+//		}
+//
+//		a {
+//			color: $color-gold;
+//			line-height: $dimension;
+//			text-align: center;
+//			text-decoration: none;
+//			vertical-align: center;
+//
+//			&:hover {
+//				background-color: $color-gold;
+//				color: $color-white;
+//			}
+//		}
+//	}
+//
+//	.menu-item {
+//		@include rhythm(1, 0, 0, 1);
+//
+//		display: block;
+//		text-transform: uppercase;
+//		font-style: italic;
+//	}
+//}
