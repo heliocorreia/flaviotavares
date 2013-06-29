@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
-"POT-Creation-Date: 2013-04-21 11:06-0300\n"
-"PO-Revision-Date: 2013-04-21 11:09-0300\n"
+"POT-Creation-Date: 2013-06-29 13:59-0300\n"
+"PO-Revision-Date: 2013-06-29 13:59-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -15,98 +15,238 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../t-biography.php:26
+#: ../t-biography.php:25
 msgid "Esse mundo da imagem me persegue e eu o persigo."
 msgstr "This world of the image pursues me and I pursue it in return."
 
-#: ../t-biography.php:27
-msgid "Flávio Tavares"
-msgstr ""
-
 #: ../t-biography.php:46
-msgid "Apesar de sua singular matriz, a busca de Flávio Tavares"
-msgstr "Despite his singular matrix, Flávio Tavares searches"
-
-#: ../t-biography.php:46
-msgid "é a de um imaginário arquetípico em que o sacro dialoga"
-msgstr "for archetypal imagery in which the sacred encounters"
-
-#: ../t-biography.php:46
-msgid "com o profano e onde a afirmação da vida sempre"
-msgstr "with the profane, and where an affirmation of life always"
-
-#: ../t-biography.php:46
-msgid "se sobrepõe ao pessimismo e ao culto da morte, tão"
-msgstr "overcomes pessimism and the cult of death, which is so"
-
-#: ../t-biography.php:46
-msgid "presentes na arte conteporânea."
-msgstr "present in contemporary art."
-
-#: ../t-biography.php:47
-msgid "Gabriel Bechara"
-msgstr ""
-
-#: ../t-biography.php:47
 msgid ""
-"Professor de Estética e História da Arte da Universidade Federal da Paraíba, "
-"2005"
+"Em três décadas impressionou-me a constante evolução desse artista e a sua "
+"capacidade de aprofundar os seus temas básicos e o refinamento dos "
+"instrumentos. Certamente, hoje, Flávio Tavares está entre os mais "
+"importantes artistas do Nordeste e tem uma posição respeitável entre os "
+"artistas brasileiros figurativos de sua geração."
 msgstr ""
-"Professor of Aesthetics and History of Art at Paraiba Federal University, "
-"2005"
 
-#: ../t-biography.php:62
+#: ../t-biography.php:47
+msgid "Jacob Klintowitz"
+msgstr ""
+
+#: ../t-biography.php:47 ../t-biography.php:113
+msgid "Crítico de arte"
+msgstr "Art Critic"
+
+#: ../t-biography.php:63
 msgid "A semente"
 msgstr ""
 
-#: ../t-biography.php:63
+#: ../t-biography.php:64
 msgid "Acrílico sobre tela 1,60 x 1,40 cm"
 msgstr ""
 
-#: ../t-biography.php:72 ../t-biography.php:82 ../t-biography.php:92
+#: ../t-biography.php:73 ../t-biography.php:83 ../t-biography.php:93
 msgid "Sem título"
 msgstr "Untitled"
 
-#: ../t-biography.php:73 ../t-biography.php:93
+#: ../t-biography.php:74 ../t-biography.php:94
 msgid "Pastel 83 x 93 cm"
 msgstr ""
 
-#: ../t-biography.php:83
+#: ../t-biography.php:84
 msgid "Óleo sobre tela 80 x 70 cm"
 msgstr ""
 
-#: ../t-contact.php:14
+#: ../t-biography.php:108
+msgid ""
+"A obra de Flávio Tavares é fruto de 40 anos de processo contínuo, que "
+"resultou em uma linguagem artística perfeitamente adequada à sua expressão "
+"plástica. Para perceber sua poética é necessário compreender, ao mesmo "
+"tempo, as imbricações da concepção estética, a criatividade da imagética e o "
+"percurso de sua produção, manifestados em meios expressivos diferenciados e "
+"em variações técnicas que nos auxiliam, inclusive, na compreensão da arte "
+"contemporânea."
+msgstr ""
+"Flávio Tavares’ work is the result of a permanent process throughout 40 "
+"years that resulted in an artistic language in perfect harmony with its "
+"artistic expression. In order to grasp his poetry one must understand, at "
+"the same time, the overlapping of the artistic conception and the creativity "
+"of his imagery as well as the course itself of his production, present in "
+"various expressive means and in technical variations that will also help us "
+"understand contemporary art."
+
+#: ../t-biography.php:109
+msgid "Presidente da Associação Brasileira de Críticos de Arte"
+msgstr "President of the Brazilian Association of Art Critics"
+
+#: ../t-biography.php:112
+msgid ""
+"Conheço o trabalho do artista plástico Flávio Tavares há 30 anos, "
+"aproximadamente. Nestas três décadas impressionou-me a constante evolução do "
+"artista e a sua capacidade de aprofundar os seus temas básicos e o "
+"refinamento dos instrumentos. Certamente, hoje, Flávio Tavares está entre os "
+"mais importantes artistas do Nordeste e tem uma posição respeitável entre os "
+"artistasbrasileiros figurativos de sua geração."
+msgstr ""
+"I have known the work of the artist Flávio Tavares for about 30 years. In "
+"these three decades I have been impressed by the consistent evolution of the "
+"artist and his capacity to plunge deeper and deeper into his basic themes "
+"and the refinement of his instruments. Certainly, today, Flávio Tavares is "
+"among the most important artists in Northeast Brazil and he enjoys a "
+"comfortable reputation among figurative Brazilian artists of his generation."
+
+#: ../t-biography.php:116
+msgid ""
+"O artista surpreende-se, subverte, registra tudo em sua volta, neste "
+"desfilar de mistério por onde transitam flores, pássaros,florestas, bichos "
+"acuados, gente perplexa ou contemplativa, nas horas que vão sesucedendo "
+"entre o céu e  a terra num tempo marcado para acabar."
+msgstr ""
+"The artist is surprised, subverts, registers everything around him, in this "
+"endless parade of mystery visited by birds, forests, beasts at bay, awed or "
+"contemplative people as hours go by, one after the other between heaven and "
+"earth within a time due to end."
+
+#: ../t-biography.php:117
+msgid "Artista plástico"
+msgstr "Artist"
+
+#: ../t-biography.php:120
+msgid ""
+"Flávio Tavares, em sua pesquisa artística, dá asas aos seus sonhos, através "
+"de desenhos e pinturas cujos componentes principais são a representação das "
+"lembranças da infância, das paisagens oníricas de sua terra e da criação de "
+"um mundo melhor. Sua arte convida o espectador a entrar na viagem artística "
+"semeada de alegria, de encanto e de mistério."
+msgstr ""
+"Flávio Tavares, in his artistic research, gives wings to his dreams through "
+"his drawings and paintings whose major characteristics are the "
+"representation of childhood memories, dream landscapes of his homeland and "
+"the creationof a better world. His art invites the spectator to join him in "
+"an artistic journey sprinkled with joy, charm and mystery."
+
+#: ../t-biography.php:121
+msgid "Crítica de arte"
+msgstr "Art Critic"
+
+#: ../t-biography.php:124
+msgid ""
+"Suavizada na superfície por suas cores e volumes carregados de calma "
+"sensualidade, recurso que sempre atrai e envolve o apreciador desprevenido, "
+"a pintura de Flávio Tavares, no próximo passo, como que nos arrebata e "
+"transforma o ‘devaneio’ em mergulho profundo. Em quase todas as suas fases, "
+"a profusa emoção que emana de suas figuras, em diferentes planos, instala "
+"uma atmosfera densa de significados, transcende todo o quadro e nos conduz a "
+"indagações no mínimo inquietantes. É assim que vejo e sinto a arte de Flávio "
+"Tavares, um pintor da alma, para mim um inveterado dostoiesvskiano, que se "
+"tornou, em seu luminoso trajeto, um dos maiores artistas da "
+"contemporaneidade brasileira."
+msgstr ""
+"Smoothed on the surface by his colors and volumes charged with calm and "
+"sensuality, artifices that inevitably attract and involve the unsuspecting "
+"observer, Flávio Tavares’ painting,then captures us and transforms the "
+"reverie into a deep plunge. In most of his phases, the intense emotion that "
+"emanates from his figures, in various perspectives, installs an atmosphere "
+"dense in meanings that transcend the whole picture and leads us into "
+"disturbing questionings. This is the way I perceive the art of Flávio "
+"Tavares, a painter of the soul, and, according to my perception of him, a "
+"relentless dostoevskian artist who has become,in his luminous path, one of "
+"the greatest Brazilian contemporary artists."
+
+#: ../t-biography.php:125
+msgid "Cineasta e jornalista"
+msgstr "Film-maker and journalist"
+
+#: ../t-biography.php:134 ../t-biography.php:138
+msgid "Reinado do Sol"
+msgstr ""
+
+#: ../t-biography.php:135
+msgid ""
+"Óleo sobre Tela, 900 x 300cm, 2008. Acervo da Estação Cabo Branco, João "
+"Pessoa - PB"
+msgstr ""
+
+#: ../t-biography.php:139
+msgid ""
+"Um escritor elegante e gentil bem no meio da tela. Um poeta maldito, um "
+"grupo nômade, uma tribo indígena e um intelectual abolicionista. Muitos "
+"escravos, putas, diversos espelhos, anões e duendes, enfim mais de 500 "
+"personagens, as tais personalidades que compõem o painel de 9 metros por 3, "
+"intitulado “No Reinado do Sol”, obra do artista Flávio Tavares."
+msgstr ""
+
+#: ../t-biography.php:140
+msgid ""
+"A obra virou o adorno principal do hall da Estação Ciência, projeto do "
+"arquiteto Oscar Niemeyer, em que a Prefeitura de João Pessoa presentou a "
+"cidade como marco cultural de uma gestão que dialoga com as artes. Salve!"
+msgstr ""
+
+#: ../t-biography.php:144
+msgid "Curriculum"
+msgstr ""
+
+#: ../t-contact.php:12
 msgid "Ateliê Flávio Tavares"
 msgstr "Atelier Flavio Tavares"
 
-#: ../t-contact.php:15
-msgid "Rua Maria José Rique, quadra 177, loteamento Cidade Recreio"
+#: ../t-contact.php:14
+msgid "Rua Zilda Nunes da Silva. 177. Portal do Sol"
 msgstr ""
 
 #: ../t-contact.php:15
-msgid "Altiplano"
+msgid "Altiplano Cabo Branco"
 msgstr ""
 
 #: ../t-contact.php:15
+msgid "CEP: 58046-505"
+msgstr ""
+
+#: ../t-contact.php:16
 msgid "João Pessoa"
 msgstr ""
 
-#: ../t-contact.php:15
-msgid "Veja mapa aqui"
-msgstr "See map here"
-
-#: ../t-contact.php:16
-msgid "Terças, quintas e sábados."
-msgstr "Tuesdays, thursdays and saturdays."
-
-#: ../t-contact.php:17
+#: ../t-contact.php:18
 msgid "Agendar horário para visitação."
 msgstr "Schedule time for visitation."
 
-#: ../t-contact.php:18
-msgid "Fone: (83) 3226 7376"
+#: ../t-contact.php:19
+#, fuzzy
+msgid "Fone: (83) 3226-5022"
 msgstr "Phone: (83) 3226 7376"
 
-#: ../t-contact.php:21
+#: ../t-contact.php:22
 msgid "Na Web"
 msgstr "On Web"
+
+#, fuzzy
+#~ msgid "Flávio Tavares"
+#~ msgstr "Atelier Flavio Tavares"
+
+#~ msgid "Apesar de sua singular matriz, a busca de Flávio Tavares"
+#~ msgstr "Despite his singular matrix, Flávio Tavares searches"
+
+#~ msgid "é a de um imaginário arquetípico em que o sacro dialoga"
+#~ msgstr "for archetypal imagery in which the sacred encounters"
+
+#~ msgid "com o profano e onde a afirmação da vida sempre"
+#~ msgstr "with the profane, and where an affirmation of life always"
+
+#~ msgid "se sobrepõe ao pessimismo e ao culto da morte, tão"
+#~ msgstr "overcomes pessimism and the cult of death, which is so"
+
+#~ msgid "presentes na arte conteporânea."
+#~ msgstr "present in contemporary art."
+
+#~ msgid ""
+#~ "Professor de Estética e História da Arte da Universidade Federal da "
+#~ "Paraíba, 2005"
+#~ msgstr ""
+#~ "Professor of Aesthetics and History of Art at Paraiba Federal University, "
+#~ "2005"
+
+#~ msgid "Veja mapa aqui"
+#~ msgstr "See map here"
+
+#~ msgid "Terças, quintas e sábados."
+#~ msgstr "Tuesdays, thursdays and saturdays."

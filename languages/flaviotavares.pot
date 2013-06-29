@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
-"POT-Creation-Date: 2013-04-02 00:34-0300\n"
-"PO-Revision-Date: 2013-04-02 00:34-0300\n"
+"POT-Creation-Date: 2013-06-29 13:59-0300\n"
+"PO-Revision-Date: 2013-06-29 13:59-0300\n"
 "Last-Translator: \n"
 "Language-Team:  <dev@heliocorreia.com>\n"
 "MIME-Version: 1.0\n"
@@ -14,84 +14,173 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../t-biography.php:12
+#: ../t-biography.php:25
 msgid "Esse mundo da imagem me persegue e eu o persigo."
 msgstr ""
 
-#: ../t-biography.php:13
-msgid "Flávio Tavares"
-msgstr ""
-
-#: ../t-biography.php:19
-msgid "O artista com seu quadro, A Pedra do Reino, 1981."
-msgstr ""
-
-#: ../t-biography.php:23
-msgid "Apesar de sua singular matriz, a busca de Flávio Tavares"
-msgstr ""
-
-#: ../t-biography.php:23
-msgid "é a de um imaginário arquetípico em que o sacro dialoga"
-msgstr ""
-
-#: ../t-biography.php:23
-msgid "com o profano e onde a afirmação da vida sempre"
-msgstr ""
-
-#: ../t-biography.php:23
-msgid "se sobrepõe ao pessimismo e ao culto da morte, tão"
-msgstr ""
-
-#: ../t-biography.php:23
-msgid "presentes na arte conteporânea."
-msgstr ""
-
-#: ../t-biography.php:24
-msgid "Gabriel Bechara"
-msgstr ""
-
-#: ../t-biography.php:24
+#: ../t-biography.php:46
 msgid ""
-"Professor de Estética e História da Arte da Universidade Federal da Paraíba, "
-"2005"
+"Em três décadas impressionou-me a constante evolução desse artista e a sua "
+"capacidade de aprofundar os seus temas básicos e o refinamento dos "
+"instrumentos. Certamente, hoje, Flávio Tavares está entre os mais "
+"importantes artistas do Nordeste e tem uma posição respeitável entre os "
+"artistas brasileiros figurativos de sua geração."
 msgstr ""
 
-#: ../t-biography.php:39
+#: ../t-biography.php:47
+msgid "Jacob Klintowitz"
+msgstr ""
+
+#: ../t-biography.php:47 ../t-biography.php:113
+msgid "Crítico de arte"
+msgstr ""
+
+#: ../t-biography.php:63
 msgid "A semente"
 msgstr ""
 
-#: ../t-biography.php:40
+#: ../t-biography.php:64
 msgid "Acrílico sobre tela 1,60 x 1,40 cm"
 msgstr ""
 
-#: ../t-biography.php:49 ../t-biography.php:59 ../t-biography.php:69
+#: ../t-biography.php:73 ../t-biography.php:83 ../t-biography.php:93
 msgid "Sem título"
 msgstr ""
 
-#: ../t-biography.php:50 ../t-biography.php:70
+#: ../t-biography.php:74 ../t-biography.php:94
 msgid "Pastel 83 x 93 cm"
 msgstr ""
 
-#: ../t-biography.php:60
+#: ../t-biography.php:84
 msgid "Óleo sobre tela 80 x 70 cm"
 msgstr ""
 
-#: ../t-contact.php:14
+#: ../t-biography.php:108
+msgid ""
+"A obra de Flávio Tavares é fruto de 40 anos de processo contínuo, que "
+"resultou em uma linguagem artística perfeitamente adequada à sua expressão "
+"plástica. Para perceber sua poética é necessário compreender, ao mesmo "
+"tempo, as imbricações da concepção estética, a criatividade da imagética e o "
+"percurso de sua produção, manifestados em meios expressivos diferenciados e "
+"em variações técnicas que nos auxiliam, inclusive, na compreensão da arte "
+"contemporânea."
+msgstr ""
+
+#: ../t-biography.php:109
+msgid "Presidente da Associação Brasileira de Críticos de Arte"
+msgstr ""
+
+#: ../t-biography.php:112
+msgid ""
+"Conheço o trabalho do artista plástico Flávio Tavares há 30 anos, "
+"aproximadamente. Nestas três décadas impressionou-me a constante evolução do "
+"artista e a sua capacidade de aprofundar os seus temas básicos e o "
+"refinamento dos instrumentos. Certamente, hoje, Flávio Tavares está entre os "
+"mais importantes artistas do Nordeste e tem uma posição respeitável entre os "
+"artistasbrasileiros figurativos de sua geração."
+msgstr ""
+
+#: ../t-biography.php:116
+msgid ""
+"O artista surpreende-se, subverte, registra tudo em sua volta, neste "
+"desfilar de mistério por onde transitam flores, pássaros,florestas, bichos "
+"acuados, gente perplexa ou contemplativa, nas horas que vão sesucedendo "
+"entre o céu e  a terra num tempo marcado para acabar."
+msgstr ""
+
+#: ../t-biography.php:117
+msgid "Artista plástico"
+msgstr ""
+
+#: ../t-biography.php:120
+msgid ""
+"Flávio Tavares, em sua pesquisa artística, dá asas aos seus sonhos, através "
+"de desenhos e pinturas cujos componentes principais são a representação das "
+"lembranças da infância, das paisagens oníricas de sua terra e da criação de "
+"um mundo melhor. Sua arte convida o espectador a entrar na viagem artística "
+"semeada de alegria, de encanto e de mistério."
+msgstr ""
+
+#: ../t-biography.php:121
+msgid "Crítica de arte"
+msgstr ""
+
+#: ../t-biography.php:124
+msgid ""
+"Suavizada na superfície por suas cores e volumes carregados de calma "
+"sensualidade, recurso que sempre atrai e envolve o apreciador desprevenido, "
+"a pintura de Flávio Tavares, no próximo passo, como que nos arrebata e "
+"transforma o ‘devaneio’ em mergulho profundo. Em quase todas as suas fases, "
+"a profusa emoção que emana de suas figuras, em diferentes planos, instala "
+"uma atmosfera densa de significados, transcende todo o quadro e nos conduz a "
+"indagações no mínimo inquietantes. É assim que vejo e sinto a arte de Flávio "
+"Tavares, um pintor da alma, para mim um inveterado dostoiesvskiano, que se "
+"tornou, em seu luminoso trajeto, um dos maiores artistas da "
+"contemporaneidade brasileira."
+msgstr ""
+
+#: ../t-biography.php:125
+msgid "Cineasta e jornalista"
+msgstr ""
+
+#: ../t-biography.php:134 ../t-biography.php:138
+msgid "Reinado do Sol"
+msgstr ""
+
+#: ../t-biography.php:135
+msgid ""
+"Óleo sobre Tela, 900 x 300cm, 2008. Acervo da Estação Cabo Branco, João "
+"Pessoa - PB"
+msgstr ""
+
+#: ../t-biography.php:139
+msgid ""
+"Um escritor elegante e gentil bem no meio da tela. Um poeta maldito, um "
+"grupo nômade, uma tribo indígena e um intelectual abolicionista. Muitos "
+"escravos, putas, diversos espelhos, anões e duendes, enfim mais de 500 "
+"personagens, as tais personalidades que compõem o painel de 9 metros por 3, "
+"intitulado “No Reinado do Sol”, obra do artista Flávio Tavares."
+msgstr ""
+
+#: ../t-biography.php:140
+msgid ""
+"A obra virou o adorno principal do hall da Estação Ciência, projeto do "
+"arquiteto Oscar Niemeyer, em que a Prefeitura de João Pessoa presentou a "
+"cidade como marco cultural de uma gestão que dialoga com as artes. Salve!"
+msgstr ""
+
+#: ../t-biography.php:144
+msgid "Curriculum"
+msgstr ""
+
+#: ../t-contact.php:12
 msgid "Ateliê Flávio Tavares"
 msgstr ""
 
-#: ../t-contact.php:16
-msgid "Terças, quintas e sábados."
+#: ../t-contact.php:14
+msgid "Rua Zilda Nunes da Silva. 177. Portal do Sol"
 msgstr ""
 
-#: ../t-contact.php:17
-msgid "Agendar horário para visitação."
+#: ../t-contact.php:15
+msgid "Altiplano Cabo Branco"
+msgstr ""
+
+#: ../t-contact.php:15
+msgid "CEP: 58046-505"
+msgstr ""
+
+#: ../t-contact.php:16
+msgid "João Pessoa"
 msgstr ""
 
 #: ../t-contact.php:18
-msgid "Fone: (83) 3226 7376"
+msgid "Agendar horário para visitação."
 msgstr ""
 
-#: ../t-contact.php:21
+#: ../t-contact.php:19
+msgid "Fone: (83) 3226-5022"
+msgstr ""
+
+#: ../t-contact.php:22
 msgid "Na Web"
 msgstr ""
