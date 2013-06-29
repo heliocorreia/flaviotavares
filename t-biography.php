@@ -29,22 +29,22 @@ head.ready(function(){
 			<section class="header-slides">
 				<div class="header-slides-inner">
 				<?php $slides = array(
-					array('img' => '/media/img/img-biography-author-1.jpg', 'caption' => 'O artista com seu quadro, "A Pedra do Reino", 1981.'),
-					array('img' => '/media/img/img-biography-author-3.jpg', 'caption' => 'O artista com seu quadro, "A Pedra do Reino", 1981.'),
-					array('img' => '/media/img/img-biography-author-4.jpg', 'caption' => 'O artista em seu ateliê com o jornalista Gonzaga Rodrigues.'),
-					array('img' => '/media/img/img-biography-author-5.jpg', 'caption' => 'Flávio tavares, 2013 - Foto: wscom'),
+					array('img' => '/media/img/img-biography-author-1.jpg', 'caption' => __('O artista com seu quadro, "A Pedra do Reino", 1981.', 'flaviotavares')),
+					array('img' => '/media/img/img-biography-author-3.jpg', 'caption' => __('O artista com seu quadro, "A Pedra do Reino", 1981.', 'flaviotavares')),
+					array('img' => '/media/img/img-biography-author-4.jpg', 'caption' => __('O artista em seu ateliê com o jornalista Gonzaga Rodrigues.', 'flaviotavares')),
+					array('img' => '/media/img/img-biography-author-5.jpg', 'caption' => __('Flávio Tavares, 2013 - Foto: wscom', 'flaviotavares')),
 				);
 				foreach($slides as $slide): ?>
 					<figure>
 						<img src="<?php echo get_stylesheet_directory_uri() . $slide['img']; ?>" width="735" height="441">
-						<figcaption><?php _e($slide['caption'], 'flaviotavares'); ?></figcaption>
+						<figcaption><?php echo $slide['caption']; ?></figcaption>
 					</figure>
 				<?php endforeach; ?>
 				</div>
 			</section>
 			<blockquote class="quote-by-others">
 				<p><?php _e('Em três décadas impressionou-me a constante evolução desse artista e a sua capacidade de aprofundar os seus temas básicos e o refinamento dos instrumentos. Certamente, hoje, Flávio Tavares está entre os mais importantes artistas do Nordeste e tem uma posição respeitável entre os artistas brasileiros figurativos de sua geração.', 'flaviotavares'); ?></p>
-				<footer class="hcard"><span class="fn n"><?php _e('Jacob Klintowitz', 'flaviotavares'); ?></span>, <span class="role"><?php _e('Crítico de arte', 'flaviotavares'); ?></span></footer>
+				<footer class="hcard"><span class="fn n">Jacob Klintowitz</span>, <span class="role"><?php _e('Crítico de arte', 'flaviotavares'); ?></span></footer>
 			</blockquote>
 		</section>
 	</header>
