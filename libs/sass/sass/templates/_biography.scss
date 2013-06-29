@@ -132,7 +132,7 @@ body.page-template-t-biography-php {
 	.quote-by-others {
 		@extend %biography-header;
 		@extend %font-quattrocento-sans;
-		@include rhythm(1, 0, 0, 3);
+		@include rhythm(0, 0, 0, 3);
 
 		text-align: center;
 
