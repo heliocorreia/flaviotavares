@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
-"POT-Creation-Date: 2013-06-29 13:59-0300\n"
-"PO-Revision-Date: 2013-06-29 14:01-0300\n"
+"POT-Creation-Date: 2013-06-29 14:25-0300\n"
+"PO-Revision-Date: 2013-06-29 14:26-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -19,6 +19,18 @@ msgstr ""
 msgid "Esse mundo da imagem me persegue e eu o persigo."
 msgstr ""
 
+#: ../t-biography.php:32 ../t-biography.php:33
+msgid "O artista com seu quadro, \"A Pedra do Reino\", 1981."
+msgstr ""
+
+#: ../t-biography.php:34
+msgid "O artista em seu ateliê com o jornalista Gonzaga Rodrigues."
+msgstr ""
+
+#: ../t-biography.php:35
+msgid "Flávio Tavares, 2013 - Foto: wscom"
+msgstr ""
+
 #: ../t-biography.php:46
 msgid ""
 "Em três décadas impressionou-me a constante evolução desse artista e a sua "
@@ -26,10 +38,6 @@ msgid ""
 "instrumentos. Certamente, hoje, Flávio Tavares está entre os mais "
 "importantes artistas do Nordeste e tem uma posição respeitável entre os "
 "artistas brasileiros figurativos de sua geração."
-msgstr ""
-
-#: ../t-biography.php:47
-msgid "Jacob Klintowitz"
 msgstr ""
 
 #: ../t-biography.php:47 ../t-biography.php:113
@@ -152,6 +160,12 @@ msgstr ""
 
 #: ../t-biography.php:144
 msgid "Curriculum"
+msgstr ""
+
+#: ../t-biography.php:145
+#, php-format
+msgid ""
+"Baixe um PDF com o currículo do artista <a href=\"%s\">clicando aqui</a>."
 msgstr ""
 
 #: ../t-contact.php:12
