@@ -294,6 +294,33 @@ body.page-template-t-biography-php {
 
 		margin-left: - columns(3, 8);
 		margin-right: - columns(1, 8);
+
+		img {
+			height: auto;
+		}
+	}
+
+	$widths: image-width("reinado-do-sol-1.jpg") image-width("reinado-do-sol-2.jpg");
+	@for $i from 1 through length($widths) {
+		$width: nth($widths, $i);
+
+		.reinado-img#{$i} {
+			@include at-breakpoint($media-layout-480) {
+				width: $width * .25;
+			}
+			@include at-breakpoint($media-layout-600) {
+				width: $width * .40;
+			}
+			@include at-breakpoint($media-layout-768) {
+				width: $width * .55;
+			}
+			@include at-breakpoint($media-layout-992) {
+				width: $width * .70;
+			}
+			@include at-breakpoint($media-layout-1382) {
+				width: $width;
+			}
+		}
 	}
 
 	.reinado-caption-title,
