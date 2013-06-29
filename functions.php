@@ -56,7 +56,7 @@ function my_enqueue_cssjs(){
 	$styles = array(
 		'_bxslider'				=> $base . '/media/js/bxslider/jquery.bxslider.css',
 		// '_fontOvo' 				=> 'http://fonts.googleapis.com/css?family=Ovo',
-		// '_fontQuattrocentoSans' => 'http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,700italic,700,400',
+		'_fontQuattrocentoSans' => 'http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,700italic,700,400',
 		'_tosros'				=> $base . '/media/js/tosros/jquery.tosrus.css',
 
 	);
