@@ -136,8 +136,8 @@ head.ready(function(){
 				</figcaption>
 			</figure>
 			<h1 class="reinado-title"><?php _e('Reinado do Sol', 'flaviotavares'); ?></h1>
-			<p class="reinado-desc"><?php _e('Um escritor elegante e gentil bem no meio da tela. Um poeta maldito, um grupo nômade, uma tribo indígena e um intelectual abolicionista. Muitos escravos, putas, diversos espelhos, anões e duendes, enfim mais de 500 personagens, as tais personalidades que compõem o painel de 9 metros por 3, intitulado “No Reinado do Sol”, obra do artista Flávio Tavares.', 'flaviotavares'); ?>
-			<p class="reinado-desc"><?php _e('A obra virou o adorno principal do hall da Estação Ciência, projeto do arquiteto Oscar Niemeyer, em que a Prefeitura de João Pessoa presentou a cidade como marco cultural de uma gestão que dialoga com as artes. Salve!', 'flaviotavares') ?> - <strong>Kubitschek Pinheiro</strong></p>
+			<p class="reinado-desc">"<?php _e('Um escritor elegante e gentil bem no meio da tela. Um poeta maldito, um grupo nômade, uma tribo indígena e um intelectual abolicionista. Muitos escravos, putas, diversos espelhos, anões e duendes, enfim mais de 500 personagens, as tais personalidades que compõem o painel de 9 metros por 3, intitulado “No Reinado do Sol”, obra do artista Flávio Tavares.', 'flaviotavares'); ?>
+			<p class="reinado-desc"><?php _e('A obra virou o adorno principal do hall da Estação Ciência, projeto do arquiteto Oscar Niemeyer, em que a Prefeitura de João Pessoa presentou a cidade como marco cultural de uma gestão que dialoga com as artes. Salve!', 'flaviotavares') ?>" - <strong>Kubitschek Pinheiro</strong></p>
 		</section>
 
 		<section class="curriculum">
