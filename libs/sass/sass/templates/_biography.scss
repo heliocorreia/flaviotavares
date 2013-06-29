@@ -204,26 +204,50 @@ body.page-template-t-biography-php {
 			@include span-columns(4 omega, 16);
 
 			color: #666;
-			direction: rtl;
 			left: 0;
-			list-style: decimal outside;
+			list-style: none;
 			position: absolute;
+			text-align: right;
 			top: 0;
 		}
 
 		.work-item {
 			@include rhythm(1, 0, 0, 1, $biography-aside-font-size);
+			padding-right: 1em;
+
+			&::before {
+				@extend %biography-aside-size;
+
+				content: attr(data-index) ".";
+				position: absolute;
+				right: 0;
+			}
 		}
 
 		.work-figure {
-			display: none;
+			left: 0;
+			position: absolute;
+			top: 0;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			&::after {
+				@extend %biography-aside-size;
+
+				bottom: 0;
+				content: attr(data-index) ".";
+				left: 0;
+				margin-bottom: -2em;
+				position: absolute;
+			}
 		}
 
 		.work-title,
 		.work-specs,
 		.work-year {
-			@include rhythm;
-
 			margin: 0;
 		}
 
@@ -234,6 +258,57 @@ body.page-template-t-biography-php {
 
 		.work-title {
 			@extend %biography-aside-title;
+		}
+	}
+
+	// CONTENT BREAKPOINTS
+
+	$ratios: 0.25 0.5 0.75 1;
+	$breakpoints: $media-layout-600 $media-layout-768 $media-layout-992 $media-layout-1382;
+	@for $i from 1 through length($ratios) {
+		$ratio: nth($ratios, $i);
+		$breakpoint: nth($breakpoints, $i);
+		$work-figure-margin-ratio: 20px * $ratio;
+
+		$img1-height: image-height("img-biography-work-1.jpg") * $ratio;
+		$img1-width: image-width("img-biography-work-1.jpg") * $ratio;
+		$img2-width: image-width("img-biography-work-2.jpg") * $ratio;
+		$img3-width: image-width("img-biography-work-3.jpg") * $ratio;
+		$img4-width: image-width("img-biography-work-4.jpg") * $ratio;
+
+		@include at-breakpoint($breakpoint) {
+			.content-main {
+				$offset: $img1-height + $work-figure-margin-ratio;
+				padding-top: $offset + (4 * $work-figure-margin-ratio);
+			}
+
+			.content-main-aside {
+				.works {
+					$offset: $img1-height + $work-figure-margin-ratio + (image-height("img-biography-work-4.jpg") * $ratio);
+					padding-top: $offset + (4 * $work-figure-margin-ratio);
+				}
+
+				.work-figure-1 {
+					width: $img1-width;
+				}
+
+				.work-figure-2 {
+					left: $work-figure-margin-ratio + $img1-width;
+					width: $img2-width;
+				}
+
+				.work-figure-3 {
+					left: $work-figure-margin-ratio + $img1-width + $work-figure-margin-ratio + $img2-width;
+					width: $img3-width;
+				}
+
+				.work-figure-4 {
+					left: $img1-width;
+					margin-left: - $img4-width;
+					top: $work-figure-margin-ratio + $img1-height;
+					width: $img4-width;
+				}
+			}
 		}
 	}
 

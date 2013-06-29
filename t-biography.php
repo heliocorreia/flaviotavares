@@ -54,7 +54,7 @@ head.ready(function(){
 				<?php the_content(); ?>
 				<aside class="content-main-aside">
 					<ol class="works">
-						<li class="work-item">
+						<li class="work-item" data-index="1">
 							<figure data-index="1" class="work-figure work-figure-1">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/img-biography-work-1.jpg" height="205" width="300">
 							</figure>
@@ -64,7 +64,7 @@ head.ready(function(){
 								<dd class="work-year">2006</dd>
 							</dl>
 						</li>
-						<li class="work-item">
+						<li class="work-item" data-index="2">
 							<figure data-index="2" class="work-figure work-figure-2">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/img-biography-work-2.jpg" height="205" width="288">
 							</figure>
@@ -74,7 +74,7 @@ head.ready(function(){
 								<dd class="work-year">1968</dd>
 							</dl>
 						</li>
-						<li class="work-item">
+						<li class="work-item" data-index="3">
 							<figure data-index="3" class="work-figure work-figure-3">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/img-biography-work-3.jpg" height="205" width="410">
 							</figure>
@@ -84,7 +84,7 @@ head.ready(function(){
 								<dd class="work-year">1989</dd>
 							</dl>
 						</li>
-						<li class="work-item">
+						<li class="work-item" data-index="4">
 							<figure data-index="4" class="work-figure work-figure-4">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/img-biography-work-4.jpg" height="312" width="198">
 							</figure>
