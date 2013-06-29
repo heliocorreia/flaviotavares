@@ -29,8 +29,8 @@ head.ready(function(){
 			<section class="header-slides">
 				<div class="header-slides-inner">
 				<?php $slides = array(
-					array('img' => '/media/img/img-biography-author-1.jpg', 'caption' => 'O artista com seu quadro, A Pedra do Reino, 1981.'),
-					array('img' => '/media/img/img-biography-author-3.jpg', 'caption' => 'O artista com seu quadro, A Pedra do Reino, 1981.'),
+					array('img' => '/media/img/img-biography-author-1.jpg', 'caption' => 'O artista com seu quadro, "A Pedra do Reino", 1981.'),
+					array('img' => '/media/img/img-biography-author-3.jpg', 'caption' => 'O artista com seu quadro, "A Pedra do Reino", 1981.'),
 					array('img' => '/media/img/img-biography-author-4.jpg', 'caption' => 'O artista em seu ateliê com o jornalista Gonzaga Rodrigues.'),
 					array('img' => '/media/img/img-biography-author-5.jpg', 'caption' => 'Flávio tavares, 2013 - Foto: wscom'),
 				);
