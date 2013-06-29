@@ -316,8 +316,20 @@ body.page-template-t-biography-php {
 
 	.extras {
 		@include margin-leader(24);
-		@include padding-leader(3);
 		@include padding-trailer(2);
+
+		&::before {
+			@include pre(6);
+			@include span-columns(8);
+			@include padding-trailer(3);
+
+			content: 'Photo: Antônio Augusto Fontes';
+			display: block;
+		}
+
+		.top-page-slug-pt_br &::before {
+			content: 'Foto: Antônio Augusto Fontes';
+		}
 
 		a {
 			color: $color-cyan;
@@ -349,6 +361,7 @@ body.page-template-t-biography-php {
 	.extra-quote {
 		@extend %biography-content-blockquote;
 		@include trailer(2);
+
 		margin: {
 			left: 0;
 			right: 0;
