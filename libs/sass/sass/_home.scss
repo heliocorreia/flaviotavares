@@ -43,6 +43,8 @@ body.home {
 	.nav-menu {
 		@include stretch($offset-bottom:0, $offset-top:false);
 
+		padding: 0;
+
 		&::before {
 			$height: logo-sprite-height(white-big);
 			@include logo-sprite(white-big);
