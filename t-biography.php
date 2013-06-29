@@ -23,7 +23,7 @@ head.ready(function(){
 				<h1 class="header-title"><?php the_title(); ?></h1>
 				<blockquote class="quote-by-author">
 					<p><?php _e('Esse mundo da imagem me persegue e eu o persigo.', 'flaviotavares'); ?></p>
-					<p><span><?php _e('Flávio Tavares', 'flaviotavares'); ?></span></p>
+					<p><span>Flávio Tavares</span></p>
 				</blockquote>
 			</section>
 			<section class="header-slides">
