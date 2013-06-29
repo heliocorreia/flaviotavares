@@ -132,7 +132,7 @@ head.ready(function(){
 
 		<section class="curriculum">
 			<h1 class="curriculum-title">Curriculum</h1>
-			<p class="curriculum-desc">Baixe um PDF com o curriculum do artista <a href="#">clicando aqui</a>.</p>
+			<p class="curriculum-desc">Baixe um PDF com o curriculum do artista <a href="<?php echo home_url('/wp-content/uploads/2013/06/curriculum-flavio-tavares.pdf'); ?>">clicando aqui</a>.</p>
 		</section>
 
 		<nav id="nav-biography">
