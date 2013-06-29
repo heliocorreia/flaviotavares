@@ -106,16 +106,24 @@ head.ready(function(){
 		<section class="extra-quotes">
 			<h1 class="extra-quotes-title">Citações</h1>
 			<blockquote class="extra-quote">
-				<p class="extra-quote-content"><?php _e('Conheço o trabalho do artista plástico Flávio Tavares há 30 anos e nestas três décadas impressionou-me a constante evolução do artista e a sua capacidade de aprofundar os seus temas básicos e o refinamento dos instrumentos. Certamente, hoje, Flávio Tavares está entre os mais importantes artistas do Nordeste e tem uma posição respeitável entre os artistas brasileiros figurativos de sua geração.', 'flaviotavares'); ?></p>
-				<footer class="hcard"><span class="fn n"><?php _e('Jacob Klintowitz', 'flaviotavares'); ?></span>, <span class="role"><?php _e('Crítico de arte', 'flaviotavares'); ?></span>. 2001</footer>
+				<p class="extra-quote-content"><?php _e('A obra de Flávio Tavares é fruto de 40 anos de processo contínuo, que resultou em uma linguagem artística perfeitamente adequada à sua expressão plástica. Para perceber sua poética é necessário compreender, ao mesmo tempo, as imbricações da concepção estética, a criatividade da imagética e o percurso de sua produção, manifestados em meios expressivos diferenciados e em variações técnicas que nos auxiliam, inclusive, na compreensão da arte contemporânea.', 'flaviotavares'); ?></p>
+				<footer class="hcard"><span class="fn n">Elvira Vernaschi</span>, <span class="role"><?php _e('Presidente da Associação Brasileira de Críticos de Arte', 'flaviotavares'); ?></span>. 2005</footer>
+			</blockquote>
+			<blockquote class="extra-quote">
+				<p class="extra-quote-content"><?php _e('Conheço o trabalho do artista plástico Flávio Tavares há 30 anos, aproximadamente. Nestas três décadas impressionou-me a constante evolução do artista e a sua capacidade de aprofundar os seus temas básicos e o refinamento dos instrumentos. Certamente, hoje, Flávio Tavares está entre os mais importantes artistas do Nordeste e tem uma posição respeitável entre os artistasbrasileiros figurativos de sua geração.', 'flaviotavares'); ?></p>
+				<footer class="hcard"><span class="fn n">Jacob Klintowitz</span>, <span class="role"><?php _e('Crítico de arte', 'flaviotavares'); ?></span>. 2001</footer>
+			</blockquote>
+			<blockquote class="extra-quote">
+				<p class="extra-quote-content"><?php _e('O artista surpreende-se, subverte, registra tudo em sua volta, neste desfilar de mistério por onde transitam flores, pássaros,florestas, bichos acuados, gente perplexa ou contemplativa, nas horas que vão sesucedendo entre o céu e  a terra num tempo marcado para acabar.', 'flaviotavares'); ?></p>
+				<footer class="hcard"><span class="fn n">Hermano José Guedes</span>, <span class="role"><?php _e('Artista plástico', 'flaviotavares'); ?></span>, 2005</footer>
 			</blockquote>
 			<blockquote class="extra-quote">
 				<p class="extra-quote-content"><?php _e('Flávio Tavares, em sua pesquisa artística, dá asas aos seus sonhos, através de desenhos e pinturas cujos componentes principais são a representação das lembranças da infância, das paisagens oníricas de sua terra e da criação de um mundo melhor. Sua arte convida o espectador a entrar na viagem artística semeada de alegria, de encanto e de mistério.', 'flaviotavares'); ?></p>
-				<footer class="hcard"><span class="fn n"><?php _e('Risoleta Córdula', 'flaviotavares'); ?></span>, <span class="role"><?php _e('Crítica de arte', 'flaviotavares'); ?></span>. 2005</footer>
+				<footer class="hcard"><span class="fn n">Risoleta Córdula</span>, <span class="role"><?php _e('Crítica de arte', 'flaviotavares'); ?></span>. 2005</footer>
 			</blockquote>
 			<blockquote class="extra-quote">
-				<p class="extra-quote-content"><?php _e('A obra de Flávio Tavares é fruto de 40 anos de processo contínuo, que resultou em uma linguagem artística perfeitamente adequada à sua expressão plástica. Para perceber sua poética é necessário compreender, ao mesmo tempo, as imbricações da concepção estética, a criatividade da imagética e o percurso de sua produção, manifestados em meios expressivos diferenciados e em variações técnicas que nos auxiliam, inclusive, na compreensão da arte contemporânea.', 'flaviotavares'); ?></p>
-				<footer class="hcard"><span class="fn n"><?php _e('Elvira Vernaschi', 'flaviotavares'); ?></span>, <span class="role"><?php _e('Presidente da Associação Brasileira de Críticos de Arte', 'flaviotavares'); ?></span>. 2005</footer>
+				<p class="extra-quote-content"><?php _e('Suavizada na superfície por suas cores e volumes carregados de calma sensualidade, recurso que sempre atrai e envolve o apreciador desprevenido, a pintura de Flávio Tavares, no próximo passo, como que nos arrebata e transforma o ‘devaneio’ em mergulho profundo. Em quase todas as suas fases, a profusa emoção que emana de suas figuras, em diferentes planos, instala uma atmosfera densa de significados, transcende todo o quadro e nos conduz a indagações no mínimo inquietantes. É assim que vejo e sinto a arte de Flávio Tavares, um pintor da alma, para mim um inveterado dostoiesvskiano, que se tornou, em seu luminoso trajeto, um dos maiores artistas da contemporaneidade brasileira.', 'flaviotavares'); ?></p>
+				<footer class="hcard"><span class="fn n">Vladimir Carvalho</span>, <span class="role"><?php _e('Cineasta e jornalista', 'flaviotavares'); ?></span>. 2005</footer>
 			</blockquote>
 		</section>
 
