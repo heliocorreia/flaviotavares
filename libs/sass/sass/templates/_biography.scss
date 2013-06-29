@@ -1,13 +1,33 @@
+$biography-aside-font-size: 12px;
+
+// EXTENDS ////////////////////////////////////////////////////////////////////
+
 %biography-header {
 	@include span-columns(13 omega);
 }
 
-%biography-content-h1 {
+%biography-title {
 	@include adjust-font-size-to(18px);
 
 	color: $color-black;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+
+%biography-aside-size {
+	@include adjust-font-size-to($biography-aside-font-size);
+}
+
+%biography-aside-title {
+	@extend %biography-aside-size;
+	color: #987e51;
+	font-weight: bold;
+}
+
+%biography-content-columns {
+	@include pre(2);
+	@include pad(4);
+	@include span-columns(8);
 }
 
 %biography-content-blockquote {
@@ -19,6 +39,8 @@
 		@include rhythm(1, 0, 0, 1, 20px);
 	}
 }
+
+// T BIOGRAPHY ////////////////////////////////////////////////////////////////
 
 body.page-template-t-biography-php {
 	background: {
@@ -159,15 +181,13 @@ body.page-template-t-biography-php {
 	}
 
 	.content-main {
-		@include pre(2);
-		@include pad(4);
-		@include span-columns(8);
+		@extend %biography-content-columns;
 
 		color: #333;
 		position: relative;
 
 		h1 {
-			@extend %biography-content-h1;
+			@extend %biography-title;
 		}
 
 		blockquote {
@@ -180,8 +200,6 @@ body.page-template-t-biography-php {
 	}
 
 	.content-main-aside {
-		$font-size: 12px;
-
 		.works {
 			@include span-columns(4 omega, 16);
 
@@ -194,7 +212,7 @@ body.page-template-t-biography-php {
 		}
 
 		.work-item {
-			@include rhythm(1, 0, 0, 1, $font-size);
+			@include rhythm(1, 0, 0, 1, $biography-aside-font-size);
 		}
 
 		.work-figure {
@@ -204,15 +222,18 @@ body.page-template-t-biography-php {
 		.work-title,
 		.work-specs,
 		.work-year {
-			@include adjust-font-size-to($font-size);
 			@include rhythm;
 
 			margin: 0;
 		}
 
+		.work-specs,
+		.work-year {
+			@extend %biography-aside-size;
+		}
+
 		.work-title {
-			color: #987e51;
-			font-weight: bold;
+			@extend %biography-aside-title;
 		}
 	}
 
@@ -222,6 +243,15 @@ body.page-template-t-biography-php {
 		@include margin-leader(24);
 		@include padding-leader(3);
 		@include padding-trailer(2);
+
+		a {
+			color: $color-cyan;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	.extra-quotes {
@@ -238,7 +268,7 @@ body.page-template-t-biography-php {
 	}
 
 	.extra-quotes-title {
-		@extend %biography-content-h1;
+		@extend %biography-title;
 	}
 
 	.extra-quote {
@@ -253,262 +283,69 @@ body.page-template-t-biography-php {
 	.extra-quote-content {
 	}
 
-	.reinado-do-sol {
-		@include pre(3);
-		@include span-columns(10);
+	// REINADO ///////////////////////////////////////////////////////////////////
+
+	.reinado {
+		@extend %biography-content-columns;
 	}
 
+	.reinado-figure {
+		@include trailer(2);
 
+		margin-left: - columns(3, 8);
+		margin-right: - columns(1, 8);
+	}
 
-
-
-
-
-
-
-
-
-//	.content-body {
-//		@include clearfix;
-//		@include padding-leader(10);
-//		@include padding-trailer(4);
-//
-//		position: relative;
-//	}
-
-//	.content, .sidebar {
-//		& > :first-child {
-//			margin-top: 0;
-//			padding-top: 0;
-//		}
-//	}
-
-//	.content {
-//		@include pre(4, 13);
-//		@include span-columns(5, 13);
-//
-//		color: #333;
-//
-//		h1 {
-//			@include adjust-font-size-to(16px);
-//			@include rhythm(3, 1, 0, 1);
-//
-//			color: $color-black;
-//			font-weight: bold;
-//			text-transform: uppercase;
-//		}
-//
-//		blockquote, p {
-//			@include rhythm(1, 0, 0, 1);
-//		}
-//
-//		blockquote {
-//			color: #987e51;
-//
-//			p {
-//				@include adjust-font-size-to(20px);
-//				@include rhythm(1, 0, 0, 1, 20px);
-//			}
-//		}
-//	}
-
-//	.content-aside {
-//		//
-//	}
-
-//	.sidebar {
-//		$font-size: 12px;
-//
-//		@include span-columns(4 omega, 13);
-//
-//		ol, li {
-//			@include rhythm(1, 0, 0, 1, $font-size);
-//		}
-//
-//		ol {
-//			@include adjust-font-size-to($font-size);
-//
-//			color: #666;
-//			list-style: decimal outside;
-//
-//			dd {
-//				@include rhythm;
-//
-//				margin-left: 0;
-//			}
-//
-//			.title {
-//				color: #987e51;
-//				font-weight: bold;
-//			}
-//		}
-//
-//		figure {
-//			$ratio: 0.25;
-//			$img-biography-work-margin: 10px;
-//			$img1-height: image-height("img-biography-work-1.jpg");
-//			$img1-width: image-width("img-biography-work-1.jpg");
-//			$img2-width: image-width("img-biography-work-2.jpg");
-//			$img3-width: image-width("img-biography-work-3.jpg");
-//			$img4-width: image-width("img-biography-work-4.jpg");
-//
-//			left: 0;
-//			position: absolute;
-//			top: 0;
-//			width: $img1-width * $ratio;
-//
-//			&::after {
-//				@include inline-block;
-//				@include opacity(0.5);
-//
-//				content: attr(data-index) ".";
-//				bottom: 0;
-//				position: absolute;
-//				left: 0;
-//				margin-bottom: -2em;
-//			}
-//
-//			img {
-//				float: left;
-//				height: auto;
-//				width: 100%;
-//			}
-//
-//			&.img-2 {
-//				left: $img-biography-work-margin + ($img1-width * $ratio);
-//				width: $img2-width * $ratio;
-//			}
-//
-//			&.img-3 {
-//				left: $img-biography-work-margin + ($img1-width * $ratio) + $img-biography-work-margin + ($img2-width * $ratio);
-//				width: $img3-width * $ratio;
-//			}
-//
-//			&.img-4 {
-//				left: $img1-width * $ratio;
-//				margin-left: - image-width("img-biography-work-4.jpg") * $ratio;
-//				top: $img-biography-work-margin + ($img1-height * $ratio);
-//				width: $img4-width * $ratio;
-//			}
-//
-//			// breakpoints
-//			$ratios: 0.5 0.75 1;
-//			$breakpoints: $media-layout-768 $media-layout-992 $media-layout-1382;
-//			@for $i from 1 through length($ratios) {
-//				$ratio: nth($ratios, $i);
-//				$breakpoint: nth($breakpoints, $i);
-//
-//				@include at-breakpoint($breakpoint) {
-//					width: $img1-width * $ratio;
-//
-//					&.img-2 {
-//						left: $img-biography-work-margin + ($img1-width * $ratio);
-//						width: $img2-width * $ratio;
-//					}
-//
-//					&.img-3 {
-//						left: $img-biography-work-margin + ($img1-width * $ratio) + $img-biography-work-margin + ($img2-width * $ratio);
-//						width: $img3-width * $ratio;
-//					}
-//
-//					&.img-4 {
-//						left: $img1-width * $ratio;
-//						margin-left: - image-width("img-biography-work-4.jpg") * $ratio;
-//						top: $img-biography-work-margin + ($img1-height * $ratio);
-//						width: $img4-width * $ratio;
-//					}
-//				}
-//			}
-//		}
-//	}
-
-	// BxSlider //////////////////////////////////////////////////////////////////
-
-	.bx-controls {
+	.reinado-caption-title,
+	.reinado-caption-desc {
 		margin: 0;
 	}
 
-	.bx-pager {
-		@include stretch-x;
-
-		bottom: 0;
-		margin-bottom: lines-for-font-size($figcaption-font-size) * 3em;
-		text-align: center;
-		z-index: 1;
+	.reinado-caption-title {
+		@extend %biography-aside-title;
 	}
 
-	.bx-pager-item {
-		@include inline-block;
+	.reinado-caption-desc {
+		@extend %biography-aside-size;
 	}
 
-	.bx-pager-link {
-		$size: 14px;
+	.reinado-title {
+		@extend %biography-title;
+	}
 
-		@include border-radius(50%);
-		@include hide-text;
-		@include inline-block;
-		@include opacity(.6);
+	// CURRICULUM ////////////////////////////////////////////////////////////////
 
-		background: black;
-		height: $size;
-		margin: 0 .25em;
-		outline: none;
-		width: $size;
+	.curriculum {
+		@extend %biography-content-columns;
+	}
 
-		&.active {
-			@include opaque;
+	.curriculum-title {
+		@extend %biography-title;
+	}
+
+	// NAV BIOGRAPHY /////////////////////////////////////////////////////////////
+
+	#nav-biography {
+		@extend %biography-content-columns;
+		@include leader(1);
+
+		a {
+			@include inline-block;
+
+			padding: 1em;
+		}
+
+		.nav-biography {
+			margin: 0;
+			padding: 0;
+		}
+
+		.menu-item {
+			@include inline-block;
+
+			border: 1px solid #999999;
+			list-style: none;
+			margin: 0 .5em .5em 0;
 		}
 	}
 }
-
-//#nav-biography {
-//	@include margin-leader(14);
-//
-//	.nav-biography {
-//		$dimension: rhythm(5);
-//
-//		margin: 0;
-//		padding: 0;
-//
-//		a,
-//		&::before {
-//			@include border-radius(100%);
-//			@include inline-block;
-//
-//			border: 2px solid $color-gold;
-//			color: #4b3a1d;
-//			width: $dimension;
-//		}
-//
-//		&::before {
-//			@include background(image-url("img-biography-menu.jpg") center center);
-//			@include inline-block;
-//
-//			background-size: 100% auto;
-//			border-color: $color-white;
-//			content: '';
-//			height: $dimension;
-//		}
-//
-//		a {
-//			color: $color-gold;
-//			line-height: $dimension;
-//			text-align: center;
-//			text-decoration: none;
-//			vertical-align: center;
-//
-//			&:hover {
-//				background-color: $color-gold;
-//				color: $color-white;
-//			}
-//		}
-//	}
-//
-//	.menu-item {
-//		@include rhythm(1, 0, 0, 1);
-//
-//		display: block;
-//		text-transform: uppercase;
-//		font-style: italic;
-//	}
-//}

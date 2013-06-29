@@ -117,18 +117,33 @@ head.ready(function(){
 			</blockquote>
 		</section>
 
-		<section style="display: none" class="reinado-do-sol">
-			<figure>
-				<img class="reinado-do-sol-1" src="<?php echo get_stylesheet_directory_uri() . '/media/img/reinado-do-sol-1.jpg'; ?>" width="622" height="350">
-				<img class="reinado-do-sol-2" src="<?php echo get_stylesheet_directory_uri() . '/media/img/reinado-do-sol-2.jpg'; ?>" width="351" height="350">
+		<section class="reinado">
+			<figure class="reinado-figure">
+				<img class="reinado-img1" src="<?php echo get_stylesheet_directory_uri() . '/media/img/reinado-do-sol-1.jpg'; ?>" width="622" height="350">
+				<img class="reinado-img2" src="<?php echo get_stylesheet_directory_uri() . '/media/img/reinado-do-sol-2.jpg'; ?>" width="351" height="350">
 				<figcaption>
-					<?php _e('Reinado do Sol', 'flaviotavares'); ?>
-					<?php _e('Óleo sobre Tela, 900 x 300cm, 2008. Acervo da Estação Cabo Branco, João Pessoa - PB', 'flaviotavares'); ?>
+					<h1 class="reinado-caption-title"><?php _e('Reinado do Sol', 'flaviotavares'); ?></h1>
+					<p class="reinado-caption-desc"><?php _e('Óleo sobre Tela, 900 x 300cm, 2008. Acervo da Estação Cabo Branco, João Pessoa - PB', 'flaviotavares'); ?></p>
 				</figcaption>
 			</figure>
-			<h1>Reinaldo do Sol</h1>
-			<p>O Reinado do Sol mescla, com doses exatas de realidade e fantasia, conta em tintas uma história de lutas, conquistas, sonhos e memórias. É uma obra grandiosa em tamanho e conteúdo, que leva para a Estação Cabo Branco (projeto do arquiteto Oscar Niemeyer) um pouco do universo de Flávio Tavares.</p>
+			<h1 class="reinado-title">Reinaldo do Sol</h1>
+			<p class="reinado-desc">O Reinado do Sol mescla, com doses exatas de realidade e fantasia, conta em tintas uma história de lutas, conquistas, sonhos e memórias. É uma obra grandiosa em tamanho e conteúdo, que leva para a <a href="#">Estação Cabo Branco</a> (projeto do arquiteto Oscar Niemeyer) um pouco do universo de Flávio Tavares.</p>
 		</section>
+
+		<section class="curriculum">
+			<h1 class="curriculum-title">Curriculum</h1>
+			<p class="curriculum-desc">Baixe um PDF com o curriculum do artista <a href="#">clicando aqui</a>.</p>
+		</section>
+
+		<nav id="nav-biography">
+	        <?php wp_nav_menu(array(
+	                'menu' => 'biography-' . my_top_parent_slug(),
+	                'theme_location' => 'biography',
+	                'container' => 'div',
+	                'menu_class' => 'nav-biography',
+	                'depth' => 2,
+	        )); ?>
+		</nav>
 	</aside>
 </section>
 <?php get_footer(); ?>
