@@ -128,13 +128,13 @@ head.ready(function(){
 					<p class="reinado-caption-desc"><?php _e('Óleo sobre Tela, 900 x 300cm, 2008. Acervo da Estação Cabo Branco, João Pessoa - PB', 'flaviotavares'); ?></p>
 				</figcaption>
 			</figure>
-			<h1 class="reinado-title">Reinado do Sol</h1>
-			<p class="reinado-desc">O Reinado do Sol mescla, com doses exatas de realidade e fantasia, conta em tintas uma história de lutas, conquistas, sonhos e memórias. É uma obra grandiosa em tamanho e conteúdo, que leva para a <a href="#">Estação Cabo Branco</a> (projeto do arquiteto Oscar Niemeyer) um pouco do universo de Flávio Tavares.</p>
+			<h1 class="reinado-title"><?php _e('Reinado do Sol', 'flaviotavares'); ?></h1>
+			<p class="reinado-desc"><?php printf(__('O Reinado do Sol mescla, com doses exatas de realidade e fantasia, conta em tintas uma história de lutas, conquistas, sonhos e memórias. É uma obra grandiosa em tamanho e conteúdo, que leva para a <a href="%s" target="_blank">Estação Cabo Branco</a> (projeto do arquiteto Oscar Niemeyer) um pouco do universo de Flávio Tavares.', 'flaviotavares'), 'http://www.joaopessoa.pb.gov.br/estacaocabobranco/'); ?></p>
 		</section>
 
 		<section class="curriculum">
-			<h1 class="curriculum-title">Curriculum</h1>
-			<p class="curriculum-desc">Baixe um PDF com o curriculum do artista <a href="<?php echo home_url('/wp-content/uploads/2013/06/curriculum-flavio-tavares.pdf'); ?>">clicando aqui</a>.</p>
+			<h1 class="curriculum-title"><?php _e('Curriculum', 'flaviotavares'); ?></h1>
+			<p class="curriculum-desc"><?php printf(__('Baixe um PDF com o curriculum do artista <a href="%s">clicando aqui</a>.', 'flaviotavares'), home_url('/wp-content/uploads/2013/06/curriculum-flavio-tavares.pdf')); ?></p>
 		</section>
 
 		<nav id="nav-biography">
