@@ -128,7 +128,7 @@ head.ready(function(){
 					<p class="reinado-caption-desc"><?php _e('Óleo sobre Tela, 900 x 300cm, 2008. Acervo da Estação Cabo Branco, João Pessoa - PB', 'flaviotavares'); ?></p>
 				</figcaption>
 			</figure>
-			<h1 class="reinado-title">Reinaldo do Sol</h1>
+			<h1 class="reinado-title">Reinado do Sol</h1>
 			<p class="reinado-desc">O Reinado do Sol mescla, com doses exatas de realidade e fantasia, conta em tintas uma história de lutas, conquistas, sonhos e memórias. É uma obra grandiosa em tamanho e conteúdo, que leva para a <a href="#">Estação Cabo Branco</a> (projeto do arquiteto Oscar Niemeyer) um pouco do universo de Flávio Tavares.</p>
 		</section>
 
