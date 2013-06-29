@@ -319,12 +319,15 @@ body.page-template-t-biography-php {
 		@include padding-trailer(2);
 
 		&::before {
+			@include adjust-font-size-to($figcaption-font-size);
+			@include opacity(0.7);
+			@include padding-trailer(3);
 			@include pre(6);
 			@include span-columns(8);
-			@include padding-trailer(3);
 
 			content: 'Photo: Antônio Augusto Fontes';
 			display: block;
+			text-transform: uppercase;
 		}
 
 		.top-page-slug-pt_br &::before {
