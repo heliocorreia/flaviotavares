@@ -129,12 +129,13 @@ head.ready(function(){
 				</figcaption>
 			</figure>
 			<h1 class="reinado-title"><?php _e('Reinado do Sol', 'flaviotavares'); ?></h1>
-			<p class="reinado-desc"><?php printf(__('O Reinado do Sol mescla, com doses exatas de realidade e fantasia, conta em tintas uma história de lutas, conquistas, sonhos e memórias. É uma obra grandiosa em tamanho e conteúdo, que leva para a <a href="%s" target="_blank">Estação Cabo Branco</a> (projeto do arquiteto Oscar Niemeyer) um pouco do universo de Flávio Tavares.', 'flaviotavares'), 'http://www.joaopessoa.pb.gov.br/estacaocabobranco/'); ?></p>
+			<p class="reinado-desc"><?php _e('Um escritor elegante e gentil bem no meio da tela. Um poeta maldito, um grupo nômade, uma tribo indígena e um intelectual abolicionista. Muitos escravos, putas, diversos espelhos, anões e duendes, enfim mais de 500 personagens, as tais personalidades que compõem o painel de 9 metros por 3, intitulado “No Reinado do Sol”, obra do artista Flávio Tavares.', 'flaviotavares'); ?>
+			<p class="reinado-desc"><?php _e('A obra virou o adorno principal do hall da Estação Ciência, projeto do arquiteto Oscar Niemeyer, em que a Prefeitura de João Pessoa presentou a cidade como marco cultural de uma gestão que dialoga com as artes. Salve!', 'flaviotavares') ?> - <strong>Kubitschek Pinheiro</strong></p>
 		</section>
 
 		<section class="curriculum">
 			<h1 class="curriculum-title"><?php _e('Curriculum', 'flaviotavares'); ?></h1>
-			<p class="curriculum-desc"><?php printf(__('Baixe um PDF com o curriculum do artista <a href="%s">clicando aqui</a>.', 'flaviotavares'), home_url('/wp-content/uploads/2013/06/curriculum-flavio-tavares.pdf')); ?></p>
+			<p class="curriculum-desc"><?php printf(__('Baixe um PDF com o currículo do artista <a href="%s">clicando aqui</a>.', 'flaviotavares'), home_url('/wp-content/uploads/2013/06/curriculum-flavio-tavares.pdf')); ?></p>
 		</section>
 
 		<nav id="nav-biography">
