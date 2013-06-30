@@ -110,7 +110,7 @@ body.page-template-t-biography-php {
 
 			@include stretch;
 
-			border: $border-width solid $color;
+			border: $border-width solid #333;
 			bottom: 2 * $border-width;
 			content: '';
 			margin: rhythm(1);
