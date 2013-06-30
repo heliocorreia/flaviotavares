@@ -60,9 +60,9 @@ head.ready(function(){
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/img-biography-work-1.jpg" height="205" width="300">
 							</figure>
 							<dl>
-								<dd class="work-title"><?php _e('A semente', 'flaviotavares'); ?></dd>
-								<dd class="work-specs"><?php _e('Acrílico sobre tela 1,60 x 1,40 cm', 'flaviotavares'); ?></dd>
-								<dd class="work-year">2006</dd>
+								<dd class="work-title"><?php _e('Sem título', 'flaviotavares'); ?></dd>
+								<dd class="work-specs"><?php _e('Pastel 83 x 93 cm', 'flaviotavares'); ?></dd>
+								<dd class="work-year">1968</dd>
 							</dl>
 						</li>
 						<li class="work-item" data-index="2">
@@ -70,9 +70,9 @@ head.ready(function(){
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/img-biography-work-2.jpg" height="205" width="288">
 							</figure>
 							<dl>
-								<dd class="work-title"><?php _e('Sem título', 'flaviotavares'); ?></dd>
-								<dd class="work-specs"><?php _e('Pastel 83 x 93 cm', 'flaviotavares'); ?></dd>
-								<dd class="work-year">1968</dd>
+								<dd class="work-title"><?php _e('A semente', 'flaviotavares'); ?></dd>
+								<dd class="work-specs"><?php _e('Acrílico sobre tela 1,60 x 1,40 cm', 'flaviotavares'); ?></dd>
+								<dd class="work-year">2006</dd>
 							</dl>
 						</li>
 						<li class="work-item" data-index="3">
@@ -80,9 +80,9 @@ head.ready(function(){
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/img-biography-work-3.jpg" height="205" width="410">
 							</figure>
 							<dl>
-								<dd class="work-title"><?php _e('Sem título', 'flaviotavares'); ?></dd>
-								<dd class="work-specs"><?php _e('Óleo sobre tela 80 x 70 cm', 'flaviotavares'); ?></dd>
-								<dd class="work-year">1989</dd>
+								<dd class="work-title"><?php _e('O espírito criador do povo norderstino', 'flaviotavares'); ?></dd>
+								<dd class="work-specs"><?php _e('Óleo sobre tela 380 x 150 cm', 'flaviotavares'); ?></dd>
+								<dd class="work-year">2010</dd>
 							</dl>
 						</li>
 						<li class="work-item" data-index="4">
@@ -91,8 +91,8 @@ head.ready(function(){
 							</figure>
 							<dl>
 								<dd class="work-title"><?php _e('Sem título', 'flaviotavares'); ?></dd>
-								<dd class="work-specs"><?php _e('Pastel 83 x 93 cm', 'flaviotavares'); ?></dd>
-								<dd class="work-year">1968</dd>
+								<dd class="work-specs"><?php _e('Óleo sobre tela 140 x 80 cm', 'flaviotavares'); ?></dd>
+								<dd class="work-year">2000</dd>
 							</dl>
 						</li>
 					</ol>

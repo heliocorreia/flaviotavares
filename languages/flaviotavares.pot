@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
-"POT-Creation-Date: 2013-06-30 02:46-0300\n"
-"PO-Revision-Date: 2013-06-30 02:46-0300\n"
+"POT-Creation-Date: 2013-06-30 17:36-0300\n"
+"PO-Revision-Date: 2013-06-30 17:36-0300\n"
 "Last-Translator: \n"
 "Language-Team:  <dev@heliocorreia.com>\n"
 "MIME-Version: 1.0\n"
@@ -43,24 +43,32 @@ msgstr ""
 msgid "Crítico de arte"
 msgstr ""
 
-#: ../t-biography.php:63
-msgid "A semente"
-msgstr ""
-
-#: ../t-biography.php:64
-msgid "Acrílico sobre tela 1,60 x 1,40 cm"
-msgstr ""
-
-#: ../t-biography.php:73 ../t-biography.php:83 ../t-biography.php:93
+#: ../t-biography.php:63 ../t-biography.php:93
 msgid "Sem título"
 msgstr ""
 
-#: ../t-biography.php:74 ../t-biography.php:94
+#: ../t-biography.php:64
 msgid "Pastel 83 x 93 cm"
 msgstr ""
 
+#: ../t-biography.php:73
+msgid "A semente"
+msgstr ""
+
+#: ../t-biography.php:74
+msgid "Acrílico sobre tela 1,60 x 1,40 cm"
+msgstr ""
+
+#: ../t-biography.php:83
+msgid "O espírito criador do povo norderstino"
+msgstr ""
+
 #: ../t-biography.php:84
-msgid "Óleo sobre tela 80 x 70 cm"
+msgid "Óleo sobre tela 380 x 150 cm"
+msgstr ""
+
+#: ../t-biography.php:94
+msgid "Óleo sobre tela 140 x 80 cm"
 msgstr ""
 
 #: ../t-biography.php:108

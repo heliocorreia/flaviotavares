@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
-"POT-Creation-Date: 2013-06-29 14:25-0300\n"
-"PO-Revision-Date: 2013-06-30 02:46-0300\n"
+"POT-Creation-Date: 2013-06-30 17:36-0300\n"
+"PO-Revision-Date: 2013-06-30 17:38-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -49,25 +49,33 @@ msgstr ""
 msgid "Crítico de arte"
 msgstr "Art Critic"
 
-#: ../t-biography.php:63
-msgid "A semente"
-msgstr ""
-
-#: ../t-biography.php:64
-msgid "Acrílico sobre tela 1,60 x 1,40 cm"
-msgstr ""
-
-#: ../t-biography.php:73 ../t-biography.php:83 ../t-biography.php:93
+#: ../t-biography.php:63 ../t-biography.php:93
 msgid "Sem título"
 msgstr "Untitled"
 
-#: ../t-biography.php:74 ../t-biography.php:94
+#: ../t-biography.php:64
 msgid "Pastel 83 x 93 cm"
-msgstr ""
+msgstr "Pastel 83 x 93 cm"
+
+#: ../t-biography.php:73
+msgid "A semente"
+msgstr "A semente"
+
+#: ../t-biography.php:74
+msgid "Acrílico sobre tela 1,60 x 1,40 cm"
+msgstr "Acrylic on canvas tela 1.60 x 1.40 cm"
+
+#: ../t-biography.php:83
+msgid "O espírito criador do povo norderstino"
+msgstr "O espírito criador do povo norderstino"
 
 #: ../t-biography.php:84
-msgid "Óleo sobre tela 80 x 70 cm"
-msgstr ""
+msgid "Óleo sobre tela 380 x 150 cm"
+msgstr "Oil on canvas 380 x 150 cm"
+
+#: ../t-biography.php:94
+msgid "Óleo sobre tela 140 x 80 cm"
+msgstr "Oil on canvas 140 x 80 cm"
 
 #: ../t-biography.php:108
 msgid ""
@@ -171,7 +179,7 @@ msgstr "Film-maker and journalist"
 
 #: ../t-biography.php:134 ../t-biography.php:138
 msgid "Reinado do Sol"
-msgstr ""
+msgstr "Reinado do Sol"
 
 #: ../t-biography.php:135
 msgid ""
