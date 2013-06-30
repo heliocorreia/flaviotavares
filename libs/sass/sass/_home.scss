@@ -87,17 +87,13 @@ body.home {
 
 		a {
 			@include inline-block;
-			@include opacity(0.5);
 
-			color: #987e51;
+			color: #666;
 			font-size: 16px;
 			text-decoration: none;
 
 			&:hover {
-				@include opaque;
-
-				border-color: $color-gold;
-				color: $color-white;
+				color: $color-gold;
 			}
 		}
 	}
