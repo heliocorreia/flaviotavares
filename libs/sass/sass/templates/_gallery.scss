@@ -20,6 +20,8 @@ body.page-template-t-gallery-php {
 	}
 
 	a {
+		@include adjust-font-size-to(13px);
+
 		position: relative;
 
 		&:hover {
