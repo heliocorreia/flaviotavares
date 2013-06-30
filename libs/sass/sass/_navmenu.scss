@@ -220,12 +220,6 @@ $menu-widths: 80px 100px 134px 134px;
 			.menu-has-submenu::before {
 				margin-top: - $logo-outer-height;
 			}
-
-//			.current-page-ancestor.menu-has-submenu {
-//				&::before {
-//					margin-top: - $logo-outer-height;
-//				}
-//			}
 		}
 	}
 }
