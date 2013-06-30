@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
 "POT-Creation-Date: 2013-06-29 14:25-0300\n"
-"PO-Revision-Date: 2013-06-29 14:26-0300\n"
+"PO-Revision-Date: 2013-06-30 02:46-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -28,9 +28,8 @@ msgid "O artista em seu ateliê com o jornalista Gonzaga Rodrigues."
 msgstr "The artist and journalist friend Gonzaga Rodrigues in his studio."
 
 #: ../t-biography.php:35
-#, fuzzy
 msgid "Flávio Tavares, 2013 - Foto: wscom"
-msgstr "Atelier Flavio Tavares"
+msgstr "Flávio Tavares, 2013 - Photo: wscom"
 
 #: ../t-biography.php:46
 msgid ""
@@ -231,9 +230,8 @@ msgid "Agendar horário para visitação."
 msgstr "Schedule time for visitation."
 
 #: ../t-contact.php:19
-#, fuzzy
 msgid "Fone: (83) 3226-5022"
-msgstr "Phone: (83) 3226 7376"
+msgstr "Phone: (83) 3226-5022"
 
 #: ../t-contact.php:22
 msgid "Na Web"
