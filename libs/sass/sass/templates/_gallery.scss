@@ -44,8 +44,11 @@ body.page-template-t-gallery-php {
 		}
 
 		&::after {
-			@include stretch;
 			@include opacity(.8);
+			@include stretch;
+			@include transition-duration(.25s);
+			@include transition-property(opacity);
+			@include transition-timing-function(ease-in);
 
 			background: $color-black;
 			content: '';
