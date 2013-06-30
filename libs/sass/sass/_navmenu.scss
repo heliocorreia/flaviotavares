@@ -236,17 +236,23 @@ $menu-widths: 80px 100px 134px 134px;
 	top: rhythm(1);
 	z-index: 120;
 
-	.nav-menu:hover {
-		@include clearfix;
+	.nav-menu {
+		margin: 0;
+		padding-top: language-sprite-height(br);
+		position: relative;
 
-		.menu-item {
-			@include inline-block;
+		&:hover {
+			@include clearfix;
+
+			.menu-item {
+				display: block;
+			}
 		}
 	}
 
 	.menu-item {
 		display: none;
-		float: left;
+		list-style: none;
 
 		a {
 			@include hide-text;
@@ -256,9 +262,10 @@ $menu-widths: 80px 100px 134px 134px;
 
 	.current-menu-item,
 	.current-page-ancestor {
-		@include inline-block;
-
-		float: right;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 
 	.slug-portugues a {
