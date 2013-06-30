@@ -29,9 +29,9 @@ head.ready(function(){
 			<section class="header-slides">
 				<div class="header-slides-inner">
 				<?php $slides = array(
-					array('img' => '/media/img/img-biography-author-1.jpg', 'caption' => __('O artista com seu quadro, "A Pedra do Reino", 1981.', 'flaviotavares')),
-					array('img' => '/media/img/img-biography-author-3.jpg', 'caption' => __('O artista com seu quadro, "A Pedra do Reino", 1981.', 'flaviotavares')),
-					array('img' => '/media/img/img-biography-author-4.jpg', 'caption' => __('O artista em seu ateliê com o jornalista Gonzaga Rodrigues.', 'flaviotavares')),
+					array('img' => '/media/img/img-biography-author-1.jpg', 'caption' => __('O artista com seu quadro "A Pedra do Reino", 1981.', 'flaviotavares')),
+					array('img' => '/media/img/img-biography-author-3.jpg', 'caption' => __('Flávio Tavares pintando "O Reinado do Sol".', 'flaviotavares')),
+					array('img' => '/media/img/img-biography-author-4.jpg', 'caption' => __('O artista em seu atêlie com o jornalista Gonzaga Rodrigues.', 'flaviotavares')),
 					array('img' => '/media/img/img-biography-author-5.jpg', 'caption' => __('Flávio Tavares, 2013 - Foto: wscom', 'flaviotavares')),
 				);
 				foreach($slides as $slide): ?>
@@ -43,7 +43,7 @@ head.ready(function(){
 				</div>
 			</section>
 			<blockquote class="quote-by-others">
-				<p><?php _e('Em três décadas impressionou-me a constante evolução desse artista e a sua capacidade de aprofundar os seus temas básicos e o refinamento dos instrumentos. Certamente, hoje, Flávio Tavares está entre os mais importantes artistas do Nordeste e tem uma posição respeitável entre os artistas brasileiros figurativos de sua geração.', 'flaviotavares'); ?></p>
+				<p><?php _e('Em três décadas impressionou-me a constante evolução desse artista e a sua capacidade de aprofundar os seus temas básicos e o refinamento dos instrumentos. Certamente, hoje, Flávio Tavares está entre os mais importantes artistas do Nordeste e tem uma posição respeitável entre os artistas brasileiros figurativos de sua geração. - Jacob Klintowitz, Crítico de arte.', 'flaviotavares'); ?></p>
 				<footer class="hcard"><span class="fn n">Jacob Klintowitz</span>, <span class="role"><?php _e('Crítico de arte', 'flaviotavares'); ?></span></footer>
 			</blockquote>
 		</section>
@@ -103,7 +103,7 @@ head.ready(function(){
 
 	<aside class="extras">
 		<section class="extra-quotes">
-			<h1 class="extra-quotes-title">Citações</h1>
+			<h1 class="extra-quotes-title"><?php _e('Citações', 'flaviotavares'); ?></h1>
 			<blockquote class="extra-quote">
 				<p class="extra-quote-content"><?php _e('A obra de Flávio Tavares é fruto de 40 anos de processo contínuo, que resultou em uma linguagem artística perfeitamente adequada à sua expressão plástica. Para perceber sua poética é necessário compreender, ao mesmo tempo, as imbricações da concepção estética, a criatividade da imagética e o percurso de sua produção, manifestados em meios expressivos diferenciados e em variações técnicas que nos auxiliam, inclusive, na compreensão da arte contemporânea.', 'flaviotavares'); ?></p>
 				<footer class="hcard"><span class="fn n">Elvira Vernaschi</span>, <span class="role"><?php _e('Presidente da Associação Brasileira de Críticos de Arte', 'flaviotavares'); ?></span>. 2005</footer>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
-"POT-Creation-Date: 2013-06-30 17:36-0300\n"
-"PO-Revision-Date: 2013-06-30 17:38-0300\n"
+"POT-Creation-Date: 2013-06-30 18:31-0300\n"
+"PO-Revision-Date: 2013-06-30 18:31-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
-"X-Poedit-KeywordsList: _;_e;gettext;gettext_noop\n"
+"X-Poedit-KeywordsList: __;_e;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
@@ -19,12 +19,16 @@ msgstr ""
 msgid "Esse mundo da imagem me persegue e eu o persigo."
 msgstr "This world of the image pursues me and I pursue it in return."
 
-#: ../t-biography.php:32 ../t-biography.php:33
-msgid "O artista com seu quadro, \"A Pedra do Reino\", 1981."
+#: ../t-biography.php:32
+msgid "O artista com seu quadro \"A Pedra do Reino\", 1981."
 msgstr "The artist with his painting \"A Pedra do Reino\", 1981."
 
+#: ../t-biography.php:33
+msgid "Flávio Tavares pintando \"O Reinado do Sol\"."
+msgstr "Flávio Tavares painting \"O Reinado do Sol\", 2010"
+
 #: ../t-biography.php:34
-msgid "O artista em seu ateliê com o jornalista Gonzaga Rodrigues."
+msgid "O artista em seu atêlie com o jornalista Gonzaga Rodrigues."
 msgstr "The artist and journalist friend Gonzaga Rodrigues in his studio."
 
 #: ../t-biography.php:35
@@ -37,7 +41,8 @@ msgid ""
 "capacidade de aprofundar os seus temas básicos e o refinamento dos "
 "instrumentos. Certamente, hoje, Flávio Tavares está entre os mais "
 "importantes artistas do Nordeste e tem uma posição respeitável entre os "
-"artistas brasileiros figurativos de sua geração."
+"artistas brasileiros figurativos de sua geração. - Jacob Klintowitz, Crítico "
+"de arte."
 msgstr ""
 "In three decades I have been impressed by the consistent evolution of the "
 "artist and his capacity to plunge deeper and deeper into his basic themes "
@@ -50,6 +55,7 @@ msgid "Crítico de arte"
 msgstr "Art Critic"
 
 #: ../t-biography.php:63 ../t-biography.php:93
+#: ../languages/extra-content.php:32
 msgid "Sem título"
 msgstr "Untitled"
 
@@ -76,6 +82,10 @@ msgstr "Oil on canvas 380 x 150 cm"
 #: ../t-biography.php:94
 msgid "Óleo sobre tela 140 x 80 cm"
 msgstr "Oil on canvas 140 x 80 cm"
+
+#: ../t-biography.php:106
+msgid "Citações"
+msgstr "Quotes"
 
 #: ../t-biography.php:108
 msgid ""
@@ -186,6 +196,8 @@ msgid ""
 "Óleo sobre Tela, 900 x 300cm, 2008. Acervo da Estação Cabo Branco, João "
 "Pessoa - PB"
 msgstr ""
+"Oil Painting, 900 x 300cm, 2008. Estação Cabo Branco Collection, João Pessoa "
+"– PB, Brasil."
 
 #: ../t-biography.php:139
 msgid ""
@@ -195,6 +207,11 @@ msgid ""
 "personagens, as tais personalidades que compõem o painel de 9 metros por 3, "
 "intitulado “No Reinado do Sol”, obra do artista Flávio Tavares."
 msgstr ""
+"An elegant gentle writer is standing in the middle of the canvas. An "
+"accursed poet, a nomadic group, an Indian tribe and an abolitionist "
+"intellectual. Several slaves, whores, mirrors, dwarfs and gnomes, more than "
+"500 characters people the 9x3m panel entitled \"In  the kingdom of the Sun"
+"\", a painting by the artist Flávio Tavares."
 
 #: ../t-biography.php:140
 msgid ""
@@ -202,16 +219,21 @@ msgid ""
 "arquiteto Oscar Niemeyer, em que a Prefeitura de João Pessoa presentou a "
 "cidade como marco cultural de uma gestão que dialoga com as artes. Salve!"
 msgstr ""
+"The work is the major decoration of the hall of \"Estação Ciência\" a "
+"project signed by the architect Oscar Niemeyer, a gift offered to the city "
+"of João Pessoa by its Government as the cultural landmark of an "
+"administration that dialogues with the arts. Hail!"
 
 #: ../t-biography.php:144
 msgid "Curriculum"
-msgstr ""
+msgstr "Curriculum"
 
 #: ../t-biography.php:145
 #, php-format
 msgid ""
 "Baixe um PDF com o currículo do artista <a href=\"%s\">clicando aqui</a>."
 msgstr ""
+"<a href=\"%s\">Click here</a> to download the artist resume in PDF format."
 
 #: ../t-contact.php:12
 msgid "Ateliê Flávio Tavares"
@@ -219,19 +241,19 @@ msgstr "Atelier Flavio Tavares"
 
 #: ../t-contact.php:14
 msgid "Rua Zilda Nunes da Silva. 177. Portal do Sol"
-msgstr ""
+msgstr "Rua Zilda Nunes da Silva. 177. Portal do Sol"
 
 #: ../t-contact.php:15
 msgid "Altiplano Cabo Branco"
-msgstr ""
+msgstr "Altiplano Cabo Branco"
 
 #: ../t-contact.php:15
 msgid "CEP: 58046-505"
-msgstr ""
+msgstr "CEP: 58046-505"
 
 #: ../t-contact.php:16
 msgid "João Pessoa"
-msgstr ""
+msgstr "João Pessoa"
 
 #: ../t-contact.php:18
 msgid "Agendar horário para visitação."
@@ -245,30 +267,163 @@ msgstr "Phone: (83) 3226-5022"
 msgid "Na Web"
 msgstr "On Web"
 
-#~ msgid "Apesar de sua singular matriz, a busca de Flávio Tavares"
-#~ msgstr "Despite his singular matrix, Flávio Tavares searches"
+#: ../languages/extra-content.php:5
+msgid "O Caçador de Miragens: Flávio Tavares"
+msgstr "O Caçador de Miragens: Flávio Tavares"
 
-#~ msgid "é a de um imaginário arquetípico em que o sacro dialoga"
-#~ msgstr "for archetypal imagery in which the sacred encounters"
+#: ../languages/extra-content.php:6
+msgid "Vídeo de Elisa Cabral, 2002"
+msgstr "Elisa Cabral Video, 2002"
 
-#~ msgid "com o profano e onde a afirmação da vida sempre"
-#~ msgstr "with the profane, and where an affirmation of life always"
+#: ../languages/extra-content.php:7
+msgid ""
+"O fantástico universo pictórico do artista plástico paraibano Flávio "
+"Tavares, onde cores, traços, tons e ritmos se contrapõem na dinâmica dos "
+"gestos criativos."
+msgstr ""
+"Portuguese. A mini documentary displaying Flávio Tavares’ fantastic "
+"universe, made by filmmaker Elisa Cabral."
 
-#~ msgid "se sobrepõe ao pessimismo e ao culto da morte, tão"
-#~ msgstr "overcomes pessimism and the cult of death, which is so"
+#: ../languages/extra-content.php:9
+msgid "Entrevista para o Programa Casa Master Parte 1"
+msgstr "Casa Master Tv Show Interview - 1"
 
-#~ msgid "presentes na arte conteporânea."
-#~ msgstr "present in contemporary art."
+#: ../languages/extra-content.php:10 ../languages/extra-content.php:14
+msgid "Programa Casa Master, 2011"
+msgstr "Casa Master, TV Show, 2011"
 
-#~ msgid ""
-#~ "Professor de Estética e História da Arte da Universidade Federal da "
-#~ "Paraíba, 2005"
-#~ msgstr ""
-#~ "Professor of Aesthetics and History of Art at Paraiba Federal University, "
-#~ "2005"
+#: ../languages/extra-content.php:11
+msgid ""
+"Entrevista com o artista plástico paraibano Flávio Tavares ao programa Casa "
+"Master. Uma conversa agradável com muita história, cultura e arte."
+msgstr ""
+"Flávio Tavares interview in Portuguese for Casa Master TV Show. First Part."
 
-#~ msgid "Veja mapa aqui"
-#~ msgstr "See map here"
+#: ../languages/extra-content.php:13
+msgid "Entrevista para o Programa Casa Master Parte 2"
+msgstr "Casa Master Tv Show Interview -  2"
 
-#~ msgid "Terças, quintas e sábados."
-#~ msgstr "Tuesdays, thursdays and saturdays."
+#: ../languages/extra-content.php:15
+msgid ""
+"O artista plástico Flávio Tavares apresenta o livro homônimo que comemora os "
+"50 anos da sua trajetória artística com muitas fotos de pinturas, desenhos e "
+"gravuras."
+msgstr ""
+"Flávio Tavares interview in Portuguese for Casa Master TV Show. Second Part."
+
+#: ../languages/extra-content.php:17
+msgid "Contemporâneo – Flávio Tavares – Bloco 01"
+msgstr "Contemporaneo Tv Show – Flávio Tavares – 1"
+
+#: ../languages/extra-content.php:18 ../languages/extra-content.php:22
+#: ../languages/extra-content.php:26
+msgid "Programa Contemporâneo, 2012"
+msgstr "Programa Contemporâneo, 2012"
+
+#: ../languages/extra-content.php:19
+msgid "Entrevista em 3 blocos para o programa Comtemporâneo. Primeira parte"
+msgstr ""
+"Flávio Tavares interview in Portuguese for Contemporaneo TV Show. First part."
+
+#: ../languages/extra-content.php:21
+msgid "Contemporâneo – Flávio Tavares – Bloco 02"
+msgstr "Contemporaneo Tv Show – Flávio Tavares – 2"
+
+#: ../languages/extra-content.php:23
+msgid "Entrevista em 3 blocos para o programa Contemporâneo. Segunda Parte."
+msgstr ""
+"Flávio Tavares interview in Portuguese for Contemporaneo TV Show. Second "
+"part."
+
+#: ../languages/extra-content.php:25
+msgid "Contemporâneo – Flávio Tavares – Bloco 03"
+msgstr "Contemporaneo Tv Show – Flávio Tavares – 3"
+
+#: ../languages/extra-content.php:27
+msgid "Entrevista em 3 blocos para o programa Contemporâneo. Terceira parte."
+msgstr ""
+"Flávio Tavares interview in Portuguese for Contemporaneo TV Show. Third part."
+
+#: ../languages/extra-content.php:33
+msgid "Bico de pena sobre papel"
+msgstr "Pen and ink on paper"
+
+#: ../languages/extra-content.php:34
+msgid "Xilogravura"
+msgstr "Woodcut"
+
+#: ../languages/extra-content.php:35
+msgid "Litogravura"
+msgstr "Lithograph"
+
+#: ../languages/extra-content.php:36
+msgid "Acrilica sobre tela"
+msgstr "Acrylic on canvas tela 1.60 x 1.40 cm"
+
+#: ../languages/extra-content.php:37
+msgid "Acrílica sobre cartão"
+msgstr "Acrylic on card"
+
+#: ../languages/extra-content.php:38
+msgid "Encáustica sobre tela"
+msgstr "Encaustic on canvas"
+
+#: ../languages/extra-content.php:39
+msgid "Óleo sobre madeira"
+msgstr "Oil on wood"
+
+#: ../languages/extra-content.php:40
+msgid "Óleo sobre papel"
+msgstr "Oil on paper"
+
+#: ../languages/extra-content.php:41
+msgid "Mural de azulejos"
+msgstr "Wall tiles"
+
+#: ../languages/extra-content.php:42
+msgid "Pastel"
+msgstr "Pastel"
+
+#: ../languages/extra-content.php:43
+msgid "Sanguine"
+msgstr "Sanguine"
+
+#: ../languages/extra-content.php:44
+msgid "Sanguine sobre papel"
+msgstr "Sanguine on paper"
+
+#: ../languages/extra-content.php:45
+msgid "Nanquim sobre papel"
+msgstr "Ink on paper"
+
+#: ../languages/extra-content.php:46
+msgid "Técnica Mista"
+msgstr "Mixed"
+
+#: ../languages/extra-content.php:47
+msgid "Escultura em madeira"
+msgstr "Wood carving"
+
+#: ../languages/extra-content.php:48
+msgid "Escultura em pedra calcária"
+msgstr "Sculpture on limestone"
+
+#: ../languages/extra-content.php:49
+msgid "Escultura em pedra"
+msgstr "Sculpture on stone"
+
+#: ../languages/extra-content.php:50
+msgid "Pintura em azulejo"
+msgstr "Painting on tiles"
+
+#: ../languages/extra-content.php:51
+msgid "Pintura sobre cerâmica"
+msgstr "Painting on ceramics"
+
+#: ../languages/extra-content.php:52
+msgid "Escultura e pintura sobre madeira"
+msgstr "Sculpture and painting on wood"
+
+#: ../languages/extra-content.php:53
+msgid "Preço sob consulta"
+msgstr "Price on request"

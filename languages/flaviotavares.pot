@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
-"POT-Creation-Date: 2013-06-30 17:36-0300\n"
-"PO-Revision-Date: 2013-06-30 17:36-0300\n"
+"POT-Creation-Date: 2013-06-30 18:31-0300\n"
+"PO-Revision-Date: 2013-06-30 18:31-0300\n"
 "Last-Translator: \n"
 "Language-Team:  <dev@heliocorreia.com>\n"
 "MIME-Version: 1.0\n"
@@ -18,12 +18,16 @@ msgstr ""
 msgid "Esse mundo da imagem me persegue e eu o persigo."
 msgstr ""
 
-#: ../t-biography.php:32 ../t-biography.php:33
-msgid "O artista com seu quadro, \"A Pedra do Reino\", 1981."
+#: ../t-biography.php:32
+msgid "O artista com seu quadro \"A Pedra do Reino\", 1981."
+msgstr ""
+
+#: ../t-biography.php:33
+msgid "Flávio Tavares pintando \"O Reinado do Sol\"."
 msgstr ""
 
 #: ../t-biography.php:34
-msgid "O artista em seu ateliê com o jornalista Gonzaga Rodrigues."
+msgid "O artista em seu atêlie com o jornalista Gonzaga Rodrigues."
 msgstr ""
 
 #: ../t-biography.php:35
@@ -36,14 +40,16 @@ msgid ""
 "capacidade de aprofundar os seus temas básicos e o refinamento dos "
 "instrumentos. Certamente, hoje, Flávio Tavares está entre os mais "
 "importantes artistas do Nordeste e tem uma posição respeitável entre os "
-"artistas brasileiros figurativos de sua geração."
+"artistas brasileiros figurativos de sua geração. - Jacob Klintowitz, Crítico "
+"de arte."
 msgstr ""
 
 #: ../t-biography.php:47 ../t-biography.php:113
 msgid "Crítico de arte"
-msgstr ""
+msgstr "Crítico de arte"
 
 #: ../t-biography.php:63 ../t-biography.php:93
+#: ../languages/extra-content.php:32
 msgid "Sem título"
 msgstr ""
 
@@ -69,6 +75,10 @@ msgstr ""
 
 #: ../t-biography.php:94
 msgid "Óleo sobre tela 140 x 80 cm"
+msgstr ""
+
+#: ../t-biography.php:106
+msgid "Citações"
 msgstr ""
 
 #: ../t-biography.php:108
@@ -205,4 +215,157 @@ msgstr ""
 
 #: ../t-contact.php:22
 msgid "Na Web"
+msgstr ""
+
+#: ../languages/extra-content.php:5
+msgid "O Caçador de Miragens: Flávio Tavares"
+msgstr ""
+
+#: ../languages/extra-content.php:6
+msgid "Vídeo de Elisa Cabral, 2002"
+msgstr ""
+
+#: ../languages/extra-content.php:7
+msgid ""
+"O fantástico universo pictórico do artista plástico paraibano Flávio "
+"Tavares, onde cores, traços, tons e ritmos se contrapõem na dinâmica dos "
+"gestos criativos."
+msgstr ""
+
+#: ../languages/extra-content.php:9
+msgid "Entrevista para o Programa Casa Master Parte 1"
+msgstr ""
+
+#: ../languages/extra-content.php:10 ../languages/extra-content.php:14
+msgid "Programa Casa Master, 2011"
+msgstr ""
+
+#: ../languages/extra-content.php:11
+msgid ""
+"Entrevista com o artista plástico paraibano Flávio Tavares ao programa Casa "
+"Master. Uma conversa agradável com muita história, cultura e arte."
+msgstr ""
+
+#: ../languages/extra-content.php:13
+msgid "Entrevista para o Programa Casa Master Parte 2"
+msgstr ""
+
+#: ../languages/extra-content.php:15
+msgid ""
+"O artista plástico Flávio Tavares apresenta o livro homônimo que comemora os "
+"50 anos da sua trajetória artística com muitas fotos de pinturas, desenhos e "
+"gravuras."
+msgstr ""
+
+#: ../languages/extra-content.php:17
+msgid "Contemporâneo – Flávio Tavares – Bloco 01"
+msgstr ""
+
+#: ../languages/extra-content.php:18 ../languages/extra-content.php:22
+#: ../languages/extra-content.php:26
+msgid "Programa Contemporâneo, 2012"
+msgstr ""
+
+#: ../languages/extra-content.php:19
+msgid "Entrevista em 3 blocos para o programa Comtemporâneo. Primeira parte"
+msgstr ""
+
+#: ../languages/extra-content.php:21
+msgid "Contemporâneo – Flávio Tavares – Bloco 02"
+msgstr ""
+
+#: ../languages/extra-content.php:23
+msgid "Entrevista em 3 blocos para o programa Contemporâneo. Segunda Parte."
+msgstr ""
+
+#: ../languages/extra-content.php:25
+msgid "Contemporâneo – Flávio Tavares – Bloco 03"
+msgstr ""
+
+#: ../languages/extra-content.php:27
+msgid "Entrevista em 3 blocos para o programa Contemporâneo. Terceira parte."
+msgstr ""
+
+#: ../languages/extra-content.php:33
+msgid "Bico de pena sobre papel"
+msgstr ""
+
+#: ../languages/extra-content.php:34
+msgid "Xilogravura"
+msgstr ""
+
+#: ../languages/extra-content.php:35
+msgid "Litogravura"
+msgstr ""
+
+#: ../languages/extra-content.php:36
+msgid "Acrilica sobre tela"
+msgstr ""
+
+#: ../languages/extra-content.php:37
+msgid "Acrílica sobre cartão"
+msgstr ""
+
+#: ../languages/extra-content.php:38
+msgid "Encáustica sobre tela"
+msgstr ""
+
+#: ../languages/extra-content.php:39
+msgid "Óleo sobre madeira"
+msgstr ""
+
+#: ../languages/extra-content.php:40
+msgid "Óleo sobre papel"
+msgstr ""
+
+#: ../languages/extra-content.php:41
+msgid "Mural de azulejos"
+msgstr ""
+
+#: ../languages/extra-content.php:42
+msgid "Pastel"
+msgstr ""
+
+#: ../languages/extra-content.php:43
+msgid "Sanguine"
+msgstr ""
+
+#: ../languages/extra-content.php:44
+msgid "Sanguine sobre papel"
+msgstr ""
+
+#: ../languages/extra-content.php:45
+msgid "Nanquim sobre papel"
+msgstr ""
+
+#: ../languages/extra-content.php:46
+msgid "Técnica Mista"
+msgstr ""
+
+#: ../languages/extra-content.php:47
+msgid "Escultura em madeira"
+msgstr ""
+
+#: ../languages/extra-content.php:48
+msgid "Escultura em pedra calcária"
+msgstr ""
+
+#: ../languages/extra-content.php:49
+msgid "Escultura em pedra"
+msgstr ""
+
+#: ../languages/extra-content.php:50
+msgid "Pintura em azulejo"
+msgstr ""
+
+#: ../languages/extra-content.php:51
+msgid "Pintura sobre cerâmica"
+msgstr ""
+
+#: ../languages/extra-content.php:52
+msgid "Escultura e pintura sobre madeira"
+msgstr ""
+
+#: ../languages/extra-content.php:53
+msgid "Preço sob consulta"
 msgstr ""
