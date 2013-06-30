@@ -136,8 +136,8 @@ $menu-widths: 80px 100px 134px 134px;
 		}
 	}
 
-	.current-menu-parent,
-	.current-menu-item.menu-has-submenu {
+	.current-page-ancestor,
+	.current-page-ancestor.menu-has-submenu {
 		&::before,
 		.sub-menu {
 			display: block;

@@ -10,4 +10,50 @@ body.page-template-t-gallery-php {
 	.main-title {
 		display: none;
 	}
+
+	p, a {
+		@include inline-block;
+	}
+
+	p {
+		margin: .5em;
+	}
+
+	a {
+		position: relative;
+
+		&:hover {
+			&::after {
+				@include transparent;
+			}
+		}
+
+		&::before {
+			$line-height: $base-line-height;
+
+			@include stretch(50%, 0, 0, 0);
+
+			color: white;
+			content: attr(rel);
+			display: block;
+			line-height: $line-height;
+			margin-top: - $line-height/2;
+			text-align: center;
+			text-transform: uppercase;
+			z-index: 2;
+		}
+
+		&::after {
+			@include stretch;
+			@include opacity(.8);
+
+			background: $color-black;
+			content: '';
+			z-index: 1;
+		}
+	}
+
+	img {
+		float: left;
+	}
 }
