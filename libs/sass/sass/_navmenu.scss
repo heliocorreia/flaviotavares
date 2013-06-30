@@ -347,22 +347,3 @@ $menu-widths: 80px 100px 134px 134px;
 		}
 	}
 }
-
-#nav-prev-next {
-	text-align: center;
-	margin-bottom: 1em;
-
-	.prev, .next {
-		cursor: pointer;
-		display: inline-block;
-		margin: 0 .25em;
-	}
-
-	.prev {
-		@include seta-sprite(rounded-small-left);
-	}
-
-	.next {
-		@include seta-sprite(rounded-small-right);
-	}
-}
