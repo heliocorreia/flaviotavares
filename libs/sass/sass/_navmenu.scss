@@ -155,7 +155,6 @@ $menu-widths: 80px 100px 134px 134px;
 		@include stretch-y;
 		@include photoshop-drop-shadow(180, 1px, 100%, 0, $color-black);
 
-		border-right: 1px solid #473b26;
 		content: '';
 	}
 
@@ -164,7 +163,7 @@ $menu-widths: 80px 100px 134px 134px;
 		padding: 0;
 
 		.menu-item > a::after {
-			border-color: #625641;
+			border-color: $color-white;
 		}
 	}
 }
