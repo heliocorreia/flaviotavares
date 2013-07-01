@@ -1,4 +1,4 @@
-$biography-aside-font-size: 12px;
+$biography-aside-font-size: 13px;
 
 // EXTENDS ////////////////////////////////////////////////////////////////////
 
@@ -51,7 +51,7 @@ body.page-template-t-biography-php {
 }
 
 #t-biography {
-	$figcaption-font-size: 12px;
+	$figcaption-font-size: $biography-aside-font-size;
 
 	@include margin-leader(21);
 
@@ -369,9 +369,6 @@ body.page-template-t-biography-php {
 			left: 0;
 			right: 0;
 		}
-	}
-
-	.extra-quote-content {
 	}
 
 	// REINADO ///////////////////////////////////////////////////////////////////

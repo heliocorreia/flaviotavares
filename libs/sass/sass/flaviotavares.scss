@@ -23,13 +23,13 @@ body {
 	background-size: cover;
 
 	@include at-breakpoint($media-layout-600) {
-		@include adjust-font-size-to(11px);
-	}
-	@include at-breakpoint($media-layout-768) {
 		@include adjust-font-size-to(12px);
 	}
-	@include at-breakpoint($media-layout-992) {
+	@include at-breakpoint($media-layout-768) {
 		@include adjust-font-size-to(13px);
+	}
+	@include at-breakpoint($media-layout-992) {
+		@include adjust-font-size-to(14px);
 	}
 	@include at-breakpoint($media-layout-1382) {
 		@include adjust-font-size-to(16px);
