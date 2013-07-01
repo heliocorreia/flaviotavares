@@ -3,6 +3,7 @@ body.page-template-t-gallery-php {
 }
 
 #t-gallery {
+	$transition-duration: .25s;
 	.content {
 		@include span-columns(13 omega);
 	}
@@ -22,11 +23,16 @@ body.page-template-t-gallery-php {
 	a {
 		@include adjust-font-size-to(13px);
 
+		overflow: hidden;
 		position: relative;
 
 		&:hover {
 			&::after {
 				@include transparent;
+			}
+
+			img {
+				@include scale(1.05, 1.05);
 			}
 		}
 
@@ -59,6 +65,11 @@ body.page-template-t-gallery-php {
 	}
 
 	img {
+		@include transform-origin(0, 0);
+		@include transition-duration(.25s);
+		@include transition-property(transform);
+		@include transition-timing-function(ease-in);
+
 		float: left;
 	}
 }
