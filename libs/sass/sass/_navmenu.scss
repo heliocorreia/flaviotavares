@@ -334,6 +334,7 @@ $menu-widths: 80px 100px 134px 134px;
 				margin-top: - image-height($img) / 2;
 				top: 50%;
 			}
+
 			& .bx-next::before {
 				$img: sprite-file(nth($breakpoint-sprites, $i), arrow-right);
 
@@ -343,6 +344,36 @@ $menu-widths: 80px 100px 134px 134px;
 				margin-top: - image-height($img) / 2;
 				right: 50%;
 				top: 50%;
+			}
+		}
+	}
+}
+
+.tos-wrapper {
+	@for $i from 1 through length($media-layout-list) {
+		@include at-breakpoint(nth($media-layout-list, $i)) {
+			.tos-prev {
+				@include get-sprite(nth($breakpoint-sprites, $i), arrow-left);
+
+				&:hover {
+					@include get-sprite(nth($breakpoint-sprites, $i), arrow-left_hover);
+				}
+			}
+
+			.tos-next {
+				@include get-sprite(nth($breakpoint-sprites, $i), arrow-right);
+
+				&:hover {
+					@include get-sprite(nth($breakpoint-sprites, $i), arrow-right_hover);
+				}
+			}
+
+			.tos-close {
+				@include get-sprite(nth($breakpoint-sprites, $i), btn-close);
+
+				&:hover {
+					@include get-sprite(nth($breakpoint-sprites, $i), btn-close_hover);
+				}
 			}
 		}
 	}
