@@ -70,8 +70,8 @@ function my_enqueue_cssjs(){
 		'_bxslider'			=> '/media/js/bxslider/jquery.bxslider.min.js',
 		'_jquery'			=> '/media/js/jquery/2.0.0.js',
 		'_tosros'			=> '/media/js/tosros/jquery.tosrus-1.3.1-packed.js',
+		'_picturefill'		=> '/media/js/picturefill.js',
 		'_verticalcenter'	=> '/media/js/jquery.responsive-vertical-center.js',
-
 	);
 
 	foreach($scripts as $k => $v) {
@@ -86,6 +86,7 @@ function my_enqueue_cssjs(){
 		wp_dequeue_script('_verticalcenter');
 
 		wp_enqueue_script('_bxslider');
+		wp_enqueue_script('_picturefill');
 	}
 
 	if (is_page_template('t-biography.php')) {
@@ -301,6 +302,21 @@ function my_post_gallery($output, $attr) {
 			$media .= " $name=" . '"' . $value . '"';
 		}
 		$media .= ' />';
+
+		if (!is_page_template('t-gallery-items.php')) {
+			$media = <<<MEDIA
+<span data-picture data-alt="${data_link_attr['data-title']}">
+    <span data-src="${data_link_attr['data-href-smart']}"></span>
+    <span data-src="${data_link_attr['data-href-tablet']}" data-media="(min-width: 600px)"></span>
+    <span data-src="${data_link_attr['data-href-desktop']}" data-media="(min-width: 768px)"></span>
+    <span data-src="${data_link_attr['data-href-original']}" data-media="(min-width: 1024px)"></span>
+    <noscript>
+        <img src="${data_link_attr['data-href-smart']}" alt="${data_link_attr['data-title']}" data-title="${data_link_attr['data-title']}" data-caption="${data_link_attr['data-caption']}" />
+    </noscript>
+</span>
+MEDIA;
+			$media = implode('', array_map('trim', explode("\n", $media)));
+		}
 
 		$href = isset($attr['link']) && 'file' == $attr['link']
 			? get_attachment_link($id)
