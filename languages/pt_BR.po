@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flávio Tavares\n"
-"POT-Creation-Date: 2013-06-30 18:32-0300\n"
-"PO-Revision-Date: 2013-06-30 18:32-0300\n"
+"POT-Creation-Date: 2013-08-01 00:55-0300\n"
+"PO-Revision-Date: 2013-08-01 00:55-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -183,7 +183,8 @@ msgstr ""
 #: ../t-biography.php:145
 #, php-format
 msgid ""
-"Baixe um PDF com o currículo do artista <a href=\"%s\">clicando aqui</a>."
+"Baixe um PDF (21MB) com o currículo do artista <a href=\"%s\">clicando aqui</"
+"a>."
 msgstr ""
 
 #: ../t-contact.php:12

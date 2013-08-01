@@ -142,7 +142,7 @@ head.ready(function(){
 
 		<section class="curriculum">
 			<h1 class="curriculum-title"><?php _e('Curriculum', 'flaviotavares'); ?></h1>
-			<p class="curriculum-desc"><?php printf(__('Baixe um PDF com o currículo do artista <a href="%s">clicando aqui</a>.', 'flaviotavares'), home_url('/wp-content/uploads/2013/06/curriculum-flavio-tavares.pdf')); ?></p>
+			<p class="curriculum-desc"><?php printf(__('Baixe um PDF (21MB) com o currículo do artista <a href="%s">clicando aqui</a>.', 'flaviotavares'), home_url('/wp-content/uploads/2013/06/curriculum-flavio-tavares.pdf')); ?></p>
 		</section>
 
 		<nav id="nav-biography">
