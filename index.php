@@ -10,6 +10,12 @@ head.ready('_picturefill', function(){
 			$bxSlider,
 			$bxViewPort,
 			$gallery = $('.gallery'),
+			resize = function() {
+				resizeBxViewPort($bxViewPort);
+				$gallery.find('img').each(function(){
+					resizeImage($(this));
+				});
+			},
 			resizeImage = function($el){
 				var win_w = $w.width(),
 					win_h = $w.height(),
@@ -36,13 +42,6 @@ head.ready('_picturefill', function(){
 			}
 		});
 
-		$w.resize(function(){
-			resizeBxViewPort($bxViewPort);
-			$gallery.find('img').each(function(){
-				resizeImage($(this));
-			});
-		});
-
 		$bxSlider = $gallery.bxSlider({
 			auto: true,
 			autoHover: true,
@@ -57,7 +56,10 @@ head.ready('_picturefill', function(){
 		$bxViewPort = $bxSlider.parent('.bx-viewport');
 		resizeBxViewPort($bxViewPort);
 
-		$(window).keydown(function(event){
+		$w
+		.load(resize)
+		.resize(resize)
+		.keydown(function(event){
 			var btnPrev = function() { $bxSlider.goToPrevSlide(); },
 				btnNext = function() { $bxSlider.goToNextSlide(); },
 				action = function(fn) {
