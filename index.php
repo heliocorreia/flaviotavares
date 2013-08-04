@@ -47,10 +47,12 @@ head.ready('_picturefill', function(){
 			autoHover: true,
 			captions: false,
 			controls: true,
+			easing: 'linear',
 			mode: 'horizontal',
 			pager: false,
 			pause: 5000,
-			randomStart: true
+			randomStart: true,
+			speed: 750
 		});
 
 		$bxViewPort = $bxSlider.parent('.bx-viewport');
