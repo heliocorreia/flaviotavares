@@ -21,8 +21,21 @@ body.page-template-t-contact-php {
 	}	
 
 	address {
-		@include pre(6);
-		@include span-columns(7);
+		$breakpoints: $media-layout-phone $media-layout-tablet;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include pre(3, 16);
+				@include post(3, 16);
+			}
+		}
+			
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include pre(6, 16);
+				@include span-columns(7, 16);
+			}
+		}
 
 		@include rhythm(1, 0, 0, 1);
 

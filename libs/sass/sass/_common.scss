@@ -2,16 +2,15 @@
  
 $total-columns  : 16;
 $column-width   : 60px;
-$gutter-width   : 20px;
+$gutter-width   : 0px;
 $grid-padding   : $gutter-width;
 
-$media-layout-480: 0 4 30em;
-$media-layout-600: 37.5em 6;
-$media-layout-768: 48em 8;
-$media-layout-992: 62em 12;
-$media-layout-1382: 86.375em 16;
+$media-layout-phone: 0 4 48em;           // <= 480px
+$media-layout-tablet: 48em 8 61.938em;   // 768px ~ 991px
+$media-layout-desktop: 62em 16 74.938em; // 992px ~ 1199px
+$media-layout-beyond-desktop: 75em 16;   // >= 1200px
 
-$media-layout-list: $media-layout-600 $media-layout-768 $media-layout-992 $media-layout-1382;
+$media-layout-list: $media-layout-phone $media-layout-tablet $media-layout-desktop $media-layout-beyond-desktop;
 
 @import "photoshop-drop-shadow";
 @import "susy";

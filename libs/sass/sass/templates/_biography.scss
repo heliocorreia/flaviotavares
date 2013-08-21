@@ -3,7 +3,12 @@ $biography-aside-font-size: 13px;
 // EXTENDS ////////////////////////////////////////////////////////////////////
 
 %biography-header {
-	@include span-columns(13 omega);
+	$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+	@for $i from 1 through length($breakpoints) {
+		@include at-breakpoint(nth($breakpoints, $i)) {
+			@include span-columns(13 omega, 16);
+		}
+	}
 }
 
 %biography-title {
@@ -25,9 +30,23 @@ $biography-aside-font-size: 13px;
 }
 
 %biography-content-columns {
-	@include pre(2);
-	@include pad(4);
-	@include span-columns(8);
+	$breakpoints: $media-layout-phone $media-layout-tablet;
+	$breakpoints-sprites: $breakpoint-600-sprites $breakpoint-768-sprites;
+	@for $i from 1 through length($breakpoints) {
+		@include at-breakpoint(nth($breakpoints, $i)) {
+			@include post(1, 16);
+			@include pre(1, 16);
+		}
+	}
+
+	$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+	@for $i from 1 through length($breakpoints) {
+		@include at-breakpoint(nth($breakpoints, $i)) {
+			@include pad(4);
+			@include post(2, 16);
+			@include pre(2, 16);
+		}
+	}
 }
 
 %biography-content-blockquote {
@@ -42,18 +61,21 @@ $biography-aside-font-size: 13px;
 
 // T BIOGRAPHY ////////////////////////////////////////////////////////////////
 
-body.page-template-t-biography-php {
-	background: {
-		color: $color-white;
-		image: image-url("bg-biography.jpg");
-		size: 100% auto;
+$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+@for $i from 1 through length($breakpoints) {
+	@include at-breakpoint(nth($breakpoints, $i)) {
+		body.page-template-t-biography-php {
+			background: {
+				color: $color-white;
+				image: image-url("bg-biography.jpg");
+				size: 100% auto;
+			}
+		}
 	}
 }
 
 #t-biography {
 	$figcaption-font-size: $biography-aside-font-size;
-
-	@include margin-leader(21);
 
 	background: {
 		attachment: fixed;
@@ -63,7 +85,15 @@ body.page-template-t-biography-php {
 		repeat: no-repeat;
 		size: cover;
 	}
-	border-bottom: rhythm(1) solid #9c8358;
+
+	$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+	@for $i from 1 through length($breakpoints) {
+		@include at-breakpoint(nth($breakpoints, $i)) {
+			@include margin-leader(21);
+
+			border-bottom: rhythm(1) solid #9c8358;
+		}
+	}
 
 	.header,
 	.content,
@@ -76,67 +106,87 @@ body.page-template-t-biography-php {
 
 	.header-container {
 		@extend .container;
-		@include padding-leader(7);
-		position: relative;
+
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include padding-leader(7);
+				position: relative;
+			}
+		}
 	}
 
 	.header-content {
 		@extend %biography-header;
 	}
 
-	.header-title {
+	.header-title,
+	.quote-by-author {
 		display: none;
 	}
 
-	.quote-by-author {
-		$color: #846d46;
+	$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+	@for $i from 1 through length($breakpoints) {
+		@include at-breakpoint(nth($breakpoints, $i)) {
+			.quote-by-author {
+				$color: #846d46;
 
-		@include box-sizing(border-box);
-		@include span-columns(5, 16);
+				@include box-sizing(border-box);
+				@include span-columns(5, 16);
 
-		background: $color-black;
-		color: $color-white;
-		left: columns(3);
-		margin: rhythm(13) 0 0 0;
-		padding: rhythm(2);
-		position: absolute;
-		text-align: center;
-		text-transform: uppercase;
-		top: - rhythm(22);
-		z-index: 10;
+				background: $color-black;
+				color: $color-white;
+				display: block;
+				left: columns(3);
+				margin: rhythm(13) 0 0 0;
+				padding: rhythm(2);
+				position: absolute;
+				text-align: center;
+				text-transform: uppercase;
+				top: - rhythm(22);
+				z-index: 10;
 
-		&:after {
-			$border-width: 1px;
+				&:after {
+					$border-width: 1px;
 
-			@include stretch;
+					@include stretch;
 
-			border: $border-width solid #333;
-			bottom: 2 * $border-width;
-			content: '';
-			margin: rhythm(1);
-			position: absolute;
-		}
+					border: $border-width solid #333;
+					bottom: 2 * $border-width;
+					content: '';
+					margin: rhythm(1);
+					position: absolute;
+				}
 
-		p {
-			@include adjust-font-size-to(18px);
-			@include rhythm;
+				p {
+					@include adjust-font-size-to(18px);
+					@include rhythm;
 
-			position: relative;
-			z-index: 1;
+					position: relative;
+					z-index: 1;
 
-			&:last-child {
-				@include adjust-font-size-to(14px);
-				color: $color;
+					&:last-child {
+						@include adjust-font-size-to(14px);
+						color: $color;
+					}
+				}
 			}
 		}
 	}
 
 	.header-slides {
-		@include span-columns(9 omega, 16);
+		position: relative;
 
-		position: absolute;
-		top: - rhythm(15);
-		right: 0;
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include span-columns(9 omega, 16);
+
+				position: absolute;
+				top: - rhythm(15);
+				right: 0;
+			}
+		}
 
 		img {
 			height: auto;
@@ -200,74 +250,86 @@ body.page-template-t-biography-php {
 	}
 
 	.content-main-aside {
-		.works {
-			@include span-columns(4 omega, 16);
+		display: none;
+	}
 
-			color: #666;
-			left: 0;
-			list-style: none;
-			position: absolute;
-			text-align: right;
-			top: 0;
-		}
+	$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+	@for $i from 1 through length($breakpoints) {
+		@include at-breakpoint(nth($breakpoints, $i)) {
+			.content-main-aside {
+				display: block;
 
-		.work-item {
-			@include rhythm(1, 0, 0, 1, $biography-aside-font-size);
-			padding-right: 1em;
+				.works {
+					@include span-columns(4 omega, 16);
 
-			&::before {
-				@extend %biography-aside-size;
+					color: #666;
+					left: 0;
+					list-style: none;
+					position: absolute;
+					text-align: right;
+					top: 0;
+				}
 
-				content: attr(data-index) ".";
-				position: absolute;
-				right: 0;
+				.work-item {
+					@include rhythm(1, 0, 0, 1, $biography-aside-font-size);
+					padding-right: 1em;
+
+					&::before {
+						@include adjust-font-size-to($biography-aside-font-size);
+
+						content: attr(data-index) ".";
+						position: absolute;
+						right: 0;
+					}
+				}
+
+				.work-figure {
+					left: 0;
+					position: absolute;
+					top: 0;
+
+					img {
+						width: 100%;
+						height: auto;
+					}
+
+					&::after {
+						@include adjust-font-size-to($biography-aside-font-size);
+
+						bottom: 0;
+						content: attr(data-index) ".";
+						left: 0;
+						margin-bottom: -2em;
+						position: absolute;
+					}
+				}
+
+				.work-title,
+				.work-specs,
+				.work-year {
+					margin: 0;
+				}
+
+				.work-specs,
+				.work-year {
+					@include adjust-font-size-to($biography-aside-font-size);
+				}
+
+				.work-title {
+					@include adjust-font-size-to($biography-aside-font-size);
+					color: #987e51;
+					font-weight: bold;
+				}
 			}
-		}
-
-		.work-figure {
-			left: 0;
-			position: absolute;
-			top: 0;
-
-			img {
-				width: 100%;
-				height: auto;
-			}
-
-			&::after {
-				@extend %biography-aside-size;
-
-				bottom: 0;
-				content: attr(data-index) ".";
-				left: 0;
-				margin-bottom: -2em;
-				position: absolute;
-			}
-		}
-
-		.work-title,
-		.work-specs,
-		.work-year {
-			margin: 0;
-		}
-
-		.work-specs,
-		.work-year {
-			@extend %biography-aside-size;
-		}
-
-		.work-title {
-			@extend %biography-aside-title;
 		}
 	}
 
 	// CONTENT BREAKPOINTS
 
-	$ratios: 0.25 0.5 0.75 1;
-	$breakpoints: $media-layout-600 $media-layout-768 $media-layout-992 $media-layout-1382;
+	$ratios: 0.25 0.5 0.80 0.98;
 	@for $i from 1 through length($ratios) {
 		$ratio: nth($ratios, $i);
-		$breakpoint: nth($breakpoints, $i);
+		$breakpoint: nth($media-layout-list, $i);
 		$work-figure-margin-ratio: 20px * $ratio;
 
 		$img1-height: image-height("img-biography-work-1.jpg") * $ratio;
@@ -316,14 +378,20 @@ body.page-template-t-biography-php {
 
 	.extras {
 		@include margin-leader(24);
-		@include padding-trailer(2);
+
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include padding-trailer(2);
+			}
+		}
 
 		&::before {
 			@include adjust-font-size-to($figcaption-font-size);
 			@include opacity(0.7);
 			@include padding-trailer(3);
+			@include post(2);
 			@include pre(6);
-			@include span-columns(8);
 
 			content: 'Photo: Antônio Augusto Fontes';
 			display: block;
@@ -345,8 +413,22 @@ body.page-template-t-biography-php {
 	}
 
 	.extra-quotes {
-		@include pre(6);
-		@include span-columns(8);
+		$breakpoints: $media-layout-phone $media-layout-tablet;
+		$breakpoints-sprites: $breakpoint-600-sprites $breakpoint-768-sprites;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include post(1, 16);
+				@include pre(1, 16);
+			}
+		}
+
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include post(2, 16);
+				@include pre(6, 16);
+			}
+		}
 
 		footer {
 			color: $color-black;
@@ -380,33 +462,30 @@ body.page-template-t-biography-php {
 	.reinado-figure {
 		@include trailer(2);
 
-		margin-left: - columns(3, 8);
-		margin-right: - columns(1, 8);
-
 		img {
 			height: auto;
 		}
-	}
 
-	$widths: image-width("reinado-do-sol-1.jpg") image-width("reinado-do-sol-2.jpg");
-	@for $i from 1 through length($widths) {
-		$width: nth($widths, $i);
+		$breakpoints: $media-layout-phone $media-layout-tablet;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				text-align: center;
+			}
+		}
 
-		.reinado-img#{$i} {
-			@include at-breakpoint($media-layout-480) {
-				width: $width * .25;
-			}
-			@include at-breakpoint($media-layout-600) {
-				width: $width * .40;
-			}
-			@include at-breakpoint($media-layout-768) {
-				width: $width * .55;
-			}
-			@include at-breakpoint($media-layout-992) {
-				width: $width * .70;
-			}
-			@include at-breakpoint($media-layout-1382) {
-				width: $width;
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				margin-left: - columns(3, 8);
+				margin-right: - columns(1, 8);
+
+				.reinado-img1 {
+					width: 62%;
+				}
+
+				.reinado-img2 {
+					width: 35%;
+				}
 			}
 		}
 	}
@@ -441,12 +520,10 @@ body.page-template-t-biography-php {
 	// NAV BIOGRAPHY /////////////////////////////////////////////////////////////
 
 	#nav-biography {
-		@extend %biography-content-columns;
 		@include leader(1);
 
 		a {
 			@include inline-block;
-
 			padding: 1em;
 		}
 
@@ -456,11 +533,27 @@ body.page-template-t-biography-php {
 		}
 
 		.menu-item {
-			@include inline-block;
-
-			border: 1px solid #999999;
+			border: solid #999999;
+			border-width: 1px 1px 0 1px;
+			display: block;
 			list-style: none;
-			margin: 0 .5em .5em 0;
+			text-align: center;
+		}
+
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include pad(4);
+				@include post(2, 16);
+				@include pre(2, 16);
+
+				.menu-item {
+					@include inline-block;
+
+					border-width: 1px;
+					margin: 0 .5em .5em 0;
+				}
+			}
 		}
 	}
 }

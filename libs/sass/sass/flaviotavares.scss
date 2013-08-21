@@ -14,43 +14,47 @@ html {
 	overflow-y: scroll;
 }
 
+//body {
+//	&::before {
+//		@include inline-block;
+//		@include opacity(.65);
+//
+//		content:"???";
+//		position: fixed;
+//		color: white;
+//		font-weight: bold;
+//		background: black;
+//		left: 0;
+//		bottom: 10%;
+//		padding: 1em;
+//		z-index: 100000;
+//
+//		$list: "0 ~ 480px" "480px ~ 768px" "768px ~ 992px" "1200px+";
+//		@for $i from 1 through length($list) {
+//			@include at-breakpoint(nth($media-layout-list, $i)) {
+//				content: nth($list, $i);
+//			}
+//		}
+//	}
+//}
+
 body {
 	@extend %font-quattrocento-sans;
-	@include adjust-font-size-to(10px);
 	@include stretch;
 
 	background: $color-black no-repeat top center fixed;
 	background-size: cover;
 
-	@include at-breakpoint($media-layout-600) {
-		@include adjust-font-size-to(12px);
-	}
-	@include at-breakpoint($media-layout-768) {
-		@include adjust-font-size-to(13px);
-	}
-	@include at-breakpoint($media-layout-992) {
-		@include adjust-font-size-to(14px);
-	}
-	@include at-breakpoint($media-layout-1382) {
-		@include adjust-font-size-to(16px);
+	$list: 16px 16px 14px 16px;
+	@for $i from 1 through length($list) {
+		@include at-breakpoint(nth($media-layout-list, $i)) {
+			@include adjust-font-size-to(nth($list, $i));
+		}
 	}
 }
 
 .container {
 	@include container;
-
-	@include at-breakpoint($media-layout-600) {
-		@include container;
-	}
-	@include at-breakpoint($media-layout-768) {
-		@include container;
-	}
-	@include at-breakpoint($media-layout-992) {
-		@include container;
-	}
-	@include at-breakpoint($media-layout-1382) {
-		@include container;
-	}
 
 	.debug-txt & {
 		@include debug-vertical-alignment;
@@ -58,6 +62,17 @@ body {
 
 	.debug-grid & {
 		@include susy-grid-background;
+	}
+}
+
+@include with-grid-settings($total-columns, $column-width, 20px, 20px) {
+	$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+	@for $i from 1 through length($breakpoints) {
+		@include at-breakpoint(nth($breakpoints, $i)) {
+			.container {
+				@include container;
+			}
+		}
 	}
 }
 

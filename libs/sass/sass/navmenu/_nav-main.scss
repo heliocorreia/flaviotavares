@@ -1,0 +1,288 @@
+%nav-main-with-sub-menu {
+	#nav-main {
+		.nav-menu {
+			.menu-item {
+				display: none;
+			}
+
+			.sub-menu .menu-item {
+				display: block;
+			}
+
+			.current-page-ancestor.menu-has-submenu {
+				border-bottom-width: 1px;
+				display: block;
+
+				& > a {
+					@include hide-text;
+					@include opacity(1);
+
+					position: relative;
+
+					&::before {
+						@include stretch;
+
+						content: '‹ Back';
+						text-align: center;
+						text-indent: 0;
+					}
+
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	&.top-page-slug-pt_br {
+		#nav-main {
+			.nav-menu {
+				.current-page-ancestor.menu-has-submenu {
+					& > a {
+						&::before {
+							content: '‹ Voltar';
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#nav-main {
+	display: none;
+
+	a {
+		color: $color-white;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $color-gold;
+		}
+	}
+}
+
+$breakpoints: $media-layout-phone $media-layout-tablet;
+$breakpoints-sprites: $breakpoint-600-sprites $breakpoint-768-sprites;
+@for $i from 1 through length($breakpoints) {
+	@include at-breakpoint(nth($breakpoints, $i)) {
+		#header {
+			background-color: $color-black;
+			position: relative;
+			z-index: 111;
+			padding: 0 2.5em;
+
+			.container {
+				position: relative;
+
+				&::before {
+					$logo: sprite-file(nth($breakpoints-sprites, $i), logo-menu);
+					$logo-height: image-height($logo);
+
+					@include inline-block;
+					@include get-sprite(nth($breakpoints-sprites, $i), logo-menu);
+
+					content: '';
+					margin: 20px 0;
+					position: absolute;
+					top: - ($logo-height / 2);
+				}
+			}
+		}
+
+		#nav-main {
+			border-top: 1px solid #808080;
+			display: block;
+			padding: 14px 0;
+
+			.nav-menu {
+				height: $base-line-height;
+				margin: 0;
+				padding: 0;
+				text-align: justify;
+
+				&::after {
+					content: '';
+					display: inline-block;
+					width: 100%;
+				}
+			}
+
+			.menu-item {
+				@include inline-block;
+			}
+
+			.sub-menu {
+				display: none;
+			}
+		}
+	}
+}
+
+$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+$breakpoints-sprites: $breakpoint-992-sprites $breakpoint-1382-sprites;
+@for $i from 1 through length($breakpoints) {
+	@include at-breakpoint(nth($breakpoints, $i)) {
+		#nav-main {
+			@include stretch-y;
+			@include span-columns(3);
+
+			display: block;
+			left: $grid-padding;
+			position: fixed;
+			z-index: 100;
+
+			&::before {
+				@include stretch;
+
+				border: 0 solid $color-black;
+				content: '';
+				display: block;
+				left: 0;
+				position: absolute;
+				top: 0;
+			}
+
+			&::after {
+				border: 0 solid $color-black;
+				content: '';
+				left: 0;
+				position: absolute;
+				bottom: 0;
+			}
+
+			a {
+				@include adjust-font-size-to(13px, 3);
+
+				display: block;
+				text-align: center;
+			}
+
+			& > div {
+				@include box-sizing(border-box);
+
+				display: table;
+				height: 100%;
+			}
+
+			.nav-menu {
+				@include box-sizing(border-box);
+
+				background-color: $color-black;
+				display: table-cell;
+				margin: 0;
+				list-style: none;
+				padding: 0;
+				vertical-align: middle;
+			}
+
+			.menu-item {
+				> a::after {
+					border: 0 solid #1a1a1a;
+					border-width: 1px 0 0 0;
+					content: '';
+					display: block;
+					margin: 0 41%;
+				}
+			}
+
+			.current-menu-item {
+				& > a {
+					@include opacity(0.2);
+
+					color: #e6e6e6;
+				}
+			}
+
+			.menu-has-submenu {
+				&::before,
+				.sub-menu {
+					display: none;
+				}
+			}
+
+			.current-page-ancestor,
+			.current-page-ancestor.menu-has-submenu {
+				&::before,
+				.sub-menu {
+					display: block;
+				}
+			}
+
+			.sub-menu,
+			.menu-has-submenu::before {
+				background-color: #333;
+				position: absolute;
+				width: $submenu-width;
+			}
+
+			.menu-has-submenu::before {
+				@include stretch-y;
+				@include photoshop-drop-shadow(180, 1px, 100%, 0, $color-black);
+
+				content: '';
+			}
+
+			.sub-menu {
+				list-style: none;
+				padding: 0;
+
+				.menu-item > a::after {
+					border-color: $color-white;
+				}
+			}
+
+			// navmain images
+			$menu-width: nth($menu-widths, $i);
+
+			$logo: sprite-file(nth($breakpoints-sprites, $i), logo-menu);
+			$logo-height: image-height($logo);
+			$logo-width: image-width($logo);
+			$rodape: sprite-file(nth($breakpoints-sprites, $i), rodape-menu);
+			$rodape-height: image-height($rodape);
+			$rodape-width: image-width($rodape);
+
+			$logo-border-bottom: round((lines-for-font-size($logo-height) * $base-line-height) - $logo-height);
+			$logo-border-left: round(($menu-width - $logo-width) / 2);
+			$logo-border-right: $menu-width - $logo-width - $logo-border-left;
+			$logo-border-top: 1 * $base-line-height;
+
+			$rodape-border-bottom: round((lines-for-font-size($rodape-height) * $base-line-height) - $rodape-height);
+			$rodape-border-left: round(($menu-width - $rodape-width) / 2);
+			$rodape-border-right: $menu-width - $rodape-width - $rodape-border-left;
+			$rodape-border-top: 1 * $base-line-height;
+
+			$logo-outer-height: $logo-border-top + $logo-height + $logo-border-bottom;
+			$logo-outer-width: $logo-border-left + $logo-width + $logo-border-right;
+			$rodape-outer-height: $rodape-border-top + $rodape-height + $rodape-border-bottom;
+			$rodape-outer-width: $rodape-border-left + $rodape-width + $rodape-border-right;
+
+			&::before {
+				@include get-sprite(nth($breakpoints-sprites, $i), logo-menu);
+				border-width: $logo-border-top $logo-border-right $logo-border-bottom $logo-border-left;
+			}
+
+			&::after {
+				@include get-sprite(nth($breakpoints-sprites, $i), rodape-menu);
+				border-width: $rodape-border-top $rodape-border-right $rodape-border-bottom $rodape-border-left;
+			}
+
+			& > div {
+				padding-bottom: $rodape-outer-height;
+				padding-top: $logo-outer-height;
+				width: $menu-width;
+			}
+
+			.sub-menu,
+			.menu-has-submenu::before {
+				left: $logo-outer-width;
+			}
+
+			.menu-has-submenu::before {
+				margin-top: - $logo-outer-height;
+			}
+		}
+	}
+}
