@@ -45,12 +45,12 @@ body {
 	background: $color-black no-repeat top center fixed;
 	background-size: cover;
 
-	$list: 16px 16px 14px 16px;
-	@for $i from 1 through length($list) {
-		@include at-breakpoint(nth($media-layout-list, $i)) {
-			@include adjust-font-size-to(nth($list, $i));
-		}
-	}
+//	$list: 16px 16px 14px 16px;
+//	@for $i from 1 through length($list) {
+//		@include at-breakpoint(nth($media-layout-list, $i)) {
+//			@include adjust-font-size-to(nth($list, $i));
+//		}
+//	}
 }
 
 .container {
