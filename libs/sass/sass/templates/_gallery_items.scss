@@ -46,9 +46,21 @@ body.page-template-t-gallery-items-php {
 
 #t-gallery-items {
 	.content {
-		@include span-columns($gallery-grid-coluns omega);
-
 		overflow: hidden;
+
+		$breakpoints: $media-layout-phone $media-layout-tablet;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include pre(1, 16);
+			}
+		}
+
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include span-columns($gallery-grid-coluns omega);
+			}
+		}
 	}
 
 	.gallery {
@@ -157,16 +169,21 @@ body.page-template-t-gallery-items-php {
 	.bx-wrapper {
 		@extend %gallery-even;
 
-		.bx-prev {
-			left: $submenu-width;
-		}
-
 		.gallery-item {
 			float: none !important;
 		}
 
 		.gallery-caption-outer {
 			visibility: visible;
+		}
+
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				.bx-prev {
+					left: $submenu-width;
+				}
+			}
 		}
 	}
 }

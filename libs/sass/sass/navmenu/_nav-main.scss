@@ -1,47 +1,52 @@
 %nav-main-with-sub-menu {
-	#nav-main {
-		.nav-menu {
-			.menu-item {
-				display: none;
-			}
-
-			.sub-menu .menu-item {
-				display: block;
-			}
-
-			.current-page-ancestor.menu-has-submenu {
-				border-bottom-width: 1px;
-				display: block;
-
-				& > a {
-					@include hide-text;
-					@include opacity(1);
-
-					position: relative;
-
-					&::before {
-						@include stretch;
-
-						content: '‹ Back';
-						text-align: center;
-						text-indent: 0;
+	$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+	@for $i from 1 through length($breakpoints) {
+		@include at-breakpoint(nth($breakpoints, $i)) {
+			#nav-main {
+				.nav-menu {
+					.menu-item {
+						display: none;
 					}
 
-					&::after {
-						display: none;
+					.sub-menu .menu-item {
+						display: block;
+					}
+
+					.current-page-ancestor.menu-has-submenu {
+						border-bottom-width: 1px;
+						display: block;
+
+						& > a {
+							@include hide-text;
+							@include opacity(1);
+
+							position: relative;
+
+							&::before {
+								@include stretch;
+
+								content: '‹ Back';
+								text-align: center;
+								text-indent: 0;
+							}
+
+							&::after {
+								display: none;
+							}
+						}
 					}
 				}
 			}
-		}
-	}
 
-	&.top-page-slug-pt_br {
-		#nav-main {
-			.nav-menu {
-				.current-page-ancestor.menu-has-submenu {
-					& > a {
-						&::before {
-							content: '‹ Voltar';
+			&.top-page-slug-pt_br {
+				#nav-main {
+					.nav-menu {
+						.current-page-ancestor.menu-has-submenu {
+							& > a {
+								&::before {
+									content: '‹ Voltar';
+								}
+							}
 						}
 					}
 				}
