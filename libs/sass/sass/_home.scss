@@ -41,7 +41,7 @@ body.home {
 	}
 
 	.nav-menu {
-		@include stretch($offset-bottom:0, $offset-top:false);
+		@include stretch($offset-bottom:15px, $offset-top:false);
 
 		padding: 0;
 
@@ -55,20 +55,19 @@ body.home {
 			width: logo-sprite-width(white-big);
 			margin: 0 auto;
 			position: relative;
-			top: -$height;
+			top: -15px;
 		}
 	}
 
 	.menu-item {
-		@include rhythm(1, 0, 0, 1);
-
 		display: block;
 		text-align: center;
 		text-transform: uppercase;
+		margin: 0.75em 0;
 		position: relative;
 
 		& + .menu-item {
-			@include padding-leader(1);
+			padding-top: 0.75em;
 		}
 
 		& + .menu-item::before {
