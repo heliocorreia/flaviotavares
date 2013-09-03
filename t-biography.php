@@ -102,6 +102,10 @@ head.ready(function(){
 	</article>
 
 	<aside class="extras">
+		<section class="extra-cover">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/bg-biography-2.jpg" width="100%" />
+		</section>
+
 		<section class="extra-quotes">
 			<h1 class="extra-quotes-title"><?php _e('Citações', 'flaviotavares'); ?></h1>
 			<blockquote class="extra-quote">

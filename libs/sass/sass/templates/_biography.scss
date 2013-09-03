@@ -487,11 +487,10 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 	// EXTRAS ////////////////////////////////////////////////////////////////////
 
 	.extras {
-		@include margin-leader(24);
-
 		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 		@for $i from 1 through length($breakpoints) {
 			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include margin-leader(24);
 				@include padding-trailer(2);
 			}
 		}
@@ -523,6 +522,15 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 				.top-page-slug-pt_br &::before {
 					content: 'Foto: Antônio Augusto Fontes';
 				}
+			}
+		}
+	}
+
+	.extra-cover {
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				display: none;
 			}
 		}
 	}
