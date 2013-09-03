@@ -79,6 +79,7 @@ function my_enqueue_cssjs(){
 		wp_register_script($k, $base . $v);
 	}
 
+	wp_enqueue_script('_picturefill');
 	wp_enqueue_script('_jquery');
 	wp_enqueue_script('_verticalcenter');
 
@@ -86,7 +87,6 @@ function my_enqueue_cssjs(){
 		wp_dequeue_script('_verticalcenter');
 
 		wp_enqueue_script('_bxslider');
-		wp_enqueue_script('_picturefill');
 	}
 
 	if (is_page_template('t-biography.php')) {
