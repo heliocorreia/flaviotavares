@@ -97,21 +97,23 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 #t-biography {
 	$figcaption-font-size: $biography-aside-font-size;
 
-	background: {
-		attachment: fixed;
-		color: $color-white;
-		image: image-url("bg-biography-2.jpg");
-		position: center center;
-		repeat: no-repeat;
-		size: cover;
-	}
-
 	$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 	@for $i from 1 through length($breakpoints) {
 		@include at-breakpoint(nth($breakpoints, $i)) {
 			@include margin-leader(21);
 
 			border-bottom: rhythm(1) solid #9c8358;
+		}
+	}
+
+	@include at-breakpoint($media-layout-beyond-desktop) {
+		background: {
+			attachment: fixed;
+			color: $color-white;
+			image: image-url("bg-biography-2.jpg");
+			position: center center;
+			repeat: no-repeat;
+			size: cover;
 		}
 	}
 
@@ -486,13 +488,41 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 
 	// EXTRAS ////////////////////////////////////////////////////////////////////
 
-	.extras {
+	.extras::before,
+	.extra-cover::after {
+		@include adjust-font-size-to($figcaption-font-size);
+		@include opacity(0.7);
+		@include padding-trailer(3);
+
+		content: 'Photo: Antônio Augusto Fontes';
+		display: none;
+		text-transform: uppercase;
+
+		.top-page-slug-pt_br & {
+			content: 'Foto: Antônio Augusto Fontes';
+		}
+
+		$breakpoints: $media-layout-phone $media-layout-tablet $media-layout-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include post(1, 16);
+				@include pre(1, 16);
+			}
+		}
+
 		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 		@for $i from 1 through length($breakpoints) {
 			@include at-breakpoint(nth($breakpoints, $i)) {
-				@include margin-leader(24);
-				@include padding-trailer(2);
+				@include post(2, 16);
+				@include pre(6, 16);
 			}
+		}
+	}
+
+	.extras {
+		@include at-breakpoint($media-layout-beyond-desktop) {
+			@include margin-leader(24);
+			@include padding-trailer(2);
 		}
 
 		a {
@@ -504,32 +534,28 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 			}
 		}
 
-		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
-		@for $i from 1 through length($breakpoints) {
-			@include at-breakpoint(nth($breakpoints, $i)) {
-				&::before {
-					@include adjust-font-size-to($figcaption-font-size);
-					@include opacity(0.7);
-					@include padding-trailer(3);
-					@include post(2);
-					@include pre(6);
-
-					content: 'Photo: Antônio Augusto Fontes';
-					display: block;
-					text-transform: uppercase;
-				}
-
-				.top-page-slug-pt_br &::before {
-					content: 'Foto: Antônio Augusto Fontes';
-				}
+		@include at-breakpoint($media-layout-beyond-desktop) {
+			&::before {
+				display: block;
 			}
 		}
 	}
 
 	.extra-cover {
-		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		$breakpoints: $media-layout-phone $media-layout-tablet $media-layout-desktop;
 		@for $i from 1 through length($breakpoints) {
 			@include at-breakpoint(nth($breakpoints, $i)) {
+				&::after {
+					display: block;
+				}
+			}
+		}
+
+		img {
+			height: auto;
+			width: 100%;
+
+			@include at-breakpoint($media-layout-beyond-desktop) {
 				display: none;
 			}
 		}

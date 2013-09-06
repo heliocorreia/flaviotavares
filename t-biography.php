@@ -103,7 +103,14 @@ head.ready(function(){
 
 	<aside class="extras">
 		<section class="extra-cover">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/bg-biography-2.jpg" width="100%" />
+			<span data-picture>
+			    <span data-src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/bg-biography-2-smart.jpg"></span>
+			    <span data-src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/bg-biography-2-tablet.jpg" data-media="(min-width: 768px)"></span>
+			    <span data-src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/bg-biography-2-desktop.jpg" data-media="(min-width: 992px)"></span>
+			    <noscript>
+			        <img src="<?php echo get_stylesheet_directory_uri(); ?>/media/img/bg-biography-2-smart.jpg" />
+			    </noscript>
+			</span>
 		</section>
 
 		<section class="extra-quotes">
