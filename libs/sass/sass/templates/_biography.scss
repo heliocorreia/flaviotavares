@@ -100,7 +100,7 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 	$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 	@for $i from 1 through length($breakpoints) {
 		@include at-breakpoint(nth($breakpoints, $i)) {
-			@include margin-leader(21);
+			@include margin-leader(20);
 
 			border-bottom: rhythm(1) solid #9c8358;
 		}
@@ -165,7 +165,7 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 				position: absolute;
 				text-align: center;
 				text-transform: uppercase;
-				top: - rhythm(22);
+				top: - rhythm(21);
 				z-index: 10;
 
 				&:after {
@@ -207,7 +207,7 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 				@include span-columns(9 omega, 16);
 
 				position: absolute;
-				top: - rhythm(15);
+				top: - rhythm(14);
 				right: 0;
 			}
 		}
