@@ -160,7 +160,7 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 				color: $color-white;
 				display: block;
 				left: columns(3);
-				margin: rhythm(13) 0 0 0;
+				margin: rhythm(12) 0 0 0;
 				padding: rhythm(2);
 				position: absolute;
 				text-align: center;
@@ -181,7 +181,7 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 				}
 
 				p {
-					@include adjust-font-size-to(18px);
+					@include adjust-font-size-to(17px);
 					@include rhythm;
 
 					position: relative;
