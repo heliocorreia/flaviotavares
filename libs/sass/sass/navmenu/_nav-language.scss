@@ -1,4 +1,8 @@
 #nav-language {
+	.nav-menu {
+		padding: 0;
+	}
+
 	.menu-item {
 		a {
 			@include hide-text;
@@ -56,9 +60,10 @@ $breakpoints-sprites: $breakpoint-992-sprites $breakpoint-1382-sprites;
 			z-index: 120;
 
 			.nav-menu {
+				$lang: sprite-file(nth($breakpoints-sprites, $i), lang-br);
+
 				margin: 0;
-				padding-top: language-sprite-height(br);
-				position: relative;
+				padding-top: image-height($lang);
 
 				&:hover {
 					@include clearfix;
