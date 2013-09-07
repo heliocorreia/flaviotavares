@@ -79,6 +79,14 @@ $breakpoints-sprites: $breakpoint-600-sprites $breakpoint-768-sprites;
 			z-index: 111;
 			padding: 0 2.5em;
 
+			.page-template-t-videos-php &,
+			.page-template-t-contact-php &,
+			.page-template-t-gallery-php &,
+			.page-template-t-gallery-items-php & {
+				@include stretch-x;
+				top: 0;
+			}
+
 			.container {
 				position: relative;
 
