@@ -33,24 +33,24 @@ $top_page_slug = my_top_parent_slug();
 <div id="doc">
 	<?php if (!is_home()): ?>
 	<header id="header">
+		<input type="checkbox" id="nav-main-button">
+		<label for="nav-main-button" onclick></label>
 		<div class="container">
-			<nav id="nav-language">
-				<?php wp_nav_menu(array(
-					'theme_location' => 'language',
-					'container' => false,
-					'menu_class' => 'nav-menu',
-					'depth' => 1,
-				)); ?>
-			</nav>
 			<nav id="nav-main">
-				<input type="checkbox" id="nav-main-button">
-				<label for="nav-main-button" onclick></label>
 				<?php wp_nav_menu(array(
 					'menu' => 'main-' . $top_page_slug,
 					'theme_location' => 'main',
 					'container' => 'div',
 					'menu_class' => 'nav-menu',
 					'depth' => 2,
+				)); ?>
+			</nav>
+			<nav id="nav-language">
+				<?php wp_nav_menu(array(
+					'theme_location' => 'language',
+					'container' => false,
+					'menu_class' => 'nav-menu',
+					'depth' => 1,
 				)); ?>
 			</nav>
 		</div>

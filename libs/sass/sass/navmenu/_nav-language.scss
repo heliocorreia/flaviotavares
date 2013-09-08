@@ -2,26 +2,59 @@
 	.nav-menu {
 		padding: 0;
 	}
-
-	.menu-item {
-		a {
-			@include hide-text;
-			@include inline-block;
-		}
-	}
 }
 
-//$breakpoints:  $media-layout-tablet;
-//$breakpoints-sprites: $breakpoint-600-sprites $breakpoint-768-sprites;
 @include at-breakpoint($media-layout-phone) {
+	#nav-language {
+		.nav-menu {
+			@include clearfix;
+
+			margin: 0;
+			padding: 0;
+		}
+
+		.menu-item {
+			@include box-sizing(border-box);
+			@include span-columns(6, 12);
+			border: 0 solid #4d4d4d;
+			border-bottom-width: 1px;
+			text-align: center;
+
+			&:nth-child(2n + 2) {
+				@include omega;
+				border-left-width: 1px;
+			}
+		}
+
+		.current-menu-item,
+		.current-page-ancestor {
+			a {
+				@include opacity(.35);
+			}
+		}
+
+		a {
+			color: $color-white;
+			display: block;
+			padding: 1em;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $color-gold;
+			}
+		}
+	}
 }
 
 $breakpoints: $media-layout-tablet null;
 $breakpoints-sprites: $breakpoint-768-sprites null;
 @for $i from 1 through 1 {
 	@include at-breakpoint(nth($breakpoints, $i)) {
-
 		#nav-language {
+			@include stretch-x;
+			top: 0;
+
 			.nav-menu {
 				margin: 0;
 				padding: 8px 0;
@@ -31,10 +64,15 @@ $breakpoints-sprites: $breakpoint-768-sprites null;
 
 			.menu-item {
 				@include inline-block;
-				padding: 8px;
+				padding: 2px 8px;
 
 				& + .menu-item {
 					border-left: 1px solid #808080;
+				}
+
+				a {
+					@include hide-text;
+					@include inline-block;
 				}
 			}
 
@@ -82,6 +120,11 @@ $breakpoints-sprites: $breakpoint-992-sprites $breakpoint-1382-sprites;
 			.menu-item {
 				display: none;
 				list-style: none;
+
+				a {
+					@include hide-text;
+					@include inline-block;
+				}
 			}
 
 			.current-menu-item,

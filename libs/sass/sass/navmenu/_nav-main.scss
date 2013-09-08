@@ -55,6 +55,12 @@
 	}
 }
 
+#header {
+	input, label {
+		display: none;
+	}
+}
+
 #nav-main {
 	display: none;
 
@@ -67,10 +73,6 @@
 			color: $color-gold;
 		}
 	}
-
-	input, label {
-		display: none;
-	}
 }
 
 @include at-breakpoint($media-layout-phone) {
@@ -81,12 +83,9 @@
 
 	$header-horizontal-padding: 1em;
 
-	#nav-language { display: none; }
-
 	#header {
 		@include stretch-x;
 		background-color: $color-black;
-		padding: 0 $header-horizontal-padding;
 		position: relative;
 		top: 0;
 		z-index: 111;
@@ -99,13 +98,13 @@
 				@include get-sprite($breakpoint-600-sprites, logo-menu);
 
 				content: '';
-				margin: $logo-margin 0;
+				margin: $logo-margin 0 $logo-margin $header-horizontal-padding;
 			}
 		}
-	}
 
-	#nav-main {
-		display: block;
+		nav {
+			display: none;
+		}
 
 		label {
 			$offset: 10px;
@@ -139,16 +138,19 @@
 			}
 		}
 
-		.nav-menu {
-			@include stretch-x;
-			top: $logo-height;
-			background: $color-black;
-			display: none;
-			padding: 0;
-		}
-
-		input:checked ~ div .nav-menu {
+		input:checked ~ div nav {
 			display: block;
+		}
+	}
+
+	#nav-main {
+		display: block;
+
+		.nav-menu {
+			background: $color-black;
+			margin: 0;
+			padding: 0;
+			top: $logo-height;
 		}
 
 		.menu-item {
@@ -186,11 +188,16 @@ $breakpoints: $media-layout-tablet null;
 $breakpoints-sprites: $breakpoint-768-sprites null;
 @for $i from 1 through 1 {
 	@include at-breakpoint(nth($breakpoints, $i)) {
+		$logo: sprite-file(nth($breakpoints-sprites, $i), logo-menu);
+		$logo-height: image-height($logo);
+		$logo-margin: 20px;
+		$logo-full-height: $logo-height + $logo-margin;
+
 		#header {
 			background-color: $color-black;
+			padding: 0 2.5em;
 			position: relative;
 			z-index: 111;
-			padding: 0 2.5em;
 
 			.page-template-t-videos-php &,
 			.page-template-t-contact-php &,
@@ -202,16 +209,14 @@ $breakpoints-sprites: $breakpoint-768-sprites null;
 
 			.container {
 				position: relative;
+				padding-top: $logo-full-height;
 
 				&::before {
-					$logo: sprite-file(nth($breakpoints-sprites, $i), logo-menu);
-					$logo-height: image-height($logo);
-
 					@include inline-block;
 					@include get-sprite(nth($breakpoints-sprites, $i), logo-menu);
 
 					content: '';
-					margin: 20px 0;
+					margin: $logo-margin 0;
 					position: absolute;
 					top: - ($logo-height / 2);
 				}
@@ -221,7 +226,8 @@ $breakpoints-sprites: $breakpoint-768-sprites null;
 		#nav-main {
 			border-top: 1px solid #808080;
 			display: block;
-			padding: 14px 0;
+			margin-top: $logo-margin / 2;
+			padding: 14px 0 14px 0;
 
 			.nav-menu {
 				height: $base-line-height;
