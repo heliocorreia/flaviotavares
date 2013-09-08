@@ -180,8 +180,10 @@ body.page-template-t-gallery-items-php {
 		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 		@for $i from 1 through length($breakpoints) {
 			@include at-breakpoint(nth($breakpoints, $i)) {
-				.bx-prev {
-					left: $submenu-width;
+				.bx-controls {
+					.bx-prev {
+						margin-left: $submenu-width;
+					}
 				}
 			}
 		}

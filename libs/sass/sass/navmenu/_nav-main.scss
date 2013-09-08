@@ -257,6 +257,8 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 $breakpoints-sprites: $breakpoint-992-sprites $breakpoint-1382-sprites;
 @for $i from 1 through length($breakpoints) {
 	@include at-breakpoint(nth($breakpoints, $i)) {
+		$menu-width: nth($menu-widths, $i);
+
 		#nav-main {
 			@include stretch-y;
 			@include span-columns(3);
@@ -367,8 +369,6 @@ $breakpoints-sprites: $breakpoint-992-sprites $breakpoint-1382-sprites;
 			}
 
 			// navmain images
-			$menu-width: nth($menu-widths, $i);
-
 			$logo: sprite-file(nth($breakpoints-sprites, $i), logo-menu);
 			$logo-height: image-height($logo);
 			$logo-width: image-width($logo);
@@ -414,6 +414,14 @@ $breakpoints-sprites: $breakpoint-992-sprites $breakpoint-1382-sprites;
 
 			.menu-has-submenu::before {
 				margin-top: - $logo-outer-height;
+			}
+		}
+
+		.bx-wrapper {
+			.bx-controls {
+				.bx-prev {
+					left: $menu-width;
+				}
 			}
 		}
 	}

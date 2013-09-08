@@ -12,10 +12,6 @@
 		z-index: 1;
 	}
 
-	.bx-controls {
-		@include stretch;
-	}
-
 	.bx-prev,
 	.bx-next {
 		@include hide-text;
