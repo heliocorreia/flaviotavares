@@ -33,8 +33,8 @@ $top_page_slug = my_top_parent_slug();
 <div id="doc">
 	<?php if (!is_home()): ?>
 	<header id="header">
-		<input type="checkbox" id="nav-main-button">
 		<label for="nav-main-button" onclick></label>
+		<input type="checkbox" id="nav-main-button">
 		<div class="container">
 			<nav id="nav-main">
 				<?php wp_nav_menu(array(
