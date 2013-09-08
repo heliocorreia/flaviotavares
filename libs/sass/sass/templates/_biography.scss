@@ -221,6 +221,35 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 			@extend %base-adjust-font-size;
 		}
 
+		.bx-controls {
+			@include stretch-x;
+			@include rhythm(0, 0, 2, 0);
+			bottom: 0;
+			margin: 0;
+			text-align: center;
+			z-index: 1;
+		}
+
+		.bx-pager-item {
+			@include inline-block;
+			margin: 0 0.25em;
+		}
+
+		.bx-pager-link {
+			$size: 0.75em;
+			@include border-radius(50%);
+			@include hide-text;
+			@include opacity(.4);
+			background: black;
+			display: block;
+			height: $size;
+			width: $size;
+
+			&.active {
+				background: white;
+			}
+		}
+
 		$breakpoints: $media-layout-phone $media-layout-tablet;
 		@for $i from 1 through length($breakpoints) {
 			@include at-breakpoint(nth($breakpoints, $i)) {
@@ -237,6 +266,10 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 					float: left;
 					text-align: center;
 					width: 100%;
+				}
+
+				.bx-controls {
+					@include rhythm(0, 0, 5, 0);
 				}
 			}
 		}
