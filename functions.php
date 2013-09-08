@@ -58,7 +58,6 @@ function my_enqueue_cssjs(){
 		// '_fontOvo' 				=> 'http://fonts.googleapis.com/css?family=Ovo',
 		'_fontQuattrocentoSans' => 'http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,700italic,700,400',
 		'_tosros'				=> $base . '/media/js/tosros/jquery.tosrus.css',
-
 	);
 
 	foreach($styles as $k => $v) {
@@ -72,6 +71,7 @@ function my_enqueue_cssjs(){
 		'_tosros'			=> '/media/js/tosros/jquery.tosrus-1.3.1-packed.js',
 		'_picturefill'		=> '/media/js/picturefill.js',
 		'_verticalcenter'	=> '/media/js/jquery.responsive-vertical-center.js',
+		'_hammer'			=> '/media/js/hammer/jquery.hammer.min.js',
 	);
 
 	foreach($scripts as $k => $v) {
@@ -109,6 +109,8 @@ function my_enqueue_cssjs(){
 	if (is_page_template('t-gallery-items.php')) {
 		wp_enqueue_style('_tosros');
 		wp_enqueue_script('_tosros');
+
+		wp_enqueue_script('_hammer');
 
 		wp_enqueue_style('_bxslider');
 		wp_enqueue_script('_bxslider');

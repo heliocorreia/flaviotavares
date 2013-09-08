@@ -35,24 +35,26 @@ head.ready('_jquery', function(){
 		$('.sub-menu').responsiveVerticalCenter({attribute:'top',parentSelector:'body'});
 		$('#t-gallery-items .content').responsiveVerticalCenter({parentSelector:'body'});
 
-		head.ready('_tosros', function(){
-			$gallery.find('a').each(function(i, el){
-				var $el = $(el),
-					title = $el.data('title') + '. ' + $el.data('caption');
-				title = title.replace(/<br \/>\n*/g, ' ');
-				$el.attr('title', title);
-			}).tosrus({
-				// desktop and touch
-				caption: ['title'],
-				anchors: {
-					zoomIcon: false
-				}
-			}, {
-				// desktop only
-				keys: true,
-				close: {
-					key: true
-				}
+		head.ready('_hammer', function(){
+			head.ready('_tosros', function(){
+				$gallery.find('a').each(function(i, el){
+					var $el = $(el),
+						title = $el.data('title') + '. ' + $el.data('caption');
+					title = title.replace(/<br \/>\n*/g, ' ');
+					$el.attr('title', title);
+				}).tosrus({
+					// desktop and touch
+					caption: ['title'],
+					anchors: {
+						zoomIcon: false
+					}
+				}, {
+					// desktop only
+					keys: true,
+					close: {
+						key: true
+					}
+				});
 			});
 		});
 	});
