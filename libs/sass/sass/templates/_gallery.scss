@@ -73,10 +73,12 @@ body.page-template-t-gallery-php {
 	}
 
 	img {
-		@include transform-origin(0, 0);
-		@include transition-duration(.25s);
-		@include transition-property(transform);
-		@include transition-timing-function(ease-in);
+		.no-touch & {
+			@include transform-origin(0, 0);
+			@include transition-duration(.25s);
+			@include transition-property(transform);
+			@include transition-timing-function(ease-in);
+		}
 
 		float: left;
 	}

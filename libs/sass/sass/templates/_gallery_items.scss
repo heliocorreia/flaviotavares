@@ -75,7 +75,7 @@ body.page-template-t-gallery-items-php {
 
 			color: $color-white;
 
-			&:hover {
+			.no-touch &:hover {
 				@include opacity(0.2);
 			    @include transition-property(opacity);
 			    @include transition-duration(.25s);
