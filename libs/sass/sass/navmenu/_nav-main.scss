@@ -67,11 +67,124 @@
 			color: $color-gold;
 		}
 	}
+
+	input, label {
+		display: none;
+	}
 }
 
-$breakpoints: $media-layout-phone $media-layout-tablet;
-$breakpoints-sprites: $breakpoint-600-sprites $breakpoint-768-sprites;
-@for $i from 1 through length($breakpoints) {
+@include at-breakpoint($media-layout-phone) {
+	$logo: sprite-file($breakpoint-600-sprites, logo-menu);
+	$logo-height: image-height($logo);
+	$logo-margin: 10px;
+	$logo-full-height: $logo-height + $logo-margin;
+
+	$header-horizontal-padding: 1em;
+
+	#nav-language { display: none; }
+
+	#header {
+		@include stretch-x;
+		background-color: $color-black;
+		padding: 0 $header-horizontal-padding;
+		position: relative;
+		top: 0;
+		z-index: 111;
+
+		.container {
+			min-height: $logo-full-height;
+
+			&::before {
+				@include inline-block;
+				@include get-sprite($breakpoint-600-sprites, logo-menu);
+
+				content: '';
+				margin: $logo-margin 0;
+			}
+		}
+	}
+
+	#nav-main {
+		display: block;
+
+		label {
+			$offset: 10px;
+			@include inline-block;
+			border-left: 1px solid #808080;
+			color: $color-white;
+			line-height: $logo-full-height - (2 * $offset);
+			margin-top: $offset + 4px; // 4px: logo image spacing
+			padding-left: 0.5em;
+			position: absolute;
+			right: $header-horizontal-padding;
+			top: 0;
+			user-select: none;
+
+			&::before,
+			&::after {
+				@include inline-block;
+			}
+
+			&::before {
+			    border-bottom: 0.125em solid #262626;
+				border-top: 0.375em double #262626;
+				content: "";
+				height: 0.125em;
+				width: 1em;
+			}
+
+			&::after {
+				content: "MENU";
+				margin-left: 0.5em;
+			}
+		}
+
+		.nav-menu {
+			@include stretch-x;
+			top: $logo-height;
+			background: $color-black;
+			display: none;
+			padding: 0;
+		}
+
+		input:checked ~ div .nav-menu {
+			display: block;
+		}
+
+		.menu-item {
+			border-bottom: 1px solid #3c3c3c;
+
+			a {
+				$padding: 1em;
+				$font-size: 1em;
+				$line-height: 1em;
+
+				display: block;
+				font-size: $font-size;
+				line-height: $line-height;
+				padding: $padding;
+				position: relative;
+
+				&::after {
+					content: "\203A"; // ›
+					font-size: 2em;
+					line-height: 1.5em;
+					position: absolute;
+					right: $padding;
+					top: 0;
+				}
+			}
+		}
+
+		.sub-menu {
+			display: none;
+		}
+	}
+}
+
+$breakpoints: $media-layout-tablet null;
+$breakpoints-sprites: $breakpoint-768-sprites null;
+@for $i from 1 through 1 {
 	@include at-breakpoint(nth($breakpoints, $i)) {
 		#header {
 			background-color: $color-black;

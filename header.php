@@ -43,6 +43,8 @@ $top_page_slug = my_top_parent_slug();
 				)); ?>
 			</nav>
 			<nav id="nav-main">
+				<input type="checkbox" id="nav-main-button">
+				<label for="nav-main-button" onclick></label>
 				<?php wp_nav_menu(array(
 					'menu' => 'main-' . $top_page_slug,
 					'theme_location' => 'main',
