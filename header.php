@@ -17,7 +17,7 @@ $top_page_slug = my_top_parent_slug();
 			labels = ['smart', 'tablet', 'tablet', 'desktop', 'original'],
 			breakpoints = [320, 600, 768, 1024, 1025],
 			length = breakpoints.length,
-			selected = breakpoints[0];
+			selected = labels[0];
 
 		for (i=0; i<length; i++) {
 			if (breakpoints[i] < win_w) {
