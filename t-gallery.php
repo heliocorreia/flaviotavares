@@ -15,7 +15,9 @@ Template Name: Galeria
 <script>
 head.ready('_verticalcenter', function(){
 	var $content = $('#t-gallery').find('.content');
-	$content.responsiveVerticalCenter({parentSelector:'body'});
+	if ($('html').hasClass('gt-640')) {
+		$content.responsiveVerticalCenter({parentSelector:'body'});
+	}
 	$content.find('a').each(function(){
 		var $that = $(this);
 		$that.attr('rel', $that.find('img').first().attr('alt'));
