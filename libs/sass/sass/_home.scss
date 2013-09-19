@@ -1,6 +1,4 @@
 body.home {
-	$cavalo-offset: 72px;
-
 	background-color: $color-black;
 	background-image: image-url("bg-home.jpg");
 
@@ -21,41 +19,64 @@ body.home {
 	}
 
 	#nav-lang {
+		$padding: 40px;
+
+		@include box-sizing(border-box);
+
 		background: #000;
 		border: 1px solid #333;
 		display: inline-block;
-		height: 412px;
-		margin-top: $cavalo-offset;
 		position: relative;
-		width: 480px;
 
 		&::before {
-			@include cavalo-sprite(home);
-
 			content: '';
 			display: block;
-			height: cavalo-sprite-height(home);
-			width: cavalo-sprite-width(home);
-			margin: -$cavalo-offset auto 0 auto;
+		}
+
+		$breakpoints: $media-layout-phone $media-layout-tablet $media-layout-desktop $media-layout-beyond-desktop;
+		$breakpoints-sprites: $breakpoint-600-sprites $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				$cavalo: sprite-file(nth($breakpoints-sprites, $i), cavalo);
+				$cavalo-height: image-height($cavalo);
+				$cavalo-width: image-width($cavalo);
+
+				width: $cavalo-width * 1.19900497512438;
+
+				&::before {
+					@include get-sprite(nth($breakpoints-sprites, $i), cavalo);
+
+					margin: - floor($cavalo-height * 0.28125) auto 0 auto;
+				}
+			}
 		}
 	}
 
 	.nav-menu {
-		@include stretch($offset-bottom:15px, $offset-top:false);
-
+		margin: 2em 0;
 		padding: 0;
 
 		&::before {
-			$height: logo-sprite-height(white-big);
-			@include logo-sprite(white-big);
-
 			content: '';
 			display: block;
-			height: $height;
-			width: logo-sprite-width(white-big);
 			margin: 0 auto;
 			position: relative;
-			top: -15px;
+		}
+
+		$breakpoints: $media-layout-phone $media-layout-tablet $media-layout-desktop $media-layout-beyond-desktop;
+		$breakpoints-sprites: $breakpoint-600-sprites $breakpoint-768-sprites $breakpoint-992-sprites $breakpoint-1382-sprites;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				$logo: sprite-file(nth($breakpoints-sprites, $i), white-big);
+				$logo-height: image-height($logo);
+				$logo-width: image-width($logo);
+
+				&::before {
+					@include get-sprite(nth($breakpoints-sprites, $i), white-big);
+
+					top: - ($logo-height * 0.26785714285714);
+				}
+			}
 		}
 	}
 

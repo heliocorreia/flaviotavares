@@ -31,9 +31,7 @@ $media-layout-list: $media-layout-phone $media-layout-tablet $media-layout-deskt
 // sprites
 
 $txt-sprite-dimensions: true;
-$cavalo-sprite-dimensions: true;
 $language-sprite-dimensions: true;
-$logo-sprite-dimensions: true;
 $seta-sprite-dimensions: true;
 
 $breakpoint-480-sprite-dimensions: true;
@@ -42,8 +40,6 @@ $breakpoint-768-sprite-dimensions: true;
 $breakpoint-992-sprite-dimensions: true;
 $breakpoint-1382-sprite-dimensions: true;
 
-@import "cavalo/*.png";
-@import "logo/*.png";
 @import "seta/*.png";
 
 @import "breakpoint-480/*.png";
