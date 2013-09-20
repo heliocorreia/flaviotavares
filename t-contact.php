@@ -21,8 +21,7 @@ Template Name: Contato
 			<address>
 				<h1><?php _e('Na Web', 'flaviotavares'); ?></h1>
 				<p class="email">contato@flaviotavares.com.br</p>
-				<p class="url">www.facebook.com/flaviotavares</p>
-				<p class="url">www.youtube.com.br/flaviotavares</p>
+				<p class="url">youtube.com/user/flaviotavaresmelo</p>
 			</address>
 		</section>
 	</div>
