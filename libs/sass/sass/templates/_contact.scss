@@ -21,27 +21,14 @@ body.page-template-t-contact-php {
 	}	
 
 	address {
-		$breakpoints: $media-layout-phone $media-layout-tablet;
-		@for $i from 1 through length($breakpoints) {
-			@include at-breakpoint(nth($breakpoints, $i)) {
-				@include pre(3, 16);
-				@include post(3, 16);
-			}
-		}
-			
-		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
-		@for $i from 1 through length($breakpoints) {
-			@include at-breakpoint(nth($breakpoints, $i)) {
-				@include pre(6, 16);
-				@include span-columns(7, 16);
-			}
-		}
+		$padding: rhythm(2);
+		$margin: $padding / 2;
 
 		@include rhythm(1, 0, 0, 1);
 
 		background: $color-black;
 		font-style: normal;
-		padding: rhythm(2);
+		padding: $padding;
 		position: relative;
 
 		&::after {
@@ -52,8 +39,33 @@ body.page-template-t-contact-php {
 			border: $border-width solid #333;
 			bottom: 2 * $border-width;
 			content: '';
-			margin: rhythm(1);
+			margin: $margin;
 			position: absolute;
+		}
+
+		@include at-breakpoint($media-layout-phone) {
+			@include pre(1, 16);
+			@include post(1, 16);
+
+			font-size: .85em;
+			padding: $padding * .75;
+
+			&::after {
+				margin: $margin * .75;
+			}
+		}
+
+		@include at-breakpoint($media-layout-tablet) {
+			@include pre(3, 16);
+			@include post(3, 16);
+		}
+
+		$breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include pre(6, 16);
+				@include span-columns(7, 16);
+			}
 		}
 	}
 

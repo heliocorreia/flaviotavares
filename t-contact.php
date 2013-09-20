@@ -29,7 +29,7 @@ Template Name: Contato
 </section>
 <script>
 head.ready(function(){
-	$('#t-contact .content').responsiveVerticalCenter({parentSelector:'body'});
+	$('html.gt-640 #t-contact .content').responsiveVerticalCenter({parentSelector:'body'});
 });
 </script>
 <?php get_footer(); ?>
