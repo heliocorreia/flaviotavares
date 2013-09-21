@@ -5,7 +5,6 @@ body.page-template-t-videos-php {
 		@include stretch-y;
 
 		background: image-url("gradient-transparent-black.png") repeat-y top right;
-		content: '';
 		right: 0;
 		width: image-width("gradient-transparent-black.png");
 		z-index: 99;
@@ -14,13 +13,32 @@ body.page-template-t-videos-php {
 	.container {
 		max-width: none;
 	}
+
+	$breakpoints: $media-layout-tablet $media-layout-desktop $media-layout-beyond-desktop;
+	@for $i from 1 through length($breakpoints) {
+		@include at-breakpoint(nth($breakpoints, $i)) {
+			&::after {
+				content: '';
+			}
+		}
+	}
 }
 
 #t-videos {
 	color: $color-white;
 
 	.content {
-		@include span-columns(13 omega);
+		@include at-breakpoint($media-layout-phone) {
+			@include pre(1, 16);
+			@include post(1, 16);
+		}
+
+		$breakpoints: $media-layout-tablet $media-layout-desktop $media-layout-beyond-desktop;
+		@for $i from 1 through length($breakpoints) {
+			@include at-breakpoint(nth($breakpoints, $i)) {
+				@include span-columns(13 omega, 16);
+			}
+		}
 	}
 
 	.section {
@@ -31,7 +49,9 @@ body.page-template-t-videos-php {
 		img {
 			float: left;
 			height: auto !important;
+			max-width: 100%;
 			width: 100% !important;
+
 		}
 
 		& + .section {
@@ -90,9 +110,8 @@ body.page-template-t-videos-php {
 			}
 		}
 
-		img {
-			height: auto;
-			max-width: 100%;
+		@include at-breakpoint($media-layout-phone) {
+			width: 280px;
 		}
 	}
 

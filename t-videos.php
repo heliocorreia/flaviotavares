@@ -26,7 +26,7 @@ head.ready('_jquery',function(){
 		});
 
 		head.ready('_verticalcenter', function(){
-			$('#t-videos .content').responsiveVerticalCenter({parentSelector:'body'});
+			$('html.gt-640 #t-videos .content').responsiveVerticalCenter({parentSelector:'body'});
 
 			head.ready('_tosros', function(){
 				$('#t-videos').find('.section a').tosrus({
