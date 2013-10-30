@@ -360,7 +360,7 @@ $breakpoints: $media-layout-desktop $media-layout-beyond-desktop;
 		}
 
 		p {
-			@include adjust-font-size-to(20px);
+			@include adjust-font-size-to(16px);
 		}
 	}
 
