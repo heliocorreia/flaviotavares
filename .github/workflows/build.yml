@@ -1,35 +1,30 @@
 name: Build Eleventy
 
 on:
-  push:
-    branches:
-      - master
-      - static
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
-
-    strategy:
-      matrix:
-        node-version: [12.x]
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+       - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20.x
 
-      - name: Install dependencies & build
+       - name: Install dependencies & build
         run: |
           npm ci
-          npm run build
+          npm run build:clean
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+       - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           publish_dir: ./_site
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
