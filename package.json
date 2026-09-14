@@ -3,18 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "description": "WordPress -> Eleventy migration of flaviotavares.com.br",
-   "type": "module",
-   "scripts": {
-     "build": "eleventy",
-     "build:clean": "rm -rf _site && eleventy",
-     "dev": "eleventy --serve",
-     "build:baseline": "node tests/browser/capture-baseline.mjs",
-     "test:visual": "playwright test"
-   },
-   "dependencies": {
-     "@11ty/eleventy": "^3.1.0"
-   },
-   "devDependencies": {
-     "@playwright/test": "^1.63.0"
-   }
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "build:clean": "rm -rf _site && eleventy",
+    "build:clean-pages": "rm -rf _site && eleventy && node scripts/relativize-paths.mjs _site",
+    "dev": "eleventy --serve",
+    "build:baseline": "node tests/browser/capture-baseline.mjs",
+    "test:visual": "playwright test"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
 }
