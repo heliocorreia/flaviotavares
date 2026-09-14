@@ -1,0 +1,29 @@
+{
+   "title": "Flávio Tavares",
+   "locale": {
+        "en_US": "en",
+        "pt_BR": "en_US"
+    },
+   "imageSizes": [
+        "smart",
+        "tablet",
+        "desktop"
+    ],
+   "fonts": [
+        "Quattrocento Sans"
+    ],
+    "css": "/assets/css/flaviotavares.css",
+    "pluginCss": {
+        "tosros": "/assets/js/tosros/jquery.tosrus.css",
+        "bxslider": "/assets/js/bxslider/jquery.bxslider.css"
+    },
+    "js": {
+        "headjs": "/assets/js/headjs/0.99.js",
+        "picturefill": "/assets/js/picturefill.js",
+        "jquery": "/assets/js/jquery/2.0.0.js",
+        "verticalcenter": "/assets/js/jquery.responsive-vertical-center.js",
+        "tosros": "/assets/js/tosros/jquery.tosrus-1.3.1-packed.js",
+        "hammer": "/assets/js/hammer/jquery.hammer.min.js",
+        "bxslider": "/assets/js/bxslider/jquery.bxslider.min.js"
+    }
+}

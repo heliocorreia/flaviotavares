@@ -1,0 +1,12 @@
+{%- if showHeader -%}
+<header id="header">
+                   <label for="nav-main-button" onclick=""></label>
+                   <input type="checkbox" id="nav-main-button">
+                   <div class="container">
+{%- if menuName -%}
+<nav id="nav-main">{{ navi({ menu: menuName, ulClass: 'nav-menu', current: currentSlug, container: true }) | safe }}</nav>
+{%- endif -%}
+<nav id="nav-language">{{ navi({ menu: 'languages', ulClass: 'nav-menu', lang: lang, container: false }) | safe }}</nav>
+                   </div>
+</header>
+{%- endif -%}

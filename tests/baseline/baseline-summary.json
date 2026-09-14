@@ -1,0 +1,248 @@
+[
+  {
+    "url": "http://127.0.0.1:8082/",
+    "label": "home",
+    "vp": "mobile",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/",
+    "htmlBytes": 21498,
+    "title": "Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/",
+    "label": "home",
+    "vp": "tablet",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/",
+    "htmlBytes": 21491,
+    "title": "Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/",
+    "label": "home",
+    "vp": "desktop",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/",
+    "htmlBytes": 21491,
+    "title": "Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/biography/",
+    "label": "en-biography",
+    "vp": "mobile",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/biography/",
+    "htmlBytes": 41469,
+    "title": "Biography | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/biography/",
+    "label": "en-biography",
+    "vp": "tablet",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/biography/",
+    "htmlBytes": 41463,
+    "title": "Biography | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/biography/",
+    "label": "en-biography",
+    "vp": "desktop",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/biography/",
+    "htmlBytes": 41464,
+    "title": "Biography | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/contact/",
+    "label": "en-contact",
+    "vp": "mobile",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/contact/",
+    "htmlBytes": 25633,
+    "title": "Contact | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/contact/",
+    "label": "en-contact",
+    "vp": "tablet",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/contact/",
+    "htmlBytes": 25653,
+    "title": "Contact | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/contact/",
+    "label": "en-contact",
+    "vp": "desktop",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/contact/",
+    "htmlBytes": 25653,
+    "title": "Contact | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/gallery/",
+    "label": "en-gallery",
+    "vp": "mobile",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/gallery/",
+    "htmlBytes": 29311,
+    "title": "Gallery | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/gallery/",
+    "label": "en-gallery",
+    "vp": "tablet",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/gallery/",
+    "htmlBytes": 29331,
+    "title": "Gallery | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/gallery/",
+    "label": "en-gallery",
+    "vp": "desktop",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/gallery/",
+    "htmlBytes": 29331,
+    "title": "Gallery | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/gallery/drawings/",
+    "label": "en-gallery-drawings",
+    "vp": "mobile",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/gallery/drawings/",
+    "htmlBytes": 156585,
+    "title": "Drawings | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/gallery/drawings/",
+    "label": "en-gallery-drawings",
+    "vp": "tablet",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/gallery/drawings/",
+    "htmlBytes": 156482,
+    "title": "Drawings | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/gallery/drawings/",
+    "label": "en-gallery-drawings",
+    "vp": "desktop",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/gallery/drawings/",
+    "htmlBytes": 155994,
+    "title": "Drawings | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/video/",
+    "label": "en-videos",
+    "vp": "mobile",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/video/",
+    "htmlBytes": 32341,
+    "title": "Video | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/video/",
+    "label": "en-videos",
+    "vp": "tablet",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/video/",
+    "htmlBytes": 32361,
+    "title": "Video | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/en/video/",
+    "label": "en-videos",
+    "vp": "desktop",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/en/video/",
+    "htmlBytes": 32361,
+    "title": "Video | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/pt_br/biografia/",
+    "label": "pt-br-biografia",
+    "vp": "mobile",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/pt_br/biografia/",
+    "htmlBytes": 41577,
+    "title": "Biografia | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/pt_br/biografia/",
+    "label": "pt-br-biografia",
+    "vp": "tablet",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/pt_br/biografia/",
+    "htmlBytes": 41571,
+    "title": "Biografia | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/pt_br/biografia/",
+    "label": "pt-br-biografia",
+    "vp": "desktop",
+    "status": 200,
+    "finalUrl": "http://127.0.0.1:8082/pt_br/biografia/",
+    "htmlBytes": 41572,
+    "title": "Biografia | Flávio Tavares",
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:8082/nonexistent-page-xyz/",
+    "label": "404-probe",
+    "vp": "mobile",
+    "status": 404,
+    "finalUrl": "http://127.0.0.1:8082/nonexistent-page-xyz/",
+    "htmlBytes": 25637,
+    "title": "Page not found | Flávio Tavares",
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8082/nonexistent-page-xyz/",
+    "label": "404-probe",
+    "vp": "tablet",
+    "status": 404,
+    "finalUrl": "http://127.0.0.1:8082/nonexistent-page-xyz/",
+    "htmlBytes": 25630,
+    "title": "Page not found | Flávio Tavares",
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:8082/nonexistent-page-xyz/",
+    "label": "404-probe",
+    "vp": "desktop",
+    "status": 404,
+    "finalUrl": "http://127.0.0.1:8082/nonexistent-page-xyz/",
+    "htmlBytes": 25630,
+    "title": "Page not found | Flávio Tavares",
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  }
+]

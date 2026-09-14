@@ -1,0 +1,8 @@
+# Node dependencies (regenerated via `npm ci`)
+node_modules/
+
+# Eleventy build output (regenerated via `npm run build` / `npm run dev`)
+_site/
+
+# OS / editor noise
+.DS_Store

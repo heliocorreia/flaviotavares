@@ -1,0 +1,116 @@
+[
+  {
+    "label": "en-biography",
+    "vp": "mobile",
+    "url": "http://127.0.0.1:56278/en/biography/",
+    "status": 200,
+    "htmlDiff": {
+      "same": false,
+      "out": [
+        "@ line 1",
+        "- <!DOCTYPE html><html lang=\"en-US\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biography | Flávio Tavares</title> <link rel=\"stylesheet\" t",
+        "+ <!DOCTYPE html><html lang=\"en-US\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biography | Flávio Tavares</title> <link rel=\"stylesheet\" t"
+      ]
+    },
+    "png": {
+      "baseBytes": 1261646,
+      "siteBytes": 1261646,
+      "delta": 0
+    }
+  },
+  {
+    "label": "en-biography",
+    "vp": "tablet",
+    "url": "http://127.0.0.1:56278/en/biography/",
+    "status": 200,
+    "htmlDiff": {
+      "same": false,
+      "out": [
+        "@ line 1",
+        "- <!DOCTYPE html><html lang=\"en-US\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biography | Flávio Tavares</title> <link rel=\"stylesheet\" t",
+        "+ <!DOCTYPE html><html lang=\"en-US\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biography | Flávio Tavares</title> <link rel=\"stylesheet\" t"
+      ]
+    },
+    "png": {
+      "baseBytes": 2574774,
+      "siteBytes": 2574774,
+      "delta": 0
+    }
+  },
+  {
+    "label": "en-biography",
+    "vp": "desktop",
+    "url": "http://127.0.0.1:56278/en/biography/",
+    "status": 200,
+    "htmlDiff": {
+      "same": false,
+      "out": [
+        "@ line 1",
+        "- <!DOCTYPE html><html lang=\"en-US\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biography | Flávio Tavares</title> <link rel=\"stylesheet\" t",
+        "+ <!DOCTYPE html><html lang=\"en-US\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biography | Flávio Tavares</title> <link rel=\"stylesheet\" t"
+      ]
+    },
+    "png": {
+      "baseBytes": 3129914,
+      "siteBytes": 3129426,
+      "delta": -488
+    }
+  },
+  {
+    "label": "pt-br-biografia",
+    "vp": "mobile",
+    "url": "http://127.0.0.1:56278/pt_br/biografia/",
+    "status": 200,
+    "htmlDiff": {
+      "same": false,
+      "out": [
+        "@ line 1",
+        "- <!DOCTYPE html><html lang=\"pt-BR\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biografia | Flávio Tavares</title> <link rel=\"stylesheet\" t",
+        "+ <!DOCTYPE html><html lang=\"pt-BR\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biografia | Flávio Tavares</title> <link rel=\"stylesheet\" t"
+      ]
+    },
+    "png": {
+      "baseBytes": 1268003,
+      "siteBytes": 1268003,
+      "delta": 0
+    }
+  },
+  {
+    "label": "pt-br-biografia",
+    "vp": "tablet",
+    "url": "http://127.0.0.1:56278/pt_br/biografia/",
+    "status": 200,
+    "htmlDiff": {
+      "same": false,
+      "out": [
+        "@ line 1",
+        "- <!DOCTYPE html><html lang=\"pt-BR\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biografia | Flávio Tavares</title> <link rel=\"stylesheet\" t",
+        "+ <!DOCTYPE html><html lang=\"pt-BR\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biografia | Flávio Tavares</title> <link rel=\"stylesheet\" t"
+      ]
+    },
+    "png": {
+      "baseBytes": 2583659,
+      "siteBytes": 2583659,
+      "delta": 0
+    }
+  },
+  {
+    "label": "pt-br-biografia",
+    "vp": "desktop",
+    "url": "http://127.0.0.1:56278/pt_br/biografia/",
+    "status": 200,
+    "htmlDiff": {
+      "same": false,
+      "out": [
+        "@ line 1",
+        "- <!DOCTYPE html><html lang=\"pt-BR\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biografia | Flávio Tavares</title> <link rel=\"stylesheet\" t",
+        "+ <!DOCTYPE html><html lang=\"pt-BR\" id=\"index-page\"><!--<head> <meta charset=\"utf-8\"> <meta https-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <title>Biografia | Flávio Tavares</title> <link rel=\"stylesheet\" t"
+      ]
+    },
+    "png": {
+      "baseBytes": 3156031,
+      "siteBytes": 3155547,
+      "delta": -484
+    }
+  }
+]
